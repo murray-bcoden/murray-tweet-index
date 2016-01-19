@@ -19,10 +19,20 @@
     </head>
     <body <?php body_class(); ?>>
 
-        <div class="wrapper">
+        <main class="wrapper">
 
-            <header>
+            <header class="header">
+
+                <div class="header-inner">
                 
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/murray-logo.svg">
+                    <div class="header-top">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/murray-logo.svg" class="murray-logo" alt="Murray Logo">
+                        <h1 class="murray-subtitle">#murray<span>tweet</span>index</h1>
+                    </div>
+                    <div class="header-content">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" class="header-logo" alt="Murray Tweet Index">
+                        <p class="header-intro">The #murray<span>tweet</span>index is published by communications consultancy Murray, and measures journalists across six parameters to capture their popularity, the quality of engagement and level of activity. A composite index was then created to rank overall positions.</p>
+                    </div>
+                </div>
 
             </header>

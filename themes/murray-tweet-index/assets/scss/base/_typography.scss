@@ -1,24 +1,31 @@
-@include font-face(open_sansregular, '../fonts/opensans-regular-webfont', 400, normal);
-@include font-face(open_sansbold, '../fonts/opensans-bold-webfont', 700, normal);
-@include font-face(open_sansitalic, '../fonts/opensans-italic-webfont', 700, italic);
+// @include font-face(open_sansregular, '../fonts/opensans-regular-webfont', 400, normal);
+// @include font-face(open_sansbold, '../fonts/opensans-bold-webfont', 700, normal);
+// @include font-face(open_sansitalic, '../fonts/opensans-italic-webfont', 700, italic);
 
-.open-sans-regular {
+.sans-light{
     font-family: 'open_sansregular', $fallback-stack;
     font-weight: 400;
     font-style: normal;
 }
 
-.open-sans-italic {
+.sans-semi {
     font-family: 'open_sansitalic', $fallback-stack;
-    font-weight: 400;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.serif {
+    font-family: 'ff-meta-serif-web-pro', $fallback-stack;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.serif-italic {
+    font-family: 'ff-meta-serif-web-pro', $fallback-stack;
+    font-weight: 500;
     font-style: italic;
 }
 
-.open-sans-bold {
-    font-family: 'open_sansbold', $fallback-stack;
-    font-weight: 700;
-    font-style: normal;
-}
 
 html {
     font-size: $base-font-size;
@@ -28,10 +35,9 @@ body {
     font-kerning: normal;
     font-variant-ligatures: common-ligatures, contextual;
     @include font-feature-settings("kern","liga","frac", "pnum");
-    -webkit-font-smoothing: antialiased;
-    background-color: $base-background-color;
+    //-webkit-font-smoothing: antialiased;
     color: $base-font-color;
-    @extend .open-sans-regular;
+    @extend .sans-light;
     @include font-size($body-font-size);
     line-height: $base-line-height; 
 }
@@ -117,14 +123,10 @@ cite {
 
 strong,
 p.bold {
-    @extend .open-sans-bold;
+    @extend .sans-semi;
 }
 
 em {
-    @extend .open-sans-italic; 
+    //@extend .open-sans-italic; 
 }
 
-// p.light {
-//   @extend .lato-light;
-//   em { @extend .lato-italic; }
-// }

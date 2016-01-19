@@ -1,0 +1,133 @@
+/*  ==========================================================================
+    ==========================================================================
+
+    HEADER
+    1. Header
+
+    CSS FORMATTING
+    1. Positioning
+    2. Display & Box Model
+    3. Text
+    4. Other
+
+    ==========================================================================
+    ========================================================================== */
+
+/*  ==========================================================================
+    1. Header
+    ========================================================================== */
+
+	.header {
+		background: url('../images/bg-header.jpg') top center no-repeat;
+		background-size: cover;
+		// background: url('../images/logo.png'), url('../images/bg-header.jpg');
+		// background-repeat: no-repeat;
+		// background-size: auto, cover; 
+		// background-position: top right -200px, top center;
+		//height: calc(100% - 50px); 
+		height: 100vw;
+		max-height: calc(100% - 50px);
+		min-height: 450px;
+
+		@include breakpoint($break-700) {
+			//height: 500px;
+			height: auto;
+			min-height: 1px;
+			max-height: 10000px;
+		}
+
+	}
+
+	.header-inner {
+		@extend %module;
+		height: 100%;
+		position: relative;
+		//min-height: 450px;
+	}
+
+	.header-top {
+		@include cf();
+	}
+
+	.murray-logo {
+		display: block;
+		width: 56px;
+		height: auto;
+		margin-top: 34px;
+		margin-left: 30px;
+		float: left;
+    }
+
+    .murray-subtitle {
+    	display: block;
+    	float: left;
+    	margin: 56px 0 0 20px;
+		@extend .serif-italic;
+		@include font-size($font-18);
+		color: $color-text-2;
+		span {
+			color: white;
+		}
+    }
+
+    .header-content {
+    	position: absolute;
+    	right: 0px;
+    	top: 50%;
+    	transform: translateY(-55%);
+    	//display: flex;
+    	//align-items: flex-end;
+    	//justify-content: center;
+    	//flex-direction: column;
+    	//height: 100%;
+    	padding: 0 20px;
+    	overflow: hidden;
+    	@include breakpoint($break-700) {
+			position: static;
+			transform: none;
+			padding-top: 30px;
+			padding-bottom: 50px;
+		}
+    }
+
+    .header-logo {
+    	display: block;
+    	position: relative;
+    	right: -10%;
+    	//margin-right: -10%;
+    	//margin-top: -10%;
+    	@include breakpoint($break-700) {
+			max-width: 300px;
+			right: -30px;
+			float: right;
+		}
+		@include breakpoint($break-320) {
+			max-width: 260px;
+			right: -24px;
+		}
+    }
+
+    .header-intro {
+		max-width: 700px;
+		float: right;
+		margin: 30px 10% 0;
+		@extend .serif-italic;
+		@include font-size($font-21);
+		text-align: right;
+		span {
+			color: $color-text-2;
+		}
+		@include breakpoint($break-700) {
+			margin: 30px 30px 0;
+			@include font-size($font-18);
+		}
+		@include breakpoint($break-320) {
+			@include font-size($font-16);
+		}
+    }
+
+/*  ==========================================================================
+    2. 
+    ========================================================================== */
+
+    

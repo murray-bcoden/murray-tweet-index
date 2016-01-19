@@ -6,7 +6,7 @@
 
 			</footer>
 
-		</div>
+		</main>
 		<!-- /wrapper -->
 
 		<!-- ============= OUTDATED BROWSER ============= -->
