@@ -1,0 +1,15 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Refresh Digital Communications www.refresh.ie -- <role> -- <twitter>
+
+# THANKS
+
+    <name>
+
+# TECHNOLOGY COLOPHON
+
+    CSS3, HTML5, Jeet, SASS, Breakpoint SASS
+    jQuery, Modernizr, Normalize
