@@ -1,0 +1,112 @@
+/*  ==========================================================================
+    ==========================================================================
+
+    HEADER
+    1. General
+    2. Badge
+
+    CSS FORMATTING
+    1. Positioning
+    2. Display & Box Model
+    3. Text
+    4. Other
+
+    ==========================================================================
+    ========================================================================== */
+
+/*  ==========================================================================
+    1. General
+    ========================================================================== */
+
+    .top-100 {
+        background-color: white;
+    }
+
+     .top-100-wrapper {
+        @extend %module;
+        color: $color-text-2;
+     }
+
+/*  ==========================================================================
+    2. Badge
+    ========================================================================== */
+
+     .top-100-badge-link {
+        display: block;
+        position: relative;
+        top: -143px;
+        margin: 0 auto;
+        width: 286px;
+        height: 286px;
+        border-radius: 143px;
+        background-color: white;
+        // @include breakpoint($break-1200) {
+        //     top: 0;
+        // }
+        @include breakpoint($break-1200) {
+            width: 120px;
+            height: 120px;
+            top: -60px;
+            border-radius: 60px;
+        }
+        @include breakpoint($break-1000h) {
+            width: 120px;
+            height: 120px;
+            top: -60px;
+            border-radius: 60px;
+        }
+     }
+
+     .top-100-badge {
+        position: absolute;
+        top: 18px;
+        left: 18px;
+        width: 250px;
+        height: 250px;
+        border-radius: 125px;
+        margin: 0 auto;
+        padding-top: 55px;
+        background-color: $color-brand-2;
+        background: linear-gradient(to right, $color-brand-2, #805aa3 );
+        box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.22);
+        color: white;
+        text-align: center;
+        @include font-size($font-48);
+        @extend .sans-semi;
+        line-height: 0.9;
+        text-transform: uppercase;
+        span {
+            display: block;
+            @include font-size($font-100);
+            @extend .sans-light;
+        }
+        @include breakpoint($break-1200) {
+            top: 10px;
+            left: 10px;
+            width: 100px;
+            height: 100px;
+            border-radius: 50px;
+            padding-top: 33px;
+            line-height: 1;
+            @include font-size($font-24);
+            span {
+                @include font-size($font-18);
+            }
+        }
+        @include breakpoint($break-1000h) {
+            top: 10px;
+            left: 10px;
+            width: 100px;
+            height: 100px;
+            border-radius: 50px;
+            padding-top: 33px;
+            line-height: 1;
+            @include font-size($font-24);
+            span {
+                @include font-size($font-18);
+            }
+        }
+     }
+
+
+

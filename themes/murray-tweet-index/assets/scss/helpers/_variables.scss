@@ -11,6 +11,9 @@
 	$font-16: 16;
 	$font-18: 18;
 	$font-21: 21;
+	$font-24: 24;
+	$font-48: 48;
+	$font-100: 100;
 
 	$h1-font-size: 37;
 	$h2-font-size: 23;
@@ -33,9 +36,17 @@
    	Breakpoints
    	========================================================================== */
 
+	// max widths
 	$break-320: max-width 320px;
 	$break-500: max-width 500px;
 	$break-700: max-width 700px;
+	$break-800: max-width 800px;
+	$break-1200: max-width 1200px;
+	$break-1600: max-width 1600px;
+
+	// max heights
+	$break-700h: max-height 700px;
+	$break-1000h: max-height 1000px;
 
 /* 	==========================================================================
    	Colours

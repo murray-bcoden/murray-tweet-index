@@ -3,13 +3,13 @@
 // @include font-face(open_sansitalic, '../fonts/opensans-italic-webfont', 700, italic);
 
 .sans-light{
-    font-family: 'open_sansregular', $fallback-stack;
-    font-weight: 400;
+    font-family: 'open_sans', $fallback-stack;
+    font-weight: 300;
     font-style: normal;
 }
 
 .sans-semi {
-    font-family: 'open_sansitalic', $fallback-stack;
+    font-family: 'open_sans', $fallback-stack;
     font-weight: 600;
     font-style: normal;
 }

@@ -18,19 +18,25 @@
     ========================================================================== */
 
 	.header {
-		background: url('../images/bg-header.jpg') top center no-repeat;
+		background: url('../images/bg-header-opt-@2x.png') top center no-repeat, linear-gradient(to right, #39bdcd, #00a2d1 48%, #005872 );;
 		background-size: cover;
-		// background: url('../images/logo.png'), url('../images/bg-header.jpg');
-		// background-repeat: no-repeat;
-		// background-size: auto, cover; 
-		// background-position: top right -200px, top center;
-		//height: calc(100% - 50px); 
-		height: 100vw;
+		height: 100%;
 		max-height: calc(100% - 50px);
 		min-height: 450px;
 
+		@include breakpoint($break-1200) {
+			height: auto;
+			min-height: 1px;
+			max-height: 10000px;
+		}
+
 		@include breakpoint($break-700) {
-			//height: 500px;
+			height: auto;
+			min-height: 1px;
+			max-height: 10000px;
+		}
+
+		@include breakpoint($break-1000h) {
 			height: auto;
 			min-height: 1px;
 			max-height: 10000px;
@@ -42,7 +48,6 @@
 		@extend %module;
 		height: 100%;
 		position: relative;
-		//min-height: 450px;
 	}
 
 	.header-top {
@@ -75,18 +80,25 @@
     	right: 0px;
     	top: 50%;
     	transform: translateY(-55%);
-    	//display: flex;
-    	//align-items: flex-end;
-    	//justify-content: center;
-    	//flex-direction: column;
-    	//height: 100%;
     	padding: 0 20px;
     	overflow: hidden;
-    	@include breakpoint($break-700) {
+    	@include breakpoint($break-1200) {
 			position: static;
 			transform: none;
 			padding-top: 30px;
-			padding-bottom: 50px;
+			padding-bottom: 100px;
+		}
+		// @include breakpoint($break-700) {
+		// 	position: static;
+		// 	transform: none;
+		// 	padding-top: 30px;
+		// 	padding-bottom: 50px;
+		// }
+		@include breakpoint($break-1000h) {
+			position: static;
+			transform: none;
+			padding-top: 30px;
+			padding-bottom: 100px;
 		}
     }
 
@@ -94,16 +106,21 @@
     	display: block;
     	position: relative;
     	right: -10%;
-    	//margin-right: -10%;
-    	//margin-top: -10%;
+    	min-width: 240px;
     	@include breakpoint($break-700) {
 			max-width: 300px;
 			right: -30px;
 			float: right;
 		}
 		@include breakpoint($break-320) {
+
 			max-width: 260px;
 			right: -24px;
+		}
+		@include breakpoint($break-1000h) {
+			width: 50vw;
+			float: right;
+			right: 0;
 		}
     }
 
