@@ -4,6 +4,7 @@
     HEADER
     1. General
     2. Badge
+    3. List
 
     CSS FORMATTING
     1. Positioning
@@ -14,24 +15,27 @@
     ==========================================================================
     ========================================================================== */
 
+
 /*  ==========================================================================
     1. General
     ========================================================================== */
 
     .top-100 {
         background-color: white;
+        padding-bottom: 1px;
     }
 
-     .top-100-wrapper {
+    .top-100-wrapper {
         @extend %module;
         color: $color-text-2;
-     }
+    }
+
 
 /*  ==========================================================================
     2. Badge
     ========================================================================== */
 
-     .top-100-badge-link {
+    .top-100-badge-link {
         display: block;
         position: relative;
         top: -143px;
@@ -55,9 +59,9 @@
             top: -60px;
             border-radius: 60px;
         }
-     }
+    }
 
-     .top-100-badge {
+    .top-100-badge {
         position: absolute;
         top: 18px;
         left: 18px;
@@ -67,7 +71,7 @@
         margin: 0 auto;
         padding-top: 55px;
         background-color: $color-brand-2;
-        background: linear-gradient(to right, $color-brand-2, #805aa3 );
+        background: linear-gradient(to right, $color-brand-2, #805aa3);
         box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.22);
         color: white;
         text-align: center;
@@ -106,7 +110,223 @@
                 @include font-size($font-18);
             }
         }
-     }
+    }
+
+/*  ==========================================================================
+    3. List
+    ========================================================================== */
+
+    .top-device {
+        position: relative;
+        width: 1106px;
+        height: 782px;
+        margin: -120px auto 0;
+        background: url(../images/ipad.svg) top left no-repeat;
+        @include breakpoint($break-1200) {
+            width: 561px;
+            height: 831px;
+            margin-top: -50px;
+            background: url(../images/ipad-mini.svg) top left no-repeat;
+        }
+        @include breakpoint($break-700) {
+            width: 100%;
+            height: auto;
+            margin-top: -50px 0px 0;
+            padding: 0 20px 10px;
+            background-image: none;
+        }
+        @include breakpoint($break-1000h) {
+            margin-top: 0;
+        }
+    }
+
+    .top-list-wrapper {
+        position: absolute;
+        top: 53px;
+        left: 104px;
+        width: 878px;
+        height: 656px;
+        margin: 10px 0px 9px 20px;
+        overflow-y: scroll;
+        -webkit-overflow-scrolling: touch;
+        @include breakpoint($break-1200) {
+            width: 473px;
+            height: 640px;
+            top: 95px;
+            left: 44px;
+            margin: 0;
+            //background: red;
+        }
+        @include breakpoint($break-700) {
+            width: 100%;
+            height: 300px;
+            position: static;
+        }
+    }
+
+    .top-list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        @include cf();
+    }
+
+    .top-item {
+        position: relative;
+        width: 415px;
+        margin: 0 0 1px;
+        padding: 0;
+        float: left;
+        &:nth-of-type(even) {
+            margin-left: 23px;
+        }
+        &:nth-of-type(4n + 1), &:nth-of-type(4n + 2)  {
+            .top-bar {
+                background-color: $bright-blue;
+            }
+            .top-num {
+                background-color: $color-brand-1;
+            }
+        }
+        &:nth-of-type(4n + 3), &:nth-of-type(4n + 4)  {
+            .top-image-wrapper {
+                background-color: $bright-blue;
+            }
+        }
+        &:first-child {
+            .top-bar {
+                background-color: $color-brand-2;
+            }
+        }
+        &:after, &:before {
+            display: block;
+            content: '';
+            height: 1px;
+            background-color: rgba(0, 0, 0, 0.1);
+            margin-left: 70px;
+            margin-top: 1px;
+        }
+        &:before {
+            position: absolute;
+            width: 345px;
+            bottom: -1px;
+            background-color: white;
+        }
+        @include breakpoint($break-1200) {
+            float: none;
+            width: 473px;
+            &:nth-of-type(even) {
+                margin-left: 0;
+            }
+        }
+        @include breakpoint($break-700) {
+            width: auto;
+            &:after, &:before {
+                display: none;
+            }
+        }
+    }
+
+    .top-link {
+        position: relative;
+        display: block;
+        height: 63px;
+        color: white;
+        padding-top: 11px;
+        &:hover {
+            color: white;
+        }
+    }
+
+    .top-image-wrapper {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 62px;
+        height: 62px;
+        border-radius: 36px;
+        background-color: $color-brand-1;
+    }
+
+    .top-image {
+        position: absolute;
+        top: 4px;
+        left: 4px;
+        display: block;
+        width: 54px;
+        height: 54px;
+        border-radius: 27px;
+        border: 3px solid white;
+    }
+
+    .top-bar {
+        display: flex;
+        height: 41px;
+        border-radius: 4px;
+        background-color: $color-brand-1;
+        margin-left: 52px;
+        padding-left: 0px;
+        @include font-size($font-16);
+        @include breakpoint($break-700) {
+            font-family: 'open-sans', $fallback-stack;
+            font-weight: 600;
+            font-style: normal;
+            @include font-size($font-14);
+        }
+    }
+
+    .top-num {
+        flex-basis: 13%;
+        padding-top: 8px;
+        padding-left: 8px;
+        border-right: 1px solid #f6f6f6;
+        background-color: $bright-blue;;
+        color: white;
+        text-align: center;
+        @extend .sans-semi;
+        @include breakpoint($break-700) {
+            padding-top: 10px;
+        }
+    }
+
+    .top-handle, .top-name {
+        padding-top: 8px;
+        padding-left: 10px;
+        @include breakpoint($break-700) {
+            padding-top: 10px;
+        }
+    }
+
+    .top-handle {
+        flex-grow: 1;
+    }
+
+    .top-name {
+        flex-grow: 1.5;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -12,7 +12,9 @@
 	$font-18: 18;
 	$font-21: 21;
 	$font-24: 24;
+	$font-28: 28;
 	$font-48: 48;
+	$font-72: 72;
 	$font-100: 100;
 
 	$h1-font-size: 37;
@@ -55,8 +57,12 @@
 	// Brand Colours Variables
 	$color-brand-1: #00a2d1; // light blue
 	$color-brand-2: #ed30a0; // pink
+
+	$bright-blue: #39bccd;
+	$dark-blue: #005872;
+
 	// dark colours get lighter with increasing number
-	$color-dark-ui-1: #005872;
+	$color-dark-ui-1: $dark-blue;
 	$color-dark-ui-2: #242b2f;
 	$color-dark-ui-3: #353c40;
 	// light colours get lighter with increasing number
@@ -64,7 +70,7 @@
 	$color-light-ui-2: #e8e8e8;
 	// text colours get lighter with increasing number
 	$color-text-1: #ffffff; // white
-	$color-text-2: #005872;	// navy blue
+	$color-text-2: $dark-blue;	// navy blue
 	$color-text-3: #c1c0c0; // 
 
 	// Background Color

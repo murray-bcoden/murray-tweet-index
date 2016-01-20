@@ -1,0 +1,61 @@
+/*  ==========================================================================
+    ==========================================================================
+
+    HEADER
+    1. Section
+
+    CSS FORMATTING
+    1. Positioning
+    2. Display & Box Model
+    3. Text
+    4. Other
+
+    ==========================================================================
+    ========================================================================== */
+
+
+/*  ==========================================================================
+    1. Section
+    ========================================================================== */
+
+    %module {
+        max-width: 1640px;
+        margin: 0 auto;
+    }
+
+    .section {
+        padding: 150px 20px;
+    }
+
+    .section-title, .section-intro {
+        margin: 0 auto 20px;
+        max-width: 800px;
+        padding: 0 20px;
+        text-align: center;
+    }
+
+    .section-title {
+        text-transform: uppercase;
+        @include font-size($font-48);
+        @extend .sans-light;
+        line-height: 1.2;
+    }
+
+    .section-intro {
+        @include font-size($font-24);
+        @extend .serif;
+        opacity: 0.5;
+        line-height: 1.4;
+    }
+
+    %gradient-pink-blue {
+        background-image: linear-gradient(to right, $color-brand-2, #0b86a6);
+    }
+
+    %gradient-blue {
+        background-image: linear-gradient( $color-brand-1,  #014b61 );
+    }
+
+    %gradient-blue-pink {
+        background-image: linear-gradient(to right, #005872, #a63c92);
+    }
