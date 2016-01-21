@@ -52,37 +52,74 @@
         width: 472px;
         height: 460px;
         margin: 80px auto 0;
+        @include breakpoint($break-700) {
+            float: left;
+            margin-top: 40px;
+            height: auto;
+            width: auto;
+            left: 50%;
+            transform: translateX(-40%);
+        }
     }
 
     .gains-info {
         display: block;
         width: 472px;
         height: 460px;
+        @include breakpoint($break-700) {
+            display: none;   
+        }
     }
 
     .gains-people {
         position: absolute;
-        width: 400px;
+        width: 300px;
         top: -11px;
         left: 338px;
         margin: 0;
         padding: 0;
         list-style: none;
+        @include breakpoint($break-700) {
+            position: static;
+            width: auto;
+        }
     }
 
     .gains-people-item {
         margin: 0 0 2px;
-    }
-
-    .gains-people-name {
-        margin: 0;
-        @include font-size($font-14);
-        span {
-            text-transform: uppercase;
+        @include breakpoint($break-700) {
+            margin-bottom: 20px;
         }
     }
 
-    .gains-people-title {
+    .gain-title {
+        position: relative;
+        margin: 0;
+        @include font-size($font-14);
+    }
+
+    .gain-number {
+        display: none;
+        @include breakpoint($break-700) {
+            position: absolute;
+            top: -5px;
+            left: -50px;
+            display: block;
+            color: #003241;
+            width: 40px;
+            height: 40px;
+            border-radius: 20px;
+            background-color: white;
+            text-align: center;
+            padding-top: 11px;
+        }
+    }
+
+    .gain-name {
+        text-transform: uppercase;
+    }
+
+    .gain-job {
         margin: 0;
         @extend .serif;
         color: #003241;
