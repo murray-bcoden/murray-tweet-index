@@ -3,6 +3,7 @@
 
     HEADER
     1. 
+    2. Flow Flow Plugin Overrides
 
     CSS FORMATTING
     1. Positioning
@@ -48,4 +49,24 @@
 
     .twitter-wrapper {
         @extend %module;
+    }
+
+/*  ==========================================================================
+    2. Flow Flow Plugin Overrides
+    ========================================================================== */
+
+    // hide the plugin search bar
+    .ff-filter-holder {
+        display: none !important;
+    }
+
+    #ff-stream-1 .ff-loadmore-wrapper .ff-btn {
+        background-color: $dark-blue !important;
+        @extend .sans-semi;
+        @include font-size($font-12);
+        text-transform: uppercase;
+    }
+
+    .ff-tw-retweet:after {
+        margin-left: 5px;
     }
