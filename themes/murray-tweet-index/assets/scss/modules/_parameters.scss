@@ -20,4 +20,28 @@
 
     .params {
     	background-image: $gradient-blue;
+        .section-title {
+            position: relative;
+            &:before {
+                position: absolute;
+                top: -90px;
+                left: 50%;
+                transform: translateX(-50%);
+                display: block;
+                content: '';
+                width: 47px;
+                height: 54px;
+                background: url(../images/icon-parameters.svg) center center no-repeat;
+                opacity: 0.5;
+                 @include breakpoint($break-800) {
+                    top: -60px; // 2/3 original
+                    width: 31px; // 2/3 original
+                    height: 36px; // 2/3 original
+                }
+            }
+        }
+    }
+
+    .params-wrapper {
+        @extend %module;
     }
