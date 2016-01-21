@@ -43,7 +43,60 @@
     }
 
     .gains-wrapper {
+        position: relative;
         @extend %module;
     }
 
-   
+    .gains-info-wrapper {
+        position: relative;
+        width: 472px;
+        height: 460px;
+        margin: 80px auto 0;
+    }
+
+    .gains-info {
+        display: block;
+        width: 472px;
+        height: 460px;
+    }
+
+    .gains-people {
+        position: absolute;
+        width: 400px;
+        top: -11px;
+        left: 338px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .gains-people-item {
+        margin: 0 0 2px;
+    }
+
+    .gains-people-name {
+        margin: 0;
+        @include font-size($font-14);
+        span {
+            text-transform: uppercase;
+        }
+    }
+
+    .gains-people-title {
+        margin: 0;
+        @extend .serif;
+        color: #003241;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+

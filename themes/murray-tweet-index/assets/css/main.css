@@ -581,7 +581,7 @@ p.bold, .top-100-badge, .top-num, #ff-stream-1 .ff-loadmore-wrapper .ff-btn {
   font-weight: 600;
   font-style: normal; }
 
-.serif, blockquote, .section-intro {
+.serif, blockquote, .section-intro, .gains-people-title {
   font-family: "ff-meta-serif-web-pro", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 500;
   font-style: normal; }
@@ -1366,6 +1366,43 @@ blockquote {
         top: 40px;
         width: 952px;
         height: 172px; } }
+
+.gains-wrapper {
+  position: relative; }
+
+.gains-info-wrapper {
+  position: relative;
+  width: 472px;
+  height: 460px;
+  margin: 80px auto 0; }
+
+.gains-info {
+  display: block;
+  width: 472px;
+  height: 460px; }
+
+.gains-people {
+  position: absolute;
+  width: 400px;
+  top: -11px;
+  left: 338px;
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+.gains-people-item {
+  margin: 0 0 2px; }
+
+.gains-people-name {
+  margin: 0;
+  font-size: 14px;
+  font-size: 1.4rem; }
+  .gains-people-name span {
+    text-transform: uppercase; }
+
+.gains-people-title {
+  margin: 0;
+  color: #003241; }
 
 /*  ==========================================================================
     ==========================================================================
