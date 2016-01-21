@@ -19,5 +19,5 @@
     ========================================================================== */
 
     .categories {
-    	@extend %gradient-blue;
+    	background-image: $gradient-blue;
     }

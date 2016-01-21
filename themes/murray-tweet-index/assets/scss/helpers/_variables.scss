@@ -101,6 +101,11 @@
 	//Misc
 	$selection: $color-brand-1; // cursor selection colour
 
+	// Gradients
+	$gradient-pink-blue: linear-gradient(to right, $color-brand-2, #0b86a6);
+    $gradient-blue: linear-gradient( $color-brand-1,  #014b61 );
+    $gradient-blue-pink: linear-gradient(to right, #005872, #a63c92);
+
 
 
 

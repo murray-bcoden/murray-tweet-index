@@ -19,7 +19,7 @@
     ========================================================================== */
 
     .gains {
-        background: url('../images/.svg') top center no-repeat, linear-gradient(to right, $color-brand-2, #0b86a6 );
+        background: url('../images/.svg') top center no-repeat, $gradient-pink-blue;
     }
 
     .gains-wrapper {
