@@ -18,8 +18,9 @@
     1. 
     ========================================================================== */
 
-    .categories {
-    	background-image: $gradient-blue;
+    .twitter {
+        background: url('../images/bg-twitter-2-@2x.png') top center no-repeat;
+        background-size: 100%, auto;
         .section-title {
             position: relative;
             &:before {
@@ -29,15 +30,22 @@
                 transform: translateX(-50%);
                 display: block;
                 content: '';
-                width: 73px;
-                height: 66px;
-                background: url(../images/icon-categories.svg) center center no-repeat;
+                width: 66px;
+                height: 53px;
+                background: url(../images/icon-twitter-white.svg) center center no-repeat;
                 opacity: 0.5;
                 @include breakpoint($break-800) {
                     top: -60px; // 2/3 original
-                    width: 49px; // 2/3 original
-                    height: 44px; // 2/3 original
+                    width: 44px; // 2/3 original
+                    height: 35px; // 2/3 original
                 }
             }
         }
+        @include breakpoint($break-800) {
+            background-size: auto, auto;
+        }
+    }
+
+    .twitter-wrapper {
+        @extend %module;
     }

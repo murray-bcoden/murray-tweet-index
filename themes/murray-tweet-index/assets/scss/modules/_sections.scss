@@ -25,6 +25,9 @@
 
     .section {
         padding: 150px 20px;
+        @include breakpoint($break-800) {
+            padding: 100px 20px;
+        }
     }
 
     .section-title, .section-intro {
@@ -39,13 +42,22 @@
         @include font-size($font-48);
         @extend .sans-light;
         line-height: 1.2;
+        @include breakpoint($break-800) {
+            @include font-size($font-28);
+        }
     }
 
     .section-intro {
-        @include font-size($font-24);
+        @include font-size($font-21);
         @extend .serif;
         opacity: 0.5;
         line-height: 1.4;
+        @include breakpoint($break-800) {
+            @include font-size($font-18);
+        }
+        @include breakpoint($break-800) {
+            padding: 0;
+        }
     }
 
    

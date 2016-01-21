@@ -18,8 +18,12 @@
     1. 
     ========================================================================== */
 
-    .footer {
-        background-color: $dark-blue;
-        border-top: 47px solid white;
-        min-height: 400px;
+    .media {
+        background: $gradient-pink-blue;
     }
+
+    .media-wrapper {
+        @extend %module;
+    }
+
+   

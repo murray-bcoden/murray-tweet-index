@@ -19,9 +19,31 @@
     ========================================================================== */
 
     .gains {
-        background: url('../images/.svg') top center no-repeat, $gradient-pink-blue;
+        position: relative;
+        background: $gradient-pink-blue;
+        background-size: auto;
+        overflow: hidden;
+        &:before {
+            position: absolute;
+            display: block;
+            content: '';
+            top: 65px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 1428px;
+            height: 259px;
+            background: url('../images/bg-gains.svg') top center no-repeat;
+            opacity: 0.2;
+            @include breakpoint($break-800) {
+                top: 40px; 
+                width: 952px; // 2/3 original
+                height: 172px; // 2/3 original
+            }
+        }
     }
 
     .gains-wrapper {
         @extend %module;
     }
+
+   
