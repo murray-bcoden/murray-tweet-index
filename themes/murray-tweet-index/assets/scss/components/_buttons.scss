@@ -1,0 +1,65 @@
+/*  ==========================================================================
+    ==========================================================================
+
+    HEADER
+    1. 
+
+    CSS FORMATTING
+    1. Positioning
+    2. Display & Box Model
+    3. Text
+    4. Other
+
+    ==========================================================================
+    ========================================================================== */
+
+
+/*  ==========================================================================
+    1. 
+    ========================================================================== */
+
+    .btn {
+        display: block;
+        height: 30px;
+        background-color: $color-brand-1;
+        border-radius: 15px;
+        padding: 0 20px;
+        line-height: 30px;
+        color: white;
+        @extend .sans-semi;
+        text-transform: uppercase;
+        text-align: center;
+        @include transition(background-color 0.1s linear);
+        &:hover {
+            color: white;
+            background-color: $color-brand-2;
+        }
+        &:active, &:visited, &:focus {
+            color: white;
+        }
+    }
+
+    .btn-expand {
+        @extend .btn;
+        padding-right: 30px;
+        &:after {
+            position: absolute;
+            top: 9px;
+            right: 11px;
+            display: block;
+            content: '';
+            width: 11px;
+            height: 11px;
+            color: $color-brand-1;
+            background: url(../images/icon-plus.svg) top left no-repeat transparent;
+            @include transition(transform 0.3s $easeOutBackCustom);
+            border-radius: 50%;
+        }
+    }
+
+    .btn-expanded {
+        background-color: $color-brand-2;
+        &:after {
+            transform: rotate(45deg);
+        }
+    }

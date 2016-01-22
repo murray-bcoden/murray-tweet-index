@@ -499,6 +499,9 @@ th {
 /* 	==========================================================================
    	Colours
    	========================================================================== */
+/* 	==========================================================================
+   	Transitions
+   	========================================================================== */
 /*
  * What follows is the result of much research on cross-browser styling.
  * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
@@ -576,12 +579,12 @@ img {
   font-style: normal; }
 
 .sans-semi, strong,
-p.bold, .top-100-badge, .top-num, #ff-stream-1 .ff-loadmore-wrapper .ff-btn {
+p.bold, .btn, .btn-expand, .top-100-badge, .top-num, .top-params-title, .top-params-name, .top-params-num, .params-panel-item, #ff-stream-1 .ff-loadmore-wrapper .ff-btn {
   font-family: "open-sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 600;
   font-style: normal; }
 
-.serif, blockquote, .section-intro, .gain-job {
+.serif, blockquote, .section-intro, .gain-job, .top-params-job {
   font-family: "ff-meta-serif-web-pro", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 500;
   font-style: normal; }
@@ -865,6 +868,64 @@ blockquote {
 /*  ==========================================================================
     1. 
     ========================================================================== */
+.btn, .btn-expand {
+  display: block;
+  height: 30px;
+  background-color: #00a2d1;
+  border-radius: 15px;
+  padding: 0 20px;
+  line-height: 30px;
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  -webkit-transition: background-color 0.1s linear;
+  -moz-transition: background-color 0.1s linear;
+  transition: background-color 0.1s linear; }
+  .btn:hover, .btn-expand:hover {
+    color: white;
+    background-color: #ed30a0; }
+  .btn:active, .btn-expand:active, .btn:visited, .btn-expand:visited, .btn:focus, .btn-expand:focus {
+    color: white; }
+
+.btn-expand {
+  padding-right: 30px; }
+  .btn-expand:after {
+    position: absolute;
+    top: 9px;
+    right: 11px;
+    display: block;
+    content: '';
+    width: 11px;
+    height: 11px;
+    color: #00a2d1;
+    background: url(../images/icon-plus.svg) top left no-repeat transparent;
+    -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.525, 1.65, 0.475, 1.005);
+    -moz-transition: -moz-transform 0.3s cubic-bezier(0.525, 1.65, 0.475, 1.005);
+    transition: transform 0.3s cubic-bezier(0.525, 1.65, 0.475, 1.005);
+    border-radius: 50%; }
+
+.btn-expanded {
+  background-color: #ed30a0; }
+  .btn-expanded:after {
+    transform: rotate(45deg); }
+
+/*  ==========================================================================
+    ==========================================================================
+
+    HEADER
+    1. 
+
+    CSS FORMATTING
+    1. Positioning
+    2. Display & Box Model
+    3. Text
+    4. Other
+
+    ==========================================================================
+    ========================================================================== */
+/*  ==========================================================================
+    1. 
+    ========================================================================== */
 .footer {
   background-color: #005872;
   border-top: 47px solid white;
@@ -887,7 +948,7 @@ blockquote {
 /*  ==========================================================================
     1. Section
     ========================================================================== */
-.header-inner, .top-100-wrapper, .gains-wrapper, .params-wrapper, .media-wrapper, .twitter-wrapper {
+.header-inner, .top-100-wrapper, .gains-wrapper, .media-wrapper, .twitter-wrapper {
   max-width: 1640px;
   margin: 0 auto; }
 
@@ -1502,7 +1563,8 @@ blockquote {
     ==========================================================================
 
     HEADER
-    1. 
+    1. Param Items
+    2. Param Items Panel
 
     CSS FORMATTING
     1. Positioning
@@ -1513,7 +1575,7 @@ blockquote {
     ==========================================================================
     ========================================================================== */
 /*  ==========================================================================
-    1. 
+    1. Param Items
     ========================================================================== */
 .params {
   background-image: linear-gradient(#00a2d1, #014b61); }
@@ -1536,12 +1598,72 @@ blockquote {
           width: 31px;
           height: 36px; } }
 
-.params-image-wrapper {
+.params-wrapper {
+  max-width: 1320px;
+  margin: 0 auto; }
+
+.top-params {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 70px 0 0;
+  padding: 0;
+  list-style: none; }
+  @media (max-width: 700px) {
+    .top-params {
+      display: block; } }
+
+.top-params-item {
   position: relative;
+  z-index: 1;
+  flex-basis: 49%;
+  position: relative;
+  margin: 0 0 50px;
+  padding: 0;
+  background-color: white;
+  border-radius: 4px;
+  border-radius: 4px;
+  box-shadow: 0px 0px 12.2px 7.8px rgba(0, 0, 0, 0.08); }
+  @media (max-width: 1200px) {
+    .top-params-item {
+      margin-bottom: 20px; } }
+
+.top-params-item-top {
+  z-index: 10; }
+
+.top-params-title {
+  min-height: 70px;
+  background-color: #005872;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  margin: -2px 0;
+  padding: 23px 160px;
+  font-size: 18px;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  text-align: center; }
+  @media (max-width: 1200px) {
+    .top-params-title {
+      padding-left: 23px;
+      text-align: left; } }
+  @media (max-width: 900px) {
+    .top-params-title {
+      height: 110px;
+      text-align: center;
+      padding: 23px; } }
+
+.params-image-wrapper {
+  position: absolute;
+  top: -110px;
+  left: 15px;
   width: 100px;
   height: 100px;
   border-radius: 50px;
   background-color: #005872; }
+  @media (max-width: 1200px) {
+    .params-image-wrapper {
+      position: absolute;
+      top: 10px; } }
 
 .top-params-image {
   position: absolute;
@@ -1551,6 +1673,190 @@ blockquote {
   height: 88px;
   border: 4px solid white;
   border-radius: 44px; }
+
+.top-params-details {
+  position: relative;
+  min-height: 118px;
+  padding: 23px;
+  color: #005872; }
+
+.top-params-name {
+  margin: 0;
+  padding-right: 230px;
+  font-size: 36px;
+  font-size: 3.6rem; }
+  @media (max-width: 1200px) {
+    .top-params-name {
+      margin-left: 110px;
+      font-size: 24px;
+      font-size: 2.4rem;
+      padding-right: 0; } }
+
+.top-params-job {
+  margin: 0;
+  font-size: 16px;
+  font-size: 1.6rem; }
+  @media (max-width: 1200px) {
+    .top-params-job {
+      margin-left: 110px;
+      padding-right: 0; } }
+
+.top-params-num {
+  position: absolute;
+  top: 30px;
+  right: 25px;
+  width: 195px;
+  height: 60px;
+  margin-left: 27px;
+  padding: 7px 10px 0 0;
+  background-color: #ed30a0;
+  color: white;
+  font-size: 30px;
+  font-size: 3rem;
+  text-align: center;
+  box-shadow: 1.172px 2.762px 9px 0px rgba(0, 0, 0, 0.16); }
+  .top-params-num:before {
+    position: absolute;
+    top: 0;
+    left: -27px;
+    display: block;
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 30px 27px 30px 0;
+    border-color: transparent #ed30a0 transparent transparent; }
+  @media (max-width: 1200px) {
+    .top-params-num {
+      position: relative;
+      margin: 0 0 0 110px;
+      padding-top: 0;
+      top: auto;
+      right: auto;
+      background-color: transparent;
+      color: #ed30a0;
+      box-shadow: none;
+      text-align: left;
+      width: auto;
+      height: auto; }
+      .top-params-num:before {
+        display: none; } }
+
+.btn-expand-params {
+  position: absolute;
+  top: 20px;
+  right: 25px; }
+  @media (max-width: 900px) {
+    .btn-expand-params {
+      top: 60px;
+      right: auto;
+      left: 50%;
+      transform: translateX(-50%); } }
+
+/*  ==========================================================================
+    2. Param Items Panel
+    ========================================================================== */
+.params-panel {
+  opacity: 0;
+  position: absolute;
+  top: 100px;
+  left: 0;
+  width: 100%;
+  padding: 13px 23px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  background-color: white;
+  box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.25);
+  -webkit-transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+  -moz-transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1); }
+  .params-panel:before {
+    position: absolute;
+    top: -13px;
+    right: 60px;
+    display: block;
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 26px 13px 26px;
+    border-color: transparent transparent #ffffff transparent; }
+  @media (max-width: 900px) {
+    .params-panel:before {
+      right: auto;
+      left: 50%;
+      transform: translateX(-50%); } }
+  @media (max-width: 900px) {
+    .params-panel {
+      top: 130px; } }
+
+.params-panel-display {
+  opacity: 1;
+  top: 70px; }
+  @media (max-width: 900px) {
+    .params-panel-display {
+      top: 110px; } }
+
+.params-panel-list {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+.params-panel-item {
+  display: flex;
+  align-items: center;
+  margin: 8px 0;
+  padding: 0;
+  display: flex;
+  color: #005872; }
+
+.params-panel-index {
+  display: block;
+  float: left;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: #ed30a0;
+  color: white;
+  text-align: center;
+  font-size: 12px;
+  font-size: 1.2rem;
+  line-height: 20px;
+  margin-right: 10px; }
+
+.params-panel-pos {
+  width: 180px;
+  padding-right: 10px; }
+
+.params-panel-link {
+  color: #005872; }
+
+.graph-bar {
+  position: relative;
+  height: 5px;
+  background-color: #e3e3e3; }
+  .graph-bar span {
+    display: block;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #ed30a0; }
+
+.params-bar {
+  flex-grow: 5; }
+  .params-bar span {
+    width: 50%; }
+  @media (max-width: 360px) {
+    .params-bar {
+      display: none; } }
+
+.params-panel-num {
+  width: 63px;
+  padding-left: 15px; }
+  @media (max-width: 360px) {
+    .params-panel-num {
+      padding-left: 5px; } }
 
 /*  ==========================================================================
     ==========================================================================

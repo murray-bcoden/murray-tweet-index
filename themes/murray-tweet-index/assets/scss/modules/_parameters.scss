@@ -2,7 +2,8 @@
     ==========================================================================
 
     HEADER
-    1. 
+    1. Param Items
+    2. Param Items Panel
 
     CSS FORMATTING
     1. Positioning
@@ -15,7 +16,7 @@
 
 
 /*  ==========================================================================
-    1. 
+    1. Param Items
     ========================================================================== */
 
     .params {
@@ -43,17 +44,77 @@
     }
 
     .params-wrapper {
-        @extend %module;
+        max-width: 1320px;
+        margin: 0 auto;
     }
 
+    .top-params {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin: 70px 0 0;
+        padding: 0;
+        list-style: none;
+        @include breakpoint($break-700) {
+            display: block;
+        }
+    }
 
+    .top-params-item {
+        position: relative;
+        z-index: 1;
+        flex-basis: 49%;
+        position: relative;
+        margin: 0 0 50px;
+        padding: 0;
+        background-color: white;
+        border-radius: 4px;
+        border-radius: 4px;
+        box-shadow: 0px 0px 12.2px 7.8px rgba(0, 0, 0, 0.08);
+        @include breakpoint($break-1200) {
+            margin-bottom: 20px;
+        }
+    }
+
+    .top-params-item-top {
+        z-index: 10;
+    }
+
+    .top-params-title {
+        min-height: 70px;
+        background-color: $dark-blue;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        margin: -2px 0 ;
+        padding: 23px 160px;
+        @include font-size($font-18);
+        @extend .sans-semi;
+        text-transform: uppercase;
+        text-align: center;
+        @include breakpoint($break-1200) {
+            padding-left: 23px;
+            text-align: left;
+        }
+        @include breakpoint($break-900) {
+            height: 110px;
+            text-align: center;
+            padding: 23px;
+        }
+    }
 
     .params-image-wrapper {
-        position: relative;
+        position: absolute;
+        top: -110px;
+        left: 15px;
+        //position: relative;
         width: 100px;
         height: 100px;
         border-radius: 50px;
         background-color: $dark-blue;
+        @include breakpoint($break-1200) {
+            position: absolute;
+            top: 10px;
+        }
     }
 
     .top-params-image {
@@ -64,6 +125,215 @@
         height: 88px;
         border: 4px solid white;
         border-radius: 44px;
+    }
+
+    .top-params-details {
+        position: relative;
+        min-height: 118px;
+        padding: 23px;
+        color: $dark-blue;
+        
+    }
+
+    .top-params-name {
+        margin: 0;
+        padding-right: 230px;
+        @include font-size($font-36);
+        @extend .sans-semi;
+        @include breakpoint($break-1200) {
+            margin-left: 110px;
+            @include font-size($font-24);
+            padding-right: 0;
+        }
+    }
+
+    .top-params-job {
+        margin: 0;
+        @include font-size($font-16);
+        @extend .serif;
+        @include breakpoint($break-1200) {
+            margin-left: 110px;
+            //@include font-size($font-14);
+            padding-right: 0;
+        }
+    }
+
+    .top-params-num {
+        position: absolute;
+        top: 30px;
+        right: 25px;
+        width: 195px;
+        height: 60px;
+        margin-left: 27px;
+        padding: 7px 10px 0 0;
+        background-color: $color-brand-2;
+        color: white;
+        @extend .sans-semi;
+        @include font-size($font-30);
+        text-align: center;
+        box-shadow: 1.172px 2.762px 9px 0px rgba(0, 0, 0, 0.16);
+        &:before {
+            position: absolute;
+            top: 0;
+            left: -27px;
+            display: block;
+            content: "";
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 30px 27px 30px 0;
+            border-color: transparent $color-brand-2 transparent transparent;
+        }
+        @include breakpoint($break-1200) {
+            position: relative;
+            margin: 0 0 0 110px;
+            padding-top: 0;
+            top: auto;
+            right: auto;
+            background-color: transparent;
+            color: $color-brand-2;
+            box-shadow: none;
+            text-align: left;
+            width: auto;
+            height: auto;
+            &:before {
+                display: none;
+            }
+        }
+    }
+
+    .btn-expand-params {
+        position: absolute;
+        top: 20px;
+        right: 25px;
+        @include breakpoint($break-900) {
+            top: 60px;
+            right: auto;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    
+/*  ==========================================================================
+    2. Param Items Panel
+    ========================================================================== */
+
+    .params-panel {
+        opacity: 0;
+        position: absolute;
+        top: 100px;
+        left: 0;
+        width: 100%;
+        padding: 13px 23px;
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+        background-color: white;
+        box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.25);
+        @include transition(all 0.3s $easeOutExpo);
+        &:before {
+            position: absolute;
+            top: -13px;
+            //left: 50%;
+            //transform: translateX(-50%);
+            right: 60px;
+            display: block;
+            content: "";
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 26px 13px 26px;
+            border-color: transparent transparent #ffffff transparent;
+        }
+        @include breakpoint($break-900) {
+            &:before {
+                right: auto;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+        @include breakpoint($break-900) {
+            top: 130px;
+        }
+    }
+
+    .params-panel-display {
+        opacity: 1;
+        top: 70px;
+        @include breakpoint($break-900) {
+            top: 110px;
+        }
+    }
+
+    .params-panel-list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .params-panel-item {
+        display: flex;
+        align-items: center;
+        margin: 8px 0;
+        padding: 0;
+        display: flex;
+        color: $dark-blue;
+        @extend .sans-semi;
+    }
+
+    .params-panel-index {
+        display: block;
+        float: left;
+        width: 20px;
+        height: 20px;
+        border-radius: 10px;
+        background-color: $color-brand-2;
+        color: white;
+        text-align: center;
+        @include font-size($font-12);
+        line-height: 20px;
+        margin-right: 10px;
+    }
+
+    .params-panel-pos {
+        width: 180px;
+        padding-right: 10px;
+    }
+
+    .params-panel-link {
+        color: $dark-blue;
+    }
+
+    .graph-bar {
+        position: relative;
+        height: 5px;
+        background-color: #e3e3e3;
+        span {
+            display: block;
+            position: absolute;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: $color-brand-2;
+        }
+    }
+
+    .params-bar {
+        flex-grow: 5;
+        span {
+            width: 50%;
+        }
+        @include breakpoint($break-360) {
+            display: none;
+        }
+    }
+
+    .params-panel-num {
+        width: 63px;
+        padding-left: 15px;
+        @include breakpoint($break-360) {
+            padding-left: 5px;
+        }
     }
 
 
