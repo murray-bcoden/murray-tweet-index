@@ -14,7 +14,9 @@
 	$font-21: 21;
 	$font-24: 24;
 	$font-28: 28;
+	$font-30: 30;
 	$font-32: 32;
+	$font-36: 36;
 	$font-48: 48;
 	$font-72: 72;
 	$font-100: 100;
@@ -42,11 +44,15 @@
 
 	// max widths
 	$break-320: max-width 320px;
+	$break-360: max-width 360px;
 	$break-500: max-width 500px;
 	$break-700: max-width 700px;
 	$break-800: max-width 800px;
+	$break-900: max-width 900px;
 	$break-1200: max-width 1200px;
 	$break-1600: max-width 1600px;
+
+	$break-params: 700px 1200px;
 
 	// max heights
 	$break-700h: max-height 700px;
@@ -107,6 +113,19 @@
 	$gradient-pink-blue: linear-gradient(to right, $color-brand-2, #0b86a6);
     $gradient-blue: linear-gradient( $color-brand-1,  #014b61 );
     $gradient-blue-pink: linear-gradient(to right, #005872, #a63c92);
+
+
+/* 	==========================================================================
+   	Transitions
+   	========================================================================== */
+
+	$easeInExpo: cubic-bezier(0.950, 0.050, 0.795, 0.035);
+	$easeInOutExpo: cubic-bezier(1.000, 0.000, 0.000, 1.000);
+	$easeOutExpo: cubic-bezier(0.190, 1.000, 0.220, 1.000);
+
+	$easeInOutCirc: cubic-bezier(0.785, 0.135, 0.150, 0.860);
+
+	$easeOutBackCustom: cubic-bezier(0.525, 1.650, 0.475, 1.005);
 
 
 
