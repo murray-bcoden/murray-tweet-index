@@ -321,7 +321,7 @@
     .params-bar {
         flex-grow: 5;
         span {
-            width: 50%;
+           //@include transition(width 5s $easeInOutExpo);
         }
         @include breakpoint($break-360) {
             display: none;

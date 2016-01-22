@@ -78,7 +78,7 @@
 								<span class="params-panel-index">1</span><a href="https://twitter.com/davidmcw" target="_blank" class="params-panel-link">@frankmcdonald60</a>
 							</div>
 							<div class="graph-bar params-bar"><span></span></div>
-							<div class="params-panel-num">155,103</div>
+							<div class="params-panel-num">355,103</div>
 						</li>
 						<li class="params-panel-item">
 							<div class="params-panel-pos">

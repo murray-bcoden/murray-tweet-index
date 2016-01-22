@@ -1845,8 +1845,6 @@ blockquote {
 
 .params-bar {
   flex-grow: 5; }
-  .params-bar span {
-    width: 50%; }
   @media (max-width: 360px) {
     .params-bar {
       display: none; } }
