@@ -20,6 +20,7 @@
 
     .categories-wrapper {
     	max-width: 1640px;
+    	margin: 0 auto;
     }
 
     .categories {
@@ -103,8 +104,13 @@
 			color: $color-brand-1;
 		}
 
+		.category-title-wrapper {
+			padding: 14px 7px;
+			background: #e5eef1;
+		}
+
 		.category-title {
-			padding: 14px;
+			// padding: 14px;
 			background: #e5eef1;
 			@extend .sans-semi;
 			color: $dark-blue;
@@ -167,9 +173,9 @@
         opacity: 0;
         position: absolute;
         top: -120px;
-        left: 10%;
-        right: 10%;
-        width: 80%;
+        left: 5%;
+        right: 5%;
+        width: 90%;
         padding: 13px 14px;
         border-radius: 4px;
         background-color: white;
@@ -197,9 +203,21 @@
                 transform: translateX(-50%);
             }
         }
-        @include breakpoint($break-900) {
-            // top: 130px;
-        }
+        @include breakpoint(600px 640px) {
+			left: 3%;
+			right: 3%;
+			width: 94%;
+		}
+        @include breakpoint(800px 840px) {
+			left: 3%;
+			right: 3%;
+			width: 94%;
+		}
+        @include breakpoint(1024px 1145px) {
+			left: 3%;
+			right: 3%;
+			width: 94%;
+		}
     }
 
     .categories-panel-display {
@@ -242,11 +260,22 @@
 
     .categories-panel-pos {
         width: 180px;
-        padding-right: 10px;
     }
 
     .categories-panel-link {
         color: $dark-blue;
+        @include breakpoint(460px 480px) {
+            @include font-size(12);
+        }
+        @include breakpoint(600px 710px) {
+            @include font-size(12);
+        }
+        @include breakpoint(800px 930px) {
+            @include font-size(12);
+        }
+        @include breakpoint(1024px 1145px) {
+            @include font-size(12);
+        }
     }
 
     .categories-panel-num {

@@ -35,7 +35,9 @@
 				<div class="name">Simon Carswell</div>
 				<div class="job-title">US Correspondent, Irish Times</div>
 			</div>
-			<div class="category-title">News</div>
+			<div class="category-title-wrapper">
+				<div class="category-title">News</div>
+			</div>
 		    <div class="icon-wrapper">
 		    	<div class="icon icon-news"></div>
 		        <a href="#" class="btn-expand btn-expand-categories">View Top 5</a>
@@ -79,7 +81,9 @@
 			    <div class="name">Tom Lyons</div>
 			    <div class="job-title">Business Editor, Sunday Business Post</div>
 			</div>
-		    <div class="category-title">Business</div>
+		    <div class="category-title-wrapper">
+				<div class="category-title">Business</div>
+			</div>
 		    <div class="icon-wrapper">
 		    	<div class="icon icon-business"></div>
 		        <a href="#" class="btn-expand btn-expand-categories">View Top 5</a>
@@ -123,7 +127,9 @@
 			    <div class="name">Des Cahill</div>
 			    <div class="job-title">Sports Presenter, RTE</div>
 			</div>
-		    <div class="category-title">Sport</div>
+		    <div class="category-title-wrapper">
+				<div class="category-title">Sport</div>
+			</div>
 		    <div class="icon-wrapper">
 		    	<div class="icon icon-sport"></div>
 		        <a href="#" class="btn-expand btn-expand-categories">View Top 5</a>
@@ -167,7 +173,9 @@
 			    <div class="name">Gavin Reilly</div>
 			    <div class="job-title">Political Correspondent, Today FM</div>
 			</div>
-		    <div class="category-title">Polictics</div>
+		    <div class="category-title-wrapper">
+				<div class="category-title">Polictics</div>
+			</div>
 		    <div class="icon-wrapper">
 		    	<div class="icon icon-politics"></div>
 		        <a href="#" class="btn-expand btn-expand-categories">View Top 5</a>
@@ -211,7 +219,9 @@
 			    <div class="name">George Hook</div>
 			    <div class="job-title">Presenter, Newstalk</div>
 			</div>
-		    <div class="category-title">Broadcast Presenter</div>
+		    <div class="category-title-wrapper">
+				<div class="category-title">Broadcast Presenter</div>
+			</div>
 		    <div class="icon-wrapper">
 		    	<div class="icon icon-broadcast"></div>
 		        <a href="#" class="btn-expand btn-expand-categories">View Top 5</a>
@@ -255,7 +265,9 @@
 			    <div class="name">Conor Pope</div>
 			    <div class="job-title">Consumer Affairs Correspondent, Irish Times</div>
 			</div>
-		    <div class="category-title">Consumer/Personal Finance</div>
+		    <div class="category-title-wrapper">
+				<div class="category-title">Consumer/Personal Finance</div>
+			</div>
 		    <div class="icon-wrapper">
 		    	<div class="icon icon-finance"></div>
 		        <a href="#" class="btn-expand btn-expand-categories">View Top 5</a>
@@ -299,7 +311,9 @@
 			    <div class="name">Suzanne Campbell</div>
 			    <div class="job-title">Food and Farming journalist</div>
 			</div>
-		    <div class="category-title">Agriculture/Farming</div>
+		    <div class="category-title-wrapper">
+				<div class="category-title">Agriculture/Farming</div>
+			</div>
 		    <div class="icon-wrapper">
 		    	<div class="icon icon-agri-farming"></div>
 		        <a href="#" class="btn-expand btn-expand-categories">View Top 5</a>
@@ -343,7 +357,9 @@
 			    <div class="name">Adrian Weckler</div>
 			    <div class="job-title">Technology Editor, Independent Newspapers</div>
 			</div>
-		    <div class="category-title">Technology</div>
+		    <div class="category-title-wrapper">
+				<div class="category-title">Technology</div>
+			</div>
 		    <div class="icon-wrapper">
 		    	<div class="icon icon-technology"></div>
 		        <a href="#" class="btn-expand btn-expand-categories">View Top 5</a>
@@ -387,7 +403,9 @@
 			    <div class="name">Lisa Cannon </div>
 			    <div class="job-title">Presenter, TV3</div>
 			</div>
-		    <div class="category-title">Entertainment</div>
+		    <div class="category-title-wrapper">
+				<div class="category-title">Entertainment</div>
+			</div>
 		    <div class="icon-wrapper">
 		    	<div class="icon icon-entertainment"></div>
 		        <a href="#" class="btn-expand btn-expand-categories">View Top 5</a>
@@ -431,7 +449,9 @@
 			    <div class="name">Una Mullally</div>
 			    <div class="job-title">Columnist, Irish Times</div>
 			</div>
-		    <div class="category-title">Columnist</div>
+		    <div class="category-title-wrapper">
+				<div class="category-title">Columnist</div>
+			</div>
 		    <div class="icon-wrapper">
 		    	<div class="icon icon-columnist"></div>
 		        <a href="#" class="btn-expand btn-expand-categories">View Top 5</a>
@@ -475,7 +495,9 @@
 			    <div class="name">Fergal Bowers</div>
 			    <div class="job-title">Health Correspondent, RTE</div>
 			</div>
-		    <div class="category-title">Health</div>
+		    <div class="category-title-wrapper">
+				<div class="category-title">Health</div>
+			</div>
 		    <div class="icon-wrapper">
 		    	<div class="icon icon-health"></div>
 		        <a href="#" class="btn-expand btn-expand-categories">View Top 5</a>
@@ -519,7 +541,9 @@
 			    <div class="name">Gillian Nelis</div>
 			    <div class="job-title">Managing Editor, Sunday Business Post</div>
 			</div>
-		    <div class="category-title">Food &amp; Drink</div>
+		    <div class="category-title-wrapper">
+				<div class="category-title">Food &amp; Drink</div>
+			</div>
 		    <div class="icon-wrapper">
 		    	<div class="icon icon-food"></div>
 		        <a href="#" class="btn-expand btn-expand-categories">View Top 5</a>
@@ -563,7 +587,9 @@
 			    <div class="name">Bernice Harrison</div>
 			    <div class="job-title">Property Contributor, Irish Times</div>
 			</div>
-		    <div class="category-title">Property</div>
+		    <div class="category-title-wrapper">
+				<div class="category-title">Property</div>
+			</div>
 		    <div class="icon-wrapper">
 		    	<div class="icon icon-property"></div>
 		        <a href="#" class="btn-expand btn-expand-categories">View Top 5</a>
@@ -607,7 +633,9 @@
 			    <div class="name">Brendan Courtney</div>
 			    <div class="job-title">Broadcaster, RTE</div>
 			</div>
-		    <div class="category-title">Fashion</div>
+		    <div class="category-title-wrapper">
+				<div class="category-title">Fashion</div>
+			</div>
 		    <div class="icon-wrapper">
 		    	<div class="icon icon-fashion"></div>
 		        <a href="#" class="btn-expand btn-expand-categories">View Top 5</a>
@@ -651,7 +679,9 @@
 			    <div class="name">Rosita Boland</div>
 			    <div class="job-title">Arts correspondent, Irish Times</div>
 			</div>
-		    <div class="category-title">Arts</div>
+		    <div class="category-title-wrapper">
+				<div class="category-title">Arts</div>
+			</div>
 		    <div class="icon-wrapper">
 		    	<div class="icon icon-arts"></div>
 		        <a href="#" class="btn-expand btn-expand-categories">View Top 5</a>
@@ -695,7 +725,9 @@
 			    <div class="name">David Cochrane</div>
 			    <div class="job-title">Communities Editor, Irish Times</div>
 			</div>
-		    <div class="category-title">Editorial</div>
+		    <div class="category-title-wrapper">
+				<div class="category-title">Editorial</div>
+			</div>
 		    <div class="icon-wrapper">
 		    	<div class="icon icon-editorial"></div>
 		        <a href="#" class="btn-expand btn-expand-categories">View Top 5</a>
@@ -739,7 +771,9 @@
 			    <div class="name">Karen Constantine</div>
 			    <div class="job-title">Blogger, Lovely Girlie Bits</div>
 			</div>
-		    <div class="category-title">Beauty</div>
+		    <div class="category-title-wrapper">
+				<div class="category-title">Beauty</div>
+			</div>
 		    <div class="icon-wrapper">
 		    	<div class="icon icon-beauty"></div>
 		        <a href="#" class="btn-expand btn-expand-categories">View Top 5</a>

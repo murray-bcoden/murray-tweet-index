@@ -9,6 +9,7 @@
 // @codekit-prepend "vendor/zurb/responsive-tables.js";
 // @codekit-prepend "vendor/selectric/jquery.selectric.min.js";
 // @codekit-prepend "vendor/slick-carousel/slick.min.js";
+// @codekit-prepend "vendor/match-height/match-height.js";
 // @codekit-prepend "vendor/plugins.js";
 // @codekit-prepend "vendor/outdatedbrowser/outdatedbrowser.js";
 
@@ -20,6 +21,9 @@ jQuery(document).ready(function($){
 	/*  ==========================================================================
 	    4 Categories
 	    ========================================================================== */
+
+	$('.category-title-wrapper').matchHeight();
+
 	// Initialise Selectric Dropdown and Slick Carousel
 	$('#categories').selectric();
   
@@ -49,15 +53,6 @@ jQuery(document).ready(function($){
 		}, {
 			breakpoint: 800,
 			settings: {
-				slidesToShow: 4,
-				slidesToScroll: 4,
-				infinite: true,
-				dots: true,
-				arrows: false
-			}
-		}, {
-			breakpoint: 600,
-			settings: {
 				slidesToShow: 3,
 				slidesToScroll: 3,
 				infinite: true,
@@ -65,7 +60,7 @@ jQuery(document).ready(function($){
 				arrows: false
 			}
 		}, {
-			breakpoint: 480,
+			breakpoint: 600,
 			settings: {
 				slidesToShow: 2,
 				slidesToScroll: 2,
@@ -74,12 +69,12 @@ jQuery(document).ready(function($){
 				arrows: false
 			}
 		}, {
-			breakpoint: 320,
+			breakpoint: 460,
 			settings: {
 				slidesToShow: 1,
 				slidesToScroll: 1,
 				infinite: true,
-				dots: true,
+				dots: false,
 				arrows: false
 			}
 		}]
@@ -93,7 +88,7 @@ jQuery(document).ready(function($){
 		$('.responsive').slick('slickGoTo', parseInt(categoryCurrentIndex));
 	});
 
-
+	// Expand the Top 5 lists for categories
 	$(".btn-expand-categories").click(function(e) {
 		
 		// if already expanded ?
