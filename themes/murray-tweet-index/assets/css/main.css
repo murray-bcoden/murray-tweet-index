@@ -2343,6 +2343,9 @@ blockquote {
   padding: 74px 0px 0px;
   background: #005872;
   border-radius: 3px; }
+  .category:hover {
+    box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.25);
+    z-index: 10; }
   .category .category-image-wrapper {
     position: absolute;
     width: 100px;
@@ -2462,9 +2465,9 @@ blockquote {
               transform: translateX(-50%); } }
   @media (min-width: 600px) and (max-width: 640px) {
     .categories-panel {
-      left: 3%;
-      right: 3%;
-      width: 94%; } }
+      left: 2%;
+      right: 2%;
+      width: 96%; } }
   @media (min-width: 800px) and (max-width: 840px) {
     .categories-panel {
       left: 3%;
