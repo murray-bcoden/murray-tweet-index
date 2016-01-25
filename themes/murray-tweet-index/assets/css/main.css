@@ -803,7 +803,6 @@ cite {
 
     HEADER
     1. Base Testimonial
-    2. Colour Variants
 
     CSS FORMATTING
     1. Positioning
@@ -848,9 +847,6 @@ blockquote {
       width: 70%;
       margin: 10px auto; } }
 
-/*  ==========================================================================
-    2. Colour Variants
-    ========================================================================== */
 /*  ==========================================================================
     ==========================================================================
 
@@ -1557,7 +1553,49 @@ blockquote {
     1. 
     ========================================================================== */
 .followers {
+  padding-bottom: 0;
   background-image: linear-gradient(to right, #005872, #a63c92); }
+
+.followers-image-wrapper {
+  max-width: 1313px;
+  margin: 40px auto -62px;
+  position: relative;
+  background: url("../images/total-followers-large.svg") center bottom no-repeat; }
+  .followers-image-wrapper:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: 51.7136329018%; }
+  .followers-image-wrapper > .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; }
+  @media (max-width: 800px) {
+    .followers-image-wrapper {
+      max-width: 656px;
+      position: relative;
+      background: url("../images/total-followers-small.svg") center bottom no-repeat; }
+      .followers-image-wrapper:before {
+        display: block;
+        content: "";
+        width: 100%;
+        padding-top: 103.506097561%; }
+      .followers-image-wrapper > .content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0; } }
+
+.followers-quote-wrapper {
+  background-color: #005872;
+  margin: 0 -20px;
+  padding: 70px 0 1px; }
+
+.followers-quote {
+  color: #59abc3; }
 
 /*  ==========================================================================
     ==========================================================================

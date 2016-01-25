@@ -19,5 +19,28 @@
     ========================================================================== */
 
     .followers {
+        padding-bottom: 0;
     	background-image: $gradient-blue-pink;
+    }
+
+    .followers-image-wrapper {
+        max-width: 1313px;
+        margin: 40px auto -62px;
+        @include aspect-ratio(1313, 679);
+        background: url('../images/total-followers-large.svg') center bottom no-repeat;
+        @include breakpoint($break-800) {
+            max-width: 656px;
+            @include aspect-ratio(656, 679);
+            background: url('../images/total-followers-small.svg') center bottom no-repeat;
+        }
+    }
+
+    .followers-quote-wrapper {
+        background-color: $dark-blue;
+        margin: 0 -20px;
+        padding: 70px 0 1px;
+    }
+
+    .followers-quote {
+        color: #59abc3;
     }
