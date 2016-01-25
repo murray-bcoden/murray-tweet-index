@@ -599,13 +599,10 @@ html {
 
 body {
   -webkit-font-kerning: normal;
-     -moz-font-kerning: normal;
           font-kerning: normal;
   -webkit-font-variant-ligatures: common-ligatures, contextual;
-     -moz-font-variant-ligatures: common-ligatures, contextual;
           font-variant-ligatures: common-ligatures, contextual;
   -webkit-font-feature-settings: "kern", "liga", "frac", "pnum";
-  -moz-font-feature-settings: "kern", "liga", "frac", "pnum";
   -ms-font-feature-settings: "kern", "liga", "frac", "pnum";
   font-feature-settings: "kern", "liga", "frac", "pnum";
   color: #ffffff;
@@ -652,9 +649,9 @@ a {
   color: #00a2d1;
   text-decoration: none; }
   a:hover {
-    color: #006784; }
+    color: #006785; }
   a:active, a:focus {
-    color: #006784;
+    color: #006785;
     outline: none; }
 
 hr {
@@ -1306,7 +1303,9 @@ blockquote {
     color: #00a2d1;
     background: url(../images/icon-plus.svg) top left no-repeat transparent;
     -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.525, 1.65, 0.475, 1.005);
+    transition: -webkit-transform 0.3s cubic-bezier(0.525, 1.65, 0.475, 1.005);
     transition: transform 0.3s cubic-bezier(0.525, 1.65, 0.475, 1.005);
+    transition: transform 0.3s cubic-bezier(0.525, 1.65, 0.475, 1.005), -webkit-transform 0.3s cubic-bezier(0.525, 1.65, 0.475, 1.005);
     border-radius: 50%; }
 
 .btn-expanded {
@@ -1347,7 +1346,9 @@ blockquote {
       background-size: 900px 500px;
       border: none;
       -webkit-transition: -webkit-transform 300ms cubic-bezier(0.86, 0, 0.07, 1);
-      transition: transform 300ms cubic-bezier(0.86, 0, 0.07, 1); }
+      transition: -webkit-transform 300ms cubic-bezier(0.86, 0, 0.07, 1);
+      transition: transform 300ms cubic-bezier(0.86, 0, 0.07, 1);
+      transition: transform 300ms cubic-bezier(0.86, 0, 0.07, 1), -webkit-transform 300ms cubic-bezier(0.86, 0, 0.07, 1); }
 
 .selectric-open .selectric .button {
   color: white; }
@@ -1388,7 +1389,6 @@ blockquote {
   -moz-box-sizing: border-box;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
-  -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
@@ -1703,6 +1703,9 @@ blockquote {
   text-transform: uppercase; }
 
 .methodology-content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex; }
   @media (max-width: 700px) {
     .methodology-content {
@@ -1745,11 +1748,19 @@ blockquote {
       text-decoration: underline; }
 
 .footnote {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  align-items: flex-end;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   margin-top: 50px; }
   .footnote > * {
-    flex-basis: 50%; }
+    -webkit-flex-basis: 50%;
+        -ms-flex-preferred-size: 50%;
+            flex-basis: 50%; }
 
 .credit {
   text-transform: uppercase;
@@ -3006,6 +3017,9 @@ blockquote {
 
 .params-quote-wrapper {
   position: relative; }
+  @media (max-width: 1200px) {
+    .params-quote-wrapper {
+      padding-top: 30px; } }
   .params-quote-wrapper span {
     position: absolute;
     z-index: 0;
@@ -3020,6 +3034,10 @@ blockquote {
     z-index: 0;
     opacity: 0.15;
     background: url("../images/icon-twitter.svg") center center no-repeat; }
+    @media (max-width: 1200px) {
+      .params-quote-wrapper span {
+        top: 68px;
+        height: 110px; } }
 
 .params-quote {
   position: relative;
