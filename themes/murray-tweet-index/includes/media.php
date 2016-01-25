@@ -73,5 +73,9 @@
 
 
 	</div>
+
+	<blockquote class="media-quote">
+		<p>Not surprisingly, given its scale, RTE has the most journalists in the top 100, with the second placed Irish Times just pipping Independent News &amp; Media into third place.</p>
+	</blockquote>
 	
 </section>

@@ -26,7 +26,7 @@
                 <div class="header-inner">
                 
                     <div class="header-top">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/murray-logo.svg" class="murray-logo" alt="Murray Logo">
+                        <a href="http://www.murrayconsult.ie/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/murray-logo.svg" class="murray-logo" alt="Murray Logo"></a>
                         <h1 class="murray-subtitle">#murray<span>tweet</span>index</h1>
                     </div>
                     <div class="header-content">

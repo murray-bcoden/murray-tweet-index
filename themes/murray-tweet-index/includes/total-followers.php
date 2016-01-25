@@ -9,7 +9,7 @@
 	</div>
 	<div class="followers-quote-wrapper">
 		<blockquote class="followers-quote">
-			<p>This research shows us the journalists who are most successfully reaching out on Twitter and engaging with their readers and listeners.</p>
+			<p>The reach of Irish journalists on Twitter continues to surge with the top 100 journalists listed having a combined 2.3m followers, up 15% on last year.</p>
 		</blockquote>
 	</div>
 </section>
