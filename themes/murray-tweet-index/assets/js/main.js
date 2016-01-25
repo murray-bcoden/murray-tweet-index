@@ -3,15 +3,9 @@
 // @codekit-prepend "vendor/greensock/plugins/ScrollToPlugin.min.js";
 // @codekit-prepend "vendor/greensock/easing/EasePack.min.js";
 // @codekit-prepend "vendor/greensock/TweenLite.min.js";
-// @codekit-prepend "vendor/modernizr-2.8.3.min.js";
-// @codekit-prepend "vendor/mmenu/jquery.mmenu.min.js"; 
-// @codekit-prepend "vendor/respond.min.js";
-// @codekit-prepend "vendor/zurb/responsive-tables.js";
 // @codekit-prepend "vendor/selectric/jquery.selectric.min.js";
 // @codekit-prepend "vendor/slick-carousel/slick.min.js";
 // @codekit-prepend "vendor/match-height/match-height.js";
-// @codekit-prepend "vendor/plugins.js";
-// @codekit-prepend "vendor/outdatedbrowser/outdatedbrowser.js";
 
 
 jQuery(document).ready(function($){
@@ -34,34 +28,34 @@ jQuery(document).ready(function($){
 		slidesToScroll: 5,
 		dots: true,
 		responsive: [{
-			breakpoint: 1440,
-			settings: {
-				slidesToShow: 5,
-				slidesToScroll: 5,
-				infinite: true,
-				dots: true,
-				arrows: false
-			}
-		}, {
-			breakpoint: 1024,
+			breakpoint: 1300,
 			settings: {
 				slidesToShow: 4,
 				slidesToScroll: 4,
 				infinite: true,
 				dots: true,
-				arrows: false
+				arrows: true
 			}
 		}, {
-			breakpoint: 800,
+			breakpoint: 1100,
 			settings: {
 				slidesToShow: 3,
 				slidesToScroll: 3,
 				infinite: true,
 				dots: true,
-				arrows: false
+				arrows: true
 			}
 		}, {
-			breakpoint: 600,
+			breakpoint: 900,
+			settings: {
+				slidesToShow: 2,
+				slidesToScroll: 2,
+				infinite: true,
+				dots: true,
+				arrows: true
+			}
+		}, {
+			breakpoint: 700,
 			settings: {
 				slidesToShow: 2,
 				slidesToScroll: 2,
@@ -70,12 +64,12 @@ jQuery(document).ready(function($){
 				arrows: false
 			}
 		}, {
-			breakpoint: 460,
+			breakpoint: 500,
 			settings: {
 				slidesToShow: 1,
 				slidesToScroll: 1,
 				infinite: true,
-				dots: false,
+				dots: true,
 				arrows: false
 			}
 		}]
@@ -126,7 +120,7 @@ jQuery(document).ready(function($){
 
 	
 	/*  ==========================================================================
-	    6 Parameters
+	    Parameters panels
 	    ========================================================================== */
 
 
@@ -165,7 +159,7 @@ jQuery(document).ready(function($){
 	}
 
 	/*  ==========================================================================
-	    6 Parameters
+	    Parameter Graphs
 	    ========================================================================== */
 
 	function initParamGraphs($link) {

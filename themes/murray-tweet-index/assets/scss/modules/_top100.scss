@@ -180,24 +180,6 @@
         &:nth-of-type(even) {
             margin-left: 23px;
         }
-        &:nth-of-type(4n + 1), &:nth-of-type(4n + 2)  {
-            .top-bar {
-                background-color: $bright-blue;
-            }
-            .top-num {
-                background-color: $color-brand-1;
-            }
-        }
-        &:nth-of-type(4n + 3), &:nth-of-type(4n + 4)  {
-            .top-image-wrapper {
-                background-color: $bright-blue;
-            }
-        }
-        &:first-child {
-            .top-bar {
-                background-color: $color-brand-2;
-            }
-        }
         &:after, &:before {
             display: block;
             content: '';
@@ -223,6 +205,26 @@
             width: auto;
             &:after, &:before {
                 display: none;
+            }
+        }
+        @include breakpoint($break-1201) {
+            &:nth-of-type(4n + 1), &:nth-of-type(4n + 2)  {
+                .top-bar {
+                    background-color: $bright-blue;
+                }
+                .top-num {
+                    background-color: $color-brand-1;
+                }
+            }
+            &:nth-of-type(4n + 3), &:nth-of-type(4n + 4)  {
+                .top-image-wrapper {
+                    background-color: $bright-blue;
+                }
+            }
+        }
+        &:first-child {
+            .top-bar {
+                background-color: $color-brand-2;
             }
         }
     }

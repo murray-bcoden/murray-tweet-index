@@ -1315,10 +1315,28 @@ blockquote {
         -ms-transform: rotate(45deg);
             transform: rotate(45deg); }
 
+/*  ==========================================================================
+    ==========================================================================
+
+    HEADER
+    1. Selectric
+
+    CSS FORMATTING
+    1. Positioning
+    2. Display & Box Model
+    3. Text
+    4. Other
+
+    ==========================================================================
+    ========================================================================== */
+/*  ==========================================================================
+    1. Selectric
+    ========================================================================== */
 .selectric-wrapper {
   margin: 21px auto 60px;
   width: 100%;
-  max-width: 325px; }
+  max-width: 325px;
+  box-shadow: 0px 6px 15px 0px rgba(0, 0, 0, 0.15); }
 
 .selectric {
   height: 41px;
@@ -1333,7 +1351,7 @@ blockquote {
     font-size: 1.6rem;
     color: #005872; }
   .selectric .button {
-    width: 41px;
+    width: 49px;
     height: 41px;
     background-color: #ed30a0;
     border-top-right-radius: 3px;
@@ -1341,7 +1359,7 @@ blockquote {
     color: white; }
     .selectric .button:after {
       width: 13px;
-      height: 8px;
+      height: 9px;
       background: url("../images/mti-sprites-@2x.png") no-repeat 0 0 transparent;
       background-size: 900px 500px;
       border: none;
@@ -1358,9 +1376,11 @@ blockquote {
             transform: rotate(180deg); }
 
 .selectric-items {
-  padding-left: 6px;
-  padding-right: 8px;
-  border-radius: 3px; }
+  margin-top: 1px;
+  padding: 15px 6px;
+  border-radius: 3px;
+  border: none;
+  box-shadow: 0px 6px 15px 0px rgba(0, 0, 0, 0.3); }
   .selectric-items ::-webkit-scrollbar {
     width: 6px;
     height: 6px; }
@@ -1378,11 +1398,17 @@ blockquote {
   color: #005872; }
 
 .selectric-items li:hover {
+  background: #efefef; }
+
+.selectric-items li.selected {
   background: #ed30a0;
   color: white; }
 
 /* Slider */
 .slick-slider {
+  max-width: 1464px;
+  margin: 0px auto 30px;
+  padding: 0 92px;
   position: relative;
   display: block;
   box-sizing: border-box;
@@ -1395,12 +1421,15 @@ blockquote {
   -ms-touch-action: none;
   touch-action: none;
   -webkit-tap-highlight-color: transparent; }
+  @media (max-width: 700px) {
+    .slick-slider {
+      padding: 0; } }
 
 .slick-list {
   position: relative;
   overflow: hidden;
   display: block;
-  margin: 0;
+  margin: 0 auto;
   padding: 0; }
   .slick-list:focus {
     outline: none; }
@@ -1487,12 +1516,12 @@ blockquote {
   content: ''; }
 
 .slick-prev {
-  left: -70px; }
+  left: 20px; }
   .slick-prev:before {
     background-position: -50px 0; }
 
 .slick-next {
-  right: -70px; }
+  right: 20px; }
   .slick-next:before {
     background-position: -100px 0; }
 
@@ -1500,10 +1529,6 @@ blockquote {
   background: #ed30a0; }
 
 /* Dots */
-.slick-slider {
-  max-width: 1280px;
-  margin: 0px auto 30px; }
-
 /* the slides */
 .slick-slide {
   margin: 0 1px; }
@@ -1515,6 +1540,7 @@ blockquote {
 /* Dots */
 .slick-dots {
   position: absolute;
+  left: 0;
   bottom: -60px;
   list-style: none;
   display: block;
@@ -1524,8 +1550,8 @@ blockquote {
   .slick-dots li {
     position: relative;
     display: inline-block;
-    height: 20px;
-    width: 20px;
+    height: 10px;
+    width: 10px;
     margin: 0px 5px;
     padding: 0px;
     cursor: pointer; }
@@ -1533,8 +1559,8 @@ blockquote {
       border: 0;
       background: transparent;
       display: block;
-      height: 20px;
-      width: 20px;
+      height: 10px;
+      width: 10px;
       outline: none;
       line-height: 0;
       font-size: 0;
@@ -1549,8 +1575,8 @@ blockquote {
         top: 0;
         left: 0;
         content: '';
-        width: 20px;
-        height: 20px;
+        width: 10px;
+        height: 10px;
         text-align: center;
         background-color: #00a2d1;
         opacity: 1;
@@ -1560,6 +1586,16 @@ blockquote {
     .slick-dots li.slick-active button:before {
       background-color: #ed30a0;
       opacity: 1; }
+  @media (max-width: 400px) {
+    .slick-dots li {
+      width: 5px;
+      height: 5px; }
+      .slick-dots li button {
+        width: 5px;
+        height: 5px; }
+        .slick-dots li button:before {
+          width: 5px;
+          height: 5px; } }
 
 .icon-wrapper {
   position: relative;
@@ -2142,14 +2178,6 @@ blockquote {
   float: left; }
   .top-item:nth-of-type(even) {
     margin-left: 23px; }
-  .top-item:nth-of-type(4n + 1) .top-bar, .top-item:nth-of-type(4n + 2) .top-bar {
-    background-color: #39bccd; }
-  .top-item:nth-of-type(4n + 1) .top-num, .top-item:nth-of-type(4n + 2) .top-num {
-    background-color: #00a2d1; }
-  .top-item:nth-of-type(4n + 3) .top-image-wrapper, .top-item:nth-of-type(4n + 4) .top-image-wrapper {
-    background-color: #39bccd; }
-  .top-item:first-child .top-bar {
-    background-color: #ed30a0; }
   .top-item:after, .top-item:before {
     display: block;
     content: '';
@@ -2173,6 +2201,15 @@ blockquote {
       width: auto; }
       .top-item:after, .top-item:before {
         display: none; } }
+  @media (min-width: 1201px) {
+    .top-item:nth-of-type(4n + 1) .top-bar, .top-item:nth-of-type(4n + 2) .top-bar {
+      background-color: #39bccd; }
+    .top-item:nth-of-type(4n + 1) .top-num, .top-item:nth-of-type(4n + 2) .top-num {
+      background-color: #00a2d1; }
+    .top-item:nth-of-type(4n + 3) .top-image-wrapper, .top-item:nth-of-type(4n + 4) .top-image-wrapper {
+      background-color: #39bccd; } }
+  .top-item:first-child .top-bar {
+    background-color: #ed30a0; }
 
 .top-link {
   position: relative;
@@ -2429,7 +2466,9 @@ blockquote {
   margin-top: 50px;
   padding: 74px 0px 0px;
   background: #005872;
-  border-radius: 3px; }
+  border-radius: 3px;
+  -webkit-transition: box-shadow 0.2 linear;
+  transition: box-shadow 0.2 linear; }
   .category:hover {
     box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.25);
     z-index: 10; }
