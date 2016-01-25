@@ -1446,7 +1446,7 @@ blockquote {
 
 /* Dots */
 .slick-slider {
-  max-width: 1280px;
+  max-width: 1140px;
   margin: 0px auto 30px; }
 
 /* the slides */
@@ -2352,11 +2352,11 @@ blockquote {
     position: absolute;
     width: auto;
     height: auto;
-    bottom: 10px;
+    bottom: 30px;
     left: 50%;
     transform: translateX(-50%);
     display: inline-block;
-    padding: 10px 32px 10px 19px;
+    padding: 5px 32px 5px 19px;
     background: #ed30a0;
     border-radius: 20px;
     font-size: 12px;
