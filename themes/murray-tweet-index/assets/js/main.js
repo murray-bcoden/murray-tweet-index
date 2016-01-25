@@ -43,6 +43,8 @@ jQuery(document).ready(function($){
 				slidesToShow: 4,
 				slidesToScroll: 4,
 				infinite: true,
+				dots: true,
+				arrows: false
 			}
 		}, {
 			breakpoint: 800,
@@ -50,6 +52,8 @@ jQuery(document).ready(function($){
 				slidesToShow: 4,
 				slidesToScroll: 4,
 				infinite: true,
+				dots: true,
+				arrows: false
 			}
 		}, {
 			breakpoint: 600,
@@ -57,6 +61,8 @@ jQuery(document).ready(function($){
 				slidesToShow: 3,
 				slidesToScroll: 3,
 				infinite: true,
+				dots: true,
+				arrows: false
 			}
 		}, {
 			breakpoint: 480,
@@ -64,6 +70,8 @@ jQuery(document).ready(function($){
 				slidesToShow: 2,
 				slidesToScroll: 2,
 				infinite: true,
+				dots: true,
+				arrows: false
 			}
 		}, {
 			breakpoint: 320,
@@ -71,6 +79,8 @@ jQuery(document).ready(function($){
 				slidesToShow: 1,
 				slidesToScroll: 1,
 				infinite: true,
+				dots: true,
+				arrows: false
 			}
 		}]
 	});
