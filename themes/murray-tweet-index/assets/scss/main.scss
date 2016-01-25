@@ -18,9 +18,17 @@
 
 @import "shame";
 
+// Vendor
+@import "vendor/selectric/selectric";
+@import "vendor/slick-carousel/slick";
+@import "vendor/slick-carousel/slick-theme";
+
 // Components
 @import "components/testimonials";
 @import "components/buttons";
+@import "components/dropdowns";
+@import "components/carousels";
+@import "components/icons";
 
 // Helpers
 //@import "helpers/functions";
@@ -33,8 +41,6 @@
 // Pages
 //@import "pages/contact";
 //@import "pages/home";
-
-// Vendor
 
 // Modules
 @import "modules/sections";

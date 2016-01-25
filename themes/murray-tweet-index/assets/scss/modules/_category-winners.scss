@@ -18,6 +18,10 @@
     1. 
     ========================================================================== */
 
+    .categories-wrapper {
+    	max-width: 1640px;
+    }
+
     .categories {
     	background-image: $gradient-blue;
         .section-title {
@@ -41,3 +45,120 @@
             }
         }
     }
+
+    .categories-cta {
+    	margin-top: 50px;
+    	@extend .sans-semi;
+    	@include font-size(14);
+    	text-align: center;
+    	text-transform: uppercase;
+    }
+
+
+	.category {
+		position: relative;
+		margin-top: 50px;
+		padding: 74px 0px 0px;
+		background: $dark-blue;
+		border-radius: 3px;
+
+		.category-image-wrapper {
+			position: absolute;
+			width: 100px;
+			height: 100px;
+			left: 50%;
+			top: -50px;
+			transform: translateX(-50%);
+			background: $dark-blue;
+			padding: 4px;
+			border-radius: 50%;
+		}
+		.twitter-profile {
+		    // display: inline-block;
+			position: absolute;
+		    width: 84px;
+		    height: 84px;
+			left: 8px;
+			top: 8px;
+		    border-radius: 50%;
+		    border: solid 6px white;
+		    &.slick-loading {
+		        background: white url(../images/ajax-loader.gif) center center no-repeat;
+		        padding-bottom: 100%;
+		    }
+		}
+
+		.name {
+			@extend .sans-light;
+			@include font-size(24);
+			text-align: center;
+		}
+
+		.job-title {
+			margin-bottom: 40px;
+			padding: 0px 21px;
+			@extend .serif;
+			@include font-size(16);
+			text-align: center;
+			color: $color-brand-1;
+		}
+
+		.category-title {
+			padding: 14px;
+			background: #e5eef1;
+			@extend .sans-semi;
+			color: $dark-blue;
+			text-align: center;
+			text-transform: uppercase;
+		}
+
+		.category-winner {
+			height: 160px;
+		}
+
+		.show-more-link {
+			position: absolute;
+			width: auto;
+			height: auto;
+			bottom: 30px;
+			left: 50%;
+			transform: translateX(-50%);
+			display: inline-block;
+			padding: 0 20px;
+			background: $color-brand-2;
+			border-radius: 20px;
+			line-height: 30px;
+			@extend .sans-semi;
+			@include font-size(12);
+			text-transform: uppercase;
+			color: white;
+		}
+
+		.show-more {
+			display: none;
+			position: absolute;
+			width: 80%;
+			height: auto;
+			bottom: 5px;
+			left: 50%;
+			transform: translateX(-50%);
+			padding: 5px;
+			background: #cccccc;
+
+			p {
+				width: 80%;
+				float: left;
+				color: white;
+			}
+
+			.close {
+				width: 20%;
+				float: left;
+				color: red;
+			}
+		}
+	}
+
+	.category-top-5 {
+		display: none;
+	}

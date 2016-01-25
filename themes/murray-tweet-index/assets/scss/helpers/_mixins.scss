@@ -20,3 +20,21 @@
         bottom: 0;
     }
 }
+
+@mixin scrollbars($size, $foreground-color) {
+  // For Google Chrome
+  ::-webkit-scrollbar {
+      width:  $size;
+      height: $size;
+  }
+
+  ::-webkit-scrollbar-thumb {
+      background: $foreground-color;
+      border-radius: 3px;
+  }
+
+  // For Internet Explorer
+  body {
+    scrollbar-face-color: $foreground-color;
+  }
+}
