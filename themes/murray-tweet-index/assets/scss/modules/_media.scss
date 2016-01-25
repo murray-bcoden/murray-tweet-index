@@ -24,34 +24,45 @@
 
     .media-wrapper {
         @extend %module;
+        max-width: 1320px;
     }
 
     .media-info-wrap {
         display: flex;
         justify-content: space-around;
         align-items: center;
-        margin-top: 40px;
+        margin-top: 90px;
+        @include breakpoint($break-1000) {
+            display: block;
+        }
     }
 
     .media-type-wrapper {
         flex-basis: 50%;
         flex-grow: 1;
-        //width: 50%;
     }
 
     .media-type {
         display: block;
         max-width: 664px;
+        @include breakpoint($break-1000) {
+            margin: 80px auto 80px;
+        }
     }
 
     .most-list-wrapper {
         flex-basis: 50%;
         flex-grow: 1;
         margin: 0 0 0 5%;
+        @include breakpoint($break-1000) {
+            max-width: 650px;
+            margin: 0 auto;
+        }
     }
 
     .most-list-title {
         text-transform: uppercase;
+        margin: 0 0 40px;
         @include font-size($font-24);
         @extend .sans-light;
     }
@@ -78,6 +89,9 @@
 
     .most-bar {
         flex-grow: 1;
+        @include breakpoint($break-400) {
+            display: none;
+        }
     }
 
     .most-num {

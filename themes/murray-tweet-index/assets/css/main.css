@@ -1914,11 +1914,17 @@ blockquote {
 .media {
   background: linear-gradient(to right, #ed30a0, #0b86a6); }
 
+.media-wrapper {
+  max-width: 1320px; }
+
 .media-info-wrap {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin-top: 40px; }
+  margin-top: 90px; }
+  @media (max-width: 1000px) {
+    .media-info-wrap {
+      display: block; } }
 
 .media-type-wrapper {
   flex-basis: 50%;
@@ -1927,14 +1933,22 @@ blockquote {
 .media-type {
   display: block;
   max-width: 664px; }
+  @media (max-width: 1000px) {
+    .media-type {
+      margin: 80px auto 80px; } }
 
 .most-list-wrapper {
   flex-basis: 50%;
   flex-grow: 1;
   margin: 0 0 0 5%; }
+  @media (max-width: 1000px) {
+    .most-list-wrapper {
+      max-width: 650px;
+      margin: 0 auto; } }
 
 .most-list-title {
   text-transform: uppercase;
+  margin: 0 0 40px;
   font-size: 24px;
   font-size: 2.4rem; }
 
@@ -1956,6 +1970,9 @@ blockquote {
 
 .most-bar {
   flex-grow: 1; }
+  @media (max-width: 400px) {
+    .most-bar {
+      display: none; } }
 
 .most-num {
   width: 60px;
