@@ -32,6 +32,7 @@ jQuery(document).ready(function($){
 		speed: 300,
 		slidesToShow: 5,
 		slidesToScroll: 5,
+		dots: true,
 		responsive: [{
 			breakpoint: 1440,
 			settings: {

@@ -2356,16 +2356,15 @@ blockquote {
         -ms-transform: translateX(-50%);
             transform: translateX(-50%);
     background: #005872;
-    padding: 4px;
-    border-radius: 50%; }
+    border-radius: 50px; }
   .category .twitter-profile {
     position: absolute;
-    width: 84px;
-    height: 84px;
-    left: 8px;
-    top: 8px;
-    border-radius: 50%;
-    border: solid 6px white; }
+    width: 88px;
+    height: 88px;
+    left: 6px;
+    top: 6px;
+    border-radius: 44px;
+    border: solid 4px white; }
     .category .twitter-profile.slick-loading {
       background: white url(../images/ajax-loader.gif) center center no-repeat;
       padding-bottom: 100%; }
