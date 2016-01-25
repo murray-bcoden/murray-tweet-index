@@ -124,9 +124,10 @@
 			left: 50%;
 			transform: translateX(-50%);
 			display: inline-block;
-			padding: 5px 32px 5px 19px;
+			padding: 0 20px;
 			background: $color-brand-2;
 			border-radius: 20px;
+			line-height: 30px;
 			@extend .sans-semi;
 			@include font-size(12);
 			text-transform: uppercase;

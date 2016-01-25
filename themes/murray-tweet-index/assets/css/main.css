@@ -1441,12 +1441,12 @@ blockquote {
     background-position: -100px 0; }
 
 .slick-prev:hover, .slick-prev:focus, .slick-next:hover, .slick-next:focus {
-  background: white;
-  opacity: 0.5; }
+  background: #ed30a0;
+  color: white; }
 
 /* Dots */
 .slick-slider {
-  max-width: 1140px;
+  max-width: 1280px;
   margin: 0px auto 30px; }
 
 /* the slides */
@@ -1545,16 +1545,16 @@ blockquote {
         content: '\2022';
         width: 20px;
         height: 20px;
-        font-family: "slick";
-        font-size: 20px;
-        line-height: 20px;
+        font-size: 40px;
+        line-height: 40px;
         text-align: center;
-        color: white;
-        opacity: 0.25;
+        color: #00a2d1;
+        opacity: 1;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale; }
     .slick-dots li.slick-active button:before {
-      opacity: 0.75; }
+      color: #ed30a0;
+      opacity: 1; }
 
 .icon-wrapper {
   position: relative;
@@ -1613,8 +1613,8 @@ blockquote {
   background-position: -300px -50px; }
 
 .icon-technology {
-  width: 41px;
-  height: 41px;
+  width: 42px;
+  height: 42px;
   background-position: -350px -50px; }
 
 .icon-entertainment {
@@ -2356,9 +2356,10 @@ blockquote {
     left: 50%;
     transform: translateX(-50%);
     display: inline-block;
-    padding: 5px 32px 5px 19px;
+    padding: 0 20px;
     background: #ed30a0;
     border-radius: 20px;
+    line-height: 30px;
     font-size: 12px;
     font-size: 1.2rem;
     text-transform: uppercase;
