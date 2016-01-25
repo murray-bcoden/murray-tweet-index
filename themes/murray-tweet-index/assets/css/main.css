@@ -2498,7 +2498,7 @@ blockquote {
         bottom: 0; } }
 
 .followers-quote-wrapper {
-  background-color: #005872;
+  background-color: #014b61;
   margin: 0 -20px;
   padding: 70px 0 1px; }
 
@@ -2802,6 +2802,27 @@ blockquote {
     .params-panel-num {
       padding-left: 5px; } }
 
+.params-quote-wrapper {
+  position: relative; }
+  .params-quote-wrapper span {
+    position: absolute;
+    z-index: 0;
+    display: block;
+    width: 100%;
+    height: 223px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0;
+    opacity: 0.15;
+    background: url("../images/icon-twitter.svg") center center no-repeat; }
+
+.params-quote {
+  position: relative;
+  color: #59abc3;
+  z-index: 2;
+  margin-bottom: 0; }
+
 /*  ==========================================================================
     ==========================================================================
 
@@ -2891,6 +2912,16 @@ blockquote {
   background-color: #00a2d1;
   line-height: 23px;
   text-align: center; }
+
+.media-quote {
+  color: white;
+  margin-top: 80px;
+  margin-bottom: 0; }
+  .media-quote p {
+    opacity: 0.5; }
+  .media-quote:before, .media-quote:after {
+    color: white;
+    opacity: 0.8; }
 
 /*  ==========================================================================
     ==========================================================================

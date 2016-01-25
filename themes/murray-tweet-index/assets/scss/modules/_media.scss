@@ -105,6 +105,19 @@
         text-align: center;
     }
 
+    .media-quote {
+        color: white;
+        margin-top: 80px;
+        margin-bottom: 0;
+        p {
+            opacity: 0.5;
+        }
+        &:before, &:after {
+            color: white;
+            opacity: 0.8;
+        }
+    }
+
 
 
 
