@@ -9,11 +9,120 @@
 // @codekit-prepend "vendor/zurb/responsive-tables.js";
 // @codekit-prepend "vendor/selectric/jquery.selectric.min.js";
 // @codekit-prepend "vendor/slick-carousel/slick.min.js";
+// @codekit-prepend "vendor/match-height/match-height.js";
 // @codekit-prepend "vendor/plugins.js";
 // @codekit-prepend "vendor/outdatedbrowser/outdatedbrowser.js";
 
 
 jQuery(document).ready(function($){
+
+
+
+	/*  ==========================================================================
+	    4 Categories
+	    ========================================================================== */
+
+	$('.category-title-wrapper').matchHeight();
+
+	// Initialise Selectric Dropdown and Slick Carousel
+	$('#categories').selectric();
+  
+	$('.responsive').slick({
+		infinite: true,
+		speed: 300,
+		slidesToShow: 5,
+		slidesToScroll: 5,
+		dots: true,
+		responsive: [{
+			breakpoint: 1440,
+			settings: {
+				slidesToShow: 5,
+				slidesToScroll: 5,
+				infinite: true,
+				dots: true,
+				arrows: false
+			}
+		}, {
+			breakpoint: 1024,
+			settings: {
+				slidesToShow: 4,
+				slidesToScroll: 4,
+				infinite: true,
+				dots: true,
+				arrows: false
+			}
+		}, {
+			breakpoint: 800,
+			settings: {
+				slidesToShow: 3,
+				slidesToScroll: 3,
+				infinite: true,
+				dots: true,
+				arrows: false
+			}
+		}, {
+			breakpoint: 600,
+			settings: {
+				slidesToShow: 2,
+				slidesToScroll: 2,
+				infinite: true,
+				dots: true,
+				arrows: false
+			}
+		}, {
+			breakpoint: 460,
+			settings: {
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				infinite: true,
+				dots: false,
+				arrows: false
+			}
+		}]
+	});
+
+	// Get index of the selected item in the dropdown and move the carousel to that index
+	var categoryCurrentIndex = 0;
+	$('#categories').change(function(e) {
+		categoryCurrentIndex = $(this).prop('selectedIndex');
+		var categoryCurrentSlide = $('.responsive').slick('slickCurrentSlide');
+		$('.responsive').slick('slickGoTo', parseInt(categoryCurrentIndex));
+	});
+
+	// Expand the Top 5 lists for categories
+	$(".btn-expand-categories").click(function(e) {
+		
+		// if already expanded ?
+		if($(this).hasClass('btn-expanded')) {
+			$(this).removeClass('btn-expanded')
+			resetParamsTop5();
+		}
+		else {
+			resetCategoriesTop5();
+			$currPanel = $(this).parent();
+			$(this).addClass('btn-expanded')
+			$(this).next().addClass('categories-panel-display');
+			$(this).parent().addClass("top-categories-item-top");
+			// initParamGraphs($(this));
+		}
+		
+		e.preventDefault();
+		e.stopPropagation();
+
+	});
+
+	$(document).on('click', function () {
+       	resetCategoriesTop5();
+    });
+
+
+	function resetCategoriesTop5() {
+		// remove all these classes from the popup panel, button and main panel.
+		$('.categories-panel').removeClass('categories-panel-display'); 
+		$('.btn-expand-categories').removeClass('btn-expanded');
+		$('.top-categories-item').removeClass('top-categories-item-top');
+		$('.top-categories-item').parent().removeClass("top-categories-item-top");
+	}
 
 	
 	/*  ==========================================================================
@@ -75,78 +184,5 @@ jQuery(document).ready(function($){
 
 		
 	}
-
-
-	// Initialise Selectric Dropdown and Slick Carousel
-	$('#categories').selectric();
-  
-	$('.responsive').slick({
-		infinite: true,
-		speed: 300,
-		slidesToShow: 5,
-		slidesToScroll: 5,
-		responsive: [{
-			breakpoint: 1440,
-			settings: {
-				slidesToShow: 5,
-				slidesToScroll: 5,
-				infinite: true,
-				dots: true,
-				arrows: false
-			}
-		}, {
-			breakpoint: 1024,
-			settings: {
-				slidesToShow: 4,
-				slidesToScroll: 4,
-				infinite: true,
-			}
-		}, {
-			breakpoint: 800,
-			settings: {
-				slidesToShow: 4,
-				slidesToScroll: 4,
-				infinite: true,
-			}
-		}, {
-			breakpoint: 600,
-			settings: {
-				slidesToShow: 3,
-				slidesToScroll: 3,
-				infinite: true,
-			}
-		}, {
-			breakpoint: 480,
-			settings: {
-				slidesToShow: 2,
-				slidesToScroll: 2,
-				infinite: true,
-			}
-		}, {
-			breakpoint: 320,
-			settings: {
-				slidesToShow: 1,
-				slidesToScroll: 1,
-				infinite: true,
-			}
-		}]
-	});
-
-	var currentIndex = 0;
-	$('#categories').on('change', function() {
-	currentIndex = $(this).prop('selectedIndex');
-	var currentSlide = $('.responsive').slick('slickCurrentSlide');
-	$('.responsive').slick('slickGoTo', parseInt(currentIndex));
-	});
-
-
-	$('.category .show-more-link').on('click', function() {
-	$(this).next().css('display', 'block');
-	});
-
-
-	$('.category .close').on('click', function() {
-	$(this).parent().css('display', 'none');
-	});
 
 });

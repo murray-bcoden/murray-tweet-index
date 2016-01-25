@@ -20,6 +20,7 @@
 
     .categories-wrapper {
     	max-width: 1640px;
+    	margin: 0 auto;
     }
 
     .categories {
@@ -62,6 +63,11 @@
 		background: $dark-blue;
 		border-radius: 3px;
 
+		&:hover {
+			box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.25);
+			z-index: 10;
+		}
+
 		.category-image-wrapper {
 			position: absolute;
 			width: 100px;
@@ -70,18 +76,18 @@
 			top: -50px;
 			transform: translateX(-50%);
 			background: $dark-blue;
-			padding: 4px;
-			border-radius: 50%;
+			// padding: 4px;
+			border-radius: 50px;
 		}
 		.twitter-profile {
 		    // display: inline-block;
 			position: absolute;
-		    width: 84px;
-		    height: 84px;
-			left: 8px;
-			top: 8px;
-		    border-radius: 50%;
-		    border: solid 6px white;
+		    width: 88px;
+		    height: 88px;
+			left: 6px;
+			top: 6px;
+		    border-radius: 44px;
+		    border: solid 4px white;
 		    &.slick-loading {
 		        background: white url(../images/ajax-loader.gif) center center no-repeat;
 		        padding-bottom: 100%;
@@ -103,8 +109,13 @@
 			color: $color-brand-1;
 		}
 
+		.category-title-wrapper {
+			padding: 14px 7px;
+			background: #e5eef1;
+		}
+
 		.category-title {
-			padding: 14px;
+			// padding: 14px;
 			background: #e5eef1;
 			@extend .sans-semi;
 			color: $dark-blue;
@@ -116,22 +127,17 @@
 			height: 160px;
 		}
 
-		.show-more-link {
+		.btn-expand-categories {
 			position: absolute;
-			width: auto;
+			width: 128px;
 			height: auto;
 			bottom: 30px;
 			left: 50%;
 			transform: translateX(-50%);
-			display: inline-block;
-			padding: 0 20px;
 			background: $color-brand-2;
-			border-radius: 20px;
-			line-height: 30px;
-			@extend .sans-semi;
-			@include font-size(12);
-			text-transform: uppercase;
-			color: white;
+			&:hover {
+				background: $color-brand-1;
+			}
 		}
 
 		.show-more {
@@ -162,3 +168,125 @@
 	.category-top-5 {
 		display: none;
 	}
+
+    
+/*  ==========================================================================
+    2. Categories Items Panel
+    ========================================================================== */
+
+    .categories-panel {
+        opacity: 0;
+        position: absolute;
+        top: -120px;
+        left: 5%;
+        right: 5%;
+        width: 90%;
+        padding: 13px 14px;
+        border-radius: 4px;
+        background-color: white;
+        box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.25);
+        @include transition(all 0.3s $easeOutExpo);
+        &:before {
+            position: absolute;
+            bottom: -13px;
+            //left: 50%;
+            //transform: translateX(-50%);
+            left: 50%;
+            transform: translateX(-50%);
+            display: block;
+            content: "";
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 13px 26px 0 26px;
+            border-color: #ffffff transparent transparent  transparent;
+        }
+        @include breakpoint($break-900) {
+            &:before {
+                right: auto;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+        @include breakpoint(600px 640px) {
+			left: 2%;
+			right: 2%;
+			width: 96%;
+		}
+        @include breakpoint(800px 840px) {
+			left: 3%;
+			right: 3%;
+			width: 94%;
+		}
+        @include breakpoint(1024px 1145px) {
+			left: 3%;
+			right: 3%;
+			width: 94%;
+		}
+    }
+
+    .categories-panel-display {
+        opacity: 1;
+        // top: 70px;
+        @include breakpoint($break-900) {
+            // top: 110px;
+        }
+    }
+
+    .categories-panel-list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .categories-panel-item {
+        display: flex;
+        align-items: center;
+        margin: 8px 0;
+        padding: 0;
+        display: flex;
+        color: $dark-blue;
+        @extend .sans-semi;
+    }
+
+    .categories-panel-index {
+        display: block;
+        float: left;
+        width: 20px;
+        height: 20px;
+        border-radius: 10px;
+        background-color: $color-brand-2;
+        color: white;
+        text-align: center;
+        @include font-size($font-12);
+        line-height: 20px;
+        margin-right: 10px;
+    }
+
+    .categories-panel-pos {
+        width: 180px;
+    }
+
+    .categories-panel-link {
+        color: $dark-blue;
+        @include breakpoint(460px 480px) {
+            @include font-size(12);
+        }
+        @include breakpoint(600px 710px) {
+            @include font-size(12);
+        }
+        @include breakpoint(800px 930px) {
+            @include font-size(12);
+        }
+        @include breakpoint(1024px 1145px) {
+            @include font-size(12);
+        }
+    }
+
+    .categories-panel-num {
+        width: 63px;
+        padding-left: 15px;
+        @include breakpoint($break-360) {
+            padding-left: 5px;
+        }
+    }
