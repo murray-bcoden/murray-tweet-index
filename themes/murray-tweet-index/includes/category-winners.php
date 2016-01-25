@@ -38,12 +38,36 @@
 			<div class="category-title">News</div>
 		    <div class="icon-wrapper">
 		    	<div class="icon icon-news"></div>
-		        <a href="#" class="show-more-link">View Top 5</a>
-		    </div>
-
-		    <div class="category-top-5">
-		      <p>More info here...</p>
-		      <button class="close">X</button>
+		        <a href="#" class="btn-expand btn-expand-categories">View Top 5</a>
+				<div class="categories-panel">
+					<ol class="categories-panel-list">
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">1</span><a href="https://twitter.com/davidmcw" target="_blank" class="categories-panel-link">@ghook</a>
+							</div>
+						</li>
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">2</span><a href="https://twitter.com/davidmcw" target="_blank" class="categories-panel-link">@davidmcw</a>
+							</div>
+						</li>
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">3</span><a href="https://twitter.com/davidmcw" target="_blank" class="categories-panel-link">@cooper_m</a>
+							</div>
+						</li>
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">4</span><a href="https://twitter.com/davidmcw" target="_blank" class="categories-panel-link">@miriamocal</a>
+							</div>
+						</li>
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">5</span><a href="https://twitter.com/davidmcw" target="_blank" class="categories-panel-link">@vincentbrowne</a>
+							</div>
+						</li>
+					</ol>
+				</div>
 		    </div>
 		  </div>
 
@@ -58,12 +82,36 @@
 		    <div class="category-title">Business</div>
 		    <div class="icon-wrapper">
 		    	<div class="icon icon-business"></div>
-		        <a href="#" class="show-more-link">View Top 5</a>
-		    </div>
-
-		    <div class="category-top-5">
-		      <p>More info here...</p>
-		      <button class="close">X</button>
+		        <a href="#" class="btn-expand btn-expand-categories">View Top 5</a>
+				<div class="categories-panel">
+					<ol class="categories-panel-list">
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">1</span><a href="https://twitter.com/davidmcw" target="_blank" class="categories-panel-link">@ghook</a>
+							</div>
+						</li>
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">2</span><a href="https://twitter.com/davidmcw" target="_blank" class="categories-panel-link">@davidmcw</a>
+							</div>
+						</li>
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">3</span><a href="https://twitter.com/davidmcw" target="_blank" class="categories-panel-link">@cooper_m</a>
+							</div>
+						</li>
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">4</span><a href="https://twitter.com/davidmcw" target="_blank" class="categories-panel-link">@miriamocal</a>
+							</div>
+						</li>
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">5</span><a href="https://twitter.com/davidmcw" target="_blank" class="categories-panel-link">@vincentbrowne</a>
+							</div>
+						</li>
+					</ol>
+				</div>
 		    </div>
 		  </div>
 		  
@@ -78,12 +126,36 @@
 		    <div class="category-title">Sport</div>
 		    <div class="icon-wrapper">
 		    	<div class="icon icon-sport"></div>
-		        <a href="#" class="show-more-link">View Top 5</a>
-		    </div>
-
-		    <div class="category-top-5">
-		      <p>More info here...</p>
-		      <button class="close">X</button>
+		        <a href="#" class="btn-expand btn-expand-categories">View Top 5</a>
+				<div class="categories-panel">
+					<ol class="categories-panel-list">
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">1</span><a href="https://twitter.com/davidmcw" target="_blank" class="categories-panel-link">@ghook</a>
+							</div>
+						</li>
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">2</span><a href="https://twitter.com/davidmcw" target="_blank" class="categories-panel-link">@davidmcw</a>
+							</div>
+						</li>
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">3</span><a href="https://twitter.com/davidmcw" target="_blank" class="categories-panel-link">@cooper_m</a>
+							</div>
+						</li>
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">4</span><a href="https://twitter.com/davidmcw" target="_blank" class="categories-panel-link">@miriamocal</a>
+							</div>
+						</li>
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">5</span><a href="https://twitter.com/davidmcw" target="_blank" class="categories-panel-link">@vincentbrowne</a>
+							</div>
+						</li>
+					</ol>
+				</div>
 		    </div>
 		  </div>
 		  
@@ -98,12 +170,36 @@
 		    <div class="category-title">Polictics</div>
 		    <div class="icon-wrapper">
 		    	<div class="icon icon-politics"></div>
-		        <a href="#" class="show-more-link">View Top 5</a>
-		    </div>
-
-		    <div class="category-top-5">
-		      <p>More info here...</p>
-		      <button class="close">X</button>
+		        <a href="#" class="btn-expand btn-expand-categories">View Top 5</a>
+				<div class="categories-panel">
+					<ol class="categories-panel-list">
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">1</span><a href="https://twitter.com/davidmcw" target="_blank" class="categories-panel-link">@ghook</a>
+							</div>
+						</li>
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">2</span><a href="https://twitter.com/davidmcw" target="_blank" class="categories-panel-link">@davidmcw</a>
+							</div>
+						</li>
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">3</span><a href="https://twitter.com/davidmcw" target="_blank" class="categories-panel-link">@cooper_m</a>
+							</div>
+						</li>
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">4</span><a href="https://twitter.com/davidmcw" target="_blank" class="categories-panel-link">@miriamocal</a>
+							</div>
+						</li>
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">5</span><a href="https://twitter.com/davidmcw" target="_blank" class="categories-panel-link">@vincentbrowne</a>
+							</div>
+						</li>
+					</ol>
+				</div>
 		    </div>
 		  </div>
 		  
@@ -118,12 +214,36 @@
 		    <div class="category-title">Broadcast Presenter</div>
 		    <div class="icon-wrapper">
 		    	<div class="icon icon-broadcast"></div>
-		        <a href="#" class="show-more-link">View Top 5</a>
-		    </div>
-
-		    <div class="category-top-5">
-		      <p>More info here...</p>
-		      <button class="close">X</button>
+		        <a href="#" class="btn-expand btn-expand-categories">View Top 5</a>
+				<div class="categories-panel">
+					<ol class="categories-panel-list">
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">1</span><a href="https://twitter.com/davidmcw" target="_blank" class="categories-panel-link">@ghook</a>
+							</div>
+						</li>
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">2</span><a href="https://twitter.com/davidmcw" target="_blank" class="categories-panel-link">@davidmcw</a>
+							</div>
+						</li>
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">3</span><a href="https://twitter.com/davidmcw" target="_blank" class="categories-panel-link">@cooper_m</a>
+							</div>
+						</li>
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">4</span><a href="https://twitter.com/davidmcw" target="_blank" class="categories-panel-link">@miriamocal</a>
+							</div>
+						</li>
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">5</span><a href="https://twitter.com/davidmcw" target="_blank" class="categories-panel-link">@vincentbrowne</a>
+							</div>
+						</li>
+					</ol>
+				</div>
 		    </div>
 		  </div>
 		  
@@ -138,12 +258,36 @@
 		    <div class="category-title">Consumer/Personal Finance</div>
 		    <div class="icon-wrapper">
 		    	<div class="icon icon-finance"></div>
-		        <a href="#" class="show-more-link">View Top 5</a>
-		    </div>
-
-		    <div class="category-top-5">
-		      <p>More info here...</p>
-		      <button class="close">X</button>
+		        <a href="#" class="btn-expand btn-expand-categories">View Top 5</a>
+				<div class="categories-panel">
+					<ol class="categories-panel-list">
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">1</span><a href="https://twitter.com/davidmcw" target="_blank" class="categories-panel-link">@ghook</a>
+							</div>
+						</li>
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">2</span><a href="https://twitter.com/davidmcw" target="_blank" class="categories-panel-link">@davidmcw</a>
+							</div>
+						</li>
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">3</span><a href="https://twitter.com/davidmcw" target="_blank" class="categories-panel-link">@cooper_m</a>
+							</div>
+						</li>
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">4</span><a href="https://twitter.com/davidmcw" target="_blank" class="categories-panel-link">@miriamocal</a>
+							</div>
+						</li>
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">5</span><a href="https://twitter.com/davidmcw" target="_blank" class="categories-panel-link">@vincentbrowne</a>
+							</div>
+						</li>
+					</ol>
+				</div>
 		    </div>
 		  </div>
 		  
@@ -158,12 +302,36 @@
 		    <div class="category-title">Agriculture/Farming</div>
 		    <div class="icon-wrapper">
 		    	<div class="icon icon-agri-farming"></div>
-		        <a href="#" class="show-more-link">View Top 5</a>
-		    </div>
-
-		    <div class="category-top-5">
-		      <p>More info here...</p>
-		      <button class="close">X</button>
+		        <a href="#" class="btn-expand btn-expand-categories">View Top 5</a>
+				<div class="categories-panel">
+					<ol class="categories-panel-list">
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">1</span><a href="https://twitter.com/davidmcw" target="_blank" class="categories-panel-link">@ghook</a>
+							</div>
+						</li>
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">2</span><a href="https://twitter.com/davidmcw" target="_blank" class="categories-panel-link">@davidmcw</a>
+							</div>
+						</li>
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">3</span><a href="https://twitter.com/davidmcw" target="_blank" class="categories-panel-link">@cooper_m</a>
+							</div>
+						</li>
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">4</span><a href="https://twitter.com/davidmcw" target="_blank" class="categories-panel-link">@miriamocal</a>
+							</div>
+						</li>
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">5</span><a href="https://twitter.com/davidmcw" target="_blank" class="categories-panel-link">@vincentbrowne</a>
+							</div>
+						</li>
+					</ol>
+				</div>
 		    </div>
 		  </div>
 		  
@@ -178,12 +346,36 @@
 		    <div class="category-title">Technology</div>
 		    <div class="icon-wrapper">
 		    	<div class="icon icon-technology"></div>
-		        <a href="#" class="show-more-link">View Top 5</a>
-		    </div>
-
-		    <div class="category-top-5">
-		      <p>More info here...</p>
-		      <button class="close">X</button>
+		        <a href="#" class="btn-expand btn-expand-categories">View Top 5</a>
+				<div class="categories-panel">
+					<ol class="categories-panel-list">
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">1</span><a href="https://twitter.com/davidmcw" target="_blank" class="categories-panel-link">@ghook</a>
+							</div>
+						</li>
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">2</span><a href="https://twitter.com/davidmcw" target="_blank" class="categories-panel-link">@davidmcw</a>
+							</div>
+						</li>
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">3</span><a href="https://twitter.com/davidmcw" target="_blank" class="categories-panel-link">@cooper_m</a>
+							</div>
+						</li>
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">4</span><a href="https://twitter.com/davidmcw" target="_blank" class="categories-panel-link">@miriamocal</a>
+							</div>
+						</li>
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">5</span><a href="https://twitter.com/davidmcw" target="_blank" class="categories-panel-link">@vincentbrowne</a>
+							</div>
+						</li>
+					</ol>
+				</div>
 		    </div>
 		  </div>
 		  
@@ -198,12 +390,36 @@
 		    <div class="category-title">Entertainment</div>
 		    <div class="icon-wrapper">
 		    	<div class="icon icon-entertainment"></div>
-		        <a href="#" class="show-more-link">View Top 5</a>
-		    </div>
-
-		    <div class="category-top-5">
-		      <p>More info here...</p>
-		      <button class="close">X</button>
+		        <a href="#" class="btn-expand btn-expand-categories">View Top 5</a>
+				<div class="categories-panel">
+					<ol class="categories-panel-list">
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">1</span><a href="https://twitter.com/davidmcw" target="_blank" class="categories-panel-link">@ghook</a>
+							</div>
+						</li>
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">2</span><a href="https://twitter.com/davidmcw" target="_blank" class="categories-panel-link">@davidmcw</a>
+							</div>
+						</li>
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">3</span><a href="https://twitter.com/davidmcw" target="_blank" class="categories-panel-link">@cooper_m</a>
+							</div>
+						</li>
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">4</span><a href="https://twitter.com/davidmcw" target="_blank" class="categories-panel-link">@miriamocal</a>
+							</div>
+						</li>
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">5</span><a href="https://twitter.com/davidmcw" target="_blank" class="categories-panel-link">@vincentbrowne</a>
+							</div>
+						</li>
+					</ol>
+				</div>
 		    </div>
 		  </div>
 		  
@@ -218,12 +434,36 @@
 		    <div class="category-title">Columnist</div>
 		    <div class="icon-wrapper">
 		    	<div class="icon icon-columnist"></div>
-		        <a href="#" class="show-more-link">View Top 5</a>
-		    </div>
-
-		    <div class="category-top-5">
-		      <p>More info here...</p>
-		      <button class="close">X</button>
+		        <a href="#" class="btn-expand btn-expand-categories">View Top 5</a>
+				<div class="categories-panel">
+					<ol class="categories-panel-list">
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">1</span><a href="https://twitter.com/davidmcw" target="_blank" class="categories-panel-link">@ghook</a>
+							</div>
+						</li>
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">2</span><a href="https://twitter.com/davidmcw" target="_blank" class="categories-panel-link">@davidmcw</a>
+							</div>
+						</li>
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">3</span><a href="https://twitter.com/davidmcw" target="_blank" class="categories-panel-link">@cooper_m</a>
+							</div>
+						</li>
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">4</span><a href="https://twitter.com/davidmcw" target="_blank" class="categories-panel-link">@miriamocal</a>
+							</div>
+						</li>
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">5</span><a href="https://twitter.com/davidmcw" target="_blank" class="categories-panel-link">@vincentbrowne</a>
+							</div>
+						</li>
+					</ol>
+				</div>
 		    </div>
 		  </div>
 		  
@@ -238,12 +478,36 @@
 		    <div class="category-title">Health</div>
 		    <div class="icon-wrapper">
 		    	<div class="icon icon-health"></div>
-		        <a href="#" class="show-more-link">View Top 5</a>
-		    </div>
-
-		    <div class="category-top-5">
-		      <p>More info here...</p>
-		      <button class="close">X</button>
+		        <a href="#" class="btn-expand btn-expand-categories">View Top 5</a>
+				<div class="categories-panel">
+					<ol class="categories-panel-list">
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">1</span><a href="https://twitter.com/davidmcw" target="_blank" class="categories-panel-link">@ghook</a>
+							</div>
+						</li>
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">2</span><a href="https://twitter.com/davidmcw" target="_blank" class="categories-panel-link">@davidmcw</a>
+							</div>
+						</li>
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">3</span><a href="https://twitter.com/davidmcw" target="_blank" class="categories-panel-link">@cooper_m</a>
+							</div>
+						</li>
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">4</span><a href="https://twitter.com/davidmcw" target="_blank" class="categories-panel-link">@miriamocal</a>
+							</div>
+						</li>
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">5</span><a href="https://twitter.com/davidmcw" target="_blank" class="categories-panel-link">@vincentbrowne</a>
+							</div>
+						</li>
+					</ol>
+				</div>
 		    </div>
 		  </div>
 		  
@@ -258,12 +522,36 @@
 		    <div class="category-title">Food &amp; Drink</div>
 		    <div class="icon-wrapper">
 		    	<div class="icon icon-food"></div>
-		        <a href="#" class="show-more-link">View Top 5</a>
-		    </div>
-
-		    <div class="category-top-5">
-		      <p>More info here...</p>
-		      <button class="close">X</button>
+		        <a href="#" class="btn-expand btn-expand-categories">View Top 5</a>
+				<div class="categories-panel">
+					<ol class="categories-panel-list">
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">1</span><a href="https://twitter.com/davidmcw" target="_blank" class="categories-panel-link">@ghook</a>
+							</div>
+						</li>
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">2</span><a href="https://twitter.com/davidmcw" target="_blank" class="categories-panel-link">@davidmcw</a>
+							</div>
+						</li>
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">3</span><a href="https://twitter.com/davidmcw" target="_blank" class="categories-panel-link">@cooper_m</a>
+							</div>
+						</li>
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">4</span><a href="https://twitter.com/davidmcw" target="_blank" class="categories-panel-link">@miriamocal</a>
+							</div>
+						</li>
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">5</span><a href="https://twitter.com/davidmcw" target="_blank" class="categories-panel-link">@vincentbrowne</a>
+							</div>
+						</li>
+					</ol>
+				</div>
 		    </div>
 		  </div>
 		  
@@ -278,12 +566,36 @@
 		    <div class="category-title">Property</div>
 		    <div class="icon-wrapper">
 		    	<div class="icon icon-property"></div>
-		        <a href="#" class="show-more-link">View Top 5</a>
-		    </div>
-
-		    <div class="category-top-5">
-		      <p>More info here...</p>
-		      <button class="close">X</button>
+		        <a href="#" class="btn-expand btn-expand-categories">View Top 5</a>
+				<div class="categories-panel">
+					<ol class="categories-panel-list">
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">1</span><a href="https://twitter.com/davidmcw" target="_blank" class="categories-panel-link">@ghook</a>
+							</div>
+						</li>
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">2</span><a href="https://twitter.com/davidmcw" target="_blank" class="categories-panel-link">@davidmcw</a>
+							</div>
+						</li>
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">3</span><a href="https://twitter.com/davidmcw" target="_blank" class="categories-panel-link">@cooper_m</a>
+							</div>
+						</li>
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">4</span><a href="https://twitter.com/davidmcw" target="_blank" class="categories-panel-link">@miriamocal</a>
+							</div>
+						</li>
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">5</span><a href="https://twitter.com/davidmcw" target="_blank" class="categories-panel-link">@vincentbrowne</a>
+							</div>
+						</li>
+					</ol>
+				</div>
 		    </div>
 		  </div>
 		  
@@ -298,12 +610,36 @@
 		    <div class="category-title">Fashion</div>
 		    <div class="icon-wrapper">
 		    	<div class="icon icon-fashion"></div>
-		        <a href="#" class="show-more-link">View Top 5</a>
-		    </div>
-
-		    <div class="category-top-5">
-		      <p>More info here...</p>
-		      <button class="close">X</button>
+		        <a href="#" class="btn-expand btn-expand-categories">View Top 5</a>
+				<div class="categories-panel">
+					<ol class="categories-panel-list">
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">1</span><a href="https://twitter.com/davidmcw" target="_blank" class="categories-panel-link">@ghook</a>
+							</div>
+						</li>
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">2</span><a href="https://twitter.com/davidmcw" target="_blank" class="categories-panel-link">@davidmcw</a>
+							</div>
+						</li>
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">3</span><a href="https://twitter.com/davidmcw" target="_blank" class="categories-panel-link">@cooper_m</a>
+							</div>
+						</li>
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">4</span><a href="https://twitter.com/davidmcw" target="_blank" class="categories-panel-link">@miriamocal</a>
+							</div>
+						</li>
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">5</span><a href="https://twitter.com/davidmcw" target="_blank" class="categories-panel-link">@vincentbrowne</a>
+							</div>
+						</li>
+					</ol>
+				</div>
 		    </div>
 		  </div>
 		  
@@ -318,12 +654,36 @@
 		    <div class="category-title">Arts</div>
 		    <div class="icon-wrapper">
 		    	<div class="icon icon-arts"></div>
-		        <a href="#" class="show-more-link">View Top 5</a>
-		    </div>
-
-		    <div class="category-top-5">
-		      <p>More info here...</p>
-		      <button class="close">X</button>
+		        <a href="#" class="btn-expand btn-expand-categories">View Top 5</a>
+				<div class="categories-panel">
+					<ol class="categories-panel-list">
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">1</span><a href="https://twitter.com/davidmcw" target="_blank" class="categories-panel-link">@ghook</a>
+							</div>
+						</li>
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">2</span><a href="https://twitter.com/davidmcw" target="_blank" class="categories-panel-link">@davidmcw</a>
+							</div>
+						</li>
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">3</span><a href="https://twitter.com/davidmcw" target="_blank" class="categories-panel-link">@cooper_m</a>
+							</div>
+						</li>
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">4</span><a href="https://twitter.com/davidmcw" target="_blank" class="categories-panel-link">@miriamocal</a>
+							</div>
+						</li>
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">5</span><a href="https://twitter.com/davidmcw" target="_blank" class="categories-panel-link">@vincentbrowne</a>
+							</div>
+						</li>
+					</ol>
+				</div>
 		    </div>
 		  </div>
 		  
@@ -338,12 +698,36 @@
 		    <div class="category-title">Editorial</div>
 		    <div class="icon-wrapper">
 		    	<div class="icon icon-editorial"></div>
-		        <a href="#" class="show-more-link">View Top 5</a>
-		    </div>
-
-		    <div class="category-top-5">
-		      <p>More info here...</p>
-		      <button class="close">X</button>
+		        <a href="#" class="btn-expand btn-expand-categories">View Top 5</a>
+				<div class="categories-panel">
+					<ol class="categories-panel-list">
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">1</span><a href="https://twitter.com/davidmcw" target="_blank" class="categories-panel-link">@ghook</a>
+							</div>
+						</li>
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">2</span><a href="https://twitter.com/davidmcw" target="_blank" class="categories-panel-link">@davidmcw</a>
+							</div>
+						</li>
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">3</span><a href="https://twitter.com/davidmcw" target="_blank" class="categories-panel-link">@cooper_m</a>
+							</div>
+						</li>
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">4</span><a href="https://twitter.com/davidmcw" target="_blank" class="categories-panel-link">@miriamocal</a>
+							</div>
+						</li>
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">5</span><a href="https://twitter.com/davidmcw" target="_blank" class="categories-panel-link">@vincentbrowne</a>
+							</div>
+						</li>
+					</ol>
+				</div>
 		    </div>
 		  </div>
 		  
@@ -358,12 +742,36 @@
 		    <div class="category-title">Beauty</div>
 		    <div class="icon-wrapper">
 		    	<div class="icon icon-beauty"></div>
-		        <a href="#" class="show-more-link">View Top 5</a>
-		    </div>
-
-		    <div class="category-top-5">
-		      <p>More info here...</p>
-		      <button class="close">X</button>
+		        <a href="#" class="btn-expand btn-expand-categories">View Top 5</a>
+				<div class="categories-panel">
+					<ol class="categories-panel-list">
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">1</span><a href="https://twitter.com/davidmcw" target="_blank" class="categories-panel-link">@ghook</a>
+							</div>
+						</li>
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">2</span><a href="https://twitter.com/davidmcw" target="_blank" class="categories-panel-link">@davidmcw</a>
+							</div>
+						</li>
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">3</span><a href="https://twitter.com/davidmcw" target="_blank" class="categories-panel-link">@cooper_m</a>
+							</div>
+						</li>
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">4</span><a href="https://twitter.com/davidmcw" target="_blank" class="categories-panel-link">@miriamocal</a>
+							</div>
+						</li>
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">5</span><a href="https://twitter.com/davidmcw" target="_blank" class="categories-panel-link">@vincentbrowne</a>
+							</div>
+						</li>
+					</ol>
+				</div>
 		    </div>
 		  </div>
 		  

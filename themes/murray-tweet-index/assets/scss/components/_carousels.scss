@@ -141,7 +141,6 @@
 
 .slick-prev:hover, .slick-prev:focus, .slick-next:hover, .slick-next:focus {
 	background: $color-brand-2;
-	color: white;
 }
 
 /* Dots */
@@ -199,7 +198,7 @@
                 content: '\2022';
                 width: 20px;
                 height: 20px;
-                font-family: "slick";
+                // font-family: "slick";
                 font-size: 6px;
                 line-height: 20px;
                 text-align: center;
