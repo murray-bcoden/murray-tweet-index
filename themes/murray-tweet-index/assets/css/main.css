@@ -573,13 +573,13 @@ img {
   -ms-interpolation-mode: bicubic;
   image-rendering: optimizeQuality; }
 
-.sans-light, body, .section-title, .top-100-badge span {
+.sans-light, body, .section-title, .top-100-badge span, .most-list-title {
   font-family: "open-sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300;
   font-style: normal; }
 
 .sans-semi, strong,
-p.bold, .btn, .btn-expand, .top-100-badge, .top-num, .top-params-title, .top-params-name, .top-params-num, .params-panel-item, #ff-stream-1 .ff-loadmore-wrapper .ff-btn {
+p.bold, .btn, .btn-expand, .top-100-badge, .top-num, .top-params-title, .top-params-name, .top-params-num, .params-panel-item, .most-outlet, #ff-stream-1 .ff-loadmore-wrapper .ff-btn {
   font-family: "open-sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 600;
   font-style: normal; }
@@ -1913,6 +1913,59 @@ blockquote {
     ========================================================================== */
 .media {
   background: linear-gradient(to right, #ed30a0, #0b86a6); }
+
+.media-info-wrap {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 40px; }
+
+.media-type-wrapper {
+  flex-basis: 50%;
+  flex-grow: 1; }
+
+.media-type {
+  display: block;
+  max-width: 664px; }
+
+.most-list-wrapper {
+  flex-basis: 50%;
+  flex-grow: 1;
+  margin: 0 0 0 5%; }
+
+.most-list-title {
+  text-transform: uppercase;
+  font-size: 24px;
+  font-size: 2.4rem; }
+
+.most-list {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+.most-list-item {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 15px; }
+
+.most-outlet {
+  min-width: 230px;
+  max-width: 230px;
+  text-transform: uppercase; }
+
+.most-bar {
+  flex-grow: 1; }
+
+.most-num {
+  width: 60px;
+  max-width: 60px;
+  height: 23px;
+  margin-left: 15px;
+  border-radius: 12px;
+  background-color: #00a2d1;
+  line-height: 23px;
+  text-align: center; }
 
 /*  ==========================================================================
     ==========================================================================
