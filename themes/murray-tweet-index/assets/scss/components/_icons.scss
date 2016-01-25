@@ -9,7 +9,7 @@
 
 .icon {
 	position: absolute;
-	background: url(../images/mti-sprites-@2x.png) no-repeat;
+	background: $sprites-x2 no-repeat;
 	background-size: $sprites-x2-size;
 	left: 50%;
 	top: 23px;
