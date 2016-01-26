@@ -38,8 +38,8 @@
 			<div class="category-title-wrapper">
 				<div class="category-title">News</div>
 			</div>
-		    <div class="icon-wrapper">
-		    	<div class="icon icon-news"></div>
+		    <div class="category-icon-wrapper">
+		    	<div class="category-icon category-icon-news"></div>
 		        <a href="#" class="btn-expand btn-expand-categories">View Top 5</a>
 				<div class="categories-panel">
 					<ol class="categories-panel-list">
@@ -84,8 +84,8 @@
 		    <div class="category-title-wrapper">
 				<div class="category-title">Business</div>
 			</div>
-		    <div class="icon-wrapper">
-		    	<div class="icon icon-business"></div>
+		    <div class="category-icon-wrapper">
+		    	<div class="category-icon category-icon-business"></div>
 		        <a href="#" class="btn-expand btn-expand-categories">View Top 5</a>
 				<div class="categories-panel">
 					<ol class="categories-panel-list">
@@ -130,8 +130,8 @@
 		    <div class="category-title-wrapper">
 				<div class="category-title">Sport</div>
 			</div>
-		    <div class="icon-wrapper">
-		    	<div class="icon icon-sport"></div>
+		    <div class="category-icon-wrapper">
+		    	<div class="category-icon category-icon-sport"></div>
 		        <a href="#" class="btn-expand btn-expand-categories">View Top 5</a>
 				<div class="categories-panel">
 					<ol class="categories-panel-list">
@@ -176,8 +176,8 @@
 		    <div class="category-title-wrapper">
 				<div class="category-title">Polictics</div>
 			</div>
-		    <div class="icon-wrapper">
-		    	<div class="icon icon-politics"></div>
+		    <div class="category-icon-wrapper">
+		    	<div class="category-icon category-icon-politics"></div>
 		        <a href="#" class="btn-expand btn-expand-categories">View Top 5</a>
 				<div class="categories-panel">
 					<ol class="categories-panel-list">
@@ -222,8 +222,8 @@
 		    <div class="category-title-wrapper">
 				<div class="category-title">Broadcast Presenter</div>
 			</div>
-		    <div class="icon-wrapper">
-		    	<div class="icon icon-broadcast"></div>
+		    <div class="category-icon-wrapper">
+		    	<div class="category-icon category-icon-broadcast"></div>
 		        <a href="#" class="btn-expand btn-expand-categories">View Top 5</a>
 				<div class="categories-panel">
 					<ol class="categories-panel-list">
@@ -268,8 +268,8 @@
 		    <div class="category-title-wrapper">
 				<div class="category-title">Consumer/Personal Finance</div>
 			</div>
-		    <div class="icon-wrapper">
-		    	<div class="icon icon-finance"></div>
+		    <div class="category-icon-wrapper">
+		    	<div class="category-icon category-icon-finance"></div>
 		        <a href="#" class="btn-expand btn-expand-categories">View Top 5</a>
 				<div class="categories-panel">
 					<ol class="categories-panel-list">
@@ -314,8 +314,8 @@
 		    <div class="category-title-wrapper">
 				<div class="category-title">Agriculture/Farming</div>
 			</div>
-		    <div class="icon-wrapper">
-		    	<div class="icon icon-agri-farming"></div>
+		    <div class="category-icon-wrapper">
+		    	<div class="category-icon category-icon-agri-farming"></div>
 		        <a href="#" class="btn-expand btn-expand-categories">View Top 5</a>
 				<div class="categories-panel">
 					<ol class="categories-panel-list">
@@ -360,8 +360,8 @@
 		    <div class="category-title-wrapper">
 				<div class="category-title">Technology</div>
 			</div>
-		    <div class="icon-wrapper">
-		    	<div class="icon icon-technology"></div>
+		    <div class="category-icon-wrapper">
+		    	<div class="category-icon category-icon-technology"></div>
 		        <a href="#" class="btn-expand btn-expand-categories">View Top 5</a>
 				<div class="categories-panel">
 					<ol class="categories-panel-list">
@@ -406,8 +406,8 @@
 		    <div class="category-title-wrapper">
 				<div class="category-title">Entertainment</div>
 			</div>
-		    <div class="icon-wrapper">
-		    	<div class="icon icon-entertainment"></div>
+		    <div class="category-icon-wrapper">
+		    	<div class="category-icon category-icon-entertainment"></div>
 		        <a href="#" class="btn-expand btn-expand-categories">View Top 5</a>
 				<div class="categories-panel">
 					<ol class="categories-panel-list">
@@ -452,8 +452,8 @@
 		    <div class="category-title-wrapper">
 				<div class="category-title">Columnist</div>
 			</div>
-		    <div class="icon-wrapper">
-		    	<div class="icon icon-columnist"></div>
+		    <div class="category-icon-wrapper">
+		    	<div class="category-icon category-icon-columnist"></div>
 		        <a href="#" class="btn-expand btn-expand-categories">View Top 5</a>
 				<div class="categories-panel">
 					<ol class="categories-panel-list">
@@ -498,8 +498,8 @@
 		    <div class="category-title-wrapper">
 				<div class="category-title">Health</div>
 			</div>
-		    <div class="icon-wrapper">
-		    	<div class="icon icon-health"></div>
+		    <div class="category-icon-wrapper">
+		    	<div class="category-icon category-icon-health"></div>
 		        <a href="#" class="btn-expand btn-expand-categories">View Top 5</a>
 				<div class="categories-panel">
 					<ol class="categories-panel-list">
@@ -544,8 +544,8 @@
 		    <div class="category-title-wrapper">
 				<div class="category-title">Food &amp; Drink</div>
 			</div>
-		    <div class="icon-wrapper">
-		    	<div class="icon icon-food"></div>
+		    <div class="category-icon-wrapper">
+		    	<div class="category-icon category-icon-food"></div>
 		        <a href="#" class="btn-expand btn-expand-categories">View Top 5</a>
 				<div class="categories-panel">
 					<ol class="categories-panel-list">
@@ -590,8 +590,8 @@
 		    <div class="category-title-wrapper">
 				<div class="category-title">Property</div>
 			</div>
-		    <div class="icon-wrapper">
-		    	<div class="icon icon-property"></div>
+		    <div class="category-icon-wrapper">
+		    	<div class="category-icon category-icon-property"></div>
 		        <a href="#" class="btn-expand btn-expand-categories">View Top 5</a>
 				<div class="categories-panel">
 					<ol class="categories-panel-list">
@@ -636,8 +636,8 @@
 		    <div class="category-title-wrapper">
 				<div class="category-title">Fashion</div>
 			</div>
-		    <div class="icon-wrapper">
-		    	<div class="icon icon-fashion"></div>
+		    <div class="category-icon-wrapper">
+		    	<div class="category-icon category-icon-fashion"></div>
 		        <a href="#" class="btn-expand btn-expand-categories">View Top 5</a>
 				<div class="categories-panel">
 					<ol class="categories-panel-list">
@@ -682,8 +682,8 @@
 		    <div class="category-title-wrapper">
 				<div class="category-title">Arts</div>
 			</div>
-		    <div class="icon-wrapper">
-		    	<div class="icon icon-arts"></div>
+		    <div class="category-icon-wrapper">
+		    	<div class="category-icon category-icon-arts"></div>
 		        <a href="#" class="btn-expand btn-expand-categories">View Top 5</a>
 				<div class="categories-panel">
 					<ol class="categories-panel-list">
@@ -728,8 +728,8 @@
 		    <div class="category-title-wrapper">
 				<div class="category-title">Editorial</div>
 			</div>
-		    <div class="icon-wrapper">
-		    	<div class="icon icon-editorial"></div>
+		    <div class="category-icon-wrapper">
+		    	<div class="category-icon category-icon-editorial"></div>
 		        <a href="#" class="btn-expand btn-expand-categories">View Top 5</a>
 				<div class="categories-panel">
 					<ol class="categories-panel-list">
@@ -774,8 +774,8 @@
 		    <div class="category-title-wrapper">
 				<div class="category-title">Beauty</div>
 			</div>
-		    <div class="icon-wrapper">
-		    	<div class="icon icon-beauty"></div>
+		    <div class="category-icon-wrapper">
+		    	<div class="category-icon category-icon-beauty"></div>
 		        <a href="#" class="btn-expand btn-expand-categories">View Top 5</a>
 				<div class="categories-panel">
 					<ol class="categories-panel-list">
