@@ -110,12 +110,15 @@
 		}
 
 		.category-title-wrapper {
+			display: flex;
+			align-items: center;
 			padding: 14px 7px;
 			background: #e5eef1;
 		}
 
 		.category-title {
 			// padding: 14px;
+			flex: 1;
 			background: #e5eef1;
 			@extend .sans-semi;
 			color: $dark-blue;
@@ -137,30 +140,6 @@
 			background: $color-brand-2;
 			&:hover {
 				background: $color-brand-1;
-			}
-		}
-
-		.show-more {
-			display: none;
-			position: absolute;
-			width: 80%;
-			height: auto;
-			bottom: 5px;
-			left: 50%;
-			transform: translateX(-50%);
-			padding: 5px;
-			background: #cccccc;
-
-			p {
-				width: 80%;
-				float: left;
-				color: white;
-			}
-
-			.close {
-				width: 20%;
-				float: left;
-				color: red;
 			}
 		}
 	}
@@ -208,21 +187,6 @@
                 transform: translateX(-50%);
             }
         }
-        @include breakpoint(600px 640px) {
-			left: 2%;
-			right: 2%;
-			width: 96%;
-		}
-        @include breakpoint(800px 840px) {
-			left: 3%;
-			right: 3%;
-			width: 94%;
-		}
-        @include breakpoint(1024px 1145px) {
-			left: 3%;
-			right: 3%;
-			width: 94%;
-		}
     }
 
     .categories-panel-display {
@@ -269,16 +233,21 @@
 
     .categories-panel-link {
         color: $dark-blue;
-        @include breakpoint(460px 480px) {
+
+        // 2 slides displayed
+        @include breakpoint(700px 720px) {
             @include font-size(12);
         }
-        @include breakpoint(600px 710px) {
+        // 3 slides displayed
+        @include breakpoint(900px 930px) {
             @include font-size(12);
         }
-        @include breakpoint(800px 930px) {
+        // 4 slides displayed
+        @include breakpoint(1100px 1120px) {
             @include font-size(12);
         }
-        @include breakpoint(1024px 1145px) {
+        // 5 slides displayed
+        @include breakpoint(1300px 1330px) {
             @include font-size(12);
         }
     }
