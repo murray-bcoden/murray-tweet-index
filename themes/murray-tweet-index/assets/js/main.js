@@ -9,9 +9,17 @@
 // @codekit-prepend "vendor/scrollmagic/minified/ScrollMagic.min.js";
 // @codekit-prepend "vendor/scrollmagic/minified/plugins/animation.gsap.min.js";
 // @codekit-prepend "vendor/scrollmagic/minified/plugins/debug.addIndicators.min.js";
+// @codekit-prepend "vendor/lazyload/jquery.lazyload.min.js";
 
 
 jQuery(document).ready(function($){
+
+
+
+	/*  ==========================================================================
+	    Top 100
+	    ========================================================================== */
+	    $("img.lazy").lazyload({container: $(".top-list-wrapper"), effect: "fadeIn", threshold: 200});
 
 
 
