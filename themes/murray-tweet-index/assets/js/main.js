@@ -195,6 +195,21 @@ jQuery(document).ready(function($){
 	}
 
 	/*  ==========================================================================
+	    Twitter share
+	    ========================================================================== */
+
+	$('.mti-twitter-share').on('click', function(e) {
+
+		var url = $(this).attr('href');
+		window.open(url, "","menubar=no,toolbar=no,resizable=yes,scrollbars=yes,width=550,height=235");
+
+		ga('send', 'event', 'button', 'click', 'social share buttons');
+
+	  	e.preventDefault();
+
+	});
+
+	/*  ==========================================================================
 	    ScrollMagic
 	    ========================================================================== */
 

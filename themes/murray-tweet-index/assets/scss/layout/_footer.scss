@@ -27,7 +27,7 @@
     .footer-wrapper {
         max-width: 1320px;
         margin: 0 auto;
-        padding: 70px 20px;
+        padding: 70px 20px 90px;
     }
 
     .methodology {
@@ -116,3 +116,52 @@
             color: white;
         }
     }
+
+    .mti-twitter-share {
+        display: block;
+        position: fixed;
+        z-index: 10000;
+        right: 20px;
+        bottom: 20px;
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        padding-top: 40px;
+        background-color: $color-brand-2;
+        box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.15);
+        text-align: center;
+        @include font-size($font-12);
+        text-transform: uppercase;
+        color: white;
+        &:after {
+            position: absolute;
+            //z-index: 2;
+            top: 16px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: block;
+            content: '';
+            width: 27px;
+            height: 22px;
+            background: url('../images/icon-twitter-white.svg') top left no-repeat;
+        }
+        &:hover, &:active, &:focus {
+            color: white;
+        }
+        @include breakpoint($break-700) {
+            right: 10px;
+            bottom: 10px;
+            width: 50px;
+            height: 50px;
+            span {
+                display: none;
+            }
+        }
+    }
+
+
+
+
+
+
+
