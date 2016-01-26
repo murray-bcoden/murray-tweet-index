@@ -135,6 +135,7 @@ jQuery(document).ready(function($){
 			resetParamsTop5();
 			$currPanel = $(this).parent();
 			$(this).addClass('btn-expanded')
+			$(this).next().css('display', 'block');
 			$(this).next().addClass('params-panel-display');
 			$(this).parent().addClass("top-params-item-top");
 			initParamGraphs($(this));
@@ -152,7 +153,9 @@ jQuery(document).ready(function($){
 
 	function resetParamsTop5() {
 		// remove all these classes from the popup panel, button and main panel.
-		$('.params-panel').removeClass('params-panel-display'); 
+		var $paramsPanel = $('.params-panel');
+		$paramsPanel.removeClass('params-panel-display'); 
+		$paramsPanel.css('display', 'none');
 		$('.btn-expand-params').removeClass('btn-expanded');
 		$('.top-params-item').removeClass('top-params-item-top');
 		$('.top-params-item').parent().removeClass("top-params-item-top");

@@ -11,7 +11,7 @@
 					<div class="params-image-wrapper">
 						<img src="http://twitter.com/sportsdes/profile_image?size=bigger" alt="" class="top-params-image">
 					</div>
-					<h4 class="top-params-name">George Hook</h4>
+					<h4 class="top-params-name"><a href="http://twitter.com/sportsdes/" target="_blank">George Hook</a></h4>
 					<p class="top-params-job">Presenter, Newstalk</p>
 					<div class="top-params-num">155,103</div>
 					
