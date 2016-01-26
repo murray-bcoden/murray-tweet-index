@@ -35,10 +35,12 @@ jQuery(document).ready(function($){
   
 	$('.responsive').slick({
 		infinite: false,
-		speed: 300,
+		speed: 500,
 		slidesToShow: 5,
 		slidesToScroll: 5,
 		dots: true,
+		easing: Expo.easeInOut,
+		useTransform: true,
 		responsive: [{
 			breakpoint: 1300,
 			settings: {
@@ -55,7 +57,8 @@ jQuery(document).ready(function($){
 				slidesToScroll: 3,
 				infinite: true,
 				dots: true,
-				arrows: true
+				arrows: true,
+				touchMove: true
 			}
 		}, {
 			breakpoint: 900,
@@ -64,7 +67,8 @@ jQuery(document).ready(function($){
 				slidesToScroll: 2,
 				infinite: true,
 				dots: true,
-				arrows: true
+				arrows: true,
+				touchMove: true
 			}
 		}, {
 			breakpoint: 700,
@@ -73,7 +77,8 @@ jQuery(document).ready(function($){
 				slidesToScroll: 2,
 				infinite: true,
 				dots: true,
-				arrows: false
+				arrows: false,
+				touchMove: true
 			}
 		}, {
 			breakpoint: 500,
@@ -82,7 +87,8 @@ jQuery(document).ready(function($){
 				slidesToScroll: 1,
 				infinite: true,
 				dots: true,
-				arrows: false
+				arrows: false,
+				touchMove: true
 			}
 		}]
 	});
