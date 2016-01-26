@@ -91,13 +91,14 @@ jQuery(document).ready(function($){
 		
 		// if already expanded ?
 		if($(this).hasClass('btn-expanded')) {
-			$(this).removeClass('btn-expanded')
+			$(this).removeClass('btn-expanded');
 			resetParamsTop5();
 		}
 		else {
 			resetCategoriesTop5();
 			$currPanel = $(this).parent();
-			$(this).addClass('btn-expanded')
+			$(this).addClass('btn-expanded');
+			$(this).next().css('display', 'block');
 			$(this).next().addClass('categories-panel-display');
 			$(this).parent().addClass("top-categories-item-top");
 			// initParamGraphs($(this));
@@ -117,6 +118,7 @@ jQuery(document).ready(function($){
 		// remove all these classes from the popup panel, button and main panel.
 		$('.categories-panel').removeClass('categories-panel-display'); 
 		$('.btn-expand-categories').removeClass('btn-expanded');
+		$('.categories-panel').css('display', 'none');
 		$('.top-categories-item').removeClass('top-categories-item-top');
 		$('.top-categories-item').parent().removeClass("top-categories-item-top");
 	}
@@ -131,14 +133,18 @@ jQuery(document).ready(function($){
 		
 		// if already expanded ?
 		if($(this).hasClass('btn-expanded')) {
-			$(this).removeClass('btn-expanded')
+			$(this).removeClass('btn-expanded');
 			resetParamsTop5();
 		}
 		else {
 			resetParamsTop5();
 			$currPanel = $(this).parent();
+<<<<<<< HEAD
 			$(this).addClass('btn-expanded')
 			$(this).next().css('display', 'block');
+=======
+			$(this).addClass('btn-expanded');
+>>>>>>> hotfix/categories-popups-fixes
 			$(this).next().addClass('params-panel-display');
 			$(this).parent().addClass("top-params-item-top");
 			initParamGraphs($(this));
