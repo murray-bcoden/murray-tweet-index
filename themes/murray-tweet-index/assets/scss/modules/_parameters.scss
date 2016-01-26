@@ -145,6 +145,12 @@
             @include font-size($font-24);
             padding-right: 0;
         }
+        a {
+            color: $dark-blue;
+        }
+        a:hover {
+            color: $color-brand-2;
+        }
     }
 
     .top-params-job {
@@ -220,6 +226,7 @@
     ========================================================================== */
 
     .params-panel {
+        display: none;
         opacity: 0;
         position: absolute;
         top: 100px;
