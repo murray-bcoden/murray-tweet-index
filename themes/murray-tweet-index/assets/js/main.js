@@ -6,6 +6,9 @@
 // @codekit-prepend "vendor/selectric/jquery.selectric.min.js";
 // @codekit-prepend "vendor/slick-carousel/slick.min.js";
 // @codekit-prepend "vendor/match-height/match-height.js";
+// @codekit-prepend "vendor/scrollmagic/minified/ScrollMagic.min.js";
+// @codekit-prepend "vendor/scrollmagic/minified/plugins/animation.gsap.min.js";
+// @codekit-prepend "vendor/scrollmagic/minified/plugins/debug.addIndicators.min.js";
 
 
 jQuery(document).ready(function($){
@@ -13,7 +16,7 @@ jQuery(document).ready(function($){
 
 
 	/*  ==========================================================================
-	    4 Categories
+	    Categories
 	    ========================================================================== */
 
 	$('.category-title-wrapper').matchHeight();
@@ -181,5 +184,27 @@ jQuery(document).ready(function($){
 
 		
 	}
+
+	/*  ==========================================================================
+	    ScrollMagic
+	    ========================================================================== */
+
+	// // BG Animation Setup
+	// // .to('@target', @length, {@object})
+	// var bg_tween = TweenLite.to('#twitter', 1, {
+	// 	backgroundColor: '#FF0000',
+	// 	ease: Linear.easeNone
+	// });
+
+	// // init ScrollMagic Controller
+	// var controller = new ScrollMagic.Controller();
+
+	// // Background Scene
+	// var bg_scene = new  ScrollMagic.Scene({
+	// 	triggerElement: '#twitter', duration: 300
+	// })
+	// 	.setTween(bg_tween)
+	// 	//.addIndicators({name: "Animate BG Colour"}) // add indicators (requires plugin)
+	// 	.addTo(controller);
 
 });
