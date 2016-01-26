@@ -1,4 +1,4 @@
-.icon-wrapper {
+.category-icon-wrapper {
 	position: relative;
 	@include cf();
 	height: 140px;
@@ -7,7 +7,7 @@
 	border-bottom-right-radius: 3px;
 }
 
-.icon {
+.category-icon {
 	position: absolute;
 	background: $sprites-x2 no-repeat;
 	background-size: $sprites-x2-size;
@@ -16,120 +16,120 @@
 	transform: translateX(-50%);
 }
 
-.icon-news {
-	@extend .icon;
+.category-icon-news {
+	@extend .category-icon;
 	width: 42px;
 	height: 42px;
 	background-position: 0 -50px;
 }
 
-.icon-business {
-	@extend .icon;
+.category-icon-business {
+	@extend .category-icon;
 	width: 47px;
 	height: 42px;
 	background-position: -50px -50px;
 }
 
-.icon-sport {
-	@extend .icon;
+.category-icon-sport {
+	@extend .category-icon;
 	width: 42px;
 	height: 42px;
 	background-position: -100px -50px;
 }
 
-.icon-politics {
-	@extend .icon;
+.category-icon-politics {
+	@extend .category-icon;
 	width: 43px;
 	height: 42px;
 	background-position: -150px -50px;
 }
 
-.icon-broadcast {
-	@extend .icon;
+.category-icon-broadcast {
+	@extend .category-icon;
 	width: 35px;
 	height: 46px;
 	background-position: -200px -50px;
 }
 
-.icon-finance {
-	@extend .icon;
+.category-icon-finance {
+	@extend .category-icon;
 	width: 48px;
 	height: 42px;
 	background-position: -250px -50px;
 }
 
-.icon-agri-farming {
-	@extend .icon;
+.category-icon-agri-farming {
+	@extend .category-icon;
 	width: 48px;
 	height: 40px;
 	background-position: -300px -50px;
 }
 
-.icon-technology {
-	@extend .icon;
+.category-icon-technology {
+	@extend .category-icon;
 	width: 42px;
 	height: 42px;
 	background-position: -350px -50px;
 }
 
-.icon-entertainment {
-	@extend .icon;
+.category-icon-entertainment {
+	@extend .category-icon;
 	width: 46px;
 	height: 46px;
 	background-position: -400px -50px;
 }
 
-.icon-columnist {
-	@extend .icon;
+.category-icon-columnist {
+	@extend .category-icon;
 	width: 40px;
 	height: 40px;
 	background-position: -450px -50px;
 }
 
-.icon-health {
-	@extend .icon;
+.category-icon-health {
+	@extend .category-icon;
 	width: 42px;
 	height: 46px;
 	background-position: -250px -100px;
 }
 
-.icon-food {
-	@extend .icon;
+.category-icon-food {
+	@extend .category-icon;
 	width: 43px;
 	height: 46px;
 	background-position: -200px -100px;
 }
 
-.icon-property {
-	@extend .icon;
+.category-icon-property {
+	@extend .category-icon;
 	width: 26px;
 	height: 42px;
 	background-position: -300px -100px;
 }
 
-.icon-fashion {
-	@extend .icon;
+.category-icon-fashion {
+	@extend .category-icon;
 	width: 33px;
 	height: 44px;
 	background-position: -150px -100px;
 }
 
-.icon-arts {
-	@extend .icon;
+.category-icon-arts {
+	@extend .category-icon;
 	width: 47px;
 	height: 40px;
 	background-position: 0px -100px;
 }
 
-.icon-editorial {
-	@extend .icon;
+.category-icon-editorial {
+	@extend .category-icon;
 	width: 39px;
 	height: 39px;
 	background-position: -100px -100px;
 }
 
-.icon-beauty {
-	@extend .icon;
+.category-icon-beauty {
+	@extend .category-icon;
 	width: 36px;
 	height: 46px;
 	background-position: -50px -100px;
