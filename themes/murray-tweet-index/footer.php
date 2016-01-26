@@ -43,7 +43,8 @@
 			</footer>
 
 		</main>
-		<!-- /wrapper -->
+			<a href="https://twitter.com/intent/tweet/?text=Check%20out%20the%20Murray%20Tweet%20Index%202015:&amp;url=http://murraytweetindex.ie&amp;hashtags=murraytweetindex&amp;via=MurrayIRL&amp;" class="mti-twitter-share"><span>Share</span></a>
+	<!-- /wrapper -->
 
 		<!-- ============= OUTDATED BROWSER ============= -->
         <div id="outdated"></div>
