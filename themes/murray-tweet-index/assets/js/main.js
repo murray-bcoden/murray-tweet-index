@@ -171,12 +171,12 @@ jQuery(document).ready(function($){
 	function initParamGraphs($link) {
 		var $paramsPanel = $link.next(); // get the containing panel
 		var $listItems = $paramsPanel.find('.params-panel-item');
-		var paramMax = $paramsPanel.find('.params-panel-item:first-child').find('.params-panel-num').html().replace(/\,/g,""); // remove comma from string
+		var paramMax = Number($paramsPanel.find('.params-panel-item:first-child').find('.params-panel-num').html().replace(/[^0-9\.]/g, '')); // remove comma from string
 		TweenLite.set($paramsPanel.find('.params-bar span'), {width:0});
 		var paramCount = 0;
 		$listItems.each(function() {
 			var $paramItem = $(this).find('.params-bar span');
-		    var paramValue = $(this).find('.params-panel-num').html().replace(/\,/g,""); // get each value
+		    var paramValue = Number($(this).find('.params-panel-num').html().replace(/[^0-9\.]/g, '')); // get each value
 		    var paramPerc = ((paramValue/paramMax)*100)+"%"; // get percentage for each value
 		    TweenLite.to($paramItem, 1, {width:paramPerc, ease:Power2.easeOut, delay:0+paramCount/5});
 		    paramCount++;

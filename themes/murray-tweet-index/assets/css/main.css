@@ -3006,7 +3006,8 @@ blockquote {
 
 .params-panel-link {
   display: none;
-  color: #005872; }
+  color: #005872;
+  text-transform: lowercase; }
 
 .graph-bar {
   position: relative;
