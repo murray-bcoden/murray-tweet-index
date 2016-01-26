@@ -2926,7 +2926,6 @@ blockquote {
     2. Param Items Panel
     ========================================================================== */
 .params-panel {
-  display: none;
   opacity: 0;
   position: absolute;
   top: 100px;
@@ -3006,6 +3005,7 @@ blockquote {
   padding-right: 10px; }
 
 .params-panel-link {
+  display: none;
   color: #005872; }
 
 .graph-bar {

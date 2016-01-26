@@ -226,7 +226,7 @@
     ========================================================================== */
 
     .params-panel {
-        display: none;
+        //display: none;
         opacity: 0;
         position: absolute;
         top: 100px;
@@ -308,6 +308,7 @@
     }
 
     .params-panel-link {
+        display: none;
         color: $dark-blue;
     }
 
