@@ -4,7 +4,7 @@
 		<h2 class="section-title">Category Winners</h2>
 		<p class="section-intro">In addition to the overall rankings, the research ranked journalists’ influence on Twitter in a range of different categories, category winners included:</p>
 
-		<p class="categories-cta">Navigate to a Category</p>
+		<!-- <p class="categories-cta">Navigate to a Category</p>
 
 		<select name="Categories" id="categories">
 			<option value="News">News</option>
@@ -24,7 +24,7 @@
 			<option value="Arts">Arts</option>
 			<option value="Editorial">Editorial</option>
 			<option value="Beauty">Beauty</option>
-		</select>
+		</select> -->
 
 		<div class="slider responsive" id="carousel">
 		  <div class="category">
