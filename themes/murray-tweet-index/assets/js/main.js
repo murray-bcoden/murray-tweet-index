@@ -3,7 +3,6 @@
 // @codekit-prepend "vendor/greensock/plugins/ScrollToPlugin.min.js";
 // @codekit-prepend "vendor/greensock/easing/EasePack.min.js";
 // @codekit-prepend "vendor/greensock/TweenLite.min.js";
-// @codekit-prepend "vendor/selectric/jquery.selectric.min.js";
 // @codekit-prepend "vendor/slick-carousel/slick.min.js";
 // @codekit-prepend "vendor/match-height/match-height.js";
 // @codekit-prepend "vendor/scrollmagic/minified/ScrollMagic.min.js";
