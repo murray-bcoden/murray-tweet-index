@@ -539,7 +539,7 @@
 		  	</div>
 		  	<div class="category-winner">
 			    <div class="name">Gillian Nelis</div>
-			    <div class="job-title">Managing Editor, Sunday Business Post</div>
+			    <div class="job-title">Sunday Business Post</div>
 			</div>
 		    <div class="category-title-wrapper">
 				<div class="category-title">Food &amp; Drink</div>
@@ -581,11 +581,11 @@
 		  
 		  <div class="category">
 		  	<div class="category-image-wrapper">
-		  		<img class="twitter-profile" src="https://twitter.com/berniceharrison/profile_image?size=bigger" alt="Twitter Profile Image">
+		  		<img class="twitter-profile" src="https://twitter.com/pfmflan/profile_image?size=bigger" alt="Twitter Profile Image">
 		  	</div>
 		  	<div class="category-winner">
-			    <div class="name">Bernice Harrison</div>
-			    <div class="job-title">Property Contributor, Irish Times</div>
+			    <div class="name">Peter Flanagan</div>
+			    <div class="job-title">Commercial Property, Irish Independent</div>
 			</div>
 		    <div class="category-title-wrapper">
 				<div class="category-title">Property</div>
@@ -597,27 +597,27 @@
 					<ol class="categories-panel-list">
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">1</span><a href="https://twitter.com/berniceharrison" target="_blank" class="categories-panel-link">@berniceharrison</a>
+								<span class="categories-panel-index">1</span><a href="https://twitter.com/pfmflan" target="_blank" class="categories-panel-link">@pfmflan</a>
 							</div>
 						</li>
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">2</span><a href="https://twitter.com/pfmflan" target="_blank" class="categories-panel-link">@pfmflan</a>
+								<span class="categories-panel-index">2</span><a href="https://twitter.com/LindaDaly19" target="_blank" class="categories-panel-link">@LindaDaly19</a>
 							</div>
 						</li>
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">3</span><a href="https://twitter.com/LindaDaly19" target="_blank" class="categories-panel-link">@LindaDaly19</a>
+								<span class="categories-panel-index">3</span><a href="https://twitter.com/MadeleineLyonsI" target="_blank" class="categories-panel-link">@MadeleineLyonsI</a>
 							</div>
 						</li>
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">4</span><a href="https://twitter.com/MadeleineLyonsI" target="_blank" class="categories-panel-link">@MadeleineLyonsI</a>
+								<span class="categories-panel-index">4</span><a href="https://twitter.com/keenan_mark" target="_blank" class="categories-panel-link">@keenan_mark</a>
 							</div>
 						</li>
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">5</span><a href="https://twitter.com/keenan_mark" target="_blank" class="categories-panel-link">@keenan_mark</a>
+								<span class="categories-panel-index">5</span><a href="https://twitter.com/tinamarieon" target="_blank" class="categories-panel-link">@tinamarieon</a>
 							</div>
 						</li>
 					</ol>
@@ -677,7 +677,7 @@
 		  	</div>
 		  	<div class="category-winner">
 			    <div class="name">Rosita Boland</div>
-			    <div class="job-title">Arts correspondent, Irish Times</div>
+			    <div class="job-title">Features Writer, Irish Times</div>
 			</div>
 		    <div class="category-title-wrapper">
 				<div class="category-title">Arts</div>
