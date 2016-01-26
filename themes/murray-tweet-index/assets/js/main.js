@@ -30,7 +30,7 @@ jQuery(document).ready(function($){
 	$('.category-title-wrapper').matchHeight();
 
 	// Initialise Selectric Dropdown and Slick Carousel
-	$('#categories').selectric();
+	//$('#categories').selectric();
   
 	$('.responsive').slick({
 		infinite: false,
@@ -93,28 +93,49 @@ jQuery(document).ready(function($){
 	});
 
 	// Get index of the selected item in the dropdown and move the carousel to that index
-	var categoryCurrentIndex = 0;
-	$('#categories').change(function(e) {
-		categoryCurrentIndex = $(this).prop('selectedIndex');
-		var categoryCurrentSlide = $('.responsive').slick('slickCurrentSlide');
-		$('.responsive').slick('slickGoTo', parseInt(categoryCurrentIndex));
-	});
+	// var categoryCurrentIndex = 0;
+	// $('#categories').change(function(e) {
+	// 	categoryCurrentIndex = $(this).prop('selectedIndex');
+	// 	var categoryCurrentSlide = $('.responsive').slick('slickCurrentSlide');
+	// 	$('.responsive').slick('slickGoTo', parseInt(categoryCurrentIndex));
+	// });
+
+	var $openOldCatPanel = null;
+	var $openNewCatPanel = null;
+	var $catBtnSelected = null;
 
 	// Expand the Top 5 lists for categories
 	$(".btn-expand-categories").click(function(e) {
+
+		var speed = 0.1;
 		
 		// if already expanded ?
 		if($(this).hasClass('btn-expanded')) {
-			$(this).removeClass('btn-expanded')
-			resetParamsTop5();
+			$(this).removeClass('btn-expanded');
+			var $tempPanel1 = $openOldCatPanel; // create a temp variable for the old panel so doesn't get overwritten before the onComplete below can trigger
+			if($openOldCatPanel != null) {
+				TweenLite.to($openOldCatPanel, speed, {bottom:100, opacity:0, ease:Circ.easeIn, onComplete:function() { $tempPanel1.css('display', 'none') } } ); // hide the open panel
+			}
 		}
 		else {
-			resetCategoriesTop5();
-			$currPanel = $(this).parent();
-			$(this).addClass('btn-expanded')
-			$(this).next().addClass('categories-panel-display');
-			$(this).parent().addClass("top-categories-item-top");
-			// initParamGraphs($(this));
+			//resetCategoriesTop5();
+
+			$openNewCatPanel = $(this).next() // find the panel to open
+			$openNewCatPanel.css('display', 'block'); // make the new panel visible
+
+			if($catBtnSelected != null) {
+				$catBtnSelected.removeClass('btn-expanded');
+			}
+			$(this).addClass('btn-expanded'); // make the current button selected
+			$catBtnSelected = $(this);
+
+			var $tempPanel2 = $openOldCatPanel; // create a temp variable for the old panel so doesn't get overwritten before the onComplete below can trigger
+			if($openOldCatPanel != null) {
+				TweenLite.to($openOldCatPanel, speed, {bottom:100, opacity:0, ease:Circ.easeIn, onComplete:function() { $tempPanel2.css('display', 'none'); } } ); // hide the open panel
+			}
+			$openOldCatPanel = $openNewCatPanel;
+			TweenLite.to($openNewCatPanel, speed, {bottom:75, opacity:1, ease:Circ.easeOut} );
+
 		}
 		
 		e.preventDefault();
@@ -123,18 +144,13 @@ jQuery(document).ready(function($){
 	});
 
 	$(document).on('click', function () {
-       	resetCategoriesTop5();
+		if($catBtnSelected != null) {
+       		$catBtnSelected.removeClass('btn-expanded');
+       	}
+		if($openOldCatPanel != null) {
+			TweenLite.to($openOldCatPanel, 0.1, {bottom:100, opacity:0, ease:Circ.easeIn, onComplete:function() { $(this).css('display', 'none') } } ); // hide the open panel
+		}
     });
-
-
-	function resetCategoriesTop5() {
-		// remove all these classes from the popup panel, button and main panel.
-		$('.categories-panel').removeClass('categories-panel-display'); 
-		$('.btn-expand-categories').removeClass('btn-expanded');
-		$('.top-categories-item').removeClass('top-categories-item-top');
-		$('.top-categories-item').parent().removeClass("top-categories-item-top");
-	}
-
 	
 	/*  ==========================================================================
 	    Parameters panels
@@ -152,7 +168,7 @@ jQuery(document).ready(function($){
 			resetParamsTop5();
 			$currPanel = $(this).parent();
 			$(this).addClass('btn-expanded')
-			$(this).next().find('.params-panel-link').css('display', 'block');
+			$(this).next().find('.params-panel-link').css('display', 'block'); // show the links
 			$(this).next().addClass('params-panel-display');
 			$(this).parent().addClass("top-params-item-top");
 			initParamGraphs($(this));
@@ -172,7 +188,7 @@ jQuery(document).ready(function($){
 		// remove all these classes from the popup panel, button and main panel.
 		var $paramsPanel = $('.params-panel');
 		$paramsPanel.removeClass('params-panel-display'); 
-		$paramsPanel.find('.params-panel-link').css('display', 'none');
+		$paramsPanel.find('.params-panel-link').css('display', 'none'); // hide the links
 		$('.btn-expand-params').removeClass('btn-expanded');
 		$('.top-params-item').removeClass('top-params-item-top');
 		$('.top-params-item').parent().removeClass("top-params-item-top");
