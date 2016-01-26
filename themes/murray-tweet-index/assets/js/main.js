@@ -139,12 +139,9 @@ jQuery(document).ready(function($){
 		else {
 			resetParamsTop5();
 			$currPanel = $(this).parent();
-<<<<<<< HEAD
-			$(this).addClass('btn-expanded')
-			$(this).next().css('display', 'block');
-=======
 			$(this).addClass('btn-expanded');
->>>>>>> hotfix/categories-popups-fixes
+			$(this).next().css('display', 'block');
+			$(this).addClass('btn-expanded');
 			$(this).next().addClass('params-panel-display');
 			$(this).parent().addClass("top-params-item-top");
 			initParamGraphs($(this));
