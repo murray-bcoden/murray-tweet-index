@@ -750,7 +750,7 @@
 						</li>
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">4</span><a href="https://twitter.com/roakleyst" target="_blank" class="categories-panel-link">@roakleyst</a>
+								<span class="categories-panel-index">4</span><a href="https://twitter.com/roakleyIRL" target="_blank" class="categories-panel-link">@roakleyIRL</a>
 							</div>
 						</li>
 						<li class="categories-panel-item">
