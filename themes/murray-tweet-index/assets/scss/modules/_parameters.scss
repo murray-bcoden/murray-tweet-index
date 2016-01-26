@@ -138,7 +138,7 @@
     .top-params-name {
         margin: 0;
         padding-right: 230px;
-        @include font-size($font-36);
+        @include font-size($font-28);
         @extend .sans-semi;
         @include breakpoint($break-1200) {
             margin-left: 110px;
