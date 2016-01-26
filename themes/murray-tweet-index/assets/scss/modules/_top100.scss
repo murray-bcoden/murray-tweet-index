@@ -129,14 +129,16 @@
             background: url(../images/ipad-mini.svg) top left no-repeat;
         }
         @include breakpoint($break-700) {
-            width: 100%;
+            width: auto;
             height: auto;
-            margin-top: -50px 0px 0;
-            padding: 0 20px 10px;
+            margin: -50px 20px 0;
+            padding: 10px 0 10px;
             background-image: none;
+            border-top: 1px solid $color-brand-1;
+            border-bottom: 1px solid $color-brand-1;
         }
         @include breakpoint($break-1000h) {
-            margin-top: 0;
+            //margin-top: 0;
         }
     }
 
@@ -159,7 +161,7 @@
         }
         @include breakpoint($break-700) {
             width: 100%;
-            height: 300px;
+            height: 320px;
             position: static;
         }
     }
@@ -238,6 +240,9 @@
         &:hover {
             color: white;
         }
+        @include breakpoint($break-500) {
+            padding-top: 0;
+        }
     }
 
     .top-image-wrapper {
@@ -275,6 +280,12 @@
             font-style: normal;
             @include font-size($font-14);
         }
+        @include breakpoint($break-500) {
+            display: block;
+            position: relative;
+            height: 60px;
+            margin-left: 72px;
+        }
     }
 
     .top-num {
@@ -282,12 +293,34 @@
         padding-top: 8px;
         padding-left: 8px;
         border-right: 1px solid #f6f6f6;
-        background-color: $bright-blue;;
+        background-color: $bright-blue;
         color: white;
         text-align: center;
         @extend .sans-semi;
         @include breakpoint($break-700) {
             padding-top: 10px;
+        }
+        @include breakpoint($break-500) {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 40px;
+            height: 100%;
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+            padding: 18px 0 0;
+            &:before {
+                display: block;
+                content: '';
+                position: absolute;
+                top: 24px;
+                left: -5px;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 6px 5px 6px 0;
+                border-color: transparent $bright-blue transparent transparent;
+            }
         }
     }
 
@@ -297,14 +330,25 @@
         @include breakpoint($break-700) {
             padding-top: 10px;
         }
+        @include breakpoint($break-500) {
+            padding: 10px 10px 0 53px;
+        }
     }
 
     .top-handle {
-        flex-grow: 1;
+        //flex-grow: 1;
+        width: 158px;
     }
 
     .top-name {
-        flex-grow: 1.5;
+        //flex-grow: 1.5;
+        @include breakpoint($break-500) {
+            @include font-size($font-12);
+            padding-top: 0;
+            font-family: 'ff-meta-serif-web-pro', $fallback-stack;
+            font-weight: 500;
+            font-style: normal;
+        }
     }
 
 
