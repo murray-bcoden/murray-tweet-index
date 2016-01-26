@@ -2,7 +2,7 @@
 
 	<div class="media-wrapper">
 		<h2 class="section-title">Media Outlets</h2>
-		<p class="section-intro">Maecenas faucibus mollis interdum. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+		<p class="section-intro">The research reviewed which media outlets had most journalists in the top 100.</p>
 	
 		<div class="media-info-wrap">
 
