@@ -102,7 +102,6 @@
 
 		.job-title {
 			margin-bottom: 40px;
-			padding: 0px 21px;
 			@extend .serif;
 			@include font-size(16);
 			text-align: center;
@@ -128,6 +127,7 @@
 
 		.category-winner {
 			height: 160px;
+			padding: 0 14px;
 		}
 
 		.btn-expand-categories {
