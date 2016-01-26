@@ -2621,7 +2621,8 @@ blockquote {
   width: 180px; }
 
 .categories-panel-link {
-  color: #005872; }
+  color: #005872;
+  text-transform: lowercase; }
   @media (min-width: 700px) and (max-width: 720px) {
     .categories-panel-link {
       font-size: 12px;

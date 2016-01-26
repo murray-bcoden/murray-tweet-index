@@ -233,6 +233,7 @@
 
     .categories-panel-link {
         color: $dark-blue;
+        text-transform: lowercase;
 
         // 2 slides displayed
         @include breakpoint(700px 720px) {
