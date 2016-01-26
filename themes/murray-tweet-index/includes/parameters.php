@@ -333,7 +333,7 @@
 	</div>
 	<div class="params-quote-wrapper">
 		<blockquote class="params-quote">
-			<p>High profile journalists on Twitter can plan an important role in extending the reach of their outlet’s stories and introducing content to new audiences.</p>
+			<p>High profile journalists on Twitter can play an important role in extending the reach of their outlet’s stories and introducing content to new audiences.</p>
 		</blockquote>
 		<span></span>
 	</div>
