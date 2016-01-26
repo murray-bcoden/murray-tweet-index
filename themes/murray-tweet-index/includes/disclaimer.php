@@ -1,5 +1,7 @@
 <div id="disclaimer" class="remodal disclaimer" data-remodal-id="modal">
 	<div class="disclaimer-wrapper">
+		<a href="#" class="disclaimer-close remodal-close"></a>
+
     	<h1 class="disclaimer-title">Murray Tweet Index Disclaimer</h1>
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci repellendus et veritatis, molestiae delectus! Accusantium eveniet repudiandae quas odio perspiciatis quaerat quasi, nulla assumenda odit quisquam recusandae omnis suscipit reprehenderit?</p>
 		<p>Nostrum libero veritatis, amet beatae sed nulla expedita mollitia. Libero repudiandae dignissimos, molestiae eos dicta, dolor blanditiis consequuntur excepturi, eveniet officia deleniti voluptatem sunt culpa nulla quos dolorum harum doloremque.</p>
@@ -18,6 +20,6 @@
 		<p>Mollitia itaque tempora nihil, suscipit architecto, culpa quod officiis voluptatum reprehenderit quibusdam vel laudantium vitae consectetur neque sed, a nostrum et minus. Eveniet, rerum autem nam voluptate a quisquam quidem.</p>
 	</div>
 
-	<button data-remodal-action="confirm" class="remodal-confirm">OK</button>
+	<button data-remodal-action="confirm" class="disclaimer-ok remodal-confirm">OK</button>
 	
 </div>

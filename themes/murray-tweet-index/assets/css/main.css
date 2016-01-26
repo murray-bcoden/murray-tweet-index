@@ -573,7 +573,7 @@ img {
   -ms-interpolation-mode: bicubic;
   image-rendering: optimizeQuality; }
 
-.sans-light, body, .selectric-items li, .section-title, .top-100-badge span, .category .name, .most-list-title {
+.sans-light, body, .selectric-items li, .section-title, .top-100-badge span, .category .name, .most-list-title, .disclaimer-title {
   font-family: "open-sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300;
   font-style: normal; }
@@ -3549,14 +3549,9 @@ blockquote {
 /*  ==========================================================================
     1. Disclaimer
     ========================================================================== */
-.disclaimer {
-  background-color: white;
-  position: relative;
-  padding: 55px 0 45px 0;
-  max-height: 80vh;
-  overflow-y: scroll; }
-  .disclaimer p {
-    text-align: center; }
+@media (max-width: 700px) {
+  .remodal-wrapper {
+    padding: 0; } }
 
 .disclaimer-wrapper {
   padding: 0 20px;
@@ -3564,10 +3559,58 @@ blockquote {
   margin: 0 auto;
   position: relative;
   text-align: center; }
+  @media (max-width: 700px) {
+    .disclaimer-wrapper {
+      max-width: 100%;
+      padding: 0; } }
+
+.disclaimer {
+  background-color: white;
+  position: relative;
+  padding: 14px 21px;
+  max-height: 80vh;
+  overflow-y: scroll; }
+  .disclaimer p {
+    text-align: center; }
+  @media (max-width: 700px) {
+    .disclaimer {
+      width: 100%;
+      height: 100vh;
+      max-height: 100vh;
+      margin: 0;
+      padding: 40px 21px; } }
 
 .disclaimer-title {
-  font-size: 24px;
-  font-size: 2.4rem;
-  line-height: 1.5; }
+  text-transform: uppercase;
+  font-size: 28px;
+  font-size: 2.8rem;
+  line-height: 1.2;
+  color: #00a2d1; }
+
+.disclaimer-close {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  left: calc(100% - 62px);
+  top: -16px;
+  background-color: white; }
+  .disclaimer-close:hover {
+    background-color: #00a2d1; }
+    .disclaimer-close:hover:before {
+      background-position: -250px 0px; }
+  .disclaimer-close:before {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    left: 14px;
+    top: 14px;
+    background: url("../images/mti-sprites-@2x.png") no-repeat;
+    background-size: 900px 500px;
+    background-position: -300px 0px;
+    content: '';
+    font-size: 0; }
+
+.disclaimer-ok {
+  margin-top: 40px; }
 
 /*# sourceMappingURL=main.css.map */
