@@ -355,7 +355,7 @@
 		  	</div>
 		  	<div class="category-winner">
 			    <div class="name">Adrian Weckler</div>
-			    <div class="job-title">Technology Editor, Independent Newspapers</div>
+			    <div class="job-title">Technology Editor, Independent News &amp; Media</div>
 			</div>
 		    <div class="category-title-wrapper">
 				<div class="category-title">Technology</div>
@@ -585,7 +585,7 @@
 		  	</div>
 		  	<div class="category-winner">
 			    <div class="name">Peter Flanagan</div>
-			    <div class="job-title">Commercial Property, Irish Independent</div>
+			    <div class="job-title">Commercial Property Editor, Independent News &amp; Media</div>
 			</div>
 		    <div class="category-title-wrapper">
 				<div class="category-title">Property</div>
