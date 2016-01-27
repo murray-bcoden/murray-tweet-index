@@ -35,16 +35,25 @@
         max-width: 1320px;
         margin: 0 auto;
         padding: 70px 20px 90px;
+        @include breakpoint($break-700) {
+            display: block;
+        }
     }
 
     .methodology {
-        padding-right: 30px;
-        width: 50%;
+        padding-right: 30px; 
     }
 
     .deets {
         padding-left: 30px;
+    }
+
+    .methodology, .deets {
         width: 50%;
+        @include breakpoint($break-700) {
+            width: 100%;
+            padding: 0;
+        }
     }
 
     .footer-title {
@@ -97,6 +106,9 @@
                 text-decoration: underline;
             }
         }
+         @include breakpoint($break-700) {
+            margin-top: 42px;
+         }
     }
 
     .twitter-follow {
