@@ -583,12 +583,24 @@
 						</a>
 					</li>
 					<li class="top-item">
+						<a href="https://twitter.com/tomdoorley" class="top-link" target="_blank">
+							<div class="top-image-wrapper">
+								<img data-original="http://twitter.com/tomdoorley/profile_image?size=bigger" alt="" class="top-image lazy">
+							</div>
+							<div class="top-bar">
+								<div class="top-num">49</div>
+								<div class="top-handle">@tomdoorley</div>
+								<div class="top-name">Tom Doorley</div>
+							</div>
+						</a>
+					</li>
+					<li class="top-item">
 						<a href="https://twitter.com/chrisrdonoghue" class="top-link" target="_blank">
 							<div class="top-image-wrapper">
 								<img data-original="http://twitter.com/chrisrdonoghue/profile_image?size=bigger" alt="" class="top-image lazy">
 							</div>
 							<div class="top-bar">
-								<div class="top-num">49</div>
+								<div class="top-num">50</div>
 								<div class="top-handle">@chrisrdonoghue</div>
 								<div class="top-name">Chris Donoghue</div>
 							</div>
@@ -600,7 +612,7 @@
 								<img data-original="http://twitter.com/kensweeney/profile_image?size=bigger" alt="" class="top-image lazy">
 							</div>
 							<div class="top-bar">
-								<div class="top-num">50</div>
+								<div class="top-num">51</div>
 								<div class="top-handle">@kensweeney</div>
 								<div class="top-name">Ken Sweeney</div>
 							</div>
@@ -612,7 +624,7 @@
 								<img data-original="http://twitter.com/JohnBurnsST/profile_image?size=bigger" alt="" class="top-image lazy">
 							</div>
 							<div class="top-bar">
-								<div class="top-num">51</div>
+								<div class="top-num">52</div>
 								<div class="top-handle">@JohnBurnsST</div>
 								<div class="top-name">John Burns</div>
 							</div>
@@ -624,7 +636,7 @@
 								<img data-original="http://twitter.com/gavinsblog/profile_image?size=bigger" alt="" class="top-image lazy">
 							</div>
 							<div class="top-bar">
-								<div class="top-num">52</div>
+								<div class="top-num">53</div>
 								<div class="top-handle">@gavinsblog</div>
 								<div class="top-name">Gavin Sheridan</div>
 							</div>
@@ -636,7 +648,7 @@
 								<img data-original="http://twitter.com/fotoole/profile_image?size=bigger" alt="" class="top-image lazy">
 							</div>
 							<div class="top-bar">
-								<div class="top-num">53</div>
+								<div class="top-num">54</div>
 								<div class="top-handle">@fotoole</div>
 								<div class="top-name">Fintan O'Toole</div>
 							</div>
@@ -648,7 +660,7 @@
 								<img data-original="http://twitter.com/MartyM_RTE/profile_image?size=bigger" alt="" class="top-image lazy">
 							</div>
 							<div class="top-bar">
-								<div class="top-num">54</div>
+								<div class="top-num">55</div>
 								<div class="top-handle">@MartyM_RTE</div>
 								<div class="top-name">Marty Morrissey</div>
 							</div>
@@ -660,7 +672,7 @@
 								<img data-original="http://twitter.com/MaryERegan/profile_image?size=bigger" alt="" class="top-image lazy">
 							</div>
 							<div class="top-bar">
-								<div class="top-num">55</div>
+								<div class="top-num">56</div>
 								<div class="top-handle">@MaryERegan</div>
 								<div class="top-name">Mary Regan</div>
 							</div>
@@ -672,7 +684,7 @@
 								<img data-original="http://twitter.com/philipnolan1/profile_image?size=bigger" alt="" class="top-image lazy">
 							</div>
 							<div class="top-bar">
-								<div class="top-num">56</div>
+								<div class="top-num">57</div>
 								<div class="top-handle">@philipnolan1</div>
 								<div class="top-name">Philip Nolan</div>
 							</div>
@@ -684,7 +696,7 @@
 								<img data-original="http://twitter.com/bairbrepower/profile_image?size=bigger" alt="" class="top-image lazy">
 							</div>
 							<div class="top-bar">
-								<div class="top-num">57</div>
+								<div class="top-num">58</div>
 								<div class="top-handle">@bairbrepower</div>
 								<div class="top-name">Bairbre Power</div>
 							</div>
@@ -696,7 +708,7 @@
 								<img data-original="http://twitter.com/newschambers/profile_image?size=bigger" alt="" class="top-image lazy">
 							</div>
 							<div class="top-bar">
-								<div class="top-num">58</div>
+								<div class="top-num">59</div>
 								<div class="top-handle">@newschambers</div>
 								<div class="top-name">Richard Chambers</div>
 							</div>
@@ -708,7 +720,7 @@
 								<img data-original="http://twitter.com/englishrachael/profile_image?size=bigger" alt="" class="top-image lazy">
 							</div>
 							<div class="top-bar">
-								<div class="top-num">59</div>
+								<div class="top-num">60</div>
 								<div class="top-handle">@englishrachael</div>
 								<div class="top-name">Rachael English</div>
 							</div>
@@ -720,7 +732,7 @@
 								<img data-original="http://twitter.com/damienrte/profile_image?size=bigger" alt="" class="top-image lazy">
 							</div>
 							<div class="top-bar">
-								<div class="top-num">60</div>
+								<div class="top-num">61</div>
 								<div class="top-handle">@damienrte</div>
 								<div class="top-name">Damien Tiernan</div>
 							</div>
@@ -732,7 +744,7 @@
 								<img data-original="http://twitter.com/RuthDE/profile_image?size=bigger" alt="" class="top-image lazy">
 							</div>
 							<div class="top-bar">
-								<div class="top-num">61</div>
+								<div class="top-num">62</div>
 								<div class="top-handle">@RuthDE</div>
 								<div class="top-name">Ruth Dudley Edwards</div>
 							</div>
@@ -744,7 +756,7 @@
 								<img data-original="http://twitter.com/lovelygirlybits/profile_image?size=bigger" alt="" class="top-image lazy">
 							</div>
 							<div class="top-bar">
-								<div class="top-num">62</div>
+								<div class="top-num">63</div>
 								<div class="top-handle">@lovelygirlybits</div>
 								<div class="top-name">Karen Constantine</div>
 							</div>
@@ -756,7 +768,7 @@
 								<img data-original="http://twitter.com/carolmhunt/profile_image?size=bigger" alt="" class="top-image lazy">
 							</div>
 							<div class="top-bar">
-								<div class="top-num">63</div>
+								<div class="top-num">64</div>
 								<div class="top-handle">@carolmhunt</div>
 								<div class="top-name">Carol Hunt</div>
 							</div>
@@ -768,7 +780,7 @@
 								<img data-original="http://twitter.com/brianOD_News/profile_image?size=bigger" alt="" class="top-image lazy">
 							</div>
 							<div class="top-bar">
-								<div class="top-num">64</div>
+								<div class="top-num">65</div>
 								<div class="top-handle">@brianOD_News</div>
 								<div class="top-name">Brian O'Donovan</div>
 							</div>
@@ -780,7 +792,7 @@
 								<img data-original="http://twitter.com/paulcollinstipp/profile_image?size=bigger" alt="" class="top-image lazy">
 							</div>
 							<div class="top-bar">
-								<div class="top-num">65</div>
+								<div class="top-num">66</div>
 								<div class="top-handle">@paulcollinstipp</div>
 								<div class="top-name">Paul Collins</div>
 							</div>
@@ -792,7 +804,7 @@
 								<img data-original="http://twitter.com/gergilroy/profile_image?size=bigger" alt="" class="top-image lazy">
 							</div>
 							<div class="top-bar">
-								<div class="top-num">66</div>
+								<div class="top-num">67</div>
 								<div class="top-handle">@gergilroy</div>
 								<div class="top-name">Ger Gilroy</div>
 							</div>
@@ -804,7 +816,7 @@
 								<img data-original="http://twitter.com/willhanafin/profile_image?size=bigger" alt="" class="top-image lazy">
 							</div>
 							<div class="top-bar">
-								<div class="top-num">67</div>
+								<div class="top-num">68</div>
 								<div class="top-handle">@willhanafin</div>
 								<div class="top-name">Will Hanafin</div>
 							</div>
@@ -816,7 +828,7 @@
 								<img data-original="http://twitter.com/melaniemorris/profile_image?size=bigger" alt="" class="top-image lazy">
 							</div>
 							<div class="top-bar">
-								<div class="top-num">68</div>
+								<div class="top-num">69</div>
 								<div class="top-handle">@melaniemorris</div>
 								<div class="top-name">Melanie Morris</div>
 							</div>
@@ -828,7 +840,7 @@
 								<img data-original="http://twitter.com/hlinehan/profile_image?size=bigger" alt="" class="top-image lazy">
 							</div>
 							<div class="top-bar">
-								<div class="top-num">69</div>
+								<div class="top-num">70</div>
 								<div class="top-handle">@hlinehan</div>
 								<div class="top-name">Hugh Linehan</div>
 							</div>
@@ -840,7 +852,7 @@
 								<img data-original="http://twitter.com/miriamocal/profile_image?size=bigger" alt="" class="top-image lazy">
 							</div>
 							<div class="top-bar">
-								<div class="top-num">70</div>
+								<div class="top-num">71</div>
 								<div class="top-handle">@miriamocal</div>
 								<div class="top-name">Miriam O'Callaghan</div>
 							</div>
@@ -852,7 +864,7 @@
 								<img data-original="http://twitter.com/mcculld/profile_image?size=bigger" alt="" class="top-image lazy">
 							</div>
 							<div class="top-bar">
-								<div class="top-num">71</div>
+								<div class="top-num">72</div>
 								<div class="top-handle">@mcculld</div>
 								<div class="top-name">David McCullagh</div>
 							</div>
@@ -864,7 +876,7 @@
 								<img data-original="http://twitter.com/rositaboland/profile_image?size=bigger" alt="" class="top-image lazy">
 							</div>
 							<div class="top-bar">
-								<div class="top-num">72</div>
+								<div class="top-num">73</div>
 								<div class="top-handle">@rositaboland</div>
 								<div class="top-name">Rosita Boland</div>
 							</div>
@@ -876,7 +888,7 @@
 								<img data-original="http://twitter.com/Shane_RossTD/profile_image?size=bigger" alt="" class="top-image lazy">
 							</div>
 							<div class="top-bar">
-								<div class="top-num">73</div>
+								<div class="top-num">74</div>
 								<div class="top-handle">@Shane_RossTD</div>
 								<div class="top-name">Shane Ross</div>
 							</div>
@@ -888,7 +900,7 @@
 								<img data-original="http://twitter.com/ornamulcahy/profile_image?size=bigger" alt="" class="top-image lazy">
 							</div>
 							<div class="top-bar">
-								<div class="top-num">74</div>
+								<div class="top-num">75</div>
 								<div class="top-handle">@ornamulcahy</div>
 								<div class="top-name">Orna Mulcahy</div>
 							</div>
@@ -900,7 +912,7 @@
 								<img data-original="http://twitter.com/christinebohan/profile_image?size=bigger" alt="" class="top-image lazy">
 							</div>
 							<div class="top-bar">
-								<div class="top-num">75</div>
+								<div class="top-num">76</div>
 								<div class="top-handle">@christinebohan</div>
 								<div class="top-name">Christine Bohan</div>
 							</div>
@@ -912,7 +924,7 @@
 								<img data-original="http://twitter.com/bryansixone/profile_image?size=bigger" alt="" class="top-image lazy">
 							</div>
 							<div class="top-bar">
-								<div class="top-num">76</div>
+								<div class="top-num">77</div>
 								<div class="top-handle">@bryansixone</div>
 								<div class="top-name">Bryan Dobson</div>
 							</div>
@@ -924,7 +936,7 @@
 								<img data-original="http://twitter.com/deshocks/profile_image?size=bigger" alt="" class="top-image lazy">
 							</div>
 							<div class="top-bar">
-								<div class="top-num">77</div>
+								<div class="top-num">78</div>
 								<div class="top-handle">@deshocks</div>
 								<div class="top-name">Deirdre O'Shaughnessy</div>
 							</div>
@@ -936,7 +948,7 @@
 								<img data-original="http://twitter.com/KevDoyle_Indo/profile_image?size=bigger" alt="" class="top-image lazy">
 							</div>
 							<div class="top-bar">
-								<div class="top-num">78</div>
+								<div class="top-num">79</div>
 								<div class="top-handle">@KevDoyle_Indo</div>
 								<div class="top-name">Kevin Doyle</div>
 							</div>
@@ -948,7 +960,7 @@
 								<img data-original="http://twitter.com/sonyalennon/profile_image?size=bigger" alt="" class="top-image lazy">
 							</div>
 							<div class="top-bar">
-								<div class="top-num">79</div>
+								<div class="top-num">80</div>
 								<div class="top-handle">@sonyalennon</div>
 								<div class="top-name">Sonya Lennon</div>
 							</div>
@@ -960,7 +972,7 @@
 								<img data-original="http://twitter.com/marktigheST/profile_image?size=bigger" alt="" class="top-image lazy">
 							</div>
 							<div class="top-bar">
-								<div class="top-num">80</div>
+								<div class="top-num">81</div>
 								<div class="top-handle">@marktigheST</div>
 								<div class="top-name">Mark Tighe</div>
 							</div>
@@ -972,7 +984,7 @@
 								<img data-original="http://twitter.com/LucindasIreland/profile_image?size=bigger" alt="" class="top-image lazy">
 							</div>
 							<div class="top-bar">
-								<div class="top-num">81</div>
+								<div class="top-num">82</div>
 								<div class="top-handle">@LucindasIreland</div>
 								<div class="top-name">Lucinda O'Sullivan</div>
 							</div>
@@ -984,7 +996,7 @@
 								<img data-original="http://twitter.com/martinafitzg/profile_image?size=bigger" alt="" class="top-image lazy">
 							</div>
 							<div class="top-bar">
-								<div class="top-num">82</div>
+								<div class="top-num">83</div>
 								<div class="top-handle">@martinafitzg</div>
 								<div class="top-name">Martina Fitzgerald</div>
 							</div>
@@ -996,7 +1008,7 @@
 								<img data-original="http://twitter.com/josefoshea/profile_image?size=bigger" alt="" class="top-image lazy">
 							</div>
 							<div class="top-bar">
-								<div class="top-num">83</div>
+								<div class="top-num">84</div>
 								<div class="top-handle">@josefoshea</div>
 								<div class="top-name">Joe O'Shea</div>
 							</div>
@@ -1008,7 +1020,7 @@
 								<img data-original="http://twitter.com/mcdigby/profile_image?size=bigger" alt="" class="top-image lazy">
 							</div>
 							<div class="top-bar">
-								<div class="top-num">84</div>
+								<div class="top-num">85</div>
 								<div class="top-handle">@mcdigby</div>
 								<div class="top-name">Marie Claire Digby</div>
 							</div>
@@ -1020,7 +1032,7 @@
 								<img data-original="http://twitter.com/eoinmcdevitt/profile_image?size=bigger" alt="" class="top-image lazy">
 							</div>
 							<div class="top-bar">
-								<div class="top-num">85</div>
+								<div class="top-num">86</div>
 								<div class="top-handle">@eoinmcdevitt</div>
 								<div class="top-name">Eoin McDevitt</div>
 							</div>
@@ -1032,7 +1044,7 @@
 								<img data-original="http://twitter.com/noelwhelan/profile_image?size=bigger" alt="" class="top-image lazy">
 							</div>
 							<div class="top-bar">
-								<div class="top-num">86</div>
+								<div class="top-num">87</div>
 								<div class="top-handle">@noelwhelan</div>
 								<div class="top-name">Noel Whelan</div>
 							</div>
@@ -1044,7 +1056,7 @@
 								<img data-original="http://twitter.com/aislingmkeenan/profile_image?size=bigger" alt="" class="top-image lazy">
 							</div>
 							<div class="top-bar">
-								<div class="top-num">87</div>
+								<div class="top-num">88</div>
 								<div class="top-handle">@aislingmkeenan</div>
 								<div class="top-name">Aisling Keenan</div>
 							</div>
@@ -1056,7 +1068,7 @@
 								<img data-original="http://twitter.com/emmetmalone/profile_image?size=bigger" alt="" class="top-image lazy">
 							</div>
 							<div class="top-bar">
-								<div class="top-num">88</div>
+								<div class="top-num">89</div>
 								<div class="top-handle">@emmetmalone</div>
 								<div class="top-name">Emmet Malone</div>
 							</div>
@@ -1068,7 +1080,7 @@
 								<img data-original="http://twitter.com/damien_omeara/profile_image?size=bigger" alt="" class="top-image lazy">
 							</div>
 							<div class="top-bar">
-								<div class="top-num">89</div>
+								<div class="top-num">90</div>
 								<div class="top-handle">@damien_omeara</div>
 								<div class="top-name">Damien O'Meara</div>
 							</div>
@@ -1080,7 +1092,7 @@
 								<img data-original="http://twitter.com/roakleyIRL/profile_image?size=bigger" alt="" class="top-image lazy">
 							</div>
 							<div class="top-bar">
-								<div class="top-num">90</div>
+								<div class="top-num">91</div>
 								<div class="top-handle">@roakleyIRL</div>
 								<div class="top-name">Richard Oakley</div>
 							</div>
@@ -1092,7 +1104,7 @@
 								<img data-original="http://twitter.com/sineadkissane/profile_image?size=bigger" alt="" class="top-image lazy">
 							</div>
 							<div class="top-bar">
-								<div class="top-num">91</div>
+								<div class="top-num">92</div>
 								<div class="top-handle">@sineadkissane</div>
 								<div class="top-name">Sinead Kissane</div>
 							</div>
@@ -1104,7 +1116,7 @@
 								<img data-original="http://twitter.com/saveciaranmurph/profile_image?size=bigger" alt="" class="top-image lazy">
 							</div>
 							<div class="top-bar">
-								<div class="top-num">92</div>
+								<div class="top-num">93</div>
 								<div class="top-handle">@saveciaranmurph</div>
 								<div class="top-name">Ciaran Murphy</div>
 							</div>
@@ -1116,7 +1128,7 @@
 								<img data-original="http://twitter.com/Darrenken/profile_image?size=bigger" alt="" class="top-image lazy">
 							</div>
 							<div class="top-bar">
-								<div class="top-num">93</div>
+								<div class="top-num">94</div>
 								<div class="top-handle">@Darrenken</div>
 								<div class="top-name">Darren Kennedy</div>
 							</div>
@@ -1128,7 +1140,7 @@
 								<img data-original="http://twitter.com/DonnellyStephen/profile_image?size=bigger" alt="" class="top-image lazy">
 							</div>
 							<div class="top-bar">
-								<div class="top-num">94</div>
+								<div class="top-num">95</div>
 								<div class="top-handle">@DonnellyStephen</div>
 								<div class="top-name">Stephen Donnelly</div>
 							</div>
@@ -1140,7 +1152,7 @@
 								<img data-original="http://twitter.com/TonyClaytonLea/profile_image?size=bigger" alt="" class="top-image lazy">
 							</div>
 							<div class="top-bar">
-								<div class="top-num">95</div>
+								<div class="top-num">96</div>
 								<div class="top-handle">@TonyClaytonLea</div>
 								<div class="top-name">Tony Clayton Lea</div>
 							</div>
@@ -1152,7 +1164,7 @@
 								<img data-original="http://twitter.com/malachyclerkin/profile_image?size=bigger" alt="" class="top-image lazy">
 							</div>
 							<div class="top-bar">
-								<div class="top-num">96</div>
+								<div class="top-num">97</div>
 								<div class="top-handle">@malachyclerkin</div>
 								<div class="top-name">Malachy Clerkin</div>
 							</div>
@@ -1164,7 +1176,7 @@
 								<img data-original="http://twitter.com/drgavinjennings/profile_image?size=bigger" alt="" class="top-image lazy">
 							</div>
 							<div class="top-bar">
-								<div class="top-num">97</div>
+								<div class="top-num">98</div>
 								<div class="top-handle">@drgavinjennings</div>
 								<div class="top-name">Gavin Jennings</div>
 							</div>
@@ -1176,7 +1188,7 @@
 								<img data-original="http://twitter.com/ITdominiccoyle/profile_image?size=bigger" alt="" class="top-image lazy">
 							</div>
 							<div class="top-bar">
-								<div class="top-num">98</div>
+								<div class="top-num">99</div>
 								<div class="top-handle">@ITdominiccoyle</div>
 								<div class="top-name">Dominic Coyle</div>
 							</div>
@@ -1188,21 +1200,9 @@
 								<img data-original="http://twitter.com/fionnansheahan/profile_image?size=bigger" alt="" class="top-image lazy">
 							</div>
 							<div class="top-bar">
-								<div class="top-num">99</div>
+								<div class="top-num">100</div>
 								<div class="top-handle">@fionnansheahan</div>
 								<div class="top-name">Fionnan Sheahan</div>
-							</div>
-						</a>
-					</li>
-					<li class="top-item">
-						<a href="https://twitter.com/suzannelynch1" class="top-link" target="_blank">
-							<div class="top-image-wrapper">
-								<img data-original="http://twitter.com/suzannelynch1/profile_image?size=bigger" alt="" class="top-image lazy">
-							</div>
-							<div class="top-bar">
-								<div class="top-num">100</div>
-								<div class="top-handle">@suzannelynch1</div>
-								<div class="top-name">Suzanne Lynch</div>
 							</div>
 						</a>
 					</li>

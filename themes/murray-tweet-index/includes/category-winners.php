@@ -556,22 +556,22 @@
 						</li>
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">2</span><a href="https://twitter.com/LucindasIreland" target="_blank" class="categories-panel-link">@LucindasIreland</a>
+								<span class="categories-panel-index">2</span><a href="https://twitter.com/tomdoorley" target="_blank" class="categories-panel-link">@tomdoorley</a>
 							</div>
 						</li>
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">3</span><a href="https://twitter.com/mcdigby" target="_blank" class="categories-panel-link">@mcdigby</a>
+								<span class="categories-panel-index">3</span><a href="https://twitter.com/LucindasIreland" target="_blank" class="categories-panel-link">@LucindasIreland</a>
 							</div>
 						</li>
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">4</span><a href="https://twitter.com/LillyHiggins" target="_blank" class="categories-panel-link">@LillyHiggins</a>
+								<span class="categories-panel-index">4</span><a href="https://twitter.com/mcdigby" target="_blank" class="categories-panel-link">@mcdigby</a>
 							</div>
 						</li>
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">5</span><a href="https://twitter.com/Wilsononwine" target="_blank" class="categories-panel-link">@Wilsononwine</a>
+								<span class="categories-panel-index">5</span><a href="https://twitter.com/LillyHiggins" target="_blank" class="categories-panel-link">@LillyHiggins</a>
 							</div>
 						</li>
 					</ol>
