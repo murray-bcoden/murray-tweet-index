@@ -21,23 +21,37 @@
     .footer {
         background-color: $dark-blue;
         border-top: 47px solid white;
-        color: $color-brand-1;
+        color: #6ac1db;
+        a {
+            color: white;
+            &:hover, &:focus {
+                color: white;
+            }
+        }
     }
 
     .footer-wrapper {
+        display: flex;
         max-width: 1320px;
         margin: 0 auto;
         padding: 70px 20px 90px;
     }
 
     .methodology {
+        padding-right: 30px;
+        width: 50%;
+    }
 
+    .deets {
+        padding-left: 30px;
+        width: 50%;
     }
 
     .footer-title {
         margin: 0 0 20px;
         @include font-size($font-16);
         text-transform: uppercase;
+        color: white;
     }
 
     .methodology-content {
@@ -52,8 +66,8 @@
     }
 
     .method-list {
-        max-width: 554px;
-        margin: 0 0 0 40px;
+        max-width: 564px;
+        margin: 21px 0;
         columns: 2;
         -webkit-columns: 2;
         -moz-columns: 2;
@@ -61,10 +75,7 @@
         -webkit-column-gap: 40px;
         -moz-column-gap: 40px;
         counter-reset: colnum;
-        @include breakpoint($break-700) {
-            margin-left: 0px;
-            margin-top: 21px;
-        }
+        padding-left: 16px;
         @include breakpoint($break-400) {
             columns: 1;
             -webkit-columns: 1;
@@ -78,8 +89,7 @@
     }
 
     .contact {
-        max-width: 544px;
-        margin-top: 30px;
+        margin-bottom: 42px;
         a {
             color: white;
             &:hover {
@@ -89,12 +99,15 @@
         }
     }
 
-    .footnote {
-        display: flex;
-        align-items: flex-end;
-        margin-top: 50px;
-        > * {
-            flex-basis: 50%;
+    .twitter-follow {
+        margin-bottom: 42px;
+        a:before {
+            display: inline-block;
+            content: '';
+            width: 27px;
+            height: 22px;
+            margin-right: 10px;
+            background: url('../images/icon-twitter-white.svg') top left no-repeat;
         }
     }
 
@@ -108,10 +121,11 @@
         margin: 10px 0 0 1px;
         width: 64px;
         height: auto;
+        margin-bottom: 42px;
     }
 
     .copyright {
-        text-align: right;
+        //text-align: right;
         a {
             color: white;
         }
