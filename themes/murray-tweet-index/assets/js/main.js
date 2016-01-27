@@ -216,6 +216,14 @@ jQuery(document).ready(function($){
 	}
 
 	/*  ==========================================================================
+	    Twitter follow
+	    ========================================================================== */
+	$('#twitter-follow').on('click', function(e) {
+		e.preventDefault();
+		window.open('https://twitter.com/intent/follow?screen_name=MurrayIRL&user_id=2373580801','TwitterFollow', 'width=800, height=600');
+	});
+
+	/*  ==========================================================================
 	    Twitter share
 	    ========================================================================== */
 
