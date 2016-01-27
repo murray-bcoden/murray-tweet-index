@@ -9,7 +9,7 @@
 				
 				<div class="top-params-details">
 					<div class="params-image-wrapper">
-						<img src="http://twitter.com/sportsdes/profile_image?size=bigger" alt="" class="top-params-image">
+						<img src="http://twitter.com/ghook/profile_image?size=bigger" alt="" class="top-params-image">
 					</div>
 					<h4 class="top-params-name"><a href="http://twitter.com/ghook/" target="_blank">George Hook</a></h4>
 					<p class="top-params-job">Presenter, Newstalk</p>
@@ -65,7 +65,7 @@
 					<div class="params-image-wrapper">
 						<img src="http://twitter.com/gtcost/profile_image?size=bigger" alt="" class="top-params-image">
 					</div>
-					<h4 class="top-params-name">Constantin Gurdgiev</h4>
+					<h4 class="top-params-name"><a href="http://twitter.com/gtcost/" target="_blank">Constantin Gurdgiev</a></h4>
 					<p class="top-params-job">Columnist</p>
 					<div class="top-params-num">47.30</div>
 					
@@ -119,7 +119,7 @@
 					<div class="params-image-wrapper">
 						<img src="http://twitter.com/kenearlys/profile_image?size=bigger" alt="" class="top-params-image">
 					</div>
-					<h4 class="top-params-name">Ken Early</h4>
+					<h4 class="top-params-name"<a href="http://twitter.com/kenearlys/" target="_blank">>Ken Early</a></h4>
 					<p class="top-params-job">Sport, Irish Times</p>
 					<div class="top-params-num">7,819</div>
 					
@@ -171,9 +171,9 @@
 				
 				<div class="top-params-details">
 					<div class="params-image-wrapper">
-						<img src="http://twitter.com/sportsdes/profile_image?size=bigger" alt="" class="top-params-image">
+						<img src="http://twitter.com/dearbhaildibs/profile_image?size=bigger" alt="" class="top-params-image">
 					</div>
-					<h4 class="top-params-name">Dearbhail McDonald</h4>
+					<h4 class="top-params-name"><a href="http://twitter.com/dearbhaildibs/" target="_blank">Dearbhail McDonald</a></h4>
 					<p class="top-params-job">Legal Editor, Irish Independent</p>
 					<div class="top-params-num">12,499</div>
 					
@@ -227,7 +227,7 @@
 					<div class="params-image-wrapper">
 						<img src="http://twitter.com/gerrythornley/profile_image?size=bigger" alt="" class="top-params-image">
 					</div>
-					<h4 class="top-params-name">Gerry Thornley</h4>
+					<h4 class="top-params-name"><a href="http://twitter.com/gerrythornley/" target="_blank">Gerry Thornley</a></h4>
 					<p class="top-params-job">Rugby Correspondent, RTÉ</p>
 					<div class="top-params-num">85%</div>
 					
@@ -279,9 +279,9 @@
 				
 				<div class="top-params-details">
 					<div class="params-image-wrapper">
-						<img src="http://twitter.com/sportsdes/profile_image?size=bigger" alt="" class="top-params-image">
+						<img src="http://twitter.com/gerrythornley/profile_image?size=bigger" alt="" class="top-params-image">
 					</div>
-					<h4 class="top-params-name">Gerry Thornley</h4>
+					<h4 class="top-params-name"><a href="http://twitter.com/gerrythornley/" target="_blank">Gerry Thornley</a></h4>
 					<p class="top-params-job">Rugby Correspondent, RTÉ</p>
 					<div class="top-params-num">95%</div>
 					

@@ -448,7 +448,6 @@ if (!isset($stream->layout) || empty($stream->layout)) {
 
 //                var isErr = response.errors && response.errors.length && response.errors[0] != '';
                 var isErr = response.status === "errors";
-                debugger
                 if ((opts.isAdmin || opts.isLog) && isErr) {
 					$errCont = $('<div class="ff-errors" id="ff-errors-'+response.id+'"><div class="ff-err-info">If you see this then you\'re administrator and Flow-Flow got errors from APIs while requesting data. Please go to plugin\'s admin and after refreshing page check for error(s) on stream settings page. Please provide error message info if you\'re doing support request.</div></div>')
 					$cont.before($errCont);
