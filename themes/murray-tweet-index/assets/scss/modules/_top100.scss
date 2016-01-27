@@ -374,12 +374,12 @@
 
     .top-name {
         //flex-grow: 1.5;
+        padding-top: 12px;
+        @extend .serif;
+        @include font-size($font-12);
+        text-transform: uppercase;
         @include breakpoint($break-500) {
-            @include font-size($font-12);
             padding-top: 0;
-            font-family: 'ff-meta-serif-web-pro', $fallback-stack;
-            font-weight: 500;
-            font-style: normal;
         }
     }
 
