@@ -1968,18 +1968,35 @@ blockquote {
 .footer {
   background-color: #005872;
   border-top: 47px solid white;
-  color: #00a2d1; }
+  color: #6ac1db; }
+  .footer a {
+    color: white; }
+    .footer a:hover, .footer a:focus {
+      color: white; }
 
 .footer-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   max-width: 1320px;
   margin: 0 auto;
   padding: 70px 20px 90px; }
+
+.methodology {
+  padding-right: 30px;
+  width: 50%; }
+
+.deets {
+  padding-left: 30px;
+  width: 50%; }
 
 .footer-title {
   margin: 0 0 20px;
   font-size: 16px;
   font-size: 1.6rem;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  color: white; }
 
 .methodology-content {
   display: -webkit-box;
@@ -1994,19 +2011,16 @@ blockquote {
   max-width: 544px; }
 
 .method-list {
-  max-width: 554px;
-  margin: 0 0 0 40px;
+  max-width: 564px;
+  margin: 21px 0;
   columns: 2;
   -webkit-columns: 2;
   -moz-columns: 2;
   column-gap: 40px;
   -webkit-column-gap: 40px;
   -moz-column-gap: 40px;
-  counter-reset: colnum; }
-  @media (max-width: 700px) {
-    .method-list {
-      margin-left: 0px;
-      margin-top: 21px; } }
+  counter-reset: colnum;
+  padding-left: 16px; }
   @media (max-width: 400px) {
     .method-list {
       columns: 1;
@@ -2018,28 +2032,22 @@ blockquote {
     break-inside: avoid; }
 
 .contact {
-  max-width: 544px;
-  margin-top: 30px; }
+  margin-bottom: 42px; }
   .contact a {
     color: white; }
     .contact a:hover {
       color: white;
       text-decoration: underline; }
 
-.footnote {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: end;
-  -webkit-align-items: flex-end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  margin-top: 50px; }
-  .footnote > * {
-    -webkit-flex-basis: 50%;
-        -ms-flex-preferred-size: 50%;
-            flex-basis: 50%; }
+.twitter-follow {
+  margin-bottom: 42px; }
+  .twitter-follow a:before {
+    display: inline-block;
+    content: '';
+    width: 27px;
+    height: 22px;
+    margin-right: 10px;
+    background: url("../images/icon-twitter-white.svg") top left no-repeat; }
 
 .credit {
   text-transform: uppercase;
@@ -2050,12 +2058,11 @@ blockquote {
   display: block;
   margin: 10px 0 0 1px;
   width: 64px;
-  height: auto; }
+  height: auto;
+  margin-bottom: 42px; }
 
-.copyright {
-  text-align: right; }
-  .copyright a {
-    color: white; }
+.copyright a {
+  color: white; }
 
 .mti-twitter-share {
   display: block;
@@ -2630,7 +2637,7 @@ blockquote {
   width: 158px; }
 
 .top-name {
-  padding-top: 12px;
+  padding-top: 14px;
   font-size: 12px;
   font-size: 1.2rem;
   text-transform: uppercase; }

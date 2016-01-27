@@ -23,7 +23,7 @@
 						<div class="most-num">18</div>
 					</li>
 					<li class="most-list-item">
-						<div class="most-outlet">Indepenedent News &amp; Media</div>
+						<div class="most-outlet">Independent News &amp; Media</div>
 						<div class="graph-bar most-bar"><span style="width: 71.40%"></span></div>
 						<div class="most-num">15</div>
 					</li>
@@ -33,7 +33,7 @@
 						<div class="most-num">8</div>
 					</li>
 					<li class="most-list-item">
-						<div class="most-outlet">SB Post</div>
+						<div class="most-outlet">Sunday Business Post</div>
 						<div class="graph-bar most-bar"><span style="width: 19%"></span></div>
 						<div class="most-num">4</div>
 					</li>
@@ -64,6 +64,11 @@
 					</li>
 					<li class="most-list-item">
 						<div class="most-outlet">UTV Ireland</div>
+						<div class="graph-bar most-bar"><span style="width: 4.8%"></span></div>
+						<div class="most-num">1</div>
+					</li>
+					<li class="most-list-item">
+						<div class="most-outlet">Daily Mail</div>
 						<div class="graph-bar most-bar"><span style="width: 4.8%"></span></div>
 						<div class="most-num">1</div>
 					</li>
