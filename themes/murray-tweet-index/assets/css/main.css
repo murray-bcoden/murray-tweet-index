@@ -582,7 +582,11 @@ img {
   font-style: normal; }
 
 .sans-semi, strong,
+<<<<<<< HEAD
 p.bold, .btn, .btn-expand, .slick-prev:before, .slick-next:before, .top-100-badge, .top-num, .categories-cta, .category .category-title, .categories-panel-item, .top-params-title, .top-params-name, .top-params-num, .params-panel-item, .most-outlet, #ff-stream-1 .ff-loadmore-wrapper .ff-btn {
+=======
+p.bold, .btn, .btn-expand, .slick-prev:before, .slick-next:before, .top-100-badge, .top-num, .categories-cta, .category .category-title, .categories-panel-item, .top-params-title, .top-params-name, .top-params-num, .params-panel-item, .most-outlet, #ff-stream-1 .ff-loadmore-wrapper .ff-btn, .disclaimer-content .disclaimer-point-title {
+>>>>>>> hotfix/disclaimer-content-and-styling
   font-family: "open-sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 600;
   font-style: normal; }
@@ -651,9 +655,15 @@ a {
   color: #00a2d1;
   text-decoration: none; }
   a:hover {
+<<<<<<< HEAD
     color: #006785; }
   a:active, a:focus {
     color: #006785;
+=======
+    color: #006784; }
+  a:active, a:focus {
+    color: #006784;
+>>>>>>> hotfix/disclaimer-content-and-styling
     outline: none; }
 
 hr {
@@ -2775,7 +2785,10 @@ blockquote {
     ========================================================================== */
 .categories-panel {
   display: none;
+<<<<<<< HEAD
   transform: translate3d(0, 0, 0);
+=======
+>>>>>>> hotfix/disclaimer-content-and-styling
   opacity: 0;
   position: absolute;
   bottom: 100px;
@@ -3422,6 +3435,7 @@ blockquote {
   .remodal-wrapper {
     padding: 0; } }
 
+<<<<<<< HEAD
 .disclaimer-wrapper {
   padding: 0 20px;
   max-width: 800px;
@@ -3441,27 +3455,89 @@ blockquote {
   overflow-y: scroll; }
   .disclaimer p {
     text-align: center; }
+=======
+.disclaimer {
+  background-color: white;
+  position: relative;
+  padding: 80px 30px 20px;
+  max-height: 80vh; }
+  .disclaimer p {
+    text-align: left; }
+>>>>>>> hotfix/disclaimer-content-and-styling
   @media (max-width: 700px) {
     .disclaimer {
       width: 100%;
       height: 100vh;
       max-height: 100vh;
       margin: 0;
+<<<<<<< HEAD
       padding: 40px 21px; } }
 
 .disclaimer-title {
+=======
+      padding-left: 20px;
+      padding-right: 20px; } }
+
+.disclaimer-wrapper {
+  position: relative; }
+
+.disclaimer-header {
+  position: fixed;
+  width: 100%;
+  height: 75px;
+  top: 0;
+  left: 0;
+  *zoom: 1; }
+  .disclaimer-header:before, .disclaimer-header:after {
+    content: '';
+    display: table; }
+  .disclaimer-header:after {
+    clear: both; }
+
+.disclaimer-title {
+  margin-top: 23px;
+>>>>>>> hotfix/disclaimer-content-and-styling
   text-transform: uppercase;
   font-size: 28px;
   font-size: 2.8rem;
   line-height: 1.2;
   color: #00a2d1; }
+<<<<<<< HEAD
+=======
+  @media (max-width: 800px) {
+    .disclaimer-title {
+      max-width: 90%;
+      margin: 23px auto;
+      text-align: center;
+      font-size: 24px;
+      font-size: 2.4rem; } }
+  @media (max-width: 600px) {
+    .disclaimer-title {
+      max-width: 80%;
+      margin: 23px auto;
+      text-align: center;
+      font-size: 24px;
+      font-size: 2.4rem; } }
+  @media (max-width: 500px) {
+    .disclaimer-title {
+      max-width: 65%;
+      margin: 23px auto;
+      text-align: center;
+      font-size: 18px;
+      font-size: 1.8rem; } }
+>>>>>>> hotfix/disclaimer-content-and-styling
 
 .disclaimer-close {
   position: absolute;
   width: 60px;
   height: 60px;
+<<<<<<< HEAD
   left: calc(100% - 62px);
   top: -16px;
+=======
+  left: calc(100% - 68px);
+  top: 8px;
+>>>>>>> hotfix/disclaimer-content-and-styling
   background-color: white; }
   .disclaimer-close:hover {
     background-color: #00a2d1; }
@@ -3479,5 +3555,25 @@ blockquote {
     content: '';
     font-size: 0; }
 
+<<<<<<< HEAD
 .disclaimer-ok {
   margin-top: 40px; }
+=======
+.disclaimer-content {
+  overflow-y: scroll;
+  max-height: calc(80vh - 180px); }
+  @media (max-width: 700px) {
+    .disclaimer-content {
+      max-height: calc(100vh - 180px); } }
+  .disclaimer-content li {
+    margin-bottom: 20px;
+    text-align: left; }
+  .disclaimer-content .disclaimer-point-title {
+    text-align: left; }
+
+.disclaimer-ok {
+  margin-top: 40px; }
+  @media (max-width: 400px) {
+    .disclaimer-ok {
+      max-height: 20vh; } }
+>>>>>>> hotfix/disclaimer-content-and-styling
