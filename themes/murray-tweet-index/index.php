@@ -8,6 +8,5 @@
 	<?php get_template_part('includes/media'); ?>
 	<?php get_template_part('includes/twitter'); ?>
 	<?php get_template_part('includes/disclaimer'); ?>
-	<?php get_template_part('includes/twitter-follow'); ?>
 
 <?php get_footer(); ?>
