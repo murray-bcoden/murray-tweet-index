@@ -11,7 +11,7 @@
 .disclaimer {
 	background-color: white;
 	position: relative;
-	padding: 80px 30px 20px;
+	padding: 80px 30px 60px;
 	max-height: 80vh;
 	p {
 		text-align: left;
@@ -21,8 +21,7 @@
 		height: 100vh;
 		max-height: 100vh;
 		margin: 0;
-		padding-left: 20px;
-		padding-right: 20px;
+		padding: 80px 30px 40px;
 	}
 }
 
@@ -39,7 +38,7 @@
 }
 
 .disclaimer-title {
-	margin-top: 23px;
+	margin-top: 20px;
 	text-transform: uppercase;
 	@include font-size($font-28);
 	@extend .sans-light;
@@ -47,19 +46,25 @@
 	color: $color-brand-1;
 	@include breakpoint($break-800) {
 		max-width: 90%;
-		margin: 23px auto;
+		margin: 21px auto;
 		text-align: center;
 		@include font-size($font-24);
 	}
 	@include breakpoint($break-600) {
 		max-width: 80%;
-		margin: 25px auto;
+		margin: 23px auto;
 		text-align: center;
 		@include font-size($font-21);
 	}
 	@include breakpoint($break-500) {
-		max-width: 50%;
-		margin: 19px auto;
+		max-width: 75%;
+		margin: 23px auto;
+		text-align: center;
+		@include font-size($font-18);
+	}
+	@include breakpoint($break-400) {
+		max-width: 55%;
+		margin: 15px auto;
 		text-align: center;
 		@include font-size($font-18);
 	}
@@ -69,8 +74,8 @@
 	position: absolute;
 	width: 60px;
 	height: 60px;
-	left: calc(100% - 68px);
-	top: 8px;
+	left: calc(100% - 40px);
+	top: 4px;
 	background-color: white;
 	&:hover {
 		background-color: $color-brand-1;
@@ -94,10 +99,14 @@
 
 .disclaimer-content {
 	overflow-y: scroll;
-	max-height: calc(80vh - 180px);
+	max-height: calc(80vh - 140px);
 	padding-right: 20px;
 	@include breakpoint($break-700) {
-		max-height: calc(100vh - 180px);
+		max-height: calc(100vh - 140px);
+	}
+
+	.nano-content {
+		padding-right: 30px;
 	}
 
 	li {

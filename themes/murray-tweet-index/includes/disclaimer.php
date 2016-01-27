@@ -6,8 +6,8 @@
 	    	<a href="#" class="disclaimer-close remodal-close"></a>
 	    </div>
 
-		<div class="disclaimer-content">
-			<ol>
+		<div class="disclaimer-content nano">
+			<ol class="nano-content">
 				<li>
 					<span class="disclaimer-point-title">Site Ownership, Administration &amp; Contact Information</span>
 					<p>This website www.murraytweetindex.ie (the Site) is the property of and is administered &amp; controlled by:<br />
@@ -44,8 +44,6 @@
 				</li>
 			</ol>
 		</div>
-
-		<button data-remodal-action="confirm" class="disclaimer-ok remodal-confirm">OK</button>
 
 	</div>
 	
