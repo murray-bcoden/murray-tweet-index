@@ -66,7 +66,7 @@
 						<img src="http://twitter.com/gtcost/profile_image?size=bigger" alt="" class="top-params-image">
 					</div>
 					<h4 class="top-params-name"><a href="http://twitter.com/gtcost/" target="_blank">Constantin Gurdgiev</a></h4>
-					<p class="top-params-job">Columnist</p>
+					<p class="top-params-job">Columnist, Sunday Times</p>
 					<div class="top-params-num">47.30</div>
 					
 				</div>
@@ -120,7 +120,7 @@
 						<img src="http://twitter.com/kenearlys/profile_image?size=bigger" alt="" class="top-params-image">
 					</div>
 					<h4 class="top-params-name"<a href="http://twitter.com/kenearlys/" target="_blank">Ken Early</a></h4>
-					<p class="top-params-job">Sport, Irish Times</p>
+					<p class="top-params-job">Sports Journalist, Irish Times/Second Captains</p>
 					<div class="top-params-num">7,819</div>
 					
 				</div>
@@ -228,7 +228,7 @@
 						<img src="http://twitter.com/gerrythornley/profile_image?size=bigger" alt="" class="top-params-image">
 					</div>
 					<h4 class="top-params-name"><a href="http://twitter.com/gerrythornley/" target="_blank">Gerry Thornley</a></h4>
-					<p class="top-params-job">Rugby Correspondent, RTÉ</p>
+					<p class="top-params-job">Rugby Correspondent, Irish Times</p>
 					<div class="top-params-num">85%</div>
 					
 				</div>
@@ -282,7 +282,7 @@
 						<img src="http://twitter.com/gerrythornley/profile_image?size=bigger" alt="" class="top-params-image">
 					</div>
 					<h4 class="top-params-name"><a href="http://twitter.com/gerrythornley/" target="_blank">Gerry Thornley</a></h4>
-					<p class="top-params-job">Rugby Correspondent, RTÉ</p>
+					<p class="top-params-job">Rugby Correspondent, Irish Times</p>
 					<div class="top-params-num">95%</div>
 					
 				</div>
