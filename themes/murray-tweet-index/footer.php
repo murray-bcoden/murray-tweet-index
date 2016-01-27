@@ -39,7 +39,7 @@
 					</div>
 
 					<div class="twitter-follow">
-						<a href="#twitter-follow">Follow Us</a>
+						<a href="#" id="twitter-follow">Follow Us</a>
 					</div>
 				
 				</div>

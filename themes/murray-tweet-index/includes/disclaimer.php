@@ -15,7 +15,7 @@
 					40 Baggot Street Lower<br />
 					Dublin 2</p>
 
-					<p>The primary point of contact in relation to this website is <a href="mailto:tweetindex@murraygroup.ie">tweetindex@murraygroup.ie</a></p>
+					<p>The primary point of contact in relation to this website is <a href="mailto:<?php echo antispambot( 'tweetindex@murraygroup.ie' ); ?>"><?php echo antispambot( 'tweetindex@murraygroup.ie' ); ?></a></p>
 				</li>
 
 				<li>
@@ -34,13 +34,13 @@
 				<li>
 					<span class="disclaimer-point-title">Data used in the compilation of this Data</span>
 					<p>The single purpose of this website is to deliver an analysis of Irish Media Journalists as a measure of their possible influence on Twitter.</p>
-					<p>The data used in this research was compiled from publicly available information on Twitter profiles using Twitonomy analytics (www.twitonomy.com). Data was collected for the Twitter profiles during the period from 1st January 2015 until 30th September 2015. The analysis was based on the previous 3,200 tweets that the user had made (or if the user had yet to make 3,200 tweets then all their tweets to date). The information was gathered and processed in good faith and based on our assessment of the relevant journalists who should be considered.  Any questions, comments or suggestions for improvement or inclusion in next year’s index should be sent to <a href="mailto:tweetindex@murraygroup.ie">tweetindex@murraygroup.ie</a></p>
+					<p>The data used in this research was compiled from publicly available information on Twitter profiles using Twitonomy analytics (www.twitonomy.com). Data was collected for the Twitter profiles during the period from 1st January 2015 until 30th September 2015. The analysis was based on the previous 3,200 tweets that the user had made (or if the user had yet to make 3,200 tweets then all their tweets to date). The information was gathered and processed in good faith and based on our assessment of the relevant journalists who should be considered.  Any questions, comments or suggestions for improvement or inclusion in next year’s index should be sent to <a href="mailto:<?php echo antispambot( 'tweetindex@murraygroup.ie' ); ?>"><?php echo antispambot( 'tweetindex@murraygroup.ie' ); ?></a></p>
 					<p>Any photographic images used for each Twitter Account profiled on the Site are the publicly available profile pictures uploaded to their Twitter Account and fed into the Site via a live feed from the Twitter API and have in no way been altered by the owners of the Site.</p>
 				</li>
 
 				<li>
 					<span class="disclaimer-point-title">Requests for Data Removal</span>
-					<p>If you are a journalist featured on this website and for some reason you wish to have your details removed, please confirm to us in writing by emailing us at <a href="mailto:tweetindex@murraygroup.ie">tweetindex@murraygroup.ie</a> or by regular post to the address of the owners of the site above. We will endeavour to complete any requests from any featured journalist to remove their details within 2 working days of receipt of the request (subject to confirmation of the identity of the person making the request).</p>
+					<p>If you are a journalist featured on this website and for some reason you wish to have your details removed, please confirm to us in writing by emailing us at <a href="mailto:<?php echo antispambot( 'tweetindex@murraygroup.ie' ); ?>"><?php echo antispambot( 'tweetindex@murraygroup.ie' ); ?></a> or by regular post to the address of the owners of the site above. We will endeavour to complete any requests from any featured journalist to remove their details within 2 working days of receipt of the request (subject to confirmation of the identity of the person making the request).</p>
 				</li>
 			</ol>
 		</div>
