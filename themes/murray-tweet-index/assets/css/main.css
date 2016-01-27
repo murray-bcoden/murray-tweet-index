@@ -3556,10 +3556,10 @@ blockquote {
   position: relative; }
 
 .disclaimer-header {
-  position: fixed;
+  position: absolute;
   width: 100%;
   height: 75px;
-  top: 0;
+  top: -75px;
   left: 0; }
 
 .disclaimer-title {
