@@ -54,7 +54,7 @@
 
 						<div class="credit">Designed by <a href="http://www.murraycreative.ie" target="_blank" class="mc-logo-link"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/murray-creative-logo.svg" alt="Murray Creative Logo"></a></div>
 						
-						<p class="copyright">&copy; <?php echo date('Y'); ?> Copyright <?php bloginfo('name'); ?> <a href="#disclaimer">Disclaimer</a></p>	
+						<p class="copyright">&copy; <?php echo date('Y'); ?> Copyright Murray. All rights reserved. <a href="#disclaimer">Disclaimer</a></p>	
 
 					</div>
 
