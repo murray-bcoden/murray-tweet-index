@@ -10,6 +10,7 @@
 // @codekit-prepend "vendor/scrollmagic/minified/plugins/debug.addIndicators.min.js";
 // @codekit-prepend "vendor/lazyload/jquery.lazyload.min.js";
 // @codekit-prepend "vendor/remodal/remodal.min.js";
+// @codekit-prepend "vendor/jquery.nanoscroller.min.js";
 
 
 jQuery(document).ready(function($){
@@ -20,7 +21,7 @@ jQuery(document).ready(function($){
 	    Top 100
 	    ========================================================================== */
 	    $("img.lazy").lazyload({container: $(".top-list-wrapper"), effect: "fadeIn", threshold: 200});
-
+	    $(".nano").nanoScroller({ iOSNativeScrolling: true, alwaysVisible: true });
 
 
 	/*  ==========================================================================
