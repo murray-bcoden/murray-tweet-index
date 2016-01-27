@@ -295,7 +295,7 @@
 						</li>
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">5</span><a href="https://twitter.com/jillkirby" target="_blank" class="categories-panel-link">@jillkirby</a>
+								<span class="categories-panel-index">5</span><a href="https://twitter.com/jillkerby" target="_blank" class="categories-panel-link">@jillkerby</a>
 							</div>
 						</li>
 					</ol>
