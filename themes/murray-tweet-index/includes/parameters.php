@@ -119,7 +119,7 @@
 					<div class="params-image-wrapper">
 						<img src="http://twitter.com/kenearlys/profile_image?size=bigger" alt="" class="top-params-image">
 					</div>
-					<h4 class="top-params-name"<a href="http://twitter.com/kenearlys/" target="_blank">>Ken Early</a></h4>
+					<h4 class="top-params-name"<a href="http://twitter.com/kenearlys/" target="_blank">Ken Early</a></h4>
 					<p class="top-params-job">Sport, Irish Times</p>
 					<div class="top-params-num">7,819</div>
 					

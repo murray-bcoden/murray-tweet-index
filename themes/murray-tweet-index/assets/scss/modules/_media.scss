@@ -28,6 +28,7 @@
     }
 
     .media-info-wrap {
+        display: -ms-flexbox;
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -38,12 +39,17 @@
     }
 
     .media-type-wrapper {
-        flex-basis: 50%;
+        //flex-basis: 50%;
+        width: 50%;
         flex-grow: 1;
+        @include breakpoint($break-1000) {
+            width: 100%;
+        }
     }
 
     .media-type {
         display: block;
+        width: 100%;
         max-width: 664px;
         @include breakpoint($break-1000) {
             margin: 80px auto 80px;
@@ -51,10 +57,13 @@
     }
 
     .most-list-wrapper {
-        flex-basis: 50%;
+        //flex-basis: 50%;
         flex-grow: 1;
-        margin: 0 0 0 5%;
+        //margin: 0 0 0 5%;
+        padding-left: 5%;
+        width: 50%;
         @include breakpoint($break-1000) {
+            width: 100%;
             max-width: 650px;
             margin: 0 auto;
         }
@@ -74,6 +83,7 @@
     }
 
     .most-list-item {
+        display: -ms-flexbox;
         display: flex;
         justify-content: space-around;
         align-items: center;
