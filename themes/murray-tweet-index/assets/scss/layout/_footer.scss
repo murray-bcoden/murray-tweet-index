@@ -123,6 +123,14 @@
         }
     }
 
+    .press-release {
+        margin-bottom: 42px;
+    }
+
+    .btn-download {
+        display: inline-block;
+    }
+
     .credit {
         text-transform: uppercase;
         @include font-size($font-11);
