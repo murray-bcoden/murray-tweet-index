@@ -8,53 +8,70 @@
 	}
 }
 
-.disclaimer-wrapper {
-	padding: 0 20px;
-	max-width: 800px;
-	margin: 0 auto;
-	position: relative;
-	text-align: center;
-	@include breakpoint($break-700) {
-		max-width: 100%;
-		padding: 0;
-	}
-}
-
 .disclaimer {
 	background-color: white;
 	position: relative;
-	padding: 14px 21px;
+	padding: 80px 30px 20px;
 	max-height: 80vh;
-	overflow-y: scroll;
 	p {
-		text-align: center;
+		text-align: left;
 	}
 	@include breakpoint($break-700) {
 		width: 100%;
 		height: 100vh;
 		max-height: 100vh;
 		margin: 0;
-		padding: 40px 21px;
+		padding-left: 20px;
+		padding-right: 20px;
 	}
 }
 
+.disclaimer-wrapper {
+	position: relative;
+}
+
+.disclaimer-header {
+	position: fixed;
+	width: 100%;
+	height: 75px;
+	top: 0;
+	left: 0;
+	@include cf();
+}
+
 .disclaimer-title {
+	margin-top: 23px;
 	text-transform: uppercase;
 	@include font-size($font-28);
 	@extend .sans-light;
 	line-height: 1.2;
 	color: $color-brand-1;
-	// @include breakpoint($break-800) {
-	// 	@include font-size($font-28);
-	// }
+	@include breakpoint($break-800) {
+		max-width: 90%;
+		margin: 23px auto;
+		text-align: center;
+		@include font-size($font-24);
+	}
+	@include breakpoint($break-600) {
+		max-width: 80%;
+		margin: 23px auto;
+		text-align: center;
+		@include font-size($font-24);
+	}
+	@include breakpoint($break-500) {
+		max-width: 65%;
+		margin: 23px auto;
+		text-align: center;
+		@include font-size($font-18);
+	}
 }
 
 .disclaimer-close {
 	position: absolute;
 	width: 60px;
 	height: 60px;
-	left: calc(100% - 62px);
-	top: -16px;
+	left: calc(100% - 68px);
+	top: 8px;
 	background-color: white;
 	&:hover {
 		background-color: $color-brand-1;
@@ -76,6 +93,30 @@
 	}
 }
 
+.disclaimer-content {
+	overflow-y: scroll;
+	max-height: calc(80vh - 180px);
+	@include breakpoint($break-700) {
+		max-height: calc(100vh - 180px);
+	}
+
+	li {
+		margin-bottom: 20px;
+		text-align: left;
+	}
+
+	.disclaimer-point-title {
+		@extend .sans-semi;
+		text-align: left;
+	}
+	p {
+
+	}
+}
+
 .disclaimer-ok {
 	margin-top: 40px;
+	@include breakpoint($break-400) {
+		max-height: 20vh;
+	}
 }
