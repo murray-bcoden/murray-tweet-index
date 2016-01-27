@@ -49,6 +49,7 @@
     }
 
     .top-params {
+        display: -ms-flexbox;
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
@@ -279,11 +280,11 @@
     }
 
     .params-panel-item {
+        display: -ms-flexbox;
         display: flex;
         align-items: center;
         margin: 8px 0;
         padding: 0;
-        display: flex;
         color: $dark-blue;
         @extend .sans-semi;
     }
