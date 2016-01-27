@@ -37,6 +37,10 @@
 						<p class="copyright">&copy; <?php echo date('Y'); ?> Copyright <?php bloginfo('name'); ?> <a href="#disclaimer">Disclaimer</a></p>	
 
 					</div>
+
+					<div class="twitter-follow">
+						<a href="#twitter-follow">Follow Us</a>
+					</div>
 				
 				</div>
 
