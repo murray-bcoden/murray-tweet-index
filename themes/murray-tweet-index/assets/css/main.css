@@ -3238,7 +3238,7 @@ blockquote {
     position: absolute;
     z-index: 0;
     display: block;
-    width: 100%;
+    width: 285px;
     height: 223px;
     top: 0;
     left: 50%;
@@ -3295,6 +3295,7 @@ blockquote {
 
 .media-type {
   display: block;
+  width: 100%;
   max-width: 664px; }
   @media (max-width: 1000px) {
     .media-type {

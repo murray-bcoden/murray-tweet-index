@@ -44,6 +44,7 @@
 
     .media-type {
         display: block;
+        width: 100%;
         max-width: 664px;
         @include breakpoint($break-1000) {
             margin: 80px auto 80px;
