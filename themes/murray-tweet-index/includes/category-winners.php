@@ -174,7 +174,7 @@
 			    <div class="job-title">Political Correspondent, Today FM</div>
 			</div>
 		    <div class="category-title-wrapper">
-				<div class="category-title">Polictics</div>
+				<div class="category-title">Politics</div>
 			</div>
 		    <div class="category-icon-wrapper">
 		    	<div class="category-icon category-icon-politics"></div>
