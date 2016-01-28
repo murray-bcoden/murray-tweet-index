@@ -631,7 +631,7 @@
 		  	</div>
 		  	<div class="category-winner">
 			    <div class="name">Brendan Courtney</div>
-			    <div class="job-title">Broadcaster, RTE</div>
+			    <div class="job-title">Broadcaster, frockadvisor.com</div>
 			</div>
 		    <div class="category-title-wrapper">
 				<div class="category-title">Fashion</div>

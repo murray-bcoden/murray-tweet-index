@@ -11,6 +11,7 @@
 // @codekit-prepend "vendor/lazyload/jquery.lazyload.min.js";
 // @codekit-prepend "vendor/remodal/remodal.min.js";
 // @codekit-prepend "vendor/jquery.nanoscroller.min.js";
+// @codekit-prepend "vendor/ssm.min.js";
 
 
 jQuery(document).ready(function($){
@@ -22,6 +23,12 @@ jQuery(document).ready(function($){
 	    ========================================================================== */
 	    $("img.lazy").lazyload({container: $(".top-list-wrapper"), effect: "fadeIn", threshold: 200});
 	    $(".nano").nanoScroller({ iOSNativeScrolling: true, alwaysVisible: true });
+
+	    $('.top-100-badge-link').click(function(e) {
+	    	TweenLite.to(window, 0.7, {scrollTo:{y:$('.top-100').position().top}, ease:Power2.easeOut});
+	    	e.preventDefault();
+	    });
+	    
 
 
 	/*  ==========================================================================
@@ -104,11 +111,10 @@ jQuery(document).ready(function($){
 	var $openOldCatPanel = null;
 	var $openNewCatPanel = null;
 	var $catBtnSelected = null;
+	var speed = 0.1;
 
 	// Expand the Top 5 lists for categories
 	$(".btn-expand-categories").click(function(e) {
-
-		var speed = 0.1;
 		
 		// if already expanded ?
 		if($(this).hasClass('btn-expanded')) {
@@ -121,7 +127,7 @@ jQuery(document).ready(function($){
 		else {
 			//resetCategoriesTop5();
 
-			$openNewCatPanel = $(this).next() // find the panel to open
+			$openNewCatPanel = $(this).next(); // find the panel to open
 			$openNewCatPanel.css('display', 'block'); // make the new panel visible
 
 			if($catBtnSelected != null) {
@@ -158,20 +164,99 @@ jQuery(document).ready(function($){
 	    ========================================================================== */
 
 
+	var $openOldParamPanel = null;
+	var $openNewParamPanel = null;
+	var $paramBtnSelected = null;
+	var $newSelectedParamItem = null;
+	var $oldSelectedParamItem = null;
+	var itemYpos;
+	var itemYposOut;
+
+	ssm.addStates([
+		{
+		    id: 'param-large',
+		    query: '(min-width: 1201px)',
+		    onEnter: function(){
+		        itemYpos = 68; // start pos
+				itemYposOut = itemYpos + 20; // end pos
+				if($newSelectedParamItem==null) {
+		    		$('.params-panel').css('top', itemYposOut); // reposition the panel starting point when changing between ssm breakpoints
+		    	}
+		    	else {
+		    		$('.params-panel').css('top', itemYpos);
+		    	}
+		    }
+		},
+		{
+		    id: 'param-medium',
+		    query: '(min-width: 901px) and (max-width: 1200px)',
+		    onEnter: function(){
+		        itemYpos = 68;
+				itemYposOut = itemYpos + 20;
+				if($newSelectedParamItem==null) {
+		    		$('.params-panel').css('top', itemYposOut);
+		    	}
+		    	else {
+		    		$('.params-panel').css('top', itemYpos);
+		    	}
+		    }
+		},
+		{
+		    id: 'param-small',
+		    query: '(max-width: 900px)',
+		    onEnter: function(){
+		        itemYpos = 108;
+				itemYposOut = itemYpos + 20;
+				if($newSelectedParamItem==null) {
+		    		$('.params-panel').css('top', itemYposOut);
+		    	}
+		    	else {
+		    		$('.params-panel').css('top', itemYpos);
+		    	}
+		    }
+		}
+	]);
+
 	$(".btn-expand-params").click(function(e) {
-		
+
+		//var $tempItem = $(this).parent();
+		var speed = 0.2;
+
 		// if already expanded ?
 		if($(this).hasClass('btn-expanded')) {
-			$(this).removeClass('btn-expanded')
-			resetParamsTop5();
+			$(this).removeClass('btn-expanded');
+			
+			//resetParamsTop5();
+			var $tempPanel1 = $openOldParamPanel; // create a temp variable for the old panel so doesn't get overwritten before the onComplete below can trigger
+			var $tempItem1 = $oldSelectedParamItem; // same as above
+			if($openOldParamPanel != null) {
+				TweenLite.to($openOldParamPanel, speed, {top:itemYposOut, opacity:0, ease:Circ.easeIn, onComplete:function() { $tempPanel1.css('display', 'none'); $tempItem1.removeClass('top-params-item-top'); } } ); // hide the open panel
+			}
 		}
 		else {
-			resetParamsTop5();
-			$currPanel = $(this).parent();
-			$(this).addClass('btn-expanded')
-			$(this).next().find('.params-panel-link').css('display', 'block'); // show the links
-			$(this).next().addClass('params-panel-display');
 			$(this).parent().addClass("top-params-item-top");
+
+			$openNewParamPanel = $(this).next() // find the panel to open
+			$openNewParamPanel.css('display', 'block'); // make the new panel visible
+
+			$selectedParamItem = $(this).parent();
+
+			if($paramBtnSelected != null) {
+				$paramBtnSelected.removeClass('btn-expanded');
+			}
+			$(this).addClass('btn-expanded'); // make the current button selected
+			$paramBtnSelected = $(this);
+
+			var $tempPanel2 = $openOldParamPanel; // create a temp variable for the old panel so doesn't get overwritten before the onComplete below can trigger
+			var $tempItem2 = $oldSelectedParamItem; // same as above
+			if($openOldParamPanel != null) {
+				TweenLite.to($openOldParamPanel, speed, {top:itemYposOut, opacity:0, ease:Circ.easeIn, onComplete:function() { $tempPanel2.css('display', 'none'); $tempItem2.removeClass('top-params-item-top'); } } ); // hide the open panel
+			}
+
+			$openOldParamPanel = $openNewParamPanel;
+			$oldSelectedParamItem = $selectedParamItem;
+			TweenLite.to($openNewParamPanel, speed, {top:itemYpos, opacity:1, ease:Circ.easeOut} );
+
 			initParamGraphs($(this));
 		}
 		
@@ -181,19 +266,25 @@ jQuery(document).ready(function($){
 	});
 
 	$(document).on('click', function () {
-       	resetParamsTop5();
+       	//resetParamsTop5();
+       	if($paramBtnSelected != null) {
+       		$paramBtnSelected.removeClass('btn-expanded');
+       	}
+		if($openOldParamPanel != null) {
+			TweenLite.to($openOldParamPanel, speed, {top:itemYposOut, opacity:0, ease:Circ.easeIn, onComplete:function() { $(this).css('display', 'none'); $('.top-params-item').removeClass('top-params-item-top'); } } ); // hide the open panel
+		}
     });
 
 
-	function resetParamsTop5() {
-		// remove all these classes from the popup panel, button and main panel.
-		var $paramsPanel = $('.params-panel');
-		$paramsPanel.removeClass('params-panel-display'); 
-		$paramsPanel.find('.params-panel-link').css('display', 'none'); // hide the links
-		$('.btn-expand-params').removeClass('btn-expanded');
-		$('.top-params-item').removeClass('top-params-item-top');
-		$('.top-params-item').parent().removeClass("top-params-item-top");
-	}
+	// function resetParamsTop5() {
+	// 	// remove all these classes from the popup panel, button and main panel.
+	// 	var $paramsPanel = $('.params-panel');
+	// 	$paramsPanel.removeClass('params-panel-display'); 
+	// 	$paramsPanel.find('.params-panel-link').css('display', 'none'); // hide the links
+	// 	$('.btn-expand-params').removeClass('btn-expanded');
+	// 	$('.top-params-item').removeClass('top-params-item-top');
+	// 	$('.top-params-item').parent().removeClass("top-params-item-top");
+	// }
 
 	/*  ==========================================================================
 	    Parameter Graphs
