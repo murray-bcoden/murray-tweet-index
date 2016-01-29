@@ -78,7 +78,7 @@
 						<div class="most-num">1</div>
 					</li>
 					<li class="most-list-item">
-						<div class="most-outlet">The Daily Star</div>
+						<div class="most-outlet">Irish Daily Star</div>
 						<div class="graph-bar most-bar"><span style="width: 4.8%"></span></div>
 						<div class="most-num">1</div>
 					</li>
