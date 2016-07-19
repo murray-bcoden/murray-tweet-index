@@ -1,26 +1,16 @@
-_buttons.scssc
-_carousels.scssc
-_testimonials.scssc
-_category-winners.scssc
-_parameters.scssc
-_total-followers.scssc
-main.scssc
-_mixins.scssc
-_variables.scssc
-_functions.scssc
-_grid.scssc
-_settings.scssc
-jeet.scssc
-_media.scssc
-_footer.scssc
-_dropdowns.scssc
-_top100.scssc
-_icons.scssc
-<<<<<<< HEAD
-themes/murray-tweet-index/assets/scss/.sass-cache/480f0d2b97382dbdac4cebcf8cf283f083c3a905/_disclaimer.scssc
-themes/murray-tweet-index/assets/scss/.sass-cache/8d7379e3ba6e76fb8557b2f62c1a0fc033aa25ea
-=======
-_disclaimer.scssc
-8d7379e3ba6e76fb8557b2f62c1a0fc033aa25ea
->>>>>>> feature/disclaimer-modal
-6cee9a12dbe20161bd66fd160d702255cb755b48
+# ignore Editor files
+*.sublime-project
+*.sublime-workspace
+config.codekit
+
+# ignore compiled files
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+*.scssc
+**/.sass-cache
+**/.sass-cache/*
+*.map
