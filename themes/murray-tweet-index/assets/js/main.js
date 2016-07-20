@@ -326,28 +326,6 @@ jQuery(document).ready(function($){
 
 	});
 
-/*  ==========================================================================
-    ScrollMagic
-    ========================================================================== */
-
-	// // BG Animation Setup
-	// // .to('@target', @length, {@object})
-	// var bg_tween = TweenLite.to('#twitter', 1, {
-	// 	backgroundColor: '#FF0000',
-	// 	ease: Linear.easeNone
-	// });
-
-	// // init ScrollMagic Controller
-	// var controller = new ScrollMagic.Controller();
-
-	// // Background Scene
-	// var bg_scene = new  ScrollMagic.Scene({
-	// 	triggerElement: '#twitter', duration: 300
-	// })
-	// 	.setTween(bg_tween)
-	// 	//.addIndicators({name: "Animate BG Colour"}) // add indicators (requires plugin)
-	// 	.addTo(controller);
-
 
 /*  ==========================================================================
     Animated SVG Circ Gains Graph
@@ -373,8 +351,7 @@ jQuery(document).ready(function($){
 		y: 15
 	})
 
-/*  ==========================================================================
-    GLOBAL VARIABLES
+/*  GLOBAL VARIABLES
     ========================================================================== */  
 
 	var total = 218;
@@ -386,8 +363,7 @@ jQuery(document).ready(function($){
 	var values = $(".value");
 	var circs = $(".circ");
 
-/*  ==========================================================================
-    FUNCTIONS
+/*  FUNCTIONS
     ========================================================================== */  
 
 	function initPercs() {
@@ -407,7 +383,7 @@ jQuery(document).ready(function($){
 	function positionValues() { // called oncomplete of last circ
 		for(i=0; i<values.length; i++) {
 			var newText = values[i];
-			newText.setAttributeNS(null,"x",circs[i]._gsTransform.x + circs[i]._gsTransform.xOrigin - 10);     
+			newText.setAttributeNS(null,"x",circs[i]._gsTransform.x + circs[i]._gsTransform.xOrigin - 9);     
 			newText.setAttributeNS(null,"y",circs[i]._gsTransform.y + circs[i]._gsTransform.yOrigin + 5); 
 		}
 	};
@@ -415,11 +391,10 @@ jQuery(document).ready(function($){
 	initPercs();
 	setValues();
 
-/*  ==========================================================================
-    TIMELINE
+/*  TIMELINE
     ========================================================================== */  
 
-	var tl = new TimelineMax({repeat: 2, repeatDelay: 2});
+	var tl = new TimelineMax();
 	
 	var linesPerc = ["0% "+percs[0]+"%", "0% "+percs[1]+"%", "0% "+percs[2]+"%", "0% "+percs[3]+"%", "0% "+percs[4]+"%"];
 
@@ -511,8 +486,24 @@ jQuery(document).ready(function($){
 	.to('.value', 0.5, {opacity:1, ease: Linear.easeNone});
 
 
+/*  ==========================================================================
+    ScrollMagic
+    ========================================================================== */
 
+	// init ScrollMagic Controller
+	var controller = new ScrollMagic.Controller();
 
+/*  Gains Scene
+    ========================================================================== */
+	var gainsScene = new ScrollMagic.Scene({
+		triggerElement: '.circ-graph', 
+		triggerHook: 0.8,
+		duration: 0,
+
+	})
+	.setTween(tl)
+	.addIndicators()
+	.addTo(controller);
 
 
 });
