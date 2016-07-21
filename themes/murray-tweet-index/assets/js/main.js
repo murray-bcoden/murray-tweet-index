@@ -493,13 +493,27 @@ jQuery(document).ready(function($){
 	// init ScrollMagic Controller
 	var controller = new ScrollMagic.Controller();
 
+/*  General Scene
+    ========================================================================== */
+
+    $('.scene').each(function() {
+    	var genScene = new ScrollMagic.Scene({
+			triggerElement: this, 
+			triggerHook: 0.8,
+			duration: 0
+		})
+		.setClassToggle(this, 'in-scene')
+		.addIndicators()
+		.addTo(controller);
+    });
+
 /*  Gains Scene
     ========================================================================== */
+
 	var gainsScene = new ScrollMagic.Scene({
 		triggerElement: '.circ-graph', 
 		triggerHook: 0.8,
-		duration: 0,
-
+		duration: 0
 	})
 	.setTween(tl)
 	.addIndicators()

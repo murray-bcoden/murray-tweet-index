@@ -1,4 +1,4 @@
-<section class="section followers">
+<section class="section scene followers">
 
 	<div class="followers-wrapper">
 		<h2 class="section-title">Total Followers</h2>

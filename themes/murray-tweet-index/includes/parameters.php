@@ -1,4 +1,4 @@
-<section class="section params">
+<section class="section scene params">
 
 	<div class="params-wrapper">
 		<h2 class="section-title">6 Parameters</h2>

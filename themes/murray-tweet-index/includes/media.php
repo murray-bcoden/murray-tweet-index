@@ -1,4 +1,4 @@
-<section class="section media">
+<section class="section scene media">
 
 	<div class="media-wrapper">
 		<h2 class="section-title">Media Outlets</h2>

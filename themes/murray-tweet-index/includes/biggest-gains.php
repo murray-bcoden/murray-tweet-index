@@ -1,4 +1,4 @@
-<section class="section gains">
+<section class="section scene gains">
 
 	<div class="gains-wrapper">
 		<h2 class="section-title">Biggest Gainers</h2>
@@ -84,9 +84,9 @@
 				<text class="value"></text>
 				<text class="value"></text>
 				<text class="value"></text>
-			  </svg>
+			</svg>
 
-			<!-- <ol class="gains-people">
+			<ol class="gains-people">
 				<li class="gains-people-item">
 					<h3 class="gain-title"><span class="gain-number">218</span> <span class="gain-name">Carol Hunt</span> @carolmhunt</h3>
 					<p class="gain-job">Columnist, Sunday Independent</p>
@@ -107,7 +107,7 @@
 					<h3 class="gain-title"><span class="gain-number">117</span> <span class="gain-name">Caitriona Perry</span> @caitrionaperry</h3>
 					<p class="gain-job">US Correspondent, RTÉ</p>
 				</li>
-			</ol> -->
+			</ol>
 		</div>
 	</div>
 	

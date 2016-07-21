@@ -1,4 +1,4 @@
-<section class="section categories">
+<section class="section scene categories">
 
 	<div class="categories-wrapper">
 		<h2 class="section-title">Category Winners</h2>

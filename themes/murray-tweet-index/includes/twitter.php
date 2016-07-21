@@ -1,4 +1,4 @@
-<section class="section twitter" id="twitter">
+<section class="section scene twitter" id="twitter">
 
 	<div class="twitter-wrapper">
 		<h2 class="section-title">On Twitter</h2>

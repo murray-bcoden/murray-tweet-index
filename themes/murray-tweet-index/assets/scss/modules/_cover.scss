@@ -1,0 +1,103 @@
+/*  ==========================================================================
+    ==========================================================================
+
+    TITLE
+    1. 
+
+    CSS FORMATTING
+    1. Positioning
+    2. Display & Box Model
+    3. Text
+    4. Other
+
+    ==========================================================================
+    ========================================================================== */
+
+
+/*  ==========================================================================
+    1. Variables
+    ========================================================================== */
+
+    $logoS: 50px;
+    $perpective: 700px;
+
+/*  ==========================================================================
+    2. Cover
+    ========================================================================== */
+
+    .cover {
+    	position: fixed;
+    	z-index: 99999;
+    	top: 0;
+    	right: 0;
+    	bottom: 0;
+    	left: 0;
+    	background-image: $gradient-blue;
+    }
+
+/*	3D Rotator
+	========================================================================== */
+
+	.rotatorWrapper {
+	    position: absolute;
+        top: calc(50% - 50px);
+        left: calc(50% - 50px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: $logoS*2;
+	    height: $logoS*2;
+        perspective: $perpective;
+	    perspective-origin: 50% 50%;
+	}
+
+	.rotator {
+	    color: white;
+	    transform-style: preserve-3d;
+	    animation: rotate3d 1.5s linear 0s infinite normal;
+	}
+
+	.face {
+	    width: $logoS*2;
+	    height: $logoS*2;
+	    background-color: white;
+	    border-radius: 10px;
+		opacity:0;  /* make things invisible upon start */
+	    animation:fadeIn ease-in 1; /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+	    animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+	    animation-duration:1s;
+	    animation-delay: 0.2s;
+	}
+
+    .logo-device {
+    	position: absolute;
+    	top: $logoS/2;
+    	left: $logoS/2;
+    	width: $logoS;
+    	height: $logoS;
+    	fill: #007699;
+
+    }
+
+	@keyframes fadeIn {
+		from {
+			opacity: 0.0;		
+		}
+		to {
+			opacity: 1;	
+		}		
+	}
+    
+    @keyframes rotate3d {
+        0% {
+            transform: perspective($perpective) rotateY(0deg);
+        }
+        50% {
+            transform: perspective($perpective) rotateY(-180deg);
+        }
+        100% {
+            transform: perspective($perpective) rotateY(-360deg);
+        }
+    }
+
+
