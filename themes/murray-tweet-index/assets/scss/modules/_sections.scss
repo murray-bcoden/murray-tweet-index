@@ -38,17 +38,56 @@
         text-align: center;
     }
 
+    // .section-title {
+    //     text-transform: uppercase;
+    //     @include font-size($font-48);
+    //     @extend .sans-light;
+    //     line-height: 1.2;
+    //     opacity: 0;
+    //     transform: translateY(30px);
+    //     transition: all 1s $easeOutCirc;
+    //     .in-scene & {
+    //         opacity: 1;
+    //         transform: translateY(0);
+    //     }
+    //     @include breakpoint($break-800) {
+    //         @include font-size($font-28);
+    //     }
+    // }
+
+    // .section-intro {
+    //     @include font-size($font-21);
+    //     @extend .serif;
+    //     //opacity: 0.5;
+    //     line-height: 1.4;
+    //     opacity: 0;
+    //     transform: translateY(30px);
+    //     transition: all 1s $easeOutCirc 0.2s;
+    //     .in-scene & {
+    //         opacity: 0.5;
+    //         transform: translateY(0);
+    //     }
+    //     @include breakpoint($break-800) {
+    //         @include font-size($font-18);
+    //     }
+    //     @include breakpoint($break-800) {
+    //         padding: 0;
+    //     }
+    // }
+
+
     .section-title {
         text-transform: uppercase;
         @include font-size($font-48);
         @extend .sans-light;
         line-height: 1.2;
         opacity: 0;
-        transform: translateY(30px);
-        transition: all 1s $easeOutCirc;
+        //transform: translateY(30px);
+        //transition: all 1s $easeOutCirc;
         .in-scene & {
-            opacity: 1;
-            transform: translateY(0);
+            // opacity: 1;
+            // transform: translateY(0);
+            animation: fadeInUp 1.5s $easeOutCirc 0s forwards;
         }
         @include breakpoint($break-800) {
             @include font-size($font-28);
@@ -61,11 +100,12 @@
         //opacity: 0.5;
         line-height: 1.4;
         opacity: 0;
-        transform: translateY(30px);
-        transition: all 1s $easeOutCirc;
+        //transform: translateY(30px);
+        //transition: all 1s $easeOutCirc;
         .in-scene & {
-            opacity: 0.5;
-            transform: translateY(0);
+            // opacity: 0.5;
+            // transform: translateY(0);
+            animation: fadeInUpHalf 1.5s $easeOutCirc 0.2s forwards;
         }
         @include breakpoint($break-800) {
             @include font-size($font-18);
@@ -73,6 +113,27 @@
         @include breakpoint($break-800) {
             padding: 0;
         }
+    }
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0.0;
+            transform: translateY(30px);       
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }       
+    }
+    @keyframes fadeInUpHalf {
+        from {
+            opacity: 0.0;
+            transform: translateY(30px);       
+        }
+        to {
+            opacity: 0.5;
+            transform: translateY(0);
+        }       
     }
 
    

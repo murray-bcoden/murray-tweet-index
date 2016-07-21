@@ -524,7 +524,8 @@ jQuery(document).ready(function($){
 	    	var genScene = new ScrollMagic.Scene({
 				triggerElement: this, 
 				triggerHook: 0.8,
-				duration: 0
+				duration: 0,
+				reverse: false
 			})
 			.setClassToggle(this, 'in-scene')
 			.addIndicators()
