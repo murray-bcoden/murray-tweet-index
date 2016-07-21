@@ -16,6 +16,16 @@
 
 jQuery(document).ready(function($){
 
+	window.onload = function() {
+		TweenMax.to('.rotatorWrapper', 1, {
+			css: { top: "100%", opacity: "0" },
+			delay: 0.5,
+			ease: Back.easeIn
+		});
+	};
+
+	
+
 /*  ==========================================================================
     Top 100
     ========================================================================== */
