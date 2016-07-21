@@ -73,7 +73,7 @@ msgstr "Réduire"
 #: includes/FlowFlow.php:379
 #@ flow-flow
 msgid "Posted on"
-msgstr "Poster le"
+msgstr "Posté sur"
 
 #: includes/FlowFlow.php:380
 #@ flow-flow

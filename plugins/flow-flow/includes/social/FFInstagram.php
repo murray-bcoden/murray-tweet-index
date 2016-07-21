@@ -10,7 +10,7 @@ use flow\settings\FFSettingsUtils;
  * @author    Looks Awesome <email@looks-awesome.com>
 
  * @link      http://looks-awesome.com
- * @copyright 2014 Looks Awesome
+ * @copyright 2014-2016 Looks Awesome
  */
 class FFInstagram extends FFBaseFeed {
     private $url;
@@ -34,10 +34,6 @@ class FFInstagram extends FFBaseFeed {
                     break;
                 case 'likes':
                     $this->url = "https://api.instagram.com/v1/users/self/media/liked?access_token={$accessToken}&count={$this->getCount()}";
-                    break;
-	              case 'popular':
-					$this->pagination = false;
-                    $this->url = "https://api.instagram.com/v1/media/popular?access_token={$accessToken}&count={$this->getCount()}";
                     break;
                 case 'licked':
                     $this->url = "https://api.instagram.com/v1/users/self/media/liked?access_token={$accessToken}&count={$this->getCount()}";
@@ -119,7 +115,11 @@ class FFInstagram extends FFBaseFeed {
     }
 
     private function getCaption($post){
-        return (isset($post->caption->text) && $this->showText) ? FFFeedUtils::removeEmoji((string)$post->caption->text) : '';
+        if (isset($post->caption->text) && $this->showText) {
+	        $text = FFFeedUtils::removeEmoji( (string) $post->caption->text );
+	        return $this->hashtagLinks($text);
+        }
+	    return '';
     }
 
 	/**
@@ -132,7 +132,13 @@ class FFInstagram extends FFBaseFeed {
 		$request = $this->getFeedData("https://api.instagram.com/v1/users/search?q={$content}&access_token={$accessToken}");
 		$json = json_decode($request['response']);
 		if (!is_object($json) || (is_object($json) && sizeof($json->data) == 0)) {
-			$this->errors[] = array('type'=>'instagram', 'message' => 'Bad request, access token issue', 'url' => "https://api.instagram.com/v1/users/search?q={$content}&access_token={$accessToken}");
+			if (isset($request['errors']) && is_array($request['errors'])){
+				foreach ( $request['errors'] as $error ) {
+					$error['type'] = 'instagram';
+					$this->errors[] = $error;
+				}
+			}
+			else $this->errors[] = array('type'=>'instagram', 'msg' => 'Bad request, access token issue', 'url' => "https://api.instagram.com/v1/users/search?q={$content}&access_token={$accessToken}");
 			return $content;
 		}
 		else {
@@ -143,7 +149,6 @@ class FFInstagram extends FFBaseFeed {
 			$this->errors[] = array(
 				'type' => 'instagram',
 				'msg' => 'Username not found',
-				'log' => $request['response'],
                 'url' => "https://api.instagram.com/v1/users/search?q={$content}&access_token={$accessToken}"
 			);
 			return '00000000';
@@ -162,5 +167,10 @@ class FFInstagram extends FFBaseFeed {
 			}
 		}
 		return false;
+	}
+
+	private function hashtagLinks($text) {
+		$result = preg_replace('~(\#)([^\s!,. /()"\'?]+)~', '<a href="https://www.instagram.com/explore/tags/$2">#$2</a>', $text);
+		return $result;
 	}
 }

@@ -4,13 +4,13 @@
  * @author    Looks Awesome <hello@looks-awesome.com>
 
  * @link      http://looks-awesome.com
- * @copyright 2014-2015 Looks Awesome
+ * @copyright 2014-2016 Looks Awesome
  *
  * @wordpress-plugin
  * Plugin Name:       Flow-Flow
  * Plugin URI:        flow.looks-awesome.com
  * Description:       Awesome social streams on your site
- * Version:           2.3.1
+ * Version:           2.9.4
  * Author:            Looks Awesome
  * Author URI:        looks-awesome.com
  * Text Domain:       flow-flow
@@ -19,6 +19,7 @@
 if ( ! defined( 'FF_USE_WP' ) )  define( 'FF_USE_WP', true );
 if ( ! defined( 'FF_USE_WPDB' ) )  define( 'FF_USE_WPDB', false );
 if ( ! defined( 'FF_USE_WP_CRON' ) ) define('FF_USE_WP_CRON', true);
+if ( ! defined( 'FF_USE_DIRECT_WP_CRON' ) ) define('FF_USE_DIRECT_WP_CRON', false);
 //TODO add a slash to the end
 if ( ! defined( 'FF_LOCALE'))  define('FF_LOCALE', get_locale());
 if (FF_USE_WP){
@@ -29,7 +30,6 @@ if (FF_USE_WP){
 else
     define('FF_TABLE_PREFIX', DB_TABLE_PREFIX);
 define('FF_SNAPSHOTS_TABLE_NAME', FF_TABLE_PREFIX . 'ff_snapshots');
-if (! defined('FF_IMAGE_SIZE_CACHE_TABLE_NAME')) define('FF_IMAGE_SIZE_CACHE_TABLE_NAME', FF_TABLE_PREFIX . 'ff_image_cache');
 
 
 function ff_debug_to_console($data) {
@@ -61,33 +61,41 @@ if (!class_exists('LAClassLoader')){
 
 function ff_get_context() {
 	$context = array(
-		'slug'      => 'flow-flow',
-		'slug_down' => 'flow_flow',
-		'plugin_url' => plugin_dir_url(dirname(__FILE__).'/'),
-		'admin_url' => admin_url('admin-ajax.php'),
-		'table_name_prefix' => FF_TABLE_PREFIX . 'ff_'
+		'root'              => plugin_dir_path( __FILE__ ),
+		'slug'              => 'flow-flow',
+		'slug_down'         => 'flow_flow',
+		'plugin_url'        => plugin_dir_url(dirname(__FILE__).'/'),
+		'admin_url'         => admin_url('admin-ajax.php'),
+		'table_name_prefix' => FF_TABLE_PREFIX . 'ff_',
+		'facebook_сache'    => new flow\cache\FFFacebookCacheAdapter()
 	);
 	$context['db_manager'] = new flow\db\FFDBManager($context);
+
+	global $flow_flow_context;
+	$flow_flow_context = $context;
 	return $context;
 }
-
 register_activation_hook( __FILE__, array( 'flow\\FlowFlow', 'activate' ) );
 register_deactivation_hook( __FILE__, array( 'flow\\FlowFlow', 'deactivate' ) );
 
 function ff_plugins_loaded () {
+	$context = ff_get_context();
+
+	//load addons
+	do_action('ff_addon_loaded');
+
     if (! defined('FF_AJAX_URL')) {
         $admin = function_exists('current_user_can') && current_user_can('manage_options');
         if (!$admin && defined('FF_ALTERNATE_GET_DATA') && FF_ALTERNATE_GET_DATA)
             define('FF_AJAX_URL', plugins_url( 'ff.php', __FILE__ ));
         else
-            define('FF_AJAX_URL', admin_url('admin-ajax.php' , is_ssl()));
+            define('FF_AJAX_URL', admin_url('admin-ajax.php'));
     }
 
-    $context = ff_get_context();
 	$ff = flow\FlowFlow::get_instance($context);
 
-	if (defined('DOING_CRON') && DOING_CRON && FF_USE_WP_CRON){
-		function ff_custom_cron_intervals_register(){
+	if (FF_USE_WP_CRON){
+		function ff_custom_cron_intervals_register($intervals){
 			$intervals['minute'] = array(
 				'interval' => MINUTE_IN_SECONDS,
 				'display' => 'Once Minute'
@@ -102,10 +110,7 @@ function ff_plugins_loaded () {
 			wp_schedule_event( time(), 'minute', 'flow_flow_load_cache' );
 		}
 	}
-	else if (defined('DOING_AJAX') && DOING_AJAX){
-		global $facebookCache;
-		$facebookCache = new flow\cache\FFFacebookCacheManager($context);
-
+	if (defined('DOING_AJAX') && DOING_AJAX){
 		add_action('wp_ajax_fetch_posts', array( $ff, 'processAjaxRequest'));
 		add_action('wp_ajax_nopriv_fetch_posts', array( $ff, 'processAjaxRequest'));
 		add_action('wp_ajax_moderation_apply_action', array( $ff, 'moderation_apply'));
@@ -125,6 +130,11 @@ function ff_plugins_loaded () {
 		add_action('wp_ajax_create_backup',  array( $manager, 'processAjaxRequest'));
 		add_action('wp_ajax_restore_backup', array( $manager, 'processAjaxRequest'));
 		add_action('wp_ajax_delete_backup',  array( $manager, 'processAjaxRequest'));
+
+		if (!FF_USE_WP_CRON){
+			add_action('wp_ajax_' . $context['slug_down'] . '_refresh_cache', array($ff, 'refreshCache'));
+			add_action('wp_ajax_nopriv_' . $context['slug_down'] . '_refresh_cache', array($ff, 'refreshCache'));
+		}
 	}
 	else {
 		if (is_admin()){
@@ -138,13 +148,13 @@ function ff_plugins_loaded () {
 		}
 	}
 
-    function widgets_init () {
-        register_widget( 'flow\\FlowFlowWPWidget' );
-    }
+	add_action( 'widgets_init', function () {
+		register_widget( 'flow\\FlowFlowWPWidget' );
+	});
 
-    function vc_before_init () {
-        $context = ff_get_context();
-        $db = $context['db_manager'];
+	add_action( 'vc_before_init', function () {
+		global $flow_flow_context;
+        $db = $flow_flow_context['db_manager'];
         $streams = $db->streamsSafe();
         $stream_options = array();
         if(sizeof($streams)){
@@ -154,8 +164,8 @@ function ff_plugins_loaded () {
         }
         vc_map( array(
             "name" => __("Social Stream"),
-            'admin_enqueue_css' => array($context['plugin_url'] . $context['slug'] . '/css/admin-icon.css'),
-            'front_enqueue_css' => array($context['plugin_url'] . $context['slug'] . '/css/admin-icon.css'),
+            'admin_enqueue_css' => array($flow_flow_context['plugin_url'] . $flow_flow_context['slug'] . '/css/admin-icon.css'),
+            'front_enqueue_css' => array($flow_flow_context['plugin_url'] . $flow_flow_context['slug'] . '/css/admin-icon.css'),
             'icon' => 'streams-icon',
             "description" => __("Flow-Flow plugin social stream"),
             "base" => "ff",
@@ -176,10 +186,6 @@ function ff_plugins_loaded () {
                 )
             )
         ));
-    }
-
-	add_action( 'widgets_init', 'widgets_init' );
-
-	add_action( 'vc_before_init', 'vc_before_init');
+    });
 }
 add_action( 'plugins_loaded', 'ff_plugins_loaded');

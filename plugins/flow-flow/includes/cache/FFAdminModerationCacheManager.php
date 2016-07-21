@@ -10,7 +10,7 @@ use flow\db\FFDB;
  * @author    Looks Awesome <email@looks-awesome.com>
  *
  * @link      http://looks-awesome.com
- * @copyright 2014-2015 Looks Awesome
+ * @copyright 2014-2016 Looks Awesome
  */
 class FFAdminModerationCacheManager extends FFCacheManager{
 	function __construct( $context = null, $force = false ) {
@@ -28,10 +28,12 @@ class FFAdminModerationCacheManager extends FFCacheManager{
 				$status = $action == 'new_posts_approve' ? 'approved' : 'disapproved';
 				$this->db->setPostStatus($status, FFDB::conn()->parse('WHERE ?p AND ?p', $commonPartOfSql, $additionalPartOfSql));
 				if (isset($_POST['changed'])){
+					$creation_index = time();
 					foreach ( $_POST['changed'] as $id => $item ) {
 						$status = ($item['approved'] === "true") ? 'approved' : 'disapproved';
+						$commonPartOfSql = FFDB::conn()->parse("`stream_id`=?i", $stream_id);
 						$additionalPartOfSql = FFDB::conn()->parse("`post_id` = ?s", $id);
-						$this->db->setPostStatus($status, FFDB::conn()->parse('WHERE ?p AND ?p', $commonPartOfSql, $additionalPartOfSql));
+						$this->db->setPostStatus($status, FFDB::conn()->parse('WHERE ?p AND ?p', $commonPartOfSql, $additionalPartOfSql), $creation_index);
 					}
 				}
 				FFDB::commit();

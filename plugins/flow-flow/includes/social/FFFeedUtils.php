@@ -6,7 +6,7 @@ if ( ! defined( 'WPINC' ) ) die;
  * @package   FlowFlow
  * @author    Looks Awesome <email@looks-awesome.com>
  * @link      http://looks-awesome.com
- * @copyright 2014 Looks Awesome
+ * @copyright 2014-2016 Looks Awesome
  */
 class FFFeedUtils{
 	private static $USER_AGENT = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36';
@@ -98,11 +98,14 @@ class FFFeedUtils{
                     error_log($url);
 		        }
 		    }
-	        if (strpos($url, 'https://graph.facebook.com') === 0){
+	        if ((strpos($url, 'https://graph.facebook.com') === 0) || (strpos($url, 'https://api.instagram.com') === 0) || (strpos($url, 'https://api.linkedin.com') === 0)){
 		        curl_setopt($c, CURLOPT_FAILONERROR, false);
 		        $body = ($followLocation) ? curl_exec($c) : self::curl_exec_follow($c);
 		        $body = json_decode($body);
 		        if (isset($body->error->message)) $error = $body->error->message;
+		        else if (isset($body->meta->error_message)) $error = $body->meta->error_message;
+		        else if (isset($body->message)) $error = $body->message;
+		        else var_dump($body);
 	        }
 	        $errors[] = array('msg' => $error, 'url' => $url);
         }

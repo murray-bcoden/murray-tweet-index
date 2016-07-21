@@ -7,7 +7,7 @@ if ( ! defined( 'WPINC' ) ) die;
  * @author    Looks Awesome <email@looks-awesome.com>
 
  * @link      http://looks-awesome.com
- * @copyright 2014 Looks Awesome
+ * @copyright 2014-2016 Looks Awesome
  */
 interface FFFeed {
     public function id();
@@ -15,4 +15,5 @@ interface FFFeed {
     public function posts();
     public function errors();
     public function useCache();
+	public function hasCriticalError();
 }

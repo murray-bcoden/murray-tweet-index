@@ -1,4 +1,6 @@
 <?php namespace flow\social;
+use flow\settings\FFSettingsUtils;
+
 if ( ! defined( 'WPINC' ) ) die;
 /**
  * Flow-Flow.
@@ -7,7 +9,7 @@ if ( ! defined( 'WPINC' ) ) die;
  * @author    Looks Awesome <email@looks-awesome.com>
 
  * @link      http://looks-awesome.com
- * @copyright 2014 Looks Awesome
+ * @copyright 2014-2016 Looks Awesome
  */
 class FFYoutube extends FFHttpRequestFeed{
 	private $profile = null;
@@ -22,6 +24,7 @@ class FFYoutube extends FFHttpRequestFeed{
 	private $pagination = true;
 	private $nextPageToken = '';
 	private $pageIndex = 0;
+	private $order = false;
 
 	public function __construct() {
 		parent::__construct( 'youtube' );
@@ -54,6 +57,7 @@ class FFYoutube extends FFHttpRequestFeed{
 					$this->isSearch = true;
 					$this->isPlaylist = true;
 					$this->url = "https://www.googleapis.com/youtube/v3/playlistItems?part=id%2Csnippet&playlistId={$content}&maxResults=50" . $this->apiKeyPart;
+					$this->order = FFSettingsUtils::YepNope2ClassicStyleSafe($feed, 'playlist-order', false);
 					break;
 				case 'search':
 					$this->isSearch = true;
@@ -160,7 +164,7 @@ class FFYoutube extends FFHttpRequestFeed{
 	 * @return bool
 	 */
 	protected function showImage($item){
-		$thumbnail = $item->snippet->thumbnails->high;
+		$thumbnail = isset($item->snippet->thumbnails->maxres) ? $item->snippet->thumbnails->maxres : $item->snippet->thumbnails->high;
 		if (isset($thumbnail->width)){
 			$this->image = $this->createImage($thumbnail->url, $thumbnail->width, $thumbnail->height);
 		} else {
@@ -250,7 +254,7 @@ class FFYoutube extends FFHttpRequestFeed{
 	private function isSuitablePage($pxml){
 		$isSuitablePage = false;
 		$needCountPage = ceil($this->getCount() / 50);
-		if ($this->isPlaylist){
+		if ($this->isPlaylist && $this->order){
 			$totalResult = intval($pxml->pageInfo->totalResults);
 			$countPage = ceil($totalResult / 50);
 			$additionalPage = fmod($totalResult, 50) > fmod($this->getCount(),50) ? 0 : 1;

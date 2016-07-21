@@ -10,7 +10,7 @@ use flow\settings\FFSettingsUtils;
  * @author    Looks Awesome <email@looks-awesome.com>
 
  * @link      http://looks-awesome.com
- * @copyright 2014 Looks Awesome
+ * @copyright 2014-2016 Looks Awesome
  */
 class FFHomeTimeline implements FFTimeline{
     const URL = 'https://api.twitter.com/1.1/statuses/home_timeline.json';

@@ -3,8 +3,8 @@ Contributors: dfactory
 Donate link: http://www.dfactory.eu/
 Tags: cookie, cookies, notice, notification, notify, cookie, cookie compliance, cookie law, eu cookie, privacy, privacy directive, consent, Bootstrap
 Requires at least: 3.3
-Tested up to: 4.4
-Stable tag: 1.2.34
+Tested up to: 4.5
+Stable tag: 1.2.35
 License: MIT License
 License URI: http://opensource.org/licenses/MIT
 
@@ -78,6 +78,11 @@ No questions yet.
 1. screenshot-1.png
 
 == Changelog ==
+
+= 1.2.35 =
+* Tweak: Use html_entity_decode on non-functional code block
+* Tweak: get_pages() function placement optimization
+* Tweak: Filterable manage cookie notice capability
 
 = 1.2.34 =
 * Fix: Empty href in links HTML validation issue
@@ -216,5 +221,7 @@ Initial release
 
 == Upgrade Notice ==
 
-= 1.2.34 =
-* Fix: Empty href in links HTML validation issue
+= 1.2.35 =
+* Tweak: Use html_entity_decode on non-functional code block
+* Tweak: get_pages() function placement optimization
+* Tweak: Filterable manage cookie notice capability

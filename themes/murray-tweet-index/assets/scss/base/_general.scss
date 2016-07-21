@@ -23,6 +23,10 @@ body {
     overflow: hidden;
 }
 
+.no-js .no-scroll {
+    overflow: auto;
+}
+
 html, body {
     height: 100%;
 }

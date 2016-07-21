@@ -2,6 +2,7 @@
 if ( ! defined( 'WPINC' ) ) die;
 
 use flow\db\FFDB;
+use flow\social\FFFeed;
 use flow\social\FFFeedUtils;
 use flow\settings\FFGeneralSettings;
 
@@ -12,7 +13,7 @@ use flow\settings\FFGeneralSettings;
  * @author    Looks Awesome <email@looks-awesome.com>
 
  * @link      http://looks-awesome.com
- * @copyright 2014 Looks Awesome
+ * @copyright 2014-2016 Looks Awesome
  *
  * @property FFStreamSettings stream
  */
@@ -61,7 +62,7 @@ class FFCacheManager implements FFCache{
 						    $errors[] = "<h3>Sorry, there was a problem.</h3><p>Feed {$feed->id()} returned the following error message:</p><p><em>{$e->getMessage()}</em></p>";
 					    }
 					    $countGotPosts = sizeof( $posts );
-					    $criticalError = ($countGotPosts == 0 && sizeof($errors) > 0);
+					    $criticalError = ($countGotPosts == 0 && sizeof($errors) > 0 && $feed->hasCriticalError());
 					    $statuses[$feed->id()] = array('last_update' => $criticalError ? 0 : time(), 'errors' => $errors, 'status' => (int)(!$criticalError));
 					    $allPosts += $posts;
 				    }
@@ -151,8 +152,13 @@ class FFCacheManager implements FFCache{
 
 	protected function getGetFilters(){
 		$args[] = FFDB::conn()->parse('post.stream_id = ?s', $this->stream->getId());
-		if ($this->stream->showOnlyMediaPosts()) $args[] = "post.image_url IS NOT NULL";
-		if (isset($_REQUEST['hash'])) $args[] = FFDB::conn()->parse('post.creation_index <= ?s', $this->decodeHash($_REQUEST['hash']));
+		if ($this->stream->showOnlyMediaPosts()) $args[] = "post.media_url IS NOT NULL";
+		if (isset($_REQUEST['hash']))
+			if (isset($_REQUEST['recent'])){
+				$args[] = FFDB::conn()->parse('post.creation_index > ?s', $this->decodeHash($_REQUEST['hash']));
+			} else {
+				$args[] = FFDB::conn()->parse('post.creation_index <= ?s', $this->decodeHash($_REQUEST['hash']));
+			}
 		if (false !== ($days = $this->stream->getDays())) $args[] = FFDB::conn()->parse('post.post_timestamp >= ?i', time()-$days);
 		return $args;
 	}
@@ -171,18 +177,22 @@ class FFCacheManager implements FFCache{
 	    if ($this->stream->order() == FF_RANDOM_ORDER)  $order = 'post.rand_order, post.post_id';
 	    if ($this->stream->order() == FF_BY_DATE_ORDER) $order = 'post.post_timestamp DESC, post.post_id';
 
-	    $page = isset($_REQUEST['page']) ? (int) $_REQUEST['page'] : 0;
-	    $limit = $this->stream->getCountOfPostsOnPage();
-	    $offset = $page * $limit;
-
+	    $limit = null;
+	    $offset = null;
 	    $result = array();
-	    if ($page == 0){
-		    $result = $this->getOnlyNew();
-		    if (!isset($_REQUEST['countOfPages'])){
-			    $totalCount = $this->db->countPostsIf($where);
-			    if ($totalCount === false) $totalCount = 0;
-			    $countOfPages = ($limit > $totalCount) ? 1 : round($totalCount / $limit, 0, PHP_ROUND_HALF_UP);
-			    $_REQUEST['countOfPages'] = $countOfPages;
+	    if (!isset($_REQUEST['recent'])){
+		    $page = isset($_REQUEST['page']) ? (int) $_REQUEST['page'] : 0;
+		    $limit = $this->stream->getCountOfPostsOnPage();
+		    $offset = $page * $limit;
+
+		    if ($page == 0){
+			    $result = $this->getOnlyNew();
+			    if (!isset($_REQUEST['countOfPages'])){
+				    $totalCount = $this->db->countPostsIf($where);
+				    if ($totalCount === false) $totalCount = 0;
+				    $countOfPages = ($limit > $totalCount) ? 1 : round($totalCount / $limit, 0, PHP_ROUND_HALF_UP);
+				    $_REQUEST['countOfPages'] = $countOfPages;
+			    }
 		    }
 	    }
 	    $resultFromDB = $this->db->getPostsIf($this->getGetFields(), $where, $order, $offset, $limit);
@@ -297,7 +307,7 @@ class FFCacheManager implements FFCache{
 			$url = $row['image_url'];
 			$width = $row['image_width'];
 			$tWidth = $this->stream->getImageWidth();
-			if ($this->db->getGeneralSettings()->useProxyServer() && ($width + 50) > $tWidth) $url = FFFeedUtils::proxy($url, $tWidth);
+			if (($post->type != 'posts') && $this->db->getGeneralSettings()->useProxyServer() && ($width + 50) > $tWidth) $url = FFFeedUtils::proxy($url, $tWidth);
 			$post->img = array('url' => $url, 'width' => $width, 'height' => $row['image_height'], 'type' => 'image');
 			$post->media = $post->img;
 		}

@@ -10,7 +10,7 @@ use flow\settings\FFSettingsUtils;
  * @author    Looks Awesome <email@looks-awesome.com>
 
  * @link      http://looks-awesome.com
- * @copyright 2014 Looks Awesome
+ * @copyright 2014-2016 Looks Awesome
  */
 class FFVine extends FFHttpRequestFeed{
 	private $page = 1;
@@ -41,9 +41,7 @@ class FFVine extends FFHttpRequestFeed{
 					break;
 			}
 		}
-	}
 
-	protected function beforeProcess() {
 		$this->prepareAuthorData($this->content);
 		$this->url = sprintf($this->template_url, $this->content, $this->page);
 	}

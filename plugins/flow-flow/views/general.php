@@ -6,7 +6,7 @@
  * @author    Looks Awesome <email@looks-awesome.com>
  *
  * @link      http://looks-awesome.com
- * @copyright 2014-2015 Looks Awesome
+ * @copyright 2014-2016 Looks Awesome
  */
 $options = $context['options'];
 ?>
@@ -15,7 +15,7 @@ $options = $context['options'];
 		<h1  class="desc-following">General Settings</h1>
 		<p class="desc">Adjust plugin's global settings here.</p>
 		<dl class="section-settings">
-			<dt>Date format</dt>
+			<dt class="multiline">Date format<p class="desc">That will be used in posts timestamps.</p></dt>
 			<dd>
 				<input id="general-settings-ago-format" class="clearcache" type="radio" name="flow_flow_options[general-settings-date-format]" <?php if (isset($options['general-settings-date-format']) && $options['general-settings-date-format'] == 'agoStyleDate') echo "checked"; ?> value="agoStyleDate"/>
 				<label for="general-settings-ago-format">Short</label>
@@ -26,7 +26,7 @@ $options = $context['options'];
 				<label for="general-settings-wp-format">WordPress</label>
 				<?php }?>
 			</dd>
-			<dt>Open links in new window</dt>
+			<dt class="multiline">Open links in new tab<p class="desc">Any link in post will be opened in new tab.</p></dt>
 			<dd>
 				<label for="general-settings-open-links-in-new-window">
 					<input id="general-settings-open-links-in-new-window" class="switcher clearcache" type="checkbox"
@@ -72,6 +72,15 @@ $options = $context['options'];
 					       value="yep"/><div><div></div></div>
 			</dd>
 
+<!--			<dt class="multiline">Save images to server-->
+<!--			<p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tempus a nibh condimentum commodo. Integer fermentum tortor lectus, eu porta orci dictum venenatis</p></dt>-->
+<!--			<dd>-->
+<!--				<label for="general-settings-save-images">-->
+<!--					<input id="general-settings-save-images" class="clearcache switcher" type="checkbox"-->
+<!--					       name="flow_flow_options[general-settings-save-images]"-->
+								<?php //if (isset($options['general-settings-save-images']) && $options['general-settings-save-images'] == 'yep') echo "checked"; ?>
+<!--					       value="yep"/><div><div></div></div>-->
+<!--			</dd>-->
 			<!--<dt class="multiline">SEO mode<p class="desc">When cache content is available plugin injects stream HTML synchronously and search bots index it</p></dt>
 	                    <dd>
 		                    <label for="general-settings-seo-mode">

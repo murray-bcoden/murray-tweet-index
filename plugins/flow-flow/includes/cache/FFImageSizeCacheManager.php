@@ -10,25 +10,10 @@ use flow\db\FFDB;
  * @author    Looks Awesome <email@looks-awesome.com>
 
  * @link      http://looks-awesome.com
- * @copyright 2014 Looks Awesome
+ * @copyright 2014-2016 Looks Awesome
  */
 class FFImageSizeCacheManager {
 	const FF_IMG_CACHE_SIZE = 1000;
-
-    /**
-     * @return void
-     */
-    public static function clean(){
-	    try{
-		    if (FFDB::beginTransaction()){
-			    FFDB::conn()->query('DELETE FROM ?n', FF_IMAGE_SIZE_CACHE_TABLE_NAME);
-			    FFDB::commit();
-		    }
-		    FFDB::rollback();
-	    }catch (Exception $e){
-		    FFDB::rollbackAndClose();
-	    }
-    }
 
 	private static $instance = null;
     /**
@@ -43,24 +28,39 @@ class FFImageSizeCacheManager {
 
     private $size;
     private $image_cache;
+	private $table_name;
     private $new_images = array();
 
     function __construct() {
-	    $sql = "SELECT `url`, `width`, `height`  FROM ?n ORDER BY `creation_time` DESC LIMIT ?i";
+	    global $flow_flow_context;
+	    $db = $flow_flow_context['db_manager'];
+	    $this->table_name = $db->image_cache_table_name;
 
-        if (false === ($result = FFDB::conn()->getIndCol('url', $sql, FF_IMAGE_SIZE_CACHE_TABLE_NAME, self::FF_IMG_CACHE_SIZE))) {
+	    $sql = "SELECT `url`, `width`, `height`, `original_url`  FROM ?n ORDER BY `creation_time` DESC LIMIT ?i";
+        if (false === ($result = FFDB::conn()->getIndCol('url', $sql, $this->table_name, self::FF_IMG_CACHE_SIZE))) {
             $result = array();
         }
         $this->size = sizeof($result);
         $this->image_cache = $result;
     }
 
-    /**
-     * @param string $url
-     * @return array
-     */
-    public function size($url){
+	public function getOriginalUrl($url){
+		$h = hash('md5', $url);
+		if (array_key_exists($h, $this->image_cache)){
+			return $this->image_cache[$h]['original_url'];
+		}
+		return '';
+	}
+
+	/**
+	 * @param string $url
+	 * @param string $original_url
+	 *
+	 * @return array
+	 */
+    public function size($url, $original_url = ''){
         $h = hash('md5', $url);
+	    if ($original_url != '') $url = $original_url;
         if (!array_key_exists($h, $this->image_cache)){
             try{
 	            $time = date("Y-m-d H:i:s", time());
@@ -78,8 +78,8 @@ class FFImageSizeCacheManager {
 				            $height = -1;
 			            }
 		            }
-		            $data = array('creation_time' => $time, 'width' => $width, 'height' => $height);
-	            } else $data = array('creation_time' => $time, 'width' => -1, 'height' => -1);
+		            $data = array('creation_time' => $time, 'width' => $width, 'height' => $height, 'original_url' => $original_url);
+	            } else $data = array('creation_time' => $time, 'width' => -1, 'height' => -1, 'original_url' => $original_url);
 	            if ($data['width'] > 0 && $data['height'] > 0){
 		            $this->image_cache[$h] = $data;
 		            $this->new_images[$h] = $data;
@@ -108,11 +108,11 @@ class FFImageSizeCacheManager {
      * @return void
      */
     public function save() {
-	    if (FFDB::beginTransaction()){
+	    if (sizeof($this->new_images) > 0 && FFDB::beginTransaction()){
 
 		    foreach ( $this->new_images as $url => $image ) {
 			    FFDB::conn()->query('INSERT INTO ?n SET `url` = ?s, ?u ON DUPLICATE KEY UPDATE ?u',
-				    FF_IMAGE_SIZE_CACHE_TABLE_NAME, $url, $image, array('creation_time' => $image['creation_time']));
+				    $this->table_name, $url, $image, array('creation_time' => $image['creation_time']));
 	        }
 		    FFDB::commit();
 	    }
@@ -121,6 +121,9 @@ class FFImageSizeCacheManager {
 
 	private function alternativeGetImageSize($url){
 		$raw = $this->ranger($url);
+		if ($raw === 'URL signature expired'){
+			return array(-1, -1);
+		}
 		$im = imagecreatefromstring($raw);
 		$width = imagesx($im);
 		$height = imagesy($im);

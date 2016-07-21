@@ -7,7 +7,7 @@ if ( ! defined( 'WPINC' ) ) die;
  * @author    Looks Awesome <email@looks-awesome.com>
  *
  * @link      http://looks-awesome.com
- * @copyright 2014-2015 Looks Awesome
+ * @copyright 2014-2016 Looks Awesome
  */
 
 class FFSoundcloud extends FFHttpRequestFeed{
@@ -77,11 +77,6 @@ class FFSoundcloud extends FFHttpRequestFeed{
 		}
 		return '';
 	}
-
-	public function useCache() {
-		return false;
-	}
-
 
 	protected function getMedia( $item ) {
 		$params = array(

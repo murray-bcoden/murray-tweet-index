@@ -8,20 +8,28 @@
  * @package   FlowFlow
  * @author    Looks Awesome <email@looks-awesome.com>
  * @link      http://looks-awesome.com
- * @copyright 2014 Looks Awesome
+ * @copyright 2014-2016 Looks Awesome
  */
 ?>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=345260089015373";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
 <div id="fade-overlay" class="loading">
 	<i class="flaticon-settings"></i>
 </div>
 <!-- @TODO: Provide markup for your options page here. -->
 <form id="flow_flow_form" method="post" action="<?php echo $context['form-action']; ?>" enctype="multipart/form-data">
-	<script>
+	<script id="flow_flow_script">
 		var _ajaxurl = '<?php echo $context['admin_url']; ?>';
 		var la_plugin_slug_down = '<?php echo $context['slug_down']; ?>';
-        var plugin_url = '<?php echo $context['plugin_url'] . '/' . $context['slug'] ; ?>';
+        var plugin_url = '<?php echo $context['plugin_url'] . $context['slug'] ; ?>';
         var server_time = '<?php echo time() ; ?>';
-        <?php if (isset($context['js-vars'])) echo $context['js-vars'];?>
+		<?php if (isset($context['js-vars'])) echo $context['js-vars'];?>
 	</script>
 	<?php
 		settings_fields('ff_opts');
@@ -30,7 +38,7 @@
 	<div class="wrapper">
 		<?php
 			if (FF_USE_WP) {
-                echo '<h2>'. $context['admin_page_title'] . ' v. ' . $context['version'] . ' <a href="http://' . ( strpos($context['admin_page_title'], 'Stack') !== false ? 'stack' : 'flow' )  . '.looks-awesome.com/docs/Getting_Started" target="_blank">Documentation & FAQ</a></h2>';
+                echo '<h2>'. $context['admin_page_title'] . ' v. ' . $context['version'] . ' <a href="http://' . ( strpos($context['admin_page_title'], 'Stack') !== false ? 'stack.looks-awesome.com/docs/Getting_Started' : 'social-streams.com/docs/' )  . '" target="_blank">Documentation & FAQ</a></h2>';
 
                 echo '<div id="ff-cats">';
                 wp_dropdown_categories( );
@@ -78,7 +86,7 @@
 					</div>
 					<div class="ff-cell">
 						<h1>CONTACT US</h1>
-						<a href="http://codecanyon.net/user/looks_awesome#contact">Support request</a><br>
+						<a href="http://looks-awesome.com/help">Support request</a><br>
 						<a href="http://looks-awesome.com/">Looks Awesome site</a><br>
 						<a href="https://twitter.com/looks_awesooome">Twitter</a><br>
 						<a href="https://www.facebook.com/looksawesooome">Facebook</a>
@@ -98,4 +106,7 @@
         <a href="#0" class="cd-popup-close img-replace">Close</a>
     </div> <!-- cd-popup-container -->
 </div> <!-- cd-popup -->
-<script>jQuery(document).trigger('html_ready')</script>
+
+<script>
+jQuery(document).trigger('html_ready')
+</script>

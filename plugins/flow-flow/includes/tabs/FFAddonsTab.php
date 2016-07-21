@@ -7,7 +7,7 @@ if ( ! defined( 'WPINC' ) ) die;
  * @author    Looks Awesome <email@looks-awesome.com>
  *
  * @link      http://looks-awesome.com
- * @copyright 2014-2015 Looks Awesome
+ * @copyright 2014-2016 Looks Awesome
  */
 
 class FFAddonsTab implements LATab{
@@ -27,6 +27,6 @@ class FFAddonsTab implements LATab{
 	}
 
 	public function includeOnce( $context ) {
-		\LAClassLoader::get()->includeOnceView('addons', $context);
+		include_once($context['root']  . 'views/addons.php');
 	}
 }

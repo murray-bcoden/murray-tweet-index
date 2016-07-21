@@ -10,7 +10,7 @@ if ( ! defined( 'WPINC' ) ) die;
  * @author    Looks Awesome <email@looks-awesome.com>
 
  * @link      http://looks-awesome.com
- * @copyright 2014 Looks Awesome
+ * @copyright 2014-2016 Looks Awesome
  */
 class FFMigration_2_0 implements FFDBMigration {
 
@@ -41,12 +41,10 @@ class FFMigration_2_0 implements FFDBMigration {
 			$options = $manager->getOption('options', true);
 			if (isset($options['streams'])){
 				$json = json_decode($options['streams']);
-				if (is_array($json)){
-					foreach ( $json as $stream) {
-						FFDB::setStream($manager->streams_table_name, $stream->id, $stream);
-					}
+				foreach ( $json as $stream) {
+					$obj = (object)$stream;
+					FFDB::setStream($manager->streams_table_name, $obj->id, $obj);
 				}
-
 				unset($options['streams']);
 			}
 			unset($options['streams_count']);

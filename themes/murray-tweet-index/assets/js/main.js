@@ -17,12 +17,20 @@
 jQuery(document).ready(function($){
 
 	window.onload = function() {
-		TweenMax.to('.rotatorWrapper', 1, {
+		var loaderTL = new TimelineMax({onComplete:loaderComplete});
+		loaderTL.to('.rotatorWrapper', 1, {
 			css: { top: "100%", opacity: "0" },
 			delay: 0.5,
 			ease: Back.easeIn
+		})
+		.to('.cover', 1, {
+			autoAlpha: 0
 		});
 	};
+
+	function loaderComplete() {
+		$('body').removeClass('no-scroll');
+	}
 
 	
 

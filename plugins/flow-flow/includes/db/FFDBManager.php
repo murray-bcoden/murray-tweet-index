@@ -1,5 +1,7 @@
 <?php namespace flow\db;
+use flow\cache\LAFacebookCacheManager;
 use flow\FlowFlow;
+use flow\settings\FFSettingsUtils;
 
 if ( ! defined( 'WPINC' ) ) die;
 
@@ -10,7 +12,7 @@ if ( ! defined( 'WPINC' ) ) die;
  * @author    Looks Awesome <email@looks-awesome.com>
  *
  * @link      http://looks-awesome.com
- * @copyright 2014-2015 Looks Awesome
+ * @copyright 2014-2016 Looks Awesome
  */
 class FFDBManager extends LADBManager{
 
@@ -27,6 +29,7 @@ class FFDBManager extends LADBManager{
 		FFDBUpdate::create_cache_table($this->cache_table_name, $this->posts_table_name);
 		FFDBUpdate::create_snapshot_table();
 		FFDBUpdate::create_streams_table($this->streams_table_name);
+		FFDBUpdate::create_image_size_table($this->image_cache_table_name);
 	}
 
 	public function streams(){
@@ -49,11 +52,20 @@ class FFDBManager extends LADBManager{
 
 	public function social_auth(){
 		if (isset($_REQUEST['type'])){
-			$fieldName = $_REQUEST['type'];
-			$options = $this->getOption('options', true);
-			$options[$fieldName] = $_REQUEST[$fieldName];
-			$this->setOption('options', $options, true);
-			header('Location: ' . admin_url() . '?page=flow-flow', true, 301);
+			if ($_REQUEST['type'] == 'facebook'){
+				global $flow_flow_context;
+				/** @var LAFacebookCacheManager $facebook_сache */
+				$facebook_сache = $flow_flow_context['facebook_сache'];
+				$facebook_сache->save($_REQUEST['facebook_access_token'], time() + $_REQUEST['expires']);
+			}
+			else {
+				$fieldName = $_REQUEST['type'];
+				$options = $this->getOption('options', true);
+				$options[$fieldName] = $_REQUEST[$fieldName];
+				$this->setOption('options', $options, true);
+			}
+
+			header('Location: ' . admin_url('?page=flow-flow'), true, 301);
 		}
 		die();
 	}
@@ -61,10 +73,13 @@ class FFDBManager extends LADBManager{
 	public function get_stream_settings(){
 		$id = $_GET['stream-id'];
 		$stream = FFDB::getStream( $this->streams_table_name, $id );
-		$status = FFDB::getStatusInfo($this->cache_table_name, (int)$stream->id, false);
-		if (isset($status['status']) && $status['status'] == 0 && isset($status['error'])){
-			$stream->errors = $status['error'];
-		}
+        if ($stream != null) {
+            $status = FFDB::getStatusInfo($this->cache_table_name, (int)$stream->id, false);
+            if (isset($status['status']) && $status['status'] == 0 && isset($status['error'])){
+                $stream->errors = $status['error'];
+            }
+        }
+
 		die(json_encode( $stream ));
 	}
 
@@ -183,6 +198,7 @@ class FFDBManager extends LADBManager{
 			FFDB::beginTransaction();
 			$id = $_GET['stream-id'];
 			echo FFDB::deleteStream($this->streams_table_name, $id);
+			do_action('ff_after_delete_stream', $id);
 			$this->clean(array($id));
 			FFDB::commit();
 		}catch (Exception $e){
@@ -211,11 +227,11 @@ class FFDBManager extends LADBManager{
 
 			FFDB::commit();
 			if ($force_load_cache) $this->refreshCache(null, $force_load_cache);
-			/** @var FFFacebookCacheManager $facebookCache */
-			global $facebookCache;
+			global $flow_flow_context;
+			/** @var LAFacebookCacheManager $facebookCache */
+			$facebookCache = $flow_flow_context['facebook_сache'];
 			if ($facebook_changed) {
 				$facebookCache->clean();
-				$this->deleteOption('facebook_access_token');
 			}
 			$extendedToken = $facebookCache->getAccessToken();
 			FFDB::commit();
@@ -290,20 +306,42 @@ class FFDBManager extends LADBManager{
 
 		$fb = $options['flow_flow_fb_auth_options'];
 		$old = $this->getOption('fb_auth_options', true);
+		$fb_use_own = FFSettingsUtils::YepNope2ClassicStyleSafe($fb, 'facebook_use_own_app', true);
+		$old_use_own = FFSettingsUtils::YepNope2ClassicStyleSafe($old, 'facebook_use_own_app', true);
 		if (sizeof($old) > 0){
-			if ($fb['facebook_access_token'] != $old['facebook_access_token'] ||
-			    $fb['facebook_app_id'] != $old['facebook_app_id'] ||
-			    $fb['facebook_app_secret'] != $old['facebook_app_secret']){
-				$this->cleanByFeedType('facebook');
+			if ($fb_use_own != $old_use_own){
+				//$this->cleanByFeedType('facebook');
 				$force_load_cache = true;
 				$facebook_changed = true;
 			}
-		} else if (trim($fb['facebook_access_token']) == '' &&
-		           trim($fb['facebook_app_id']) == '' &&
-		           trim($fb['facebook_app_secret']) == ''){
-			$this->cleanByFeedType('facebook');
-			$force_load_cache = true;
-			$facebook_changed = true;
+			else {
+				if ($fb_use_own) {
+					if ($fb['facebook_access_token'] != $old['facebook_access_token'] ||
+					    $fb['facebook_app_id'] != $old['facebook_app_id'] ||
+					    $fb['facebook_app_secret'] != $old['facebook_app_secret'])
+					{
+						//$this->cleanByFeedType('facebook');
+						$force_load_cache = true;
+						$facebook_changed = true;
+					}
+				}
+				else {
+					if ($fb['facebook_access_token'] != $old['facebook_access_token'])
+					{
+						//$this->cleanByFeedType('facebook');
+						$force_load_cache = true;
+						$facebook_changed = true;
+					}
+				}
+			}
+		} else {
+			if ((!$fb_use_own && trim($fb['facebook_access_token']) == '') ||
+			    ($fb_use_own && trim($fb['facebook_access_token']) == '' && trim($fb['facebook_app_id']) == '' && trim($fb['facebook_app_secret']) == ''))
+			{
+				//$this->cleanByFeedType('facebook');
+				$force_load_cache = true;
+				$facebook_changed = true;
+			}
 		}
 		return array($force_load_cache, $facebook_changed);
 	}
@@ -334,7 +372,7 @@ class FFDBManager extends LADBManager{
 			if (FFDB::beginTransaction()){
 				FFDB::conn()->query('DELETE FROM ?n ?p', $this->posts_table_name, $partOfSql);
 				FFDB::conn()->query('DELETE FROM ?n ?p', $this->cache_table_name, $partOfSql);
-				FFDB::conn()->query('DELETE FROM ?n',    FF_IMAGE_SIZE_CACHE_TABLE_NAME);
+				FFDB::conn()->query('DELETE FROM ?n', $this->image_cache_table_name);
 				FFDB::commit();
 			}
 			FFDB::rollback();
@@ -380,13 +418,15 @@ class FFDBManager extends LADBManager{
 		}
 	}
 
-	public function getIdPosts($streamId){
-		return FFDB::conn(true)->getCol('SELECT `post_id` FROM ?n WHERE `stream_id`=?s', $this->posts_table_name, $streamId);
+	public function getIdPosts($streamId, $feedId = ''){
+		if ($feedId != null) $feedId = FFDB::conn()->parse(' and `feed_id`=?s', $feedId);
+		return FFDB::conn(true)->getCol('SELECT `post_id` FROM ?n WHERE `stream_id`=?s ?p', $this->posts_table_name, $streamId, $feedId);
 	}
 
-	public function getPostsIf($fields, $condition, $order, $offset, $limit){
-		return FFDB::conn()->getAll("SELECT ?p FROM ?p post WHERE ?p ORDER BY ?p LIMIT ?i, ?i",
-			$fields, $this->posts_table_name, $condition, $order, $offset, $limit);
+	public function getPostsIf($fields, $condition, $order, $offset = null, $limit = null){
+		$limitPart = ($offset !== null && $offset !== null) ? FFDB::conn()->parse("LIMIT ?i, ?i", $offset, $limit) : '';
+		return FFDB::conn()->getAll("SELECT ?p FROM ?p post WHERE ?p ORDER BY ?p ?p",
+			$fields, $this->posts_table_name, $condition, $order, $limitPart);
 	}
 
 	public function getPostsIf2($fields, $condition){
@@ -415,7 +455,7 @@ class FFDBManager extends LADBManager{
 	}
 
 	public function deleteEmptyRecordsFromCacheInfo($streamId){
-		FFDB::conn()->query("DELETE FROM ?n where `feed_id` = '' and `stream_id`=?s", $this->cache_table_name, $streamId);
+		FFDB::conn()->query("DELETE FROM ?n where `stream_id`=?s", $this->cache_table_name, $streamId);
 	}
 
 	public function setCacheInfo($feedId, $streamId, $values){
@@ -449,8 +489,9 @@ class FFDBManager extends LADBManager{
 		}
 	}
 
-	public function setPostStatus($status, $condition){
-		$sql = "UPDATE ?n SET `post_status` = ?s ?p";
+	public function setPostStatus($status, $condition, $creation_index = null){
+		$sql = "UPDATE ?n SET `post_status` = ?s";
+		$sql .= ($creation_index != null) ? ", `creation_index` = " . $creation_index . " ?p" : " ?p";
 		if (false == FFDB::conn()->query($sql, $this->posts_table_name, $status, $condition)){
 			throw new \Exception(FFDB::conn()->conn->error);
 		}
@@ -499,13 +540,8 @@ class FFDBManager extends LADBManager{
 				'plugin_name'	=>	'flow-flow'
 			);
 
-			$ch = curl_init( 'http://flow.looks-awesome.com/wp-admin/admin-ajax.php' );
-			curl_setopt($ch, CURLOPT_FOLLOWLOCATION, false);
-			curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-			curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($post));
-			curl_setopt($ch, CURLOPT_POST, true);
-			if (false !== ($result = curl_exec( $ch ))){
-				curl_close( $ch );
+			list($result, $error) = $this->sendRequest2lo($post);
+			if (false !== $result){
 				$result = json_decode($result);
 				if (isset($result->registration_id)){
 					$this->setOption('registration_id', $result->registration_id);
@@ -517,34 +553,26 @@ class FFDBManager extends LADBManager{
 				}
 			}
 			else {
-				$error = curl_error($ch);
-				curl_close( $ch );
 				return $error;
 			}
 		}
 		if ($activated){
+			$registration_id = $this->getOption('registration_id');
+			$name = isset($settings['flow_flow_options']['company_name']) ? $settings['flow_flow_options']['company_name'] : 'Unnamed';
+			$post = array(
+				'action' => 'la_activation',
+				'registration_id' => $registration_id,
+				'name' => $name,
+				'email' => @$settings['flow_flow_options']['company_email'],
+				'purchase_code'   => @$settings['flow_flow_options']['purchase_code'],
+				'subscription' => 1,
+				'plugin_name'	=>	'flow-flow'
+			);
+
 			//subscribe
 			if (isset($_POST['doSubcribe']) && $_POST['doSubcribe'] == 'true'){
-				$registration_id = $this->getOption('registration_id');
-				$name = isset($settings['flow_flow_options']['company_name']) ? $settings['flow_flow_options']['company_name'] : 'Unnamed';
-				$post = array(
-					'action' => 'la_activation',
-					'registration_id' => $registration_id,
-					'name' => $name,
-					'email' => @$settings['flow_flow_options']['company_email'],
-					'purchase_code'   => @$settings['flow_flow_options']['purchase_code'],
-					'subscription' => 1,
-					'plugin_name'	=>	'flow-flow'
-				);
-
-				$ch = curl_init( 'http://flow.looks-awesome.com/wp-admin/admin-ajax.php' );
-				curl_setopt($ch, CURLOPT_FOLLOWLOCATION, false);
-				curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-				curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($post));
-				curl_setopt($ch, CURLOPT_POST, true);
-				$result = curl_exec( $ch );
-				curl_close( $ch );
-				$result = json_decode($result);
+				$result = $this->sendRequest2lo($post);
+				$result = json_decode($result[0]);
 				if (isset($result->registration_id)){
 					$this->setOption('registration_id', $result->registration_id);
 					$this->setOption('registration_date', time());
@@ -555,11 +583,28 @@ class FFDBManager extends LADBManager{
 
 			//remove registration
 			if (!isset($settings['flow_flow_options']['purchase_code']) || empty($settings['flow_flow_options']['purchase_code'])){
+				$post['purchase_code'] = '';
+				$this->sendRequest2lo($post);
 				$this->deleteOption('registration_id');
 				$this->deleteOption('registration_date');
 				return false;
 			}
 		}
 		return true;
+	}
+
+	private function sendRequest2lo($data){
+		$ch = curl_init( 'http://flow.looks-awesome.com/wp-admin/admin-ajax.php' );
+		curl_setopt($ch, CURLOPT_FOLLOWLOCATION, false);
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+		curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data));
+		curl_setopt($ch, CURLOPT_POST, true);
+		$error = null;
+		$result = curl_exec( $ch );
+		if ($result === false){
+			$error = curl_error($ch);
+		}
+		curl_close( $ch );
+		return array($result, $error);
 	}
 }

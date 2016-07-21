@@ -1,5 +1,10 @@
 <?php namespace flow\social;
+use flow\cache\LAFacebookCacheManager;
+use flow\db\FFDB;
+use flow\db\LADBManager;
+
 if ( ! defined( 'WPINC' ) ) die;
+if ( ! defined('FF_FACEBOOK_RATE_LIMIT'))   define('FF_FACEBOOK_RATE_LIMIT', 200);
 /**
  * Flow-Flow.
  *
@@ -7,17 +12,27 @@ if ( ! defined( 'WPINC' ) ) die;
  * @author    Looks Awesome <email@looks-awesome.com>
 
  * @link      http://looks-awesome.com
- * @copyright 2014 Looks Awesome
+ * @copyright 2014-2016 Looks Awesome
  */
 class FFFacebook extends FFHttpRequestFeed{
     /** @var  string | bool */
     private $accessToken;
     /** @var bool */
     private $hideStatus = true;
+	/** @var  bool */
+	private $saveImages = false;
 	private $image;
 	private $media;
 	private $images;
 	private $youtube_api_key;
+
+	private $hasHitLimit = false;
+	private $creationTime;
+	private $request_count = 0;
+	private $global_request_count;
+	private $global_request_array;
+
+	private $new_post_ids;
 
 	public function __construct() {
 		parent::__construct( 'facebook' );
@@ -29,65 +44,149 @@ class FFFacebook extends FFHttpRequestFeed{
      * @param $feed
      */
     public function deferredInit($options, $stream, $feed) {
-	    /** @var FFFacebookCacheManager $facebookCache */
-	    global $facebookCache;
-	    $this->accessToken = $facebookCache->getAccessToken();
-	    if ($this->accessToken === false){
-		    $this->errors[] = $facebookCache->getError();
-	    }
-
 	    $this->images = array();
         if (isset($feed->{'timeline-type'})) {
 	        $locale = defined('FF_LOCALE') ? 'locale=' . FF_LOCALE : 'locale=en_US';
 	        $fields    = 'fields=';
 	        $fields    = $fields . 'likes.summary(true),comments.summary(true),shares,';
-	        $fields    = $fields . 'id,created_time,from,link,message,name,object_id,picture,attachments{media{image}},source,status_type,story,type&';
+	        $fields    = $fields . 'id,created_time,from,link,message,name,object_id,picture,full_picture,attachments{media{image}},source,status_type,story,type';
             switch ($feed->{'timeline-type'}) {
                 case 'user_timeline':
-	                $this->url = "https://graph.facebook.com/v2.4/me/posts?{$fields}access_token={$this->accessToken}&limit={$this->getCount()}&{$locale}";
+	                $this->url = "https://graph.facebook.com/v2.5/me/posts?{$fields}&limit={$this->getCount()}&{$locale}";
 	                break;
 	            case 'group':
 		            $groupId = (string)$feed->content;
-		            $this->url        = "https://graph.facebook.com/v2.4/{$groupId}/feed?{$fields}access_token={$this->accessToken}&limit={$this->getCount()}&{$locale}";
+		            $this->url        = "https://graph.facebook.com/v2.5/{$groupId}/feed?{$fields}&limit={$this->getCount()}&{$locale}";
 		            $this->hideStatus = false;
 		            break;
                 case 'page_timeline':
                     $userId = (string)$feed->content;
-	                $this->url        = "https://graph.facebook.com/v2.4/{$userId}/posts?{$fields}access_token={$this->accessToken}&limit={$this->getCount()}&{$locale}";
+	                $this->url        = "https://graph.facebook.com/v2.5/{$userId}/posts?{$fields}&limit={$this->getCount()}&{$locale}";
 	                $this->hideStatus = false;
                     break;
 	            case 'album':
 					$albumId = (string)$feed->content;
-		            $this->url = "https://graph.facebook.com/v2.4/{$albumId}/photos?{$fields}access_token={$this->accessToken}&limit={$this->getCount()}&{$locale}";
+		            $this->url = "https://graph.facebook.com/v2.5/{$albumId}/photos?{$fields}&limit={$this->getCount()}&{$locale}";
 		            break;
                 default:
-	                $this->url = "https://graph.facebook.com/v2.4/me/home?{$fields}access_token={$this->accessToken}&limit={$this->getCount()}&{$locale}";
+	                $this->url = "https://graph.facebook.com/v2.5/me/home?{$fields}&limit={$this->getCount()}&{$locale}";
             }
         }
 	    $original = $options->original();
 	    $this->youtube_api_key = @$original['google_api_key'];
+
+	    $this->saveImages = false;//FFSettingsUtils::YepNope2ClassicStyleSafe($original, 'general-settings-save-images', false);
     }
 
-    protected function getUrl() {
-        return $this->url;
+	protected function beforeProcess() {
+		global $flow_flow_context;
+		/** @var LAFacebookCacheManager $facebookCache */
+		$facebookCache = $flow_flow_context['facebook_сache'];
+		/** @var LADBManager $db */
+		$db = $flow_flow_context['db_manager'];
+
+		$this->accessToken = $facebookCache->getAccessToken();
+		if ($this->accessToken === false){
+			$this->errors[] = $facebookCache->getError();
+			return false;
+		}
+
+		if (FFDB::beginTransaction()){
+			$limit = $db->getOption('fb_limit_counter', true, true);
+			if ($limit === false){
+				@$db->setOption('fb_limit_counter', array(), true, false);
+				$limit = $db->getOption('fb_limit_counter', true, true);
+			}
+
+			if (!is_array($limit)){
+				$this->errors[] = array( 'type' => 'facebook', 'message' => 'Can`t save `fb_limit_counter` option to mysql db.' );
+				FFDB::rollback();
+				return false;
+			}
+
+			$this->creationTime = time();
+			$this->global_request_count = 0;
+			$limitTime = $this->creationTime - 3600;
+			$result = array();
+			foreach ( $limit as $time => $count ) {
+				if ($time > $limitTime) {
+					$result[$time] = $count;
+					$this->global_request_count += (int)$count;
+				}
+			}
+			$this->global_request_array = $result;
+
+			if ($this->global_request_count + 4 > FF_FACEBOOK_RATE_LIMIT) {
+				$this->errors[] = array( 'type' => 'facebook', 'message' => 'Your site has hit the facebook api rate limit.' );
+				FFDB::rollback();
+				return false;
+			}
+		}
+		else {
+			$this->errors[] = array( 'type' => 'facebook', 'message' => 'Can`t get mysql transaction.' );
+			FFDB::rollback();
+			return false;
+		}
+		return true;
+	}
+
+	protected function afterProcess( $result ) {
+		global $flow_flow_context;
+		/** @var LADBManager $db */
+		$db = $flow_flow_context['db_manager'];
+
+		if ($this->request_count > 0) {
+			$this->global_request_array[$this->creationTime] = $this->request_count;
+		}
+		$db->setOption('fb_limit_counter', $this->global_request_array, true, false);
+		FFDB::commit();
+		return parent::afterProcess( $result );
+	}
+
+	protected function getUrl() {
+        return $this->getUrlWithToken($this->url);
     }
 
     protected function items( $request ) {
-        if (false !== $this->accessToken){
-            $pxml = json_decode($request);
-            if (isset($pxml->data)) {
-                return $pxml->data;
-            }
+        $pxml = json_decode($request);
+        if (isset($pxml->data)) {
+	        global $flow_flow_context;
+	        /** @var LADBManager $db */
+	        $db = $flow_flow_context['db_manager'];
+	        $ids = $db->getIdPosts($this->stream->getId(), $this->id());
+	        $new_ids = array();
+	        foreach ( $pxml->data as $item ) {
+		        $new_ids[] = $this->getId($item);
+	        }
+	        $this->new_post_ids = array();
+	        $diff = array_diff($new_ids, $ids);
+	        foreach ( $diff as $id ) {
+		        $this->new_post_ids[$id] = 1;
+	        }
+
+	        return $pxml->data;
         }
         return array();
     }
 
 	protected function isSuitableOriginalPost( $post ) {
+		if (!array_key_exists($this->getId($post), $this->new_post_ids)) {
+			return false;
+		}
+
 		if (isset($post->type)){
 			if ($post->type == 'status' && ($this->hideStatus || !isset($post->message))) return;
 			if ($post->type == 'photo' && isset($post->status_type) && $post->status_type == 'tagged_in_photo') return false;
 		}
 		if (!isset($post->created_time)) return false;
+
+		if ($this->hasHitLimit) return false;
+		if ($this->global_request_count + $this->request_count + 3 > FF_FACEBOOK_RATE_LIMIT) {
+			$this->errors[] = array( 'type' => 'facebook', 'message' => 'Your site has hit the facebook api rate limit.' );
+			$this->hasHitLimit = true;
+			return false;
+		}
+
 		return true;
 	}
 
@@ -115,11 +214,57 @@ class FFFacebook extends FFHttpRequestFeed{
 		    return true;
 	    }
 
-        if ((isset($item->object_id) && (($item->type == 'photo') || ($item->type == 'event')))){
-	        $url = "https://graph.facebook.com/v2.4/{$item->object_id}/picture?width={$this->getImageWidth()}&type=normal";
-	        $this->image = $this->createImage($this->getLocation($url));
-	        $url = "https://graph.facebook.com/v2.4/{$item->object_id}/picture?width=600&type=normal";
-	        $this->media = $this->createMedia($this->getLocation($url));
+	    if ((isset($item->object_id) && (($item->type == 'photo') || ($item->type == 'event')))){
+	        if ($this->saveImages){
+		        $flag = false;
+		        $original_url = "https://graph.facebook.com/v2.5/{$item->object_id}/picture?width={$this->getImageWidth()}&type=normal";
+		        list($path, $remoteUrl, $localUrl) = $this->getInfo4Save($original_url);
+		        if (!file_exists($path)){
+			        if (copy($remoteUrl, $path)){
+				        $this->image = $this->createImage($localUrl);
+				        $flag = true;
+			        }
+		        }
+		        else {
+			        $this->image = $this->createImage($localUrl);
+			        $flag = true;
+		        }
+
+		        if ($flag){
+			        $original_url = "https://graph.facebook.com/v2.5/{$item->object_id}/picture?width=600&type=normal";
+			        list($path, $remoteUrl, $localUrl) = $this->getInfo4Save($original_url);
+			        if (!file_exists($path)){
+				        if (copy($remoteUrl, $path)){
+					        $this->media = $this->createMedia($localUrl);
+					        return true;
+				        }
+			        }
+			        else {
+				        $this->media = $this->createMedia($localUrl);
+				        return true;
+			        }
+		        }
+	        }
+
+	        $url = "https://graph.facebook.com/v2.5/{$item->object_id}/picture?width={$this->getImageWidth()}&type=normal";
+	        $original_url = $this->cache->getOriginalUrl($url);
+	        if ($original_url == ''){
+		        $original_url = $this->getLocation($url);
+	        }
+	        $size = $this->cache->size($url, $original_url);
+	        $width = $size['width'];
+	        $height = $size['height'];
+	        $this->image = $this->createImage($original_url, $width, $height);
+
+	        $url = "https://graph.facebook.com/v2.5/{$item->object_id}/picture?width=600&type=normal";
+	        $original_url = $this->cache->getOriginalUrl($url);
+	        if ($original_url == ''){
+		        $original_url = $this->getLocation($url);
+	        }
+	        $size = $this->cache->size($url, $original_url);
+	        $width = $size['width'];
+	        $height = $size['height'];
+	        $this->media = $this->createMedia($original_url, $width, $height);
 	        return true;
         }
 	    if (($item->type == 'video')
@@ -131,7 +276,7 @@ class FFFacebook extends FFHttpRequestFeed{
 			    $item->object_id = $tokens[sizeof($tokens)-1];
 		    }
 		    if (isset($item->object_id) && trim($item->object_id) != ''){
-			    $data = $this->getFeedData("https://graph.facebook.com/v2.4/{$item->object_id}?fields=embed_html,source&access_token={$this->accessToken}");
+			    $data = $this->getFeedData($this->getUrlWithToken( "https://graph.facebook.com/v2.5/{$item->object_id}?fields=embed_html,source" ));
 			    $data = json_decode($data['response']);
 			    preg_match("/\<iframe.+width\=(?:\"|\')(.+?)(?:\"|\')(?:.+?)\>/", $data->embed_html, $matches);
 			    $width = $matches[1];
@@ -141,12 +286,25 @@ class FFFacebook extends FFHttpRequestFeed{
 				    $height = FFFeedUtils::getScaleHeight(600, $width, $height);
 				    $width = 600;
 			    }
-			    $url = "https://graph.facebook.com/v2.4/{$item->object_id}/picture?width={$this->getImageWidth()}&type=normal";
-			    $this->image = $this->createImage($this->getLocation($url), $width, $height);
-			    if (isset($data->source) && strpos($data->source, 'mp4') > 0)
-			        $this->media = $this->createMedia($data->source, $width, $height, 'video/mp4');
-			    else
-			        $this->media = $this->createMedia('http://www.facebook.com/video/embed?video_id=' . $item->object_id, $width, $height, 'video');
+			    $url = "https://graph.facebook.com/v2.5/{$item->object_id}/picture?width={$this->getImageWidth()}&type=normal";
+			    if ($this->saveImages){
+				    list($path, $remoteUrl, $localUrl) = $this->getInfo4Save($url);
+				    if (!file_exists($path)) {
+					    if ( copy( $remoteUrl, $path ) ) {
+						    $this->image = $this->createImage($localUrl, $width, $height);
+					    }
+					    else {
+						    $this->image = $this->createImage($this->getLocation($url), $width, $height);
+					    }
+				    }
+				    else {
+					    $this->image = $this->createImage($localUrl, $width, $height);
+				    }
+			    }
+			    else {
+				    $this->image = $this->createImage($this->getLocation($url), $width, $height);
+			    }
+			    $this->media = $this->createMedia('http://www.facebook.com/video/embed?video_id=' . $item->object_id, $width, $height, 'video');
 			    return true;
 		    }
 		    else if (isset($item->source)){
@@ -200,7 +358,12 @@ class FFFacebook extends FFHttpRequestFeed{
 		    }
 	    }
 	    if (($item->type == 'link') && isset($item->picture)){
-		    if (isset($item->attachments->data) && sizeof($item->attachments->data) > 0){
+		    if (isset($item->full_picture)){
+			    $this->image = $this->createImage($item->full_picture);
+			    $this->media = $this->createMedia((pathinfo($item->link, PATHINFO_EXTENSION) === 'gif') ? $item->link : $item->full_picture, null, null, 'image', true);
+			    return true;
+		    }
+		    else if (isset($item->attachments->data) && sizeof($item->attachments->data) > 0){
 			    $media = $item->attachments->data[0];
 			    if (isset($media->media) && isset($media->media->image)){
 				    $media = $media->media->image;
@@ -247,16 +410,30 @@ class FFFacebook extends FFHttpRequestFeed{
 	//TODO going to use a message_tags attribute
     protected function getContent($item){
 	    if (!isset($item->type)){
-		    return (string)$item->name;
+		    return isset($item->name) ? (string)$item->name : '';
 	    }
 	    if (isset($item->message)) return self::wrapHashTags(FFFeedUtils::wrapLinks($item->message), $item->id);
 	    if (isset($item->story)) return (string)$item->story;
     }
 
     protected function getProfileImage( $item ) {
-	    $url = "https://graph.facebook.com/v2.4/{$item->from->id}/picture?width=80&height=80";
+	    $url = "https://graph.facebook.com/v2.5/{$item->from->id}/picture?width=80&height=80";
 	    if (!array_key_exists($url, $this->images)){
-		    $this->images[$url] = $this->getLocation($url);
+		    if ($this->saveImages){
+			    list($path, $remoteUrl, $localUrl) = $this->getInfo4Save($url);
+			    if (!file_exists($path)) {
+				    if ( copy( $remoteUrl, $path ) ) {
+					    $this->images[$url] = $localUrl;
+				    }
+				    else {
+					    $this->images[$url] = $this->getLocation($url);
+				    }
+			    }
+			    else {
+				    $this->images[$url] = $localUrl;
+			    }
+		    }
+		    else $this->images[$url] = $this->getLocation($url);
 	    }
         return $this->images[$url];
     }
@@ -296,6 +473,17 @@ class FFFacebook extends FFHttpRequestFeed{
         return parent::customize( $post, $item );
     }
 
+	private function getInfo4Save($url){
+		$fileName = hash('md5', $url);
+		$path = WP_CONTENT_DIR . '/flow-flow-media-cache/' . $fileName;
+		if(!file_exists(WP_CONTENT_DIR . '/flow-flow-media-cache')){
+			mkdir(WP_CONTENT_DIR . '/flow-flow-media-cache', 0777);
+		}
+		$remoteUrl = $this->getUrlWithToken($url);
+		$localUrl = content_url('flow-flow-media-cache/' . $fileName);
+		return array($path, $remoteUrl, $localUrl);
+	}
+
 	/**
 	 * @param string $text
 	 * @param string $id
@@ -316,17 +504,27 @@ class FFFacebook extends FFHttpRequestFeed{
 	}
 
 	private function getLocation($url) {
-		$headers = $this->getHeadersSafe($url . "&access_token={$this->accessToken}" , 1);
-		if (isset($headers["Location"])) {
-			return $headers["Location"];
-		} else {
-			$location = @$this->getCurlLocation($url . "&access_token={$this->accessToken}");
+		if (defined('FF_DONT_USE_GET_HEADERS') && FF_DONT_USE_GET_HEADERS){
+			$location = @$this->getCurlLocation($this->getUrlWithToken( $url ));
 			if (!empty($location) && $location != 0) {
 				return $location;
 			}
 		}
+		else {
+			$headers = $this->getHeadersSafe($this->getUrlWithToken( $url ) , 1);
+			if (isset($headers["Location"])) {
+				return $headers["Location"];
+			} else {
+				$location = @$this->getCurlLocation($this->getUrlWithToken( $url ));
+				if (!empty($location) && $location != 0) {
+					return $location;
+				}
+			}
+		}
+
 		$location = str_replace('/v2.3/', '/', $url);
 		$location = str_replace('/v2.4/', '/', $location);
+		$location = str_replace('/v2.5/', '/', $location);
 		return $location;
 	}
 
@@ -364,5 +562,11 @@ class FFFacebook extends FFHttpRequestFeed{
 			curl_close( $ch );
 			return array($content);
 		}
+	}
+
+	private function getUrlWithToken($url){
+		$this->request_count++;
+		$token = $this->accessToken;
+		return $url . "&access_token={$token}";
 	}
 }

@@ -9,7 +9,7 @@ use flow\settings\FFSettingsUtils;
  * @package   FlowFlow
  * @author    Looks Awesome <email@looks-awesome.com>
  * @link      http://looks-awesome.com
- * @copyright 2014-2015 Looks Awesome
+ * @copyright 2014-2016 Looks Awesome
  */
 class FFPosts extends FFBaseFeed {
     private $args;
@@ -75,9 +75,10 @@ class FFPosts extends FFBaseFeed {
 
 	    if ( has_post_thumbnail($post["ID"]) ) {
 			$thumb_id = get_post_thumbnail_id($post["ID"]);
-			$thumb = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
+			$thumb = wp_get_attachment_image_src($thumb_id, 'medium', true);
+			$full = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
             $tc->img = $this->createImage($thumb[0], $thumb[1], $thumb[2]);
-		    $tc->media = $this->createMedia($thumb[0], $thumb[1], $thumb[2]);
+		    $tc->media = $this->createMedia($full[0], $full[1], $full[2]);
         }
 	    $counter = wp_count_comments($post["ID"]);
 	    @$tc->additional = array('comments' => (string)$counter->approved);

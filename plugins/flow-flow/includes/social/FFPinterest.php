@@ -10,7 +10,7 @@ use flow\settings\FFSettingsUtils;
  * @author    Looks Awesome <email@looks-awesome.com>
 
  * @link      http://looks-awesome.com
- * @copyright 2014 Looks Awesome
+ * @copyright 2014-2016 Looks Awesome
  */
 class FFPinterest extends FFRss {
     private $pin;
@@ -125,7 +125,7 @@ class FFPinterest extends FFRss {
         if (sizeof($data['errors']) > 0){
 	        $this->errors[] = array(
 		        'type'    => 'pinterest',
-		        'message' =>  var_dump2str($data['errors']),
+		        'message' =>  var_dump2str(isset($data['errors']['msg']) ? $data['errors']['msg'] : 'No error message'),
 		        'url' => $this->additionalUrl
 	        );
         } else {

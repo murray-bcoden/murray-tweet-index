@@ -10,17 +10,18 @@ use flow\cache\FFImageSizeCacheManager;
  * @author    Looks Awesome <email@looks-awesome.com>
 
  * @link      http://looks-awesome.com
- * @copyright 2014 Looks Awesome
+ * @copyright 2014-2016 Looks Awesome
  */
 abstract class FFBaseFeed implements FFFeed{
     private $id;
     /** @var FFImageSizeCacheManager */
-    private $cache;
+    protected $cache;
     private $count;
     private $imageWidth;
     private $useProxyServer;
 	private $type;
 	private $filterByWords;
+	private $criticalError = true;
 	/** @var FFGeneralSettings */
 	protected $options;
 	/** @var FFStreamSettings */
@@ -89,15 +90,17 @@ abstract class FFBaseFeed implements FFFeed{
     }
 
 	public final function posts() {
-		$this->deferredInit($this->options, $this->stream, $this->feed);
-		$this->beforeProcess();
 		$result = array();
-		if (sizeof($this->errors) == 0){
-			do {
-				$result += $this->onePagePosts();
-			} while ($this->nextPage($result));
-			return $this->afterProcess($result);
+		if ($this->beforeProcess()) {
+			$this->deferredInit($this->options, $this->stream, $this->feed);
+			if (sizeof($this->errors) == 0){
+				do {
+					$result += $this->onePagePosts();
+				} while ($this->nextPage($result));
+				return $this->afterProcess($result);
+			}
 		}
+		$this->criticalError = true;
 		return $result;
 	}
 
@@ -188,7 +191,7 @@ abstract class FFBaseFeed implements FFFeed{
 						}
 						break;
 					default:
-						if ((strpos($post->text, $word) !== false) || (isset($post->header) && strpos($post->header, $word) !== false)) {
+						if (!empty($word) && (strpos($post->text, $word) !== false) || (isset($post->header) && strpos($post->header, $word) !== false)) {
 							return false;
 						}
 				}
@@ -198,9 +201,10 @@ abstract class FFBaseFeed implements FFFeed{
 	}
 
 	/**
-	 * @return void
+	 * @return bool
 	 */
 	protected function beforeProcess(){
+		return (sizeof($this->errors) == 0);
 	}
 
     /**
@@ -209,6 +213,7 @@ abstract class FFBaseFeed implements FFFeed{
      */
     protected function afterProcess($result){
         $this->cache->save();
+	    $this->criticalError = empty($result) && sizeof($this->errors) > 0;
         return $result;
     }
 
@@ -230,5 +235,9 @@ abstract class FFBaseFeed implements FFFeed{
 		$use = $db->getGeneralSettings()->useCurlFollowLocation();
 		$useIpv4 = $db->getGeneralSettings()->useIPv4();
 		return FFFeedUtils::getFeedData($url, $timeout, $header, $log, $use, $useIpv4);
+	}
+
+	public function hasCriticalError() {
+		return $this->criticalError;
 	}
 } 

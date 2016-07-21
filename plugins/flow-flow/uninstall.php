@@ -6,7 +6,7 @@
  * @author    Looks Awesome <email@looks-awesome.com>
 
  * @link      http://looks-awesome.com
- * @copyright 2014 Looks Awesome
+ * @copyright 2014-2016 Looks Awesome
  */
 
 // If uninstall not called from WordPress, then exit
@@ -64,6 +64,15 @@ function delete_custom_file_directory() {
 
 function clean_db() {
 	global $wpdb;
-	$prefix = $wpdb->prefix;
-	$wpdb->query("DELETE FROM `{$prefix}options` WHERE `option_name` LIKE '%_flow_flow_%'");
+	$prefix = $wpdb->prefix . 'ff_';
+	$table_name = $prefix . 'cache';
+	$wpdb->query("DROP TABLE {$table_name}");
+	$table_name = $prefix . 'image_cache';
+	$wpdb->query("DROP TABLE {$table_name}");
+	$table_name = $prefix . 'options';
+	$wpdb->query("DROP TABLE {$table_name}");
+	$table_name = $prefix . 'posts';
+	$wpdb->query("DROP TABLE {$table_name}");
+	$table_name = $prefix . 'streams';
+	$wpdb->query("DROP TABLE {$table_name}");
 }

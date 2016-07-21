@@ -9,7 +9,7 @@ if ( ! defined( 'WPINC' ) ) die;
  * @author    Looks Awesome <email@looks-awesome.com>
 
  * @link      http://looks-awesome.com
- * @copyright 2014 Looks Awesome
+ * @copyright 2014-2016 Looks Awesome
  */
 class FFMigration_2_1 implements FFDBMigration {
 
@@ -30,6 +30,7 @@ class FFMigration_2_1 implements FFDBMigration {
 		if (!isset($options['facebook_access_token'])) $options['facebook_access_token'] = '';
 		if (!isset($options['facebook_app_id'])) $options['facebook_app_id'] = '';
 		if (!isset($options['facebook_app_secret'])) $options['facebook_app_secret'] = '';
+		if (!isset($options['facebook_app_secret'])) $options['facebook_use_own_app'] = '';
 		$manager->setOption('fb_auth_options', $options, true);
 	}
 

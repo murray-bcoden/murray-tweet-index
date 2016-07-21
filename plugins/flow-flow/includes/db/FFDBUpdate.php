@@ -7,7 +7,7 @@ if ( ! defined( 'WPINC' ) ) die;
  * @author    Looks Awesome <email@looks-awesome.com>
 
  * @link      http://looks-awesome.com
- * @copyright 2014 Looks Awesome
+ * @copyright 2014-2016 Looks Awesome
  */
 class FFDBUpdate {
 	public static function create_options_table ($table_name) {
@@ -143,5 +143,30 @@ class FFDBUpdate {
 			) $charset_collate;";
 			FFDB::conn()->query($sql);
 		}
+	}
+
+	public static function create_image_size_table($table_name) {
+		if (!FFDB::existTable($table_name)){
+			$charset_collate = '';
+			$charset = FFDB::charset();
+			if ( !empty( $charset ) ) {
+				$charset_collate = "DEFAULT CHARACTER SET {$charset}";
+			}
+			$collate = FFDB::collate();
+			if ( !empty( $collate ) ) {
+				$charset_collate .= " COLLATE {$collate}";
+			}
+			$sql = "CREATE TABLE ?n ( `url` VARCHAR(50) NOT NULL, `width` INT, `height` INT, `creation_time` TIMESTAMP DEFAULT CURRENT_TIMESTAMP, `original_url` VARCHAR(300), PRIMARY KEY (`url`) ) $charset_collate";
+			FFDB::conn()->query($sql, $table_name);
+		}
+	}
+
+	public static function remove_all_tables($prefix) {
+		FFDB::dropTable($prefix . 'streams');
+		FFDB::dropTable($prefix . 'snapshots');
+		FFDB::dropTable($prefix . 'posts');
+		FFDB::dropTable($prefix . 'options');
+		FFDB::dropTable($prefix . 'image_cache');
+		FFDB::dropTable($prefix . 'cache');
 	}
 }

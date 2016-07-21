@@ -4,7 +4,6 @@ use flow\db\FFDB;
 use flow\db\FFDBManager;
 use flow\settings\FFStreamSettings;
 use flow\social\FFFeedUtils;
-use LAClassLoader;
 
 if ( ! defined( 'WPINC' ) ) die;
 if ( ! defined('FF_BY_DATE_ORDER'))   define('FF_BY_DATE_ORDER', 'compareByTime');
@@ -23,7 +22,7 @@ if ( ! defined('FF_SMART_ORDER'))     define('FF_SMART_ORDER',   'smartCompare')
  * @author    Looks Awesome <email@looks-awesome.com>
 
  * @link      http://looks-awesome.com
- * @copyright 2014 Looks Awesome
+ * @copyright 2014-2016 Looks Awesome
  */
 class FlowFlow {
 
@@ -34,7 +33,7 @@ class FlowFlow {
 	 *
 	 * @var     string
 	 */
-	const VERSION = '2.3.1';
+	const VERSION = '2.9.4';
 
 	protected static $instance = array();
 
@@ -84,6 +83,8 @@ class FlowFlow {
 		$this->db = $context['db_manager'];
 		$this->slug = $slug;
 		$this->slug_down = $slug_down;
+
+		add_filter('ff_build_public_response', array($this, 'buildResponse'), 1, 8);
 	}
 
 	/** $return FFGeneralSettings */
@@ -101,6 +102,8 @@ class FlowFlow {
 			if ($this->prepareProcess()) {
 				$stream = $this->db->getStream($attr['id']);
 				if (isset($stream)) {
+					$stream->preview = (isset($attr['preview']) && $attr['preview']);
+					$stream->gallery = $stream->preview ? 'nope' : $stream->gallery;
 					return $this->renderStream($stream, $this->getPublicContext($stream, $this->context));
 				}
 			} else {
@@ -114,9 +117,9 @@ class FlowFlow {
 		if ($settings->isPossibleToShow()){
 			//$this->cache->setStream($settings);
 			ob_start();
-			LAClassLoader::get()->includeView('public', $context);
-			$output = ob_get_contents();
-			ob_get_clean();
+			include($context['root']  . 'views/public.php');
+			$output = ob_get_clean();
+            $output = str_replace("\r\n", '', $output);
 			return $output;
 		}
 		else
@@ -194,7 +197,13 @@ class FlowFlow {
 						}
 						if (($last_update + $cacheLifeTime) > time()) continue;
 					}
-					FFFeedUtils::getFeedData($this->getLoadCacheUrl($stream->getId(), $force), 1, false, false, $use, $useIpv4);
+					if (FF_USE_DIRECT_WP_CRON){
+						$_REQUEST['stream_id'] = $stream->getId();
+						$this->processAjaxRequestBackground();
+					}
+					else {
+						FFFeedUtils::getFeedData($this->getLoadCacheUrl($stream->getId(), $force), 1, false, false, $use, $useIpv4);
+					}
 				}catch (Exception $e){
 //					error_log($e->getMessage());
 				}
@@ -245,7 +254,7 @@ class FlowFlow {
 					$wpt = 'wordpress-type';
 				}
 
-				$clazz = new \ReflectionClass( 'flow\\social\\FF' . ucfirst($feed->$wpt) );
+				$clazz = new \ReflectionClass( 'flow\\social\\FF' . ucfirst($feed->$wpt) );//don`t change this line
 				$instance = $clazz->newInstance();
 				$instance->init($this->context, $this->generalSettings, $this->settings, $feed);
 				$result[] = $instance;
@@ -257,8 +266,12 @@ class FlowFlow {
 	private function prepareResult(array $all, $errors, $hash) {
 		$page = isset($_REQUEST['page']) ? (int)$_REQUEST['page'] : 0;
 		$oldHash = isset($_REQUEST['hash']) ? $_REQUEST['hash'] : $hash;
+		if (isset($_REQUEST['recent']) && $hash != null){
+			$oldHash = $hash;
+		}
 		list($status, $errors) = $this->status();
-		$result = json_encode($this->buildResponse($all, $errors, $oldHash, $page, $status));
+		$result = FF_USE_WP ? apply_filters('ff_build_public_response', array(), $all, $this->context, $errors, $oldHash, $page, $status, $this->settings) :
+			$this->buildResponse(array(), $all, $this->context, $errors, $oldHash, $page, $status, $this->settings);
 		if (($result === false) && (JSON_ERROR_UTF8 === json_last_error())){
 			foreach ( $all as $item ) {
 				json_encode($item);
@@ -266,14 +279,59 @@ class FlowFlow {
 					$item->text = mb_convert_encoding($item->text, "UTF-8", "auto");
 				}
 			}
-			$result = json_encode($this->buildResponse($all, $errors, $oldHash, $page, $status));
+			$result = FF_USE_WP ? apply_filters('ff_build_public_response', $result, $all, $this->context, $errors, $oldHash, $page, $status, $this->settings) :
+				$this->buildResponse($result, $all, $this->context, $errors, $oldHash, $page, $status, $this->settings);
 		}
-		return $result;
+		
+		$result['server_time'] = time();
+		$json = json_encode($result);
+		if ($json === false){
+			$errors = array();
+			switch (json_last_error()) {
+				case JSON_ERROR_NONE:
+					echo ' - No errors';
+					break;
+				case JSON_ERROR_DEPTH:
+					$errors[] = 'Json encoding error: Maximum stack depth exceeded';
+					break;
+				case JSON_ERROR_STATE_MISMATCH:
+					$errors[] = 'Json encoding error: Underflow or the modes mismatch';
+					break;
+				case JSON_ERROR_CTRL_CHAR:
+					$errors[] = 'Json encoding error: Unexpected control character found';
+					break;
+				case JSON_ERROR_SYNTAX:
+					$errors[] = 'Json encoding error: Syntax error, malformed JSON';
+					break;
+				case JSON_ERROR_UTF8:
+					for ( $i = 0; sizeof( $result['items'] ) > $i; $i++ ) {
+						$result['items'][$i]->text = mb_convert_encoding($result['items'][$i]->text, "UTF-8", "auto");
+					}
+					$json = json_encode($result);
+					if ($json === false){
+						$errors[] = 'Json encoding error:  Malformed UTF-8 characters, possibly incorrectly encoded';
+					}
+					else {
+						return $json;
+					}
+					break;
+				default:
+					$errors[] = 'Json encoding error';
+					break;
+			}
+			$result = FF_USE_WP ? apply_filters('ff_build_public_response', array(), array(), $this->context, $errors, $oldHash, $page, 'errors', $this->settings) :
+				$this->buildResponse($result, $all, $this->context, $errors, $oldHash, $page, 'errors', $this->settings);
+			$json = json_encode($result);
+		}
+		return $json;
 	}
 
-	private function buildResponse($all, $errors, $oldHash, $page, $status){
-		return array('id' => (int)$this->settings->getId(), 'items' => $all, 'errors' => $errors,
-		             'hash' => $oldHash, 'page' => $page, 'countOfPages' => $_REQUEST['countOfPages'], 'status' => $status);
+	public function buildResponse($result, $all, $context, $errors, $oldHash, $page, $status, $stream){
+		$streamId = (int) $stream->getId();
+		$countOfPages = isset($_REQUEST['countOfPages']) ? $_REQUEST['countOfPages'] : 0;
+		$result = array('id' => $streamId, 'items' => $all, 'errors' => $errors,
+		             'hash' => $oldHash, 'page' => $page, 'countOfPages' => $countOfPages, 'status' => $status);
+		return $result;
 	}
 
 	/**
@@ -289,12 +347,17 @@ class FlowFlow {
 	public static function activate( $network_wide ) {
 		if(version_compare(PHP_VERSION, '5.3.0') == -1){
 			deactivate_plugins( plugin_basename( __FILE__ ) );
-			wp_die( '<b>Flow-Flow Social Streams</b> plugin requires PHP version 5.3.0 or higher. Pls update your PHP version or ask hosting support to do this for you, you are using old and unsecure one' );
+			wp_die( '<b>Flow-Flow Social Stream</b> plugin requires PHP version 5.3.0 or higher. Pls update your PHP version or ask hosting support to do this for you, you are using old and unsecure one' );
+		}
+
+		if(!function_exists('curl_version')){
+			deactivate_plugins( plugin_basename( __FILE__ ) );
+			wp_die( '<b>Flow-Flow Social Stream</b> plugin requires curl extension for php. Please install/enable this extension or ask your hosting to help you with this.' );
 		}
 
 		if(!function_exists('mysqli_connect')){
 			deactivate_plugins( plugin_basename( __FILE__ ) );
-			wp_die( '<b>Flow-Flow Social Streams</b> plugin requires mysqli extension for MySQL. Please install/enable this extension on your server or ask your hosting to help you with this. <a href="http://php.net/manual/en/mysqli.installation.php">Installation guide</a>' );
+			wp_die( '<b>Flow-Flow Social Stream</b> plugin requires mysqli extension for MySQL. Please install/enable this extension on your server or ask your hosting to help you with this. <a href="http://php.net/manual/en/mysqli.installation.php">Installation guide</a>' );
 		}
 
 		if ( function_exists( 'is_multisite' ) && is_multisite() ) {
@@ -419,6 +482,7 @@ class FlowFlow {
 	 */
 	public function enqueue_scripts() {
 		$opts =  $this->get_options();
+        $plugins_url = plugins_url();
 		$js_opts = array(
             'streams' => new \stdClass(),
             'open_in_new' => $opts['general-settings-open-links-in-new-window'],
@@ -446,12 +510,13 @@ class FlowFlow {
 			'server_time' => time(),
 			'forceHTTPS' => $opts['general-settings-https'],
             'isAdmin' => function_exists('current_user_can') && current_user_can( 'manage_options' ),
-			'isLog' => isset($_REQUEST['fflog']) && $_REQUEST['fflog'] == 1,
             'ajaxurl' => FF_AJAX_URL,
+            'isLog' => isset($_REQUEST['fflog']) && $_REQUEST['fflog'] == 1,
+            'plugin_base' => $plugins_url . '/' . $this->slug ,
 			'plugin_ver' => self::VERSION
 		);
 
-		wp_enqueue_script($this->slug . '-plugin-script', plugins_url() . '/' . $this->slug . '/js/require-utils.js', array('jquery'), self::VERSION);
+		wp_enqueue_script($this->slug . '-plugin-script', $plugins_url . '/' . $this->slug . '/js/require-utils.js', array('jquery'), self::VERSION);
 		wp_localize_script($this->slug . '-plugin-script', $this->getNameJSOptions(), $js_opts);
 	}
 

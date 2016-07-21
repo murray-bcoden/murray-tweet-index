@@ -180,7 +180,7 @@
 
       var data = {
         icon: self.model.get('type') ? '<div class="ffticker__icon_wrapper"><span class="ffticker__icon"></span></div>' : '',
-        title: ($name.length ? 'Hi ' + $name.val() + '! ' : '' ) + self.model.get('title') + ':',
+        title: ($name.length ? 'Hi' + ($name.val() ? ' ' + $name.val() : '') + '! ' : '' ) + self.model.get('title') + ':',
         text: self.model.get('text'),
         cta: self.model.get('url') ? '<a target="_blank" href="' + self.model.get('url') + '" class="ffticker__cta">' + (self.model.get('cta') ? self.model.get('cta') : 'Learn more') + '</a>' : ''
       }
@@ -194,7 +194,7 @@
       "click .ffticker__close":   "destroy"
     },
     destroy: function () {
-      debugger
+      
       this.$el.parent().removeClass('ffticker--transition-in').css({'paddingTop' : ''});
       $(document).trigger('ticker-destroyed', this.model)
     }
@@ -222,7 +222,7 @@
             var latest = news && news[0], found;
 
             if (!latest) return;
-            debugger
+            
 
             Cookie.set('ff_news_session', latest.id);
 
@@ -240,7 +240,7 @@
 //          console.log(error.statusText);
           defer.reject('request failed');
         });
-debugger
+
         if (!sessionCookie) Cookie.set('ff_news_session', 'no_data');
 
       } else {
@@ -266,7 +266,7 @@ debugger
     function tryToAddNotification (id) {
       var found;
       var $item;
-      debugger
+      
 
       seen = cookieJSON.seen.toString().split('+');
 
@@ -318,7 +318,7 @@ debugger
     }
 
     function injectView (view) {
-     debugger
+     
       var $form = $('#flow_flow_form');
       var height;
       var seen, found;
@@ -329,7 +329,7 @@ debugger
         $form.css({'paddingTop' : height+'px'});
         setTimeout(function(){
           view.$el.parent().addClass('ffticker--transition-in');
-          debugger
+          
         }, 0)
 
         // set news cookie

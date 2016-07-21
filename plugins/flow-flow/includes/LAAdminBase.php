@@ -7,7 +7,7 @@ if ( ! defined( 'WPINC' ) ) die;
  * @author    Looks Awesome <email@looks-awesome.com>
  *
  * @link      http://looks-awesome.com
- * @copyright 2014-2015 Looks Awesome
+ * @copyright 2014-2016 Looks Awesome
  */
 abstract class LAAdminBase {
 	protected $db = null;
@@ -58,12 +58,14 @@ abstract class LAAdminBase {
 		$plugin_directory = plugins_url() . '/' . $this->getPluginSlug() . '/';
 		$this->enqueueAdminStylesAlways($plugin_directory);
 		$this->enqueueAdminScriptsAlways($plugin_directory);
+		do_action('ff_enqueue_admin_resources');
 		if (isset( $this->plugin_screen_hook_suffix)) {
 			$screen = get_current_screen();
 			if ( $this->plugin_screen_hook_suffix == $screen->id ) {
 				$this->initPluginAdminPage();
 				$this->enqueueAdminStylesOnlyAtPluginPage($plugin_directory);
 				$this->enqueueAdminScriptsOnlyAtPluginPage($plugin_directory);
+				do_action('ff_enqueue_admin_resources_only_at_plugin_page');
 			}
 		}
 	}

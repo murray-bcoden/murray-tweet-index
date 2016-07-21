@@ -8,7 +8,7 @@
  * @package   FlowFlow
  * @author    Looks Awesome <email@looks-awesome.com>
  * @link      http://looks-awesome.com
- * @copyright 2014-2015 Looks Awesome
+ * @copyright 2014-2016 Looks Awesome
  */
 $options = $context['options'];
 
@@ -27,7 +27,7 @@ $disabled = $activated ? ' class="disabled"' : '';
 	    <?php
         if (!$activated) {
             echo '<h1>Activate Flow-Flow</h1>';
-            echo '<h3>We\'re working on auto-updates implementation and plugin activation with Envato code is required to get access to easy updating. We need your email address for additional confirmation. Emails will be sent to you only if you choose this option. Emails will have important announcements about major updates and Flow-Flow extension releases. </h3>';
+            echo '<h3>We\'re working on auto-updates implementation and plugin activation with Envato code is required to get access to easy updating. We need your email address for additional confirmation. You can subscribe to important notifications if you mark checkbox in the form below. These notifications will include announcements about major updates and Flow-Flow extension releases.</h3>';
         }
         ?>
 

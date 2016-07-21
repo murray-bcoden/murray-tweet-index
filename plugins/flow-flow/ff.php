@@ -67,6 +67,9 @@ if (isset($_REQUEST['action'])){
 		case 'moderation_apply_action':
 			$ff->moderation_apply();
 			break;
+		case 'flow_flow_social_auth':
+			$db->social_auth();
+			break;
 		default:
 			if (strpos($_REQUEST['action'], "backup") !== false) {
 				define('FF_SNAPSHOTS_TABLE_NAME', DB_TABLE_PREFIX . 'ff_snapshots');

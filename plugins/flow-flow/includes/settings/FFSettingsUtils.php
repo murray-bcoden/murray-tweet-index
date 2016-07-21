@@ -7,11 +7,12 @@ if ( ! defined( 'WPINC' ) ) die;
  * @author    Looks Awesome <email@looks-awesome.com>
 
  * @link      http://looks-awesome.com
- * @copyright 2014 Looks Awesome
+ * @copyright 2014-2016 Looks Awesome
  */
 
 class FFSettingsUtils {
 	public static function YepNope2ClassicStyleSafe($array, $key, $not_parsed_result = false){
+		if (is_object($array)) $array = (array) $array;
 		return isset($array[$key]) ? self::YepNope2ClassicStyle($array[$key], $not_parsed_result) : $not_parsed_result;
 	}
 
@@ -23,6 +24,7 @@ class FFSettingsUtils {
     }
 
 	public static function notYepNope2ClassicStyleSafe($array, $key, $not_parsed_result = true){
+		if (is_object($array)) $array = (array) $array;
 		return isset($array[$key]) ? self::notYepNope2ClassicStyle($array[$key], $not_parsed_result) : $not_parsed_result;
 	}
 

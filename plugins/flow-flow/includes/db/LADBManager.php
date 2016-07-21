@@ -1,5 +1,4 @@
 <?php  namespace flow\db;
-use \LAClassLoader;
 use flow\settings\FFGeneralSettings;
 
 if ( ! defined( 'WPINC' ) ) die;
@@ -10,7 +9,7 @@ if ( ! defined( 'WPINC' ) ) die;
  * @author    Looks Awesome <email@looks-awesome.com>
  *
  * @link      http://looks-awesome.com
- * @copyright 2014-2015 Looks Awesome
+ * @copyright 2014-2016 Looks Awesome
  */
 abstract class LADBManager {
 	public $table_prefix;
@@ -43,6 +42,10 @@ abstract class LADBManager {
 			FFDB::setOption($this->option_table_name, $this->plugin_slug_down . '_db_version', $this->startVersion());
 		}
 
+		if (!FFDB::existTable($this->image_cache_table_name)){
+			$this->init();
+		}
+
 		if (false !== ($version = $this->getOption('db_version'))){
 			$migrations = array();
 			foreach ($this->migrations() as $class) {
@@ -61,6 +64,12 @@ abstract class LADBManager {
 						}
 					}
 					FFDB::commit();
+
+					if (isset($migrations['2.13'])){
+						$migration = $migrations['2.13'];
+						$migration->execute($this);
+						FFDB::commit();
+					}
 				}
 			} catch (Exception $e){
 				FFDB::rollbackAndClose();
@@ -73,12 +82,12 @@ abstract class LADBManager {
 		return new FFGeneralSettings($this->getOption('options', true), $this->getOption('fb_auth_options', true));
 	}
 
-	public function getOption($optionName, $serialized = false){
-		return FFDB::getOption($this->option_table_name, $this->plugin_slug_down . '_' . $optionName, $serialized);
+	public function getOption($optionName, $serialized = false, $lock_row = false){
+		return FFDB::getOption($this->option_table_name, $this->plugin_slug_down . '_' . $optionName, $serialized, $lock_row);
 	}
 
-	public function setOption($optionName, $optionValue, $serialized = false){
-		FFDB::setOption($this->option_table_name, $this->plugin_slug_down . '_' . $optionName, $optionValue, $serialized);
+	public function setOption($optionName, $optionValue, $serialized = false, $cached = true){
+		FFDB::setOption($this->option_table_name, $this->plugin_slug_down . '_' . $optionName, $optionValue, $serialized, $cached);
 	}
 
 	public function deleteOption($optionName){
@@ -95,7 +104,12 @@ abstract class LADBManager {
 	 * @return array
 	 */
 	protected function migrations(){
-		return LAClassLoader::get()->migrations();
+		$result = array();
+		global $flow_flow_context;
+		foreach ( glob($flow_flow_context['root'] . 'includes/db/migrations/FFMigration_*.php') as $filename ) {
+			$result[] = 'flow\\db\\migrations\\' . basename($filename, ".php");
+		}
+		return $result;
 	}
 
 	private function needExecuteMigration($db_version, $migration_version){

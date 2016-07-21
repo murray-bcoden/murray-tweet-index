@@ -2,7 +2,7 @@
 /*
 Plugin Name: Cookie Notice
 Description: Cookie Notice allows you to elegantly inform users that your site uses cookies and to comply with the EU cookie law regulations.
-Version: 1.2.34
+Version: 1.2.35
 Author: dFactory
 Author URI: http://www.dfactory.eu/
 Plugin URI: http://www.dfactory.eu/plugins/cookie-notice/
@@ -12,7 +12,7 @@ Text Domain: cookie-notice
 Domain Path: /languages
 
 Cookie Notice
-Copyright (C) 2013-2015, Digital Factory - info@digitalfactory.pl
+Copyright (C) 2013-2016, Digital Factory - info@digitalfactory.pl
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
@@ -34,7 +34,7 @@ include_once( plugin_dir_path( __FILE__ ) . 'includes/update.php' );
  * Cookie Notice class.
  *
  * @class Cookie_Notice
- * @version	1.2.34
+ * @version	1.2.35
  */
 class Cookie_Notice {
 
@@ -70,12 +70,11 @@ class Cookie_Notice {
 			'translate'						=> true,
 			'deactivation_delete'			=> 'no'
 		),
-		'version'							=> '1.2.34'
+		'version'							=> '1.2.35'
 	);
 	private $positions 			= array();
 	private $styles 			= array();
 	private $choices 			= array();
-	private $pages 				= array();
 	private $links 				= array();
 	private $link_target 		= array();
 	private $colors 			= array();
@@ -170,19 +169,6 @@ class Cookie_Notice {
 			'footer' 			=> __( 'Footer', 'cookie-notice' ),
 		);
 
-		$this->pages = get_pages(
-			array(
-				'sort_order'	=> 'ASC',
-				'sort_column'	=> 'post_title',
-				'hierarchical'	=> 0,
-				'child_of'		=> 0,
-				'parent'		=> -1,
-				'offset'		=> 0,
-				'post_type'		=> 'page',
-				'post_status'	=> 'publish'
-			)
-		);
-
 		if ( $this->options['general']['translate'] === true ) {
 			$this->options['general']['translate'] = false;
 
@@ -216,7 +202,7 @@ class Cookie_Notice {
 	 */
 	public function admin_menu_options() {
 		add_options_page(
-			__( 'Cookie Notice', 'cookie-notice' ), __( 'Cookie Notice', 'cookie-notice' ), 'manage_options', 'cookie-notice', array( $this, 'options_page' )
+			__( 'Cookie Notice', 'cookie-notice' ), __( 'Cookie Notice', 'cookie-notice' ), apply_filters( 'cn_manage_cookie_notice_cap', 'manage_options' ), 'cookie-notice', array( $this, 'options_page' )
 		);
 	}
 
@@ -356,6 +342,20 @@ class Cookie_Notice {
 	 * Read more link option.
 	 */
 	public function cn_see_more() {
+		
+		$pages = get_pages(
+			array(
+				'sort_order'	=> 'ASC',
+				'sort_column'	=> 'post_title',
+				'hierarchical'	=> 0,
+				'child_of'		=> 0,
+				'parent'		=> -1,
+				'offset'		=> 0,
+				'post_type'		=> 'page',
+				'post_status'	=> 'publish'
+			)
+		);
+		
 		echo '
 		<fieldset>
 			<label><input id="cn_see_more" type="checkbox" name="cookie_notice_options[see_more]" value="1" ' . checked( 'yes', $this->options['general']['see_more'], false ) . ' />' . __( 'Enable Read more link.', 'cookie-notice' ) . '</label>';
@@ -366,11 +366,13 @@ class Cookie_Notice {
 			<p class="description">' . __( 'The text of the more info button.', 'cookie-notice' ) . '</p>
 			<div id="cn_see_more_opt_custom_link">';
 
-		foreach ( $this->links as $value => $label ) {
-			$value = esc_attr( $value );
+		if ( $pages ) {
+			foreach ( $this->links as $value => $label ) {
+				$value = esc_attr( $value );
 
-			echo '
-				<label><input id="cn_see_more_link-' . $value . '" type="radio" name="cookie_notice_options[see_more_opt][link_type]" value="' . $value . '" ' . checked( $value, $this->options['general']['see_more_opt']['link_type'], false ) . ' />' . esc_html( $label ) . '</label>';
+				echo '
+					<label><input id="cn_see_more_link-' . $value . '" type="radio" name="cookie_notice_options[see_more_opt][link_type]" value="' . $value . '" ' . checked( $value, $this->options['general']['see_more_opt']['link_type'], false ) . ' />' . esc_html( $label ) . '</label>';
+			}
 		}
 
 		echo '
@@ -380,9 +382,11 @@ class Cookie_Notice {
 				<select name="cookie_notice_options[see_more_opt][id]">
 					<option value="empty" ' . selected( 'empty', $this->options['general']['see_more_opt']['id'], false ) . '>' . __( '-- select page --', 'cookie-notice' ) . '</option>';
 
-		foreach ( $this->pages as $page ) {
-			echo '
-					<option value="' . $page->ID . '" ' . selected( $page->ID, $this->options['general']['see_more_opt']['id'], false ) . '>' . esc_html( $page->post_title ) . '</option>';
+		if ( $pages ) {
+			foreach ( $pages as $page ) {
+				echo '
+						<option value="' . $page->ID . '" ' . selected( $page->ID, $this->options['general']['see_more_opt']['id'], false ) . '>' . esc_html( $page->post_title ) . '</option>';
+			}
 		}
 
 		echo '
@@ -548,7 +552,7 @@ class Cookie_Notice {
 		if ( ! check_admin_referer( 'cookie_notice_options-options') )
 			return $input;
 		
-		if ( ! current_user_can( 'manage_options' ) )
+		if ( ! current_user_can( apply_filters( 'cn_manage_cookie_notice_cap', 'manage_options' ) ) )
 			return $input;
 
 		if ( isset( $_POST['save_cookie_notice_options'] ) ) {
@@ -684,7 +688,7 @@ class Cookie_Notice {
 	 * Add links to Support Forum.
 	 */
 	public function plugin_extend_links( $links, $file ) {
-		if ( ! current_user_can( 'install_plugins' ) )
+		if ( ! current_user_can( apply_filters( 'cn_manage_cookie_notice_cap', 'manage_options' ) ) )
 			return $links;
 
 		$plugin = plugin_basename( __FILE__ );
@@ -699,7 +703,7 @@ class Cookie_Notice {
 	 * Add links to settings page.
 	 */
 	public function plugin_settings_link( $links, $file ) {
-		if ( ! current_user_can( 'manage_options' ) )
+		if ( ! current_user_can( apply_filters( 'cn_manage_cookie_notice_cap', 'manage_options' ) ) )
 			return $links;
 
 		$plugin = plugin_basename( __FILE__ );
@@ -780,7 +784,7 @@ class Cookie_Notice {
 	 * @return mixed
 	 */
 	public function wp_print_footer_scripts() {
-		$scripts = trim( wp_kses_post( $this->options['general']['refuse_code'] ) );
+		$scripts = html_entity_decode( trim( wp_kses_post( $this->options['general']['refuse_code'] ) ) );
 		
 		if ( $this->cookie_setted() && ! empty( $scripts ) ) {
 			?>

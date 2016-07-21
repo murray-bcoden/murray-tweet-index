@@ -8,7 +8,7 @@ if ( ! defined( 'WPINC' ) ) die;
  * @author    Looks Awesome <email@looks-awesome.com>
 
  * @link      http://looks-awesome.com
- * @copyright 2014 Looks Awesome
+ *@copyright 2014-2016 Looks Awesome
  */
 class FFDB {
 	/** @var SafeMySQL $db */
@@ -124,13 +124,15 @@ class FFDB {
 
 	private static $cache = array();
 
-	public static function getOption($table_name, $optionName, $serialized = false){
-		if (!isset(self::$cache[$optionName])){
-			$options = self::conn()->getOne('select `value` from ?n where `id`=?s', $table_name, $optionName);
+	public static function getOption($table_name, $option_name, $serialized = false, $lock_row = false){
+		if ($lock_row || !isset(self::$cache[$option_name])){
+			$q = 'select `value` from ?n where `id`=?s';
+			if ($lock_row) $q .= ' for update';
+			$options = self::conn()->getOne($q, $table_name, $option_name);
 			if ($options == false || $options == null ) return false;
-			self::$cache[$optionName] = $serialized ? unserialize($options) : $options;
+			self::$cache[$option_name] = $serialized ? unserialize($options) : $options;
 		}
-		return self::$cache[$optionName];
+		return self::$cache[$option_name];
 	}
 
 	public static function setOption($table_name, $optionName, $optionValue, $serialized = false, $cached = true){
@@ -224,7 +226,7 @@ class FFDB {
 		$status_info = FFDB::conn()->getAll('select `cach`.`stream_id` as `id`, MIN(`cach`.`status`) as `status`, COUNT(`cach`.`feed_id`) as `feeds_count` from ?n `cach` ?p  group by `cach`.`stream_id`',
 			$cache_table_name, $sql_part);
 		if (empty($status_info)){
-			return array('id' => (string)$streamId, 'status' => '0', 'feeds_count' => '0');
+			return array('id' => (string)$streamId, 'status' => '1', 'feeds_count' => '0');
 		}
 		$status_info = $status_info[0];
 		if ($status_info['status'] == '0') {

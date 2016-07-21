@@ -8,7 +8,7 @@
  * @package   FlowFlow
  * @author    Looks Awesome <email@looks-awesome.com>
  * @link      http://looks-awesome.com
- * @copyright 2014 Looks Awesome
+ * @copyright 2014-2016 Looks Awesome
  */
 $moderation = $context['moderation'] && $context['can_moderate'];
 $stream = $context['stream'];
@@ -44,6 +44,7 @@ if (!isset($stream->layout) || empty($stream->layout)) {
 		background-color: <?php echo $stream->filtercolor;?>;
 	}
 	#ff-stream-<?php echo $id;?> .ff-filter:hover,
+	#ff-stream-<?php echo $id;?> .ff-filter.ff-filter--active,
 	#ff-stream-<?php echo $id;?> .ff-moderation-button,
 	#ff-stream-<?php echo $id;?> .ff-loadmore-wrapper .ff-btn,
 	#ff-stream-<?php echo $id;?> .ff-square:nth-child(1) {
@@ -55,7 +56,7 @@ if (!isset($stream->layout) || empty($stream->layout)) {
 	#ff-stream-<?php echo $id;?> .ff-filter-holder .ff-search:after {
 		color: <?php echo $stream->filtercolor;?>;
 	}
-	#ff-stream-<?php echo $id;?>,
+	#ff-stream-<?php echo $id;?>, #ff-stream-<?php echo $id;?> .ff-popup,
 	#ff-stream-<?php echo $id;?> .ff-search input,
 	#ff-stream-<?php echo $id;?>.ff-layout-compact .picture-item__inner {
 		background-color: <?php echo $stream->bgcolor;?>;
@@ -70,7 +71,7 @@ if (!isset($stream->layout) || empty($stream->layout)) {
     }
     <?php endif?>
     <?php if( $stream->hidetext === 'yep' ):?>
-    #ff-stream-<?php echo $id;?> .ff-content, #ff-stream-<?php echo $id;?> h4, #ff-stream-<?php echo $id;?> .readmore-js-toggle {
+    #ff-stream-<?php echo $id;?> .ff-item:not(.ff-ad) .ff-content, #ff-stream-<?php echo $id;?> .ff-item:not(.ff-ad) h4, #ff-stream-<?php echo $id;?> .readmore-js-toggle {
         display: none !important;
     }
     #ff-stream-<?php echo $id;?> .ff-theme-flat.ff-style-3 .ff-content + .ff-item-meta {
@@ -78,7 +79,7 @@ if (!isset($stream->layout) || empty($stream->layout)) {
     }
     <?php endif?>
     <?php if( $stream->hidemeta === 'yep' ):?>
-    #ff-stream-<?php echo $id;?> .ff-stream .ff-item-meta, .ff-theme-flat .ff-icon, .ff-theme-flat.ff-style-3 .ff-item-cont:before {
+	#ff-stream-<?php echo $id;?> .ff-item-meta, .ff-theme-flat .ff-icon, .ff-theme-flat.ff-style-3 .ff-item-cont:before {
         display: none !important;
     }
     #ff-stream-<?php echo $id;?> .ff-theme-flat.ff-style-3 .ff-item-cont {
@@ -188,7 +189,7 @@ if (!isset($stream->layout) || empty($stream->layout)) {
 	#ff-stream-<?php echo $id;?>-slideshow, #ff-stream-<?php echo $id;?>-slideshow h4  {
 		color: <?php echo $stream->ftextcolor;?>;
 	}
-	#ff-stream-<?php echo $id;?> li,
+	#ff-stream-<?php echo $id;?> > li,
 	#ff-stream-<?php echo $id;?>-slideshow li,
 	#ff-stream-<?php echo $id;?> .ff-square {
 		background: <?php echo $stream->fcardcolor;?>;
@@ -293,75 +294,11 @@ if (!isset($stream->layout) || empty($stream->layout)) {
 	}
 	<?php endif;?>
 	<?php
-	  if(!empty($stream->css)) echo $stream->css;
+	  if(!empty($stream->css)) echo stripslashes($stream->css);
 	?>
 	</style>
 	<div class="ff-stream" id="ff-stream-<?php echo $id;?>"><span class="ff-loader"><span class="ff-square" ></span><span class="ff-square"></span><span class="ff-square ff-last"></span><span class="ff-square ff-clear"></span><span class="ff-square"></span><span class="ff-square ff-last"></span><span class="ff-square ff-clear"></span><span class="ff-square"></span><span class="ff-square ff-last"></span></span></div>
-<?php if ($seo || isset($_REQUEST['debug'])){
-	if (isset($_REQUEST['debug'])) define(WP_DEBUG, true);
-	if (!isset($_REQUEST['stream-id'])) $_REQUEST['stream-id'] = $id;?>
-	<script type="text/javascript">
-		(function ( $ ) {
-			"use strict";
-			var opts = window.FlowFlowOpts;
-			if (!opts) {
-				window.console && window.console.log('no Flow-Flow options');
-				return;
-			}
-			if (!window.FF_resource) {
-				window.console && window.console.log('no required script');
-				return
-			}
-			var streamData = <?php echo FlowFlow::get_instance()->processRequest()?>;
-			var isMobile = /android|blackBerry|iphone|ipad|ipod|opera mini|iemobile/i.test(navigator.userAgent);
-			var streamOpts = opts['streams']['id' + <?php echo $id;?>];
-			var $cont = $("#ff-stream-"+<?php echo $id;?>);
-			var script, style;
-			if (FF_resource.scriptDeferred.state() === 'pending' && !FF_resource.scriptLoading) {
-				script = document.createElement('script');
-				script.src = "<?php echo $context['plugin_url'] . '/' . $context['slug'];?>/js/public.js";
-				script.onload = function( script, textStatus ) {
-					FF_resource.scriptDeferred.resolve();
-				};
-				document.body.appendChild(script);
-				FF_resource.scriptLoading = true;
-			}
-			if (FF_resource.styleDeferred.state() === 'pending' && !FF_resource.styleLoading) {
-				style = document.createElement('link');
-				style.type = "text/css";
-				style.rel = "stylesheet";
-				style.href = "<?php echo $context['plugin_url'] . '/' . $context['slug'];?>/css/public.css";
-				style.media = "screen";
-				style.onload = function( script, textStatus ) {
-					FF_resource.styleDeferred.resolve();
-				};
-				document.getElementsByTagName("head")[0].appendChild(style);
-				FF_resource.styleLoading = true;
-			}
-			$.when( FF_resource.scriptDeferred, FF_resource.styleDeferred ).done(function ( data ) {
-				var $stream = FlowFlow.buildStreamWith(streamData);
-                var num = $streamOpts.layout === 'compact' ? $streamOpts['cards-num'] : ($streamOpts.mobileslider === 'yep' && isMobile ?  3 : false);
-                var w;
-				if (streamOpts.layout === 'compact') {
-					w = $cont.parent().width();
-					FlowFlow.adjustImgHeight($stream, (w > 300 ? 300 : w) - 72); // todo remove hardcode
-				}
-				$cont.append($stream);
-				if (typeof $stream !== 'string') {
-					FlowFlow.setupGrid($cont.find('.ff-stream-wrapper'), num, streamOpts.scrolltop === 'yep', streamOpts.gallery === 'yep', streamOpts, $cont);
-				}
-				setTimeout(function(){
-					$cont.find('.ff-header').removeClass('ff-loading').end().find('.ff-loader').addClass('ff-squeezed');
-				}, 0);
-			});
-		}(jQuery));
-	</script>
-	<?php
-	if (isset($_REQUEST['debug'])) {
-		echo '<h1>DEBUG!!!</h1>';
-		printf('<h2>%d queries. %s seconds.</h2>', get_num_queries(), timer_stop(0, 3));
-	}
-} else { ?>
+
 	<script type="text/javascript">
 
 		(function ( $ ) {
@@ -371,11 +308,11 @@ if (!isset($stream->layout) || empty($stream->layout)) {
 			var opts = window.FlowFlowOpts;
             var isLS = isLocalStorageNameSupported();
 			if (!opts) {
-				window.console && window.console.log('no Flow-Flow options');
+				window.console && window.console.log('Flow-Flow Social Stream: no options available on moment of script execution');
 				return;
 			}
 			if (!window.FF_resource) {
-				window.console && window.console.log('no required script');
+				window.console && window.console.log('Flow-Flow Social Stream: required script has not been loaded. Please check if all resources in place or loaded in correct order.');
 				return
 			}
 			var data = {
@@ -383,16 +320,18 @@ if (!isset($stream->layout) || empty($stream->layout)) {
 				'stream-id': '<?php echo $id;?>',
 				'disable-cache': '<?php echo $disableCache;?>',
 				'hash': hash,
-				'page': '<?php echo $page;?>'};
+				'page': '<?php echo $page;?>',
+				'preview': '<?php echo $stream->preview ? 1 : 0;?>'
+			};
 			var isMobile = /android|blackBerry|iphone|ipad|ipod|opera mini|iemobile/i.test(navigator.userAgent);
-			var $streamOpts = <?php echo json_encode($stream); ?>;
-            opts.streams['stream' + $streamOpts.id] = $streamOpts;
+			var streamOpts = <?php echo json_encode($stream); ?>;
+            opts.streams['stream' + streamOpts.id] = streamOpts;
 			var $cont = $("#ff-stream-"+data['stream-id']);
 			var ajaxDeferred;
 			var script, style;
 			if (FF_resource.scriptDeferred.state() === 'pending' && !FF_resource.scriptLoading) {
 				script = document.createElement('script');
-				script.src = "<?php echo $context['plugin_url'] . '/' . $context['slug'];?>/js/public.js";
+				script.src = "<?php echo $context['plugin_url'] . $context['slug'];?>/js/public.js";
 				script.onload = function( script, textStatus ) {
 					FF_resource.scriptDeferred.resolve();
 				};
@@ -402,8 +341,9 @@ if (!isset($stream->layout) || empty($stream->layout)) {
 			if (FF_resource.styleDeferred.state() === 'pending' && !FF_resource.styleLoading) {
 				style = document.createElement('link');
 				style.type = "text/css";
-				style.rel = "stylesheet";
-				style.href = "<?php echo $context['plugin_url'] . '/' . $context['slug'];?>/css/public.css";
+                style.id = "ff_style";
+                style.rel = "stylesheet";
+				style.href = "<?php echo $context['plugin_url'] . $context['slug'];?>/css/public.css";
 				style.media = "screen";
 				style.onload = function( script, textStatus ) {
 					FF_resource.styleDeferred.resolve();
@@ -411,81 +351,86 @@ if (!isset($stream->layout) || empty($stream->layout)) {
 				document.getElementsByTagName("head")[0].appendChild(style);
 				FF_resource.styleLoading = true;
 			}
-			$cont.addClass('ff-layout-' + $streamOpts.layout)
-			if ($streamOpts.layout == 'grid' && !isMobile) $cont.css('minHeight', '1000px');
-			ajaxDeferred = <?php if ($admin) {echo '$.get(opts.ajaxurl, data)';} else {echo 'isLS && sessionStorage.getItem(hash) ? {} : $.get(opts.ajaxurl, data)';} echo PHP_EOL; ?>
+			$cont.addClass('ff-layout-' + streamOpts.layout);
+			if (streamOpts.layout == 'grid' && !isMobile) $cont.css('minHeight', '1000px');
+			ajaxDeferred = <?php if ($admin) {echo '$.get(opts.ajaxurl, data)';} else {echo 'isLS && sessionStorage.getItem(hash) ? {} : $.get(opts.ajaxurl, data)';} echo PHP_EOL; ?>;
 			$.when( ajaxDeferred, FF_resource.scriptDeferred, FF_resource.styleDeferred ).done(function ( data ) {
-				var response, $errCont, $stream, errs, err, msg, w, admin, moderation;
-				var original = <?php if ($admin) {echo 'data[0]';} else {echo '(isLS && sessionStorage.getItem(hash)) ? sessionStorage.getItem(hash) : data[0]';}?>;
+				var response, $errCont, err;
+                var moderation = <?php echo $moderation ? 1 : 0 ?>;
+                var original = <?php if ($admin) {echo 'data[0]';} else {echo '(isLS && sessionStorage.getItem(hash)) ? sessionStorage.getItem(hash) : data[0]';}?>;
 				try {
 					response = JSON.parse(original);
 				} catch (e) {
 					window.console && window.console.log('Flow-Flow gets invalid data from server');
 					if (opts.isAdmin || opts.isLog) {
-						$errCont = $('<div class="ff-errors" id="ff-errors-invalid-response"><div class="ff-disclaim">If you see this message then you have administrator permissions and Flow-Flow got invalid data from server. Please provide error message below if you\'re doing support request.</div><div class="ff-err-info"></div></div>')
+						$errCont = $('<div class="ff-errors" id="ff-errors-invalid-response"><div class="ff-disclaim">If you see this message then you have administrator permissions and Flow-Flow got invalid data from server. Please provide error message below if you are doing support request.<\/div><div class="ff-err-info"><\/div><\/div>');
 						$cont.before($errCont);
 						$errCont.find('.ff-err-info').html(original == '' ? 'Empty response from server' : original)
 					}
 					return;
 				}
-
-				moderation = <?php echo $moderation ? 1 : 0 ?>;
-				$stream = FlowFlow.buildStreamWith(response, $streamOpts, moderation);
-				admin = <?php echo $admin ? 1 : 0 ?>;
-				<?php if (!$admin) {echo 'if (isLS && response.items.length > 0 && response.hash.length > 0) sessionStorage.setItem(response.hash, original);' . PHP_EOL;}?>
-				var num = $streamOpts.layout === 'compact' || ($streamOpts.mobileslider === 'yep' && isMobile)? ($streamOpts.mobileslider === 'yep' ? 3 : $streamOpts['cards-num']) : false;
-				if ($streamOpts.layout === 'compact') {
-					w = $cont.parent().width();
-					FlowFlow.adjustImgHeight($stream, (w > 300 ? 300 : w) - 72); // todo remove hardcode
+                opts.streams['stream' + streamOpts.id]['items'] = response;
+                if (!FlowFlowOpts.dependencies) FlowFlowOpts.dependencies = {};
+				<?php
+				$dependencies = apply_filters('ff_plugin_dependencies', array());
+				foreach ($dependencies as $name) {
+				    echo "if (!FlowFlowOpts.dependencies['{$name}']) FlowFlowOpts.dependencies['{$name}'] = true;";
 				}
-				$cont.append($stream);
-				if (typeof $stream !== 'string') {
-					FlowFlow.setupGrid($cont.find('.ff-stream-wrapper'), num, $streamOpts.scrolltop === 'yep', $streamOpts.gallery === 'yep', $streamOpts, $cont);
-				}
-				setTimeout(function(){
-					$cont.find('.ff-header').removeClass('ff-loading').end().find('.ff-loader').addClass('ff-squeezed');
-				}, 0);
+				?>
+                var requests = [];
+                var request, extension, style;
 
-//                var isErr = response.errors && response.errors.length && response.errors[0] != '';
+                for ( extension in FlowFlowOpts.dependencies ) {
+                    if ( FlowFlowOpts.dependencies[extension] && FlowFlowOpts.dependencies[extension] !== 'loaded') {
+                        request = $.getScript( opts.plugin_base + '-' + extension + '/js/ff_' + extension + '_public.js');
+                        requests.push(request);
+
+                        style = document.createElement('link');
+                        style.type = "text/css";
+                        style.rel = "stylesheet";
+                        style.id = "ff_ad_style";
+                        style.href = opts.plugin_base + '-' + extension + '/css/ff_' + extension + '_public.css';
+                        style.media = "screen";
+                        document.getElementsByTagName("head")[0].appendChild(style);
+
+                        FlowFlowOpts.dependencies[extension] = 'loaded';
+                    }
+                }
+
+                var resourcesLoaded = $.when.apply($, requests);
+
+                resourcesLoaded.done(function(){
+                    var $stream, width;
+                    $stream = FlowFlow.buildStreamWith(response, streamOpts, moderation, FlowFlowOpts.dependencies);
+                    <?php if (!$admin) {echo 'if (isLS && response.items.length > 0 && response.hash.length > 0) sessionStorage.setItem(response.hash, original);' . PHP_EOL;}?>
+                    var num = streamOpts.layout === 'compact' || (streamOpts.mobileslider === 'yep' && isMobile)? (streamOpts.mobileslider === 'yep' ? 3 : streamOpts['cards-num']) : false;
+                    if (streamOpts.layout === 'compact') {
+                        width = $cont.parent().width();
+                        FlowFlow.adjustImgHeight($stream, (width > 300 ? 300 : width) - 72);
+                    }
+                    $cont.append($stream);
+                    if (typeof $stream !== 'string') {
+                        FlowFlow.setupGrid($cont.find('.ff-stream-wrapper'), num, streamOpts.scrolltop === 'yep', streamOpts.gallery === 'yep', streamOpts, $cont);
+                    }
+                    setTimeout(function(){
+                        $cont.find('.ff-header').removeClass('ff-loading').end().find('.ff-loader').addClass('ff-squeezed');
+                    }, 0);
+
+	                <?php do_action('ff_add_view_action', $stream);?>
+
+                }).fail(function(){
+                    console.log('Flow-Flow: resource loading failed')
+                });
+
                 var isErr = response.status === "errors";
                 if ((opts.isAdmin || opts.isLog) && isErr) {
-					$errCont = $('<div class="ff-errors" id="ff-errors-'+response.id+'"><div class="ff-err-info">If you see this then you\'re administrator and Flow-Flow got errors from APIs while requesting data. Please go to plugin\'s admin and after refreshing page check for error(s) on stream settings page. Please provide error message info if you\'re doing support request.</div></div>')
+					$errCont = $('<div class="ff-errors" id="ff-errors-'+response.id+'"><div class="ff-err-info">If you see this then you are administrator and Flow-Flow got errors from APIs while requesting data. Please go to plugin admin and after refreshing page check for error(s) on stream settings page. Please provide error message info if you are doing support request.<\/div><\/div>');
 					$cont.before($errCont);
-					/*errs = '';
-                    for (var i = 0, len = response.errors.length;i < len; i++) {
-						err = response.errors[i];
-						if (typeof err === 'string') {
-							errs += '<p>' + err + '</p>';
-						} else if (typeof err  === 'object') {
-                            if (err['type'] && err['message'] && err['message'].length) {
-                                msg = $.isArray(err['message']) ? err['message'][0]['msg'] : err['message'];
-                                msg = msg || "";
-                                errs += '<p>From: ' + (err['type'] ? err['type'].toUpperCase() : 'Unknown') + '<br>' + msg + '</p>';
-                                if (err['type'].toUpperCase() === 'FACEBOOK' && msg.toUpperCase().indexOf('BAD REQUEST') + 1 ) {
-                                    errs += '<br><p>Explanation: This error happens if your token is invalid/expired or Facebook feed is badly configured. If you see generated long-life token in admin under Auth tab then FB auth is OK and you need to check your feed config.</p>'
-                                }
-                                if (msg.toUpperCase().indexOf('NOT FOUND') + 1 ) {
-                                    errs += '<br><p>Explanation: Content you\'re trying to get is not found. Please check your feed config and admin tooltips.</p>'
-                                }
-                            }
-                            else if ($.isArray(err)) {
-                                for (var j = 0, _l = err.length; j < _l; j++) {
-                                    errs += '<p>' + (typeof err[j]   === 'object' ? err['msg'] : err[j]) + '</p>';
-                                }
-                            }
-							else if ($.isArray(err)) {
-								for (var j = 0, _l = err.length; j < _l; j++) {
-									errs += '<p>' + err[j] + '</p>';
-								}
-							}
-						}
-					}*/
-					$errCont.find('.ff-err-info').html(errs)
 				}
 
                 if (opts.isAdmin && response.status === 'building') {
                     window.console && window.console.log(response);
-                    $cont.prepend($('<div id="ff-admin-info">ADMIN INFO: Feeds cache is being built in background. Please wait for changes to apply. Page reload is required.</div>'));
+                    $cont.prepend($('<div id="ff-admin-info">ADMIN INFO: Feeds cache is being built in background. Please wait for changes to apply. Page reload is required.<\/div>'));
                 }
 			});
 
@@ -504,4 +449,3 @@ if (!isset($stream->layout) || empty($stream->layout)) {
 		}(jQuery));
 	</script>
 	<!-- Flow-Flow — Social streams plugin for Wordpress -->
-<?php } ?>

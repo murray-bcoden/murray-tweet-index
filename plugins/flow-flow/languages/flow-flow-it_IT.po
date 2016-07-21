@@ -123,7 +123,7 @@ msgstr "Febbraio"
 #: includes/FlowFlow.php:389
 #@ flow-flow
 msgid "March"
-msgstr "Marcia"
+msgstr "Marzo"
 
 #: includes/FlowFlow.php:390
 #@ flow-flow
