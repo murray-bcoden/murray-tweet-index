@@ -244,6 +244,9 @@
             &:nth-of-type(4n + 1), &:nth-of-type(4n + 2)  {
                 .top-bar {
                     background-color: $bright-blue;
+                    &:hover {
+                        background-color: darken($bright-blue, 10%);
+                    }
                 }
                 .top-num {
                     background-color: $color-brand-1;
@@ -258,6 +261,9 @@
         &:first-child {
             .top-bar {
                 background-color: $color-brand-2;
+                &:hover {
+                    background-color: darken($color-brand-2, 10%);
+                }
             }
         }
     }
@@ -306,6 +312,10 @@
         margin-left: 52px;
         padding-left: 0px;
         @include font-size($font-16);
+        transition: background-color 0.2s linear;
+        &:hover {
+            background-color: darken($color-brand-1, 10%);
+        }
         @include breakpoint($break-700) {
             font-family: 'open-sans', $fallback-stack;
             font-weight: 600;

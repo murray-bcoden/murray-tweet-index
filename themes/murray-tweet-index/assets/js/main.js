@@ -525,6 +525,20 @@ jQuery(document).ready(function($){
 		.addTo(controller);
     });
 
+/*  Blockquotes
+    ========================================================================== */
+
+    $('blockquote').each(function() {
+    	var quoteScene = new ScrollMagic.Scene({
+			triggerElement: this, 
+			triggerHook: 0.8,
+			duration: 0
+		})
+		.setTween(TweenMax.from(this, 0.5, { y: 30, opacity: 0, ease: Power1.easeOut }))
+		.addIndicators()
+		.addTo(controller);
+    });
+
 /*  Gains Scene
     ========================================================================== */
 
