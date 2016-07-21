@@ -30,6 +30,7 @@
         }
     }
 
+
     .section-title, .section-intro {
         margin: 0 auto 20px;
         max-width: 800px;
@@ -42,6 +43,13 @@
         @include font-size($font-48);
         @extend .sans-light;
         line-height: 1.2;
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 1s $easeOutCirc;
+        .in-scene & {
+            opacity: 1;
+            transform: translateY(0);
+        }
         @include breakpoint($break-800) {
             @include font-size($font-28);
         }
@@ -50,8 +58,15 @@
     .section-intro {
         @include font-size($font-21);
         @extend .serif;
-        opacity: 0.5;
+        //opacity: 0.5;
         line-height: 1.4;
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 1s $easeOutCirc;
+        .in-scene & {
+            opacity: 0.5;
+            transform: translateY(0);
+        }
         @include breakpoint($break-800) {
             @include font-size($font-18);
         }

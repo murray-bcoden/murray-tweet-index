@@ -1,4 +1,6 @@
 // @codekit-prepend "plugins.js";
+// /*@codekit-prepend "vendor/modernizr-custom.js";*/
+// @codekit-prepend "vendor/modernizr-2.8.3.min.js";
 // @codekit-prepend "vendor/greensock/plugins/CSSPlugin.min.js";
 // @codekit-prepend "vendor/greensock/plugins/ScrollToPlugin.min.js";
 // @codekit-prepend "vendor/greensock/plugins/MorphSVGPlugin.min.js";
@@ -16,6 +18,9 @@
 
 jQuery(document).ready(function($){
 
+	var $html = $('html');
+	var $body = $('body');
+
 	window.onload = function() {
 		var loaderTL = new TimelineMax({onComplete:loaderComplete});
 		loaderTL.to('.rotatorWrapper', 1, {
@@ -29,7 +34,7 @@ jQuery(document).ready(function($){
 	};
 
 	function loaderComplete() {
-		$('body').removeClass('no-scroll');
+		$body.removeClass('no-scroll');
 	}
 
 	
@@ -514,30 +519,35 @@ jQuery(document).ready(function($){
 /*  General Scene
     ========================================================================== */
 
-    $('.scene').each(function() {
-    	var genScene = new ScrollMagic.Scene({
-			triggerElement: this, 
-			triggerHook: 0.8,
-			duration: 0
-		})
-		.setClassToggle(this, 'in-scene')
-		.addIndicators()
-		.addTo(controller);
-    });
+   	if($html.hasClass('no-touch')) {
+	    $('.scene').each(function() {
+	    	var genScene = new ScrollMagic.Scene({
+				triggerElement: this, 
+				triggerHook: 0.8,
+				duration: 0
+			})
+			.setClassToggle(this, 'in-scene')
+			.addIndicators()
+			.addTo(controller);
+	    });
+	}
 
 /*  Blockquotes
     ========================================================================== */
 
-    $('blockquote').each(function() {
-    	var quoteScene = new ScrollMagic.Scene({
-			triggerElement: this, 
-			triggerHook: 0.8,
-			duration: 0
-		})
-		.setTween(TweenMax.from(this, 0.5, { y: 30, opacity: 0, ease: Power1.easeOut }))
-		.addIndicators()
-		.addTo(controller);
-    });
+    if($html.hasClass('no-touch')) {
+    	$('blockquote').each(function() {
+	    	var quoteScene = new ScrollMagic.Scene({
+				triggerElement: this, 
+				triggerHook: 0.9,
+				duration: 0
+			})
+			.setTween(TweenMax.from(this, 0.5, { y: 30, opacity: 0, ease: Power1.easeOut }))
+			.addIndicators()
+			.addTo(controller);
+	    });
+    }
+    
 
 /*  Gains Scene
     ========================================================================== */
