@@ -67,6 +67,9 @@
         flex-basis: 49%;
         position: relative;
         visibility: hidden;
+        .touch & {
+            visibility: visible;
+        }
         margin: 0 0 50px;
         padding: 0;
         background-color: white;

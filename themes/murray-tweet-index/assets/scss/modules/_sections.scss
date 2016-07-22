@@ -82,6 +82,9 @@
         @extend .sans-light;
         line-height: 1.2;
         opacity: 0;
+        .touch & {
+            opacity: 1;
+        }
         //transform: translateY(30px);
         //transition: all 1s $easeOutCirc;
         .in-scene & {
@@ -94,12 +97,17 @@
         }
     }
 
+
+
     .section-intro {
         @include font-size($font-21);
         @extend .serif;
         //opacity: 0.5;
         line-height: 1.4;
         opacity: 0;
+        .touch & {
+            opacity: 1;
+        }
         //transform: translateY(30px);
         //transition: all 1s $easeOutCirc;
         .in-scene & {
