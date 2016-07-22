@@ -20,6 +20,11 @@ jQuery(document).ready(function($){
 
 	var $html = $('html');
 	var $body = $('body');
+	var devMode = false;
+
+	if(devMode) {
+		$body.removeClass('no-scroll');
+	}
 
 	window.onload = function() {
 		var loaderTL = new TimelineMax({onComplete:loaderComplete});
@@ -35,6 +40,7 @@ jQuery(document).ready(function($){
 
 	function loaderComplete() {
 		$body.removeClass('no-scroll');
+		show100Badge();
 	}
 
 	
@@ -50,6 +56,25 @@ jQuery(document).ready(function($){
     	TweenLite.to(window, 0.7, {scrollTo:{y:$('.top-100').position().top}, ease:Power2.easeOut});
     	e.preventDefault();
     });
+
+    // animate in top 100 badge after cover has faded out
+    function show100Badge() {
+    	var topTL = new TimelineMax({ delay: 0.2 });
+	    var $t100Circ = $('.t100-circ');
+	    var $t100Grad = $('.t100-grad');
+	    var $t100Top = $('.t100-top');
+	    var $t100100 = $('.t100-100');
+
+	    TweenMax.set('.t100', {
+			visibility: 'visible'
+		});
+
+	    topTL.set([$t100Circ, $t100Grad], { scale: 0, transformOrigin: '50% 50%' })
+	    	 .to($t100Circ, 0.4, { scale: 1, ease: Back.easeOut })
+	    	 .to($t100Grad, 0.4, { scale: 1, ease: Back.easeOut }, 0.1)
+	    	 .fromTo($t100Top, 0.4, { y: 20 , opacity: 0 }, { y: 0, opacity: 1, ease:Back.easeOut}, 0.1)
+	    	 .fromTo($t100100, 0.4, { y: 20, opacity: 0 }, { y: 0, opacity: 1, ease:Back.easeOut}, 0.2);
+    }
 	    
 
 /*  ==========================================================================
@@ -57,9 +82,6 @@ jQuery(document).ready(function($){
     ========================================================================== */
 
 	$('.category-title-wrapper').matchHeight();
-
-	// Initialise Selectric Dropdown and Slick Carousel
-	//$('#categories').selectric();
   
 	$('.responsive').slick({
 		infinite: false,
@@ -121,18 +143,29 @@ jQuery(document).ready(function($){
 		}]
 	});
 
-// Get index of the selected item in the dropdown and move the carousel to that index
-// var categoryCurrentIndex = 0;
-// $('#categories').change(function(e) {
-// 	categoryCurrentIndex = $(this).prop('selectedIndex');
-// 	var categoryCurrentSlide = $('.responsive').slick('slickCurrentSlide');
-// 	$('.responsive').slick('slickGoTo', parseInt(categoryCurrentIndex));
-// });
-
 	var $openOldCatPanel = null;
 	var $openNewCatPanel = null;
 	var $catBtnSelected = null;
-	var speed = 0.1;
+	var speed = 0.3;
+
+	if($html.hasClass('no-touch')) {
+
+		$( ".category" ).each(function() {
+			var $name = $(this).find('.name');
+			var $jobTitle = $(this).find('.job-title');
+			var $catTitle = $(this).find('.category-title-wrapper');
+			var catEasing = Elastic.easeOut.config(0.5, 0.4);
+
+			$(this).hover(
+				function() {
+					TweenMax.to($catTitle, 0.7, { y: -10, ease: catEasing });
+				}, function() {
+					TweenMax.to($catTitle, 0.7, { y: 0, ease: catEasing });
+				}
+			);
+		});
+
+	}
 
 	// Expand the Top 5 lists for categories
 	$(".btn-expand-categories").click(function(e) {
@@ -142,11 +175,10 @@ jQuery(document).ready(function($){
 			$(this).removeClass('btn-expanded');
 			var $tempPanel1 = $openOldCatPanel; // create a temp variable for the old panel so doesn't get overwritten before the onComplete below can trigger
 			if($openOldCatPanel != null) {
-				TweenLite.to($openOldCatPanel, speed, {bottom:100, opacity:0, ease:Circ.easeIn, onComplete:function() { $tempPanel1.css('display', 'none') } } ); // hide the open panel
+				TweenLite.to($openOldCatPanel, speed, {y:0, autoAlpha:0, ease:Power2.easeIn, onComplete:function() { $tempPanel1.css('display', 'none') } } ); // hide the open panel
 			}
 		}
 		else {
-			//resetCategoriesTop5();
 
 			$openNewCatPanel = $(this).next(); // find the panel to open
 			$openNewCatPanel.css('display', 'block'); // make the new panel visible
@@ -159,10 +191,10 @@ jQuery(document).ready(function($){
 
 			var $tempPanel2 = $openOldCatPanel; // create a temp variable for the old panel so doesn't get overwritten before the onComplete below can trigger
 			if($openOldCatPanel != null) {
-				TweenLite.to($openOldCatPanel, speed, {bottom:100, opacity:0, ease:Circ.easeIn, onComplete:function() { $tempPanel2.css('display', 'none'); } } ); // hide the open panel
+				TweenLite.to($openOldCatPanel, speed, {y:0, autoAlpha:0, ease:Power2.easeIn, onComplete:function() { $tempPanel2.css('display', 'none'); } } ); // hide the open panel
 			}
 			$openOldCatPanel = $openNewCatPanel;
-			TweenLite.to($openNewCatPanel, speed, {bottom:75, opacity:1, ease:Circ.easeOut} );
+			TweenLite.to($openNewCatPanel, speed, {y:25, autoAlpha:1, ease:Power2.easeOut} );
 
 		}
 		
@@ -176,7 +208,7 @@ jQuery(document).ready(function($){
        		$catBtnSelected.removeClass('btn-expanded');
        	}
 		if($openOldCatPanel != null) {
-			TweenLite.to($openOldCatPanel, 0.1, {bottom:100, opacity:0, ease:Circ.easeIn, onComplete:function() { $(this).css('display', 'none') } } ); // hide the open panel
+			TweenLite.to($openOldCatPanel, speed, {y:0, autoAlpha:0, ease:Power2.easeIn, onComplete:function() { $(this).css('display', 'none') } } ); // hide the open panel
 		}
     });
 	
@@ -188,70 +220,22 @@ jQuery(document).ready(function($){
 	var $openOldParamPanel = null;
 	var $openNewParamPanel = null;
 	var $paramBtnSelected = null;
-	var $newSelectedParamItem = null;
 	var $oldSelectedParamItem = null;
-	var itemYpos;
-	var itemYposOut;
-
-	ssm.addStates([
-		{
-		    id: 'param-large',
-		    query: '(min-width: 1201px)',
-		    onEnter: function(){
-		        itemYpos = 68; // start pos
-				itemYposOut = itemYpos + 20; // end pos
-				if($newSelectedParamItem==null) {
-		    		$('.params-panel').css('top', itemYposOut); // reposition the panel starting point when changing between ssm breakpoints
-		    	}
-		    	else {
-		    		$('.params-panel').css('top', itemYpos);
-		    	}
-		    }
-		},
-		{
-		    id: 'param-medium',
-		    query: '(min-width: 901px) and (max-width: 1200px)',
-		    onEnter: function(){
-		        itemYpos = 68;
-				itemYposOut = itemYpos + 20;
-				if($newSelectedParamItem==null) {
-		    		$('.params-panel').css('top', itemYposOut);
-		    	}
-		    	else {
-		    		$('.params-panel').css('top', itemYpos);
-		    	}
-		    }
-		},
-		{
-		    id: 'param-small',
-		    query: '(max-width: 900px)',
-		    onEnter: function(){
-		        itemYpos = 108;
-				itemYposOut = itemYpos + 20;
-				if($newSelectedParamItem==null) {
-		    		$('.params-panel').css('top', itemYposOut);
-		    	}
-		    	else {
-		    		$('.params-panel').css('top', itemYpos);
-		    	}
-		    }
-		}
-	]);
+	var yDist = 40;
 
 	$(".btn-expand-params").click(function(e) {
 
-		//var $tempItem = $(this).parent();
-		var speed = 0.2;
+		var speed = 0.3;
 
 		// if already expanded ?
 		if($(this).hasClass('btn-expanded')) {
 			$(this).removeClass('btn-expanded');
 			
-			//resetParamsTop5();
 			var $tempPanel1 = $openOldParamPanel; // create a temp variable for the old panel so doesn't get overwritten before the onComplete below can trigger
 			var $tempItem1 = $oldSelectedParamItem; // same as above
 			if($openOldParamPanel != null) {
-				TweenLite.to($openOldParamPanel, speed, {top:itemYposOut, opacity:0, ease:Circ.easeIn, onComplete:function() { $tempPanel1.css('display', 'none'); $tempItem1.removeClass('top-params-item-top'); } } ); // hide the open panel
+				// TweenLite.to($openOldParamPanel, speed, {top:itemYposOut, opacity:0, ease:Circ.easeIn, onComplete:function() { $tempPanel1.css('display', 'none'); $tempItem1.removeClass('top-params-item-top'); } } ); // hide the open panel
+				TweenLite.to($openOldParamPanel, speed, { y: 0, autoAlpha:0, ease:Power2.easeIn, onComplete:function() { $tempItem1.removeClass('top-params-item-top'); } } ); // hide the open panel
 			}
 		}
 		else {
@@ -271,12 +255,12 @@ jQuery(document).ready(function($){
 			var $tempPanel2 = $openOldParamPanel; // create a temp variable for the old panel so doesn't get overwritten before the onComplete below can trigger
 			var $tempItem2 = $oldSelectedParamItem; // same as above
 			if($openOldParamPanel != null) {
-				TweenLite.to($openOldParamPanel, speed, {top:itemYposOut, opacity:0, ease:Circ.easeIn, onComplete:function() { $tempPanel2.css('display', 'none'); $tempItem2.removeClass('top-params-item-top'); } } ); // hide the open panel
+				TweenLite.to($openOldParamPanel, speed, { y: 0, autoAlpha:0, ease:Power2.easeIn, onComplete:function() { $tempItem2.removeClass('top-params-item-top'); } } ); // hide the open panel
 			}
 
 			$openOldParamPanel = $openNewParamPanel;
 			$oldSelectedParamItem = $selectedParamItem;
-			TweenLite.to($openNewParamPanel, speed, {top:itemYpos, opacity:1, ease:Circ.easeOut} );
+			TweenLite.to($openNewParamPanel, speed, { y: -yDist, autoAlpha:1, ease:Power2.easeOut} );
 
 			initParamGraphs($(this));
 		}
@@ -292,20 +276,9 @@ jQuery(document).ready(function($){
        		$paramBtnSelected.removeClass('btn-expanded');
        	}
 		if($openOldParamPanel != null) {
-			TweenLite.to($openOldParamPanel, speed, {top:itemYposOut, opacity:0, ease:Circ.easeIn, onComplete:function() { $(this).css('display', 'none'); $('.top-params-item').removeClass('top-params-item-top'); } } ); // hide the open panel
+			TweenLite.to($openOldParamPanel, speed, { y: 0, autoAlpha:0, ease:Power2.easeIn, onComplete:function() { $('.top-params-item').removeClass('top-params-item-top'); } } ); // hide the open panel
 		}
     });
-
-
-// function resetParamsTop5() {
-// 	// remove all these classes from the popup panel, button and main panel.
-// 	var $paramsPanel = $('.params-panel');
-// 	$paramsPanel.removeClass('params-panel-display'); 
-// 	$paramsPanel.find('.params-panel-link').css('display', 'none'); // hide the links
-// 	$('.btn-expand-params').removeClass('btn-expanded');
-// 	$('.top-params-item').removeClass('top-params-item-top');
-// 	$('.top-params-item').parent().removeClass("top-params-item-top");
-// }
 
 /*  ==========================================================================
     Parameter Graphs
@@ -329,6 +302,7 @@ jQuery(document).ready(function($){
 /*  ==========================================================================
     Twitter follow
     ========================================================================== */
+
 	$('#twitter-follow').on('click', function(e) {
 		e.preventDefault();
 		window.open('https://twitter.com/intent/follow?screen_name=MurrayIRL&user_id=2373580801','TwitterFollow', 'width=800, height=600');
@@ -523,12 +497,12 @@ jQuery(document).ready(function($){
 	    $('.scene').each(function() {
 	    	var genScene = new ScrollMagic.Scene({
 				triggerElement: this, 
-				triggerHook: 0.8,
+				triggerHook: 0.7,
 				duration: 0,
 				reverse: false
 			})
 			.setClassToggle(this, 'in-scene')
-			.addIndicators()
+			//.addIndicators()
 			.addTo(controller);
 	    });
 	}
@@ -544,11 +518,24 @@ jQuery(document).ready(function($){
 				duration: 0
 			})
 			.setTween(TweenMax.from(this, 0.5, { y: 30, opacity: 0, ease: Power1.easeOut }))
-			.addIndicators()
+			//.addIndicators()
 			.addTo(controller);
 	    });
     }
-    
+
+/*  Top Device List
+    ========================================================================== */
+
+    if($html.hasClass('no-touch')) {
+    	var deviceScene = new ScrollMagic.Scene({
+			triggerElement: '.top-device', 
+			triggerHook: 0.8,
+			duration: 0
+		})
+		.setTween(TweenMax.from('.top-device', 0.5, { y: 30, opacity: 0, scale: 0.98, ease: Power2.easeOut }))
+		//.addIndicators()
+		.addTo(controller);
+    }
 
 /*  Gains Scene
     ========================================================================== */
@@ -559,8 +546,43 @@ jQuery(document).ready(function($){
 		duration: 0
 	})
 	.setTween(tl)
-	.addIndicators()
+	//.addIndicators()
 	.addTo(controller);
+
+/*  6 Parameters
+    ========================================================================== */
+    if($html.hasClass('no-touch')) {
+
+		var $params = $('.top-params-item');
+		var paramsScene = new ScrollMagic.Scene({
+			triggerElement: '.top-params', 
+			triggerHook: 0.75,
+			duration: 0
+		})
+		.setTween( TweenMax.staggerFrom( $params, 0.6, { y: 40, autoAlpha: 0, delay: 0.2, ease:Power2.easeOut }, 0.10 ))
+		//.addIndicators()
+		.addTo(controller);
+
+	}
+
+/*  Slider
+    ========================================================================== */
+
+  //   if($html.hasClass('no-touch')) {
+  //   	var sliderScene = new ScrollMagic.Scene({
+		// 	triggerElement: '.slider', 
+		// 	triggerHook: 0.5,
+		// 	duration: 0
+		// })
+		// .setTween(TweenMax.from('.slider', 0.5, { y: 30, opacity: 0, ease: Power2.easeOut }))
+		// //.addIndicators()
+		// .addTo(controller);
+  //   }
+
+
 
 
 });
+
+
+
