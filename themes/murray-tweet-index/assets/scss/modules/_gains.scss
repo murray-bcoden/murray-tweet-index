@@ -51,6 +51,7 @@
         position: relative;
         max-width: 900px;
         margin: 80px auto 0;
+        @include aspect-ratio(700, 500);
         @include breakpoint($break-400) {
             float: left;
             margin-top: 40px;

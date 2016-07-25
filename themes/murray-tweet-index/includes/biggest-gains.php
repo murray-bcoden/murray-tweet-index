@@ -5,7 +5,7 @@
 		<p class="section-intro">vs 2014</p>
 		<div class="gains-info-wrapper">
 			<!-- <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gains.svg" alt="Positions gained infographic" class="gains-info"> -->
-			<svg class="circ-graph" id="circ-graph" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 500">
+			<svg class="circ-graph content" id="circ-graph" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 500">
 			    <defs>
 			      <filter id="goo">
 			      	<feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur" />
