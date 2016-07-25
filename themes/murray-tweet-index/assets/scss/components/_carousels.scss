@@ -103,6 +103,7 @@
     font-size: 0;
     cursor: pointer;
     background: white;
+    transition: background-color 0.2s linear;
     color: transparent;
     top: 285px;
     margin-top: -25px;
@@ -113,8 +114,10 @@
     &:focus {
         outline: none;
     }
-    &.slick-disabled:before {
+    &.slick-disabled, &.slick-disabled:focus, &.slick-disabled:hover {
+        background: white;
         opacity: 0.25;
+        cursor: default;
     }
 }
 
