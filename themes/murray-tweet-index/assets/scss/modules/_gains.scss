@@ -59,6 +59,9 @@
             width: auto;
             left: 50%;
             transform: translateX(-40%);
+            &:before {
+                display: none;
+            }
         }
     }
 
