@@ -4,7 +4,7 @@
 		<h2 class="section-title">Biggest Gainers</h2>
 		<p class="section-intro">vs 2014</p>
 		<div class="gains-info-wrapper">
-			<svg class="circ-graph-svg content" id="circ-graph" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 500">
+			<svg class="circ-graph-svg content" id="circ-graph" viewBox="0 0 750 500">
 			    <defs>
 			      <filter id="goo">
 			      	<feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur" />
