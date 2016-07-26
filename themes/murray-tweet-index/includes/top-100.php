@@ -3,7 +3,7 @@
 		<a class="top-100-badge-link" href="#">
 			<!-- <h2 class="top-100-badge">Top <span>100</span></h2> -->
 			<h2 class="top-100-title">Top 100</h2>
-			<svg class="t100" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 328 328" aria-labelledby="title">
+			<svg class="t100" viewBox="0 0 328 328" aria-labelledby="title">
 			    <defs>
 			        <linearGradient id="a" x1="65.49" y1="87.04" x2="262.51" y2="240.96" gradientUnits="userSpaceOnUse">
 			            <stop offset=".11" stop-color="#ed30a0" ></stop>
