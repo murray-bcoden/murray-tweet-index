@@ -573,7 +573,7 @@ jQuery(document).ready(function($){
 		duration: 0
 	})
 	.setTween(tl)
-	//.addIndicators()
+	.addIndicators()
 	.addTo(controller);
 
 /*  Followers Scene
