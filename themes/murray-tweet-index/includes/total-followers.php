@@ -68,10 +68,10 @@
 			            <path class="totals-base" d="M613,596h91a21,21,0,0,1,0,42H613a21,21,0,0,1,0-42Z" transform="translate(0)" fill="#104c60" fill-rule="evenodd" ></path>
 			            <text class="sans-semi totals-title" transform="translate(629.94 623.23)" font-size="16" fill="#fff">TOTALS</text>
 			        </g>
-			        <text class="fsans-semi total-l" x="427" y="627" font-size="30" fill="#015873">1,973,342</text>
-			        <text class="fsans-semi total-r" x="754" y="627" font-size="30" fill="#fff">2,263,895</text>
-			        <text class="fsans-semi fperc" x="681" y="323" font-size="48" fill="#fff">14.7%</text>
-			        <text class="fsans-semi fup" x="729" y="278" font-size="30" fill="#fff">UP</text>
+			        <text class="sans-semi total-l" x="427" y="627" font-size="30" fill="#015873">1,973,342</text>
+			        <text class="sans-semi total-r" x="754" y="627" font-size="30" fill="#fff">2,263,895</text>
+			        <text class="sans-semi fperc" x="681" y="323" font-size="48" fill="#fff">14.7%</text>
+			        <text class="sans-semi fup" x="729" y="278" font-size="30" fill="#fff">UP</text>
 			    </g>
 			    <g class="fyear-l">
 			        <path class="fyear-base" d="M541,16h54a21,21,0,0,1,0,42H541a21,21,0,0,1,0-42Z" transform="translate(0)" fill="none" stroke="#fff" stroke-miterlimit="10" fill-rule="evenodd" ></path>
