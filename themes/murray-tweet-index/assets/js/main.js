@@ -568,7 +568,7 @@ jQuery(document).ready(function($){
 
 	var gainsScene = new ScrollMagic.Scene({
 		triggerElement: '.gains-info-wrapper', 
-		triggerHook: 0.8,
+		triggerHook: 0.7,
 		duration: 0
 	})
 	.setTween(tl)
