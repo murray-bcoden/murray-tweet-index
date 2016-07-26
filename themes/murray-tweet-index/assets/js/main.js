@@ -28,7 +28,9 @@ jQuery(document).ready(function($){
 	window.onload = function() {
 		var loaderTL = new TimelineMax({onComplete:loaderComplete});
 		loaderTL.to('.rotatorWrapper', 1, {
-			css: { top: "100%", opacity: "0" },
+			//css: { top: "100%", opacity: "0" },
+			y: 400,
+			opacity: 0,
 			delay: 0.5,
 			ease: Back.easeIn
 		})
