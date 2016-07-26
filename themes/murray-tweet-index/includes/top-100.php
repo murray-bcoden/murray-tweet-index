@@ -12,21 +12,10 @@
 			            <stop offset=".55" stop-color="#a14da2" ></stop>
 			            <stop offset=".68" stop-color="#805aa3" ></stop>
 			        </linearGradient>
-					<filter id="f2" y="-10" height="40" x="-10" width="150">
-						<feGaussianBlur in="SourceAlpha" stdDeviation="8"></feGaussianBlur>
-						<feOffset dx="2" dy="2"></feOffset>
-						<feComponentTransfer>
-							<feFuncA type="linear" slope="0.2"></feFuncA>
-						</feComponentTransfer>
-						<feMerge> 
-							<feMergeNode></feMergeNode>
-							<feMergeNode in="SourceGraphic"> </feMergeNode>
-						</feMerge>
-				    </filter>
 			    </defs>
 			    <title>Top 100 Banner</title>
 			    <circle class="t100-circ" cx="164.5" cy="163.5" r="143.5" fill="#fff" ></circle>
-			    <circle class="t100-grad" cx="164" cy="164" r="125" fill="url(#a)" filter="url(#f2)" ></circle>
+			    <circle class="t100-grad" cx="164" cy="164" r="125" fill="url(#a)" ></circle>
 			    <g class="t100-top" fill="#fff">
 			        <path d="M136.65 133.31h-9.26v-26.69H119V99h26v7.57h-8.34zM180.76 116.13q0 8.65-4.24 13.15t-12.42 4.5q-8.06 0-12.36-4.52t-4.3-13.17q0-8.55 4.28-13.07t12.43-4.51q8.18 0 12.4 4.48t4.21 13.14zm-23.58 0q0 9.94 6.91 9.94a5.94 5.94 0 0 0 5.21-2.41q1.7-2.41 1.7-7.52t-1.72-7.58a5.88 5.88 0 0 0-5.14-2.45q-6.96-.01-6.96 10.02zM210.61 109.95q0 5.74-3.39 8.87t-9.62 3.13H195v11.37h-9.26V99h11.86q6.49 0 9.75 2.84t3.26 8.11zM195 114.4h1.69a4.61 4.61 0 0 0 3.31-1.17 4.25 4.25 0 0 0 1.24-3.23q0-3.47-3.84-3.47H195z" ></path>
 			    </g>
