@@ -568,7 +568,7 @@ jQuery(document).ready(function($){
     ========================================================================== */
 
 	var gainsScene = new ScrollMagic.Scene({
-		triggerElement: '.circ-graph-svg', 
+		triggerElement: '.gains-info-wrapper', 
 		triggerHook: 0.8,
 		duration: 0
 	})
