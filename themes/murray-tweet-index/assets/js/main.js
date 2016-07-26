@@ -12,7 +12,6 @@
 // @codekit-prepend "vendor/scrollmagic/minified/plugins/animation.gsap.min.js";
 // @codekit-prepend "vendor/scrollmagic/minified/plugins/debug.addIndicators.min.js";
 // @codekit-prepend "vendor/lazyload/jquery.lazyload.min.js";
-// @codekit-prepend "vendor/remodal/remodal.min.js";
 // @codekit-prepend "vendor/jquery.nanoscroller.min.js";
 // @codekit-prepend "vendor/ssm.min.js";
 
