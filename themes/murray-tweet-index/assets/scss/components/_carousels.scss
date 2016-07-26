@@ -94,7 +94,9 @@
 /* Arrows */
 
 .slick-prev,
-.slick-next {
+.slick-next,
+.slick-prev:focus,
+.slick-next:focus {
     position: absolute;
     display: block;
     height: 50px;
@@ -148,7 +150,8 @@
     }
 }
 
-.slick-prev:hover, .slick-prev:focus, .slick-next:hover, .slick-next:focus {
+// .slick-prev:hover, .slick-prev:focus, .slick-next:hover, .slick-next:focus {
+.slick-prev:hover, .slick-next:hover {
 	background: $color-brand-2;
 }
 
