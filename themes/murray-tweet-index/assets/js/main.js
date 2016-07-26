@@ -328,7 +328,7 @@ jQuery(document).ready(function($){
     Animated SVG Circ Gains Graph
     ========================================================================== */
 
-    TweenMax.set('.circ-graph', {
+    TweenMax.set('.circ-graph-svg', {
 		visibility: 'visible'
 	});
 
@@ -568,7 +568,7 @@ jQuery(document).ready(function($){
     ========================================================================== */
 
 	var gainsScene = new ScrollMagic.Scene({
-		triggerElement: '.circ-graph', 
+		triggerElement: '.circ-graph-svg', 
 		triggerHook: 0.8,
 		duration: 0
 	})
