@@ -42,19 +42,26 @@
         //flex-basis: 50%;
         width: 50%;
         flex-grow: 1;
+        @include aspect-ratio(778, 590);
         @include breakpoint($break-1000) {
             width: 100%;
         }
     }
 
-    .media-type {
-        display: block;
+    .media-type-graph {
+        visibility: hidden;
         width: 100%;
-        max-width: 664px;
-        @include breakpoint($break-1000) {
-            margin: 80px auto 80px;
-        }
+        height: 100%;
     }
+
+    // .media-type {
+    //     display: none;
+    //     width: 100%;
+    //     max-width: 664px;
+    //     @include breakpoint($break-1000) {
+    //         margin: 80px auto 80px;
+    //     }
+    // }
 
     .most-list-wrapper {
         //flex-basis: 50%;
