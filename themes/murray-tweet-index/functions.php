@@ -48,6 +48,14 @@ function LoadMainJS() {
     }
 }
 
+// remove versioning on scripts
+function remove_cssjs_ver( $src ) {
+    if( strpos( $src, '?ver=' ) ) {
+        $src = remove_query_arg( 'ver', $src );
+        return $src;
+    }
+}
+
 // Remove Contact Form 7 Links from dashboard menu items if not admin
 function remove_wpcf7() {
     if (!(current_user_can('administrator'))) {
@@ -228,6 +236,8 @@ add_filter('tiny_mce_before_init', 'myextensionTinyMCE' ); // add filter to stop
 add_filter('tiny_mce_before_init', 'customformatTinyMCE' ); // Modify Tiny_MCE init
 add_filter( 'image_size_names_choose', 'my_custom_sizes' ); // add my custom image sizes to the admin list
 add_filter('the_content', 'filter_ptags_on_images'); /* Remove p tags from around images in posts */
+add_filter('style_loader_src', 'remove_cssjs_ver', 10 ); // Remove versioning from scripts
+add_filter('script_loader_src', 'remove_cssjs_ver', 10 ); // Remove versioning from scripts
 //add_filter('intermediate_image_sizes_advanced', 'remove_default_image_sizes'); // remove the WP default image sizes
 
 // Remove Filters
