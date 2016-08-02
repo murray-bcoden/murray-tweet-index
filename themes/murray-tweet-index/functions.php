@@ -42,9 +42,17 @@ function my_body_classes( $classes ) {
 function LoadMainJS() {
     if(!is_admin()) {
         wp_deregister_script('jquery');
-        wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js", false, null);
+        wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js", null, false, true);
         wp_enqueue_script('jquery');
         wp_enqueue_script( 'main-min.js', get_template_directory_uri() . '/assets/js/min/main-min.js', array('jquery') );
+    }
+}
+
+ // remove versioning from scripts
+function remove_cssjs_ver( $src ) {
+    if( strpos( $src, '?ver=' ) ) {
+        $src = remove_query_arg( 'ver', $src );
+        return $src;
     }
 }
 
@@ -228,6 +236,8 @@ add_filter('tiny_mce_before_init', 'myextensionTinyMCE' ); // add filter to stop
 add_filter('tiny_mce_before_init', 'customformatTinyMCE' ); // Modify Tiny_MCE init
 add_filter( 'image_size_names_choose', 'my_custom_sizes' ); // add my custom image sizes to the admin list
 add_filter('the_content', 'filter_ptags_on_images'); /* Remove p tags from around images in posts */
+add_filter('style_loader_src', 'remove_cssjs_ver', 10 ); // remove versioning from scripts
+add_filter('script_loader_src', 'remove_cssjs_ver', 10 ); // remove versioning from scripts
 //add_filter('intermediate_image_sizes_advanced', 'remove_default_image_sizes'); // remove the WP default image sizes
 
 // Remove Filters
