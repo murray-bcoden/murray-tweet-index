@@ -533,7 +533,7 @@ jQuery(document).ready(function($){
 /*  Init media type items
     ========================================================================== */  
 
-	TweenMax.set('svg', {
+	TweenMax.set('.media-type-graph', {
 		visibility: 'visible'
 	});
 
