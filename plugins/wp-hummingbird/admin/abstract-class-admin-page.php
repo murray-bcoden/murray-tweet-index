@@ -47,22 +47,6 @@ abstract class WP_Hummingbird_Admin_Page {
 
 	}
 
-	public function notices() {
-		if ( get_option( 'wphb_cache_folder_error' ) ) {
-			if ( ! wphb_is_cache_folder_created() ) {
-				$this->show_notice(
-					'cache-folder-error',
-					sprintf( __( 'Unable to create cache directory. Minification will not work, you need to create the folder manually %s', 'wphb' ), '<code>' . wphb_get_cache_dir() . '</code>' ),
-					'error',
-					true
-				);
-			}
-			else {
-				delete_option( 'wphb_cache_folder_error' );
-			}
-		}
-	}
-
 	/**
 	 * Load an admin view
 	 */
@@ -78,7 +62,12 @@ abstract class WP_Hummingbird_Admin_Page {
 				WDEV_Plugin_Ui::output();
 			}
 
+			if ( isset( $args['id'] ) ) {
+				$args['orig_id'] = $args['id'];
+				$args['id'] = str_replace( '/', '-', $args['id'] );
+			}
 			extract( $args );
+
 			include( $file );
 
 			$content = ob_get_clean();
@@ -104,6 +93,8 @@ abstract class WP_Hummingbird_Admin_Page {
 		add_action( 'admin_notices', array(  $this, 'notices' ) );
 		add_action( 'network_admin_notices', array(  $this, 'notices' ) );
 	}
+
+	public function notices() {}
 
 
 	/**
@@ -167,6 +158,7 @@ abstract class WP_Hummingbird_Admin_Page {
 		 * @param string $page_id Admin page ID
 		 */
 		$meta_box = apply_filters( 'wphb_add_meta_box', $meta_box, $this->slug, $this->page_id );
+		$meta_box = apply_filters( 'wphb_add_meta_box_' . $meta_box['id'], $meta_box, $this->slug, $this->page_id );
 
 		if ( $meta_box ) {
 			$this->meta_boxes[ $this->slug ][ $context ][ $id ] = $meta_box;

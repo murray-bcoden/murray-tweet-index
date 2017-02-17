@@ -23,7 +23,7 @@ class WP_Hummingbird_Module_Performance extends WP_Hummingbird_Module {
 	/**
 	 * Return the last Performance scan done data
 	 *
-	 * @return false|array Data of the last scan or false of there's not such data
+	 * @return false|array|WP_Error Data of the last scan or false of there's not such data
 	 */
 	public static function get_last_report() {
 
@@ -98,7 +98,11 @@ class WP_Hummingbird_Module_Performance extends WP_Hummingbird_Module {
 
 		if ( is_wp_error( $results ) ) {
 			// It's an error
-			$results = new WP_Error( 'performance-error', __( "The performance test didn't return any results. This probably means you're on a local website (which we can't scan) or something went wrong trying to access WPMU DEV. Try again and if this error continues to appear please open a ticket with our support heroes", 'wphb' ) );
+			$results = new WP_Error(
+				'performance-error',
+				__( "The performance test didn't return any results. This probably means you're on a local website (which we can't scan) or something went wrong trying to access WPMU DEV. Try again and if this error continues to appear please open a ticket with our support heroes", 'wphb' ),
+				array( 'details' => $results->get_error_message() )
+			);
 		}
 
 		update_site_option( 'wphb-last-report', $results );

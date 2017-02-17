@@ -19,7 +19,9 @@ function wphb_get_settings() {
 }
 
 /**
- * @param $option_nameReturn a single WP Hummingbird setting
+ * @param string $option_name Return a single WP Hummingbird setting
+ *
+ * @return mixed
  */
 function wphb_get_setting( $option_name ) {
 	$settings = wphb_get_settings();
@@ -40,13 +42,12 @@ function wphb_get_default_settings() {
 		'minify' => false,
 		'caching' => false,
 		'uptime' => false,
+		'minify_cdn' => false,
 
 		// Only for multisites. Toggles minification in a subsite
 		// By default is true as if 'minify' is set to false, this option has no meaning
 		'minify-blog' => true,
 
-		'max_files_in_group' => 10,
-		'file_age' => apply_filters( 'wphb_file_expiration', 3600 * 24 ), // 24 hours in seconds
 		'block' => array( 'scripts' => array(), 'styles' => array() ),
 		'dont_minify' => array( 'scripts' => array(), 'styles' => array() ),
 		'dont_combine' => array( 'scripts' => array(), 'styles' => array() ),
@@ -54,7 +55,18 @@ function wphb_get_default_settings() {
 		'caching_expiry_css' => '8d/A691200',
 		'caching_expiry_javascript' => '8d/A691200',
 		'caching_expiry_media' => '8d/A691200',
-		'caching_expiry_images' => '8d/A691200'
+		'caching_expiry_images' => '8d/A691200',
+
+		'cloudflare-email' => '',
+		'cloudflare-api-key' => '',
+		'cloudflare-zone' => '',
+		'cloudflare-zone-name' => '',
+		'cloudflare-connected' => false,
+		'cloudflare-plan' => false,
+		'cloudflare-page-rules' => array(),
+		'cloudflare-caching-expiry' => 691200,
+
+		'use_cdn' => false
 	);
 
 	/**
@@ -66,7 +78,7 @@ function wphb_get_default_settings() {
 
 
 function wphb_get_blog_option_names() {
-	return array( 'block', 'minify-blog', 'dont_minify', 'dont_combine', 'position', 'max_files_in_group' );
+	return array( 'block', 'minify-blog', 'dont_minify', 'dont_combine', 'position', 'max_files_in_group', 'last_change' );
 }
 
 
@@ -99,6 +111,13 @@ function wphb_update_settings( $new_settings ) {
 		update_site_option( 'wphb_settings', $network_options );
 		update_option( 'wphb_settings', $blog_options );
 	}
+}
+
+
+function wphb_update_setting( $setting, $value ) {
+	$settings = wphb_get_settings();
+	$settings[ $setting ] = $value;
+	wphb_update_settings( $settings );
 }
 
 /**

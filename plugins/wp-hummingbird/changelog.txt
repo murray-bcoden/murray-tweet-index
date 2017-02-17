@@ -1,8 +1,71 @@
 Plugin Name: WP Hummingbird
 Author: Ignacio Cruz, Ricardo Freitas
-Tested up to: 4.6
+Tested up to: 4.6.1
 
 Change Log:
+
+1.4.1 - 2016-01-12
+----------------------------------------------------------------------
+- Fix: Upgrade process was triggered too early provoking a fatal error when Smart Crawler was active
+- Fix: Minify Group warning
+- Fix: Error when WPMUDEV Dashboard was not activated
+
+1.4 - 2016-01-10
+----------------------------------------------------------------------
+- New: Brand new minification engine
+- New: Minified files are now processed in WPMUDEV's servers
+- New: Users can use WPMUDEV's CDN to store minified files
+- New: Clear CloudFlare cache feature
+- Fix: PHP code in stylesheets could potentially be exposed
+- Enhancement: stylesheets with @import directives are not minified anymore due to multiple issues that were causing
+- Some admin styles improvements
+
+1.3.5 - 2016-10-24
+----------------------------------------------------------------------
+- New: Divi 3.0 integration
+
+1.3.4.1 - 2016-10-07
+----------------------------------------------------------------------
+- Fixed: Minification was always enabled in some sites.
+
+1.3.4 - 2016-10-03
+----------------------------------------------------------------------
+- PHP 5.3 required for minification
+- Fix: Javascript improvements in CloudFlare box
+- Fix: Missing Hummingbird icon in admin bar
+- Enhancement: CloudFlare now auto selects domain
+- Enhancement: Improved caching detection
+- Other minor improvements
+
+1.3.3 - 2016-09-02
+----------------------------------------------------------------------
+- Fix: Parse error in CloudFlare module when ASP tags detection was active in PHP
+
+1.3.2 - 2016-08-22
+----------------------------------------------------------------------
+- Fix: Error when detecting CloudFlare on activation
+
+1.3.1 - 2016-08-17
+----------------------------------------------------------------------
+- Fix: CloudFlare was only showing 20 sites max
+- Fix: Parse error in PHP < 5.3 installations
+
+1.3 - 2016-08-15
+----------------------------------------------------------------------
+- New: CloudFlare integration
+- New: LiteSpeed server detection
+- Enhance: Clear minification cache when a plugin/theme is activated/deactivated
+- Enhance: New better Javascript compressor
+- Enhance: Plugin performance improvements
+- Enhance: Better Uptime error display
+- Fixed: Notice in minification screen when a plugin was deleted manually
+- Fixed: replaced buttons by inputs as sometimes settings cannot be submitted in minification screen
+- Fixed: Some minified URLs where prepended 'http' even if they had already http prepended
+- Fixed: Some admin styles
+
+1.2.4 - 2016-08-10
+----------------------------------------------------------------------
+- Fixed fatal error on activation when PHP version is < 5.3
 
 1.2.3 - 2016-07-22
 ----------------------------------------------------------------------
@@ -80,4 +143,4 @@ Enhance: Search by extension in minification page
 - First release
 
 
-399212-1470134686-ai
+399212-1487333019-au
