@@ -1,5 +1,48 @@
 ( function ( $ ) {
 
+	// set Cookie Notice
+	$.fn.setCookieNotice = function ( cookie_value ) {
+
+		var cnTime = new Date(),
+			cnLater = new Date(),
+			cnDomNode = $( '#cookie-notice' ),
+			cnSelf = this;
+
+		// set expiry time in seconds
+		cnLater.setTime( parseInt( cnTime.getTime() ) + parseInt( cnArgs.cookieTime ) * 1000 );
+
+		// set cookie
+		cookie_value = cookie_value === 'accept' ? true : false;
+		document.cookie = cnArgs.cookieName + '=' + cookie_value + ';expires=' + cnLater.toGMTString() + ';' + ( cnArgs.cookieDomain !== undefined && cnArgs.cookieDomain !== '' ? 'domain=' + cnArgs.cookieDomain + ';' : '' ) + ( cnArgs.cookiePath !== undefined && cnArgs.cookiePath !== '' ? 'path=' + cnArgs.cookiePath + ';' : '' );
+
+		// trigger custom event
+		$.event.trigger( {
+			type: "setCookieNotice",
+			value: cookie_value,
+			time: cnTime,
+			expires: cnLater
+		} );
+
+		// hide message container
+		if ( cnArgs.hideEffect === 'fade' ) {
+			cnDomNode.fadeOut( 300, function () {
+				cnSelf.removeCookieNotice();
+			} );
+		} else if ( cnArgs.hideEffect === 'slide' ) {
+			cnDomNode.slideUp( 300, function () {
+				cnSelf.removeCookieNotice();
+			} );
+		} else {
+			cnSelf.removeCookieNotice();
+		}
+	};
+
+	// remove Cookie Notice
+	$.fn.removeCookieNotice = function ( cookie_value ) {
+		$( '#cookie-notice' ).remove();
+		$( 'body' ).removeClass( 'cookies-not-accepted' );
+	};
+
 	$( document ).ready( function () {
 
 		var cnDomNode = $( '#cookie-notice' );
@@ -38,50 +81,5 @@
 			cnDomNode.removeCookieNotice();
 		}
 
-	} );
-
-	// set Cookie Notice
-	$.fn.setCookieNotice = function ( cookie_value ) {
-
-		var cnTime		= new Date(),
-			cnLater		= new Date(),
-			cnDomNode	= $( '#cookie-notice' );
-		
-		self = this;
-
-		// set expiry time in seconds
-		cnLater.setTime( parseInt( cnTime.getTime() ) + parseInt( cnArgs.cookieTime ) * 1000 );
-
-		// set cookie
-		cookie_value = cookie_value === 'accept' ? true : false;
-		document.cookie = cnArgs.cookieName + '=' + cookie_value + ';expires=' + cnLater.toGMTString() + ';' + ( cnArgs.cookieDomain !== undefined && cnArgs.cookieDomain !== '' ? 'domain=' + cnArgs.cookieDomain + ';' : '' ) + ( cnArgs.cookiePath !== undefined && cnArgs.cookiePath !== '' ? 'path=' + cnArgs.cookiePath + ';' : '' );
-
-		// trigger custom event
-		$.event.trigger( {
-			type		: "setCookieNotice",
-			value		: cookie_value,
-			time		: cnTime,
-			expires		: cnLater
-		} );
-
-		// hide message container
-		if ( cnArgs.hideEffect === 'fade' ) {
-			cnDomNode.fadeOut( 300, function () {
-				self.removeCookieNotice();
-			} );
-		} else if ( cnArgs.hideEffect === 'slide' ) {
-			cnDomNode.slideUp( 300, function () {
-				self.removeCookieNotice();
-			} );
-		} else {
-			self.removeCookieNotice();
-		}
-	};
-
-	// remove Cookie Notice
-	$.fn.removeCookieNotice = function ( cookie_value ) {
-		$( '#cookie-notice' ).remove();
-		$( 'body' ).removeClass( 'cookies-not-accepted' );
-	}
-
+	} )
 } )( jQuery );

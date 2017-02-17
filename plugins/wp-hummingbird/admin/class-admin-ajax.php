@@ -20,15 +20,20 @@ class WP_Hummingbird_Admin_AJAX {
 		add_action( 'wp_ajax_caching_clear_cache', array( $this, 'clear_caching_cache' ) );
 		add_action( 'wp_ajax_caching_write_htaccess', array( $this, 'write_caching_htaccess' ) );
 		add_action( 'wp_ajax_gzip_write_htaccess', array( $this, 'write_gzip_htaccess' ) );
-		add_action( 'wp_ajax_chart_switch_chart_area', array( $this, 'switch_chart_area' ) );
+
+		add_action( 'wp_ajax_cloudflare_connect', array( $this, 'cloudflare_connect' ) );
+		add_action( 'wp_ajax_cloudflare_set_expiry', array( $this, 'cloudflare_set_expiry' ) );
+		add_action( 'wp_ajax_cloudflare_purge_cache', array( $this, 'cloudflare_purge_cache' ) );
 	}
 
 	public function process() {
-		if ( ! isset( $_REQUEST['module_action'] ) || ! isset( $_REQUEST['module'] ) )
+		if ( ! isset( $_REQUEST['module_action'] ) || ! isset( $_REQUEST['module'] ) ) {
 			wp_send_json_error();
+		}
 
-		if ( ! isset( $_REQUEST['wphb_nonce'] ) || ! isset( $_REQUEST['nonce_name'] ) )
+		if ( ! isset( $_REQUEST['wphb_nonce'] ) || ! isset( $_REQUEST['nonce_name'] ) ) {
 			wp_send_json_error();
+		}
 
 		check_ajax_referer( $_REQUEST['nonce_name'], 'wphb_nonce' );
 
@@ -99,6 +104,20 @@ class WP_Hummingbird_Admin_AJAX {
 		die();
 	}
 
+	public function gzip_set_server_type( $data ) {
+		if ( ! isset( $data['type'] ) ) {
+			die();
+		}
+
+		if ( ! array_key_exists( $data['type'], wphb_get_servers() ) ) {
+			die();
+		}
+
+		update_user_meta( get_current_user_id(), 'wphb-server-type', $data['type'] );
+
+		die();
+	}
+
 
 	public function caching_set_expiration( $data ) {
 		if ( ! isset( $data['type'] ) || ! isset( $data['value'] ) ) {
@@ -114,6 +133,8 @@ class WP_Hummingbird_Admin_AJAX {
 		$options = wphb_get_settings();
 		$options['caching_expiry_' . $data['type']] = $data['value'];
 		wphb_update_settings( $options );
+
+		do_action( 'wphb_caching_set_expiration', $data );
 		die();
 	}
 
@@ -172,6 +193,35 @@ class WP_Hummingbird_Admin_AJAX {
 
 		wphb_toggle_minification( $value );
 
+		die();
+	}
+
+	public function dashboard_toggle_use_cdn( $data ) {
+		$this->minification_toggle_use_cdn( $data );
+	}
+
+	public function minification_toggle_use_cdn( $data ) {
+		$value = ( 'true' === $data['value'] );
+		wphb_update_setting( 'use_cdn', $value );
+
+		if ( is_multisite() && ! current_user_can( 'manage_network' ) ) {
+			die();
+		}
+
+		if ( ! is_multisite() && ! current_user_can( 'manage_options' ) ) {
+			die();
+		}
+
+		// Clear the files
+		$groups = WP_Hummingbird_Module_Minify_Group::get_minify_groups();
+		foreach ( $groups as $group ) {
+			$path = get_post_meta( $group->ID, 'path', true );
+			if ( $path ) {
+				wp_delete_file( $path );
+			}
+			wp_delete_post( $group->ID );
+		}
+		wp_cache_delete( 'wphb_minify_groups' );
 		die();
 	}
 
@@ -279,53 +329,119 @@ class WP_Hummingbird_Admin_AJAX {
 		wphb_save_htaccess( 'caching' );
 	}
 
-	public function switch_chart_area() {
-		check_ajax_referer( 'wphb-chart', 'wphb_nonce' );
 
-		if ( ! current_user_can( wphb_get_admin_capability() ) )
-			wp_send_json_error();
+	public function cloudflare_connect() {
+		$form_data = $_POST['formData'];
+		$form_data = wp_parse_args( $form_data, array( 'cloudflare-email' => '', 'cloudflare-api-key' => '', 'cloudflare-zone' => '' ) );
 
-		$area = $_REQUEST['data']['area'];
+		$step = $_POST['step'];
+		$cfData = $_POST['cfData'];
 
-		$chart = wphb_get_chart( get_home_url() );
-		$data = $chart['data'];
+		/** @var WP_Hummingbird_Module_Cloudflare $cloudflare */
+		$cloudflare = wphb_get_module( 'cloudflare' );
 
-		if ( $area == 'all' ) {
-			$sources = $chart['sources_number'];
+		$settings = wphb_get_settings();
+
+		switch ( $step ) {
+			case 'credentials': {
+				$settings['cloudflare-email'] = sanitize_email( $form_data['cloudflare-email'] );
+				$settings['cloudflare-api-key'] = sanitize_text_field( $form_data['cloudflare-api-key'] );
+				$settings['cloudflare-zone'] = sanitize_text_field( $form_data['cloudflare-zone'] );
+				$settings['cloudflare-zone-name'] = isset( $form_data['cloudflare-zone-name'] ) ? sanitize_text_field( $form_data['cloudflare-zone-name'] ) : '';
+				wphb_update_settings( $settings );
+
+				$zones = $cloudflare->get_zones_list();
+
+				if ( is_wp_error( $zones ) ) {
+					wp_send_json_error( array( 'error' => sprintf( '<strong>%s</strong> [%s]', $zones->get_error_message(), $zones->get_error_code() ) ) );
+				}
+
+
+				$cfData['email'] = $settings['cloudflare-email'];
+				$cfData['apiKey'] = $settings['cloudflare-api-key'];
+				$cfData['zones'] = $zones;
+
+
+				$settings['cloudflare-connected'] = true;
+				wphb_update_settings( $settings );
+
+				// Try to auto select domain
+				$site_url = network_site_url();
+				$site_url = rtrim( preg_replace( '/^https?:\/\//', '', $site_url ), '/' );
+				$plucked_zones = wp_list_pluck( $zones, 'label' );
+				$found = preg_grep( '/.*' . $site_url . '.*/', $plucked_zones );
+				if ( is_array( $found ) && count( $found ) === 1 && isset( $zones[ key( $found ) ]['value'] ) ) {
+					// Select the domain and cheat this function
+					$zone_found = $zones[ key( $found ) ]['value'];
+					$_POST['formData'] = array(
+						'cloudflare-zone' => $zone_found
+					);
+					$_POST['step'] = 'zone';
+					$_POST['cfData'] = $cfData;
+					$this->cloudflare_connect();
+				}
+
+				wp_send_json_success( array( 'nextStep' => 'zone', 'newData' => $cfData ) );
+				break;
+			}
+			case 'zone': {
+				$settings['cloudflare-zone'] = sanitize_text_field( $form_data['cloudflare-zone'] );
+
+				if ( empty( $settings['cloudflare-zone'] ) ) {
+					wp_send_json_error( array( 'error' => __( 'Please, select a CloudFlare zone. Normally, this is your website', 'wphb' ) ) );
+				}
+
+				// Check that the zone exists
+				$zones = $cloudflare->get_zones_list();
+				if ( is_wp_error( $zones ) ) {
+					wp_send_json_error( array( 'error' => sprintf( '<strong>%s</strong> [%s]', $zones->get_error_message(), $zones->get_error_code() ) ) );
+				}
+				else {
+					$filtered = wp_list_filter( $zones, array( 'value' => $settings['cloudflare-zone'] ) );
+					if ( ! $filtered ) {
+						wp_send_json_error( array( 'error' => __( 'The selected zone is not valid', 'wphb' ) ) );
+					}
+					$settings['cloudflare-zone-name'] = $filtered[0]['label'];
+					$settings['cloudflare-plan'] = $filtered[0]['plan'];
+				}
+
+				$settings['cloudflare-connected'] = true;
+
+				wphb_update_settings( $settings );
+				$cfData['zone'] = $settings['cloudflare-zone'];
+				$cfData['zoneName'] = $settings['cloudflare-zone-name'];
+				$cfData['plan'] = $settings['cloudflare-plan'];
+
+				update_site_option( 'wphb-is-cloudflare', 1 );
+
+				// And set the new CF setting
+				$cloudflare->set_caching_expiration( 691200 );
+
+				wp_send_json_success( array( 'nextStep' => 'final', 'newData' => $cfData ) );
+				break;
+			}
 		}
-		elseif ( $area == 'core' ) {
-			$data = wphb_filter_chart_data( $data, false );
-			$sources = array( 'header' => count( $data['header']['core'] ), 'footer' => count( $data['footer']['core'] ) );
-		}
-		else {
-			$data = wphb_filter_chart_data( $data, $area );
 
-			$sources = array( 'header' => 0, 'footer' => 0 );
-			if ( isset( $data['header']['themes'][ $area ] ) ) {
-				$sources['header'] += count( $data['header']['themes'][ $area ] );
-			}
+		wp_send_json_error( array( 'error' => '' ) );
+	}
 
-			if ( isset( $data['footer']['themes'][ $area ] ) ) {
-				$sources['footer'] += count( $data['footer']['themes'][ $area ] );
-			}
+	public function cloudflare_set_expiry() {
+		check_ajax_referer( 'wphb-cloudflare-expiry', 'security' );
 
-			if ( isset( $data['header']['plugins'][ $area ] ) ) {
-				$sources['header'] += count( $data['header']['plugins'][ $area ] );
-			}
+		$value = absint( $_POST['value'] );
+		/** @var WP_Hummingbird_Module_Cloudflare $cf */
+		$cf = wphb_get_module( 'cloudflare' );
 
-			if ( isset( $data['footer']['plugins'][ $area ] ) ) {
-				$sources['footer'] += count( $data['footer']['plugins'][ $area ] );
-			}
-		}
+		$cf->set_caching_expiration( $value );
 
-		$data_header = WP_Hummingbird_Minification_Chart::prepare_for_javascript( $data['header'], $data['groups'] );
-		$data_footer = WP_Hummingbird_Minification_Chart::prepare_for_javascript( $data['footer'], $data['groups'] );
-		$data = array(
-			'header' => json_decode( $data_header ),
-			'footer' => json_decode( $data_footer )
-		);
+		die();
+	}
 
-		wp_send_json_success( array( 'chartData' => $data, 'sourcesNumber' => $sources ) );
+	public function cloudflare_purge_cache() {
+		/** @var WP_Hummingbird_Module_Cloudflare $cf */
+		$cf = wphb_get_module( 'cloudflare' );
+		$cf->purge_cache();
+		die();
 	}
 
 }

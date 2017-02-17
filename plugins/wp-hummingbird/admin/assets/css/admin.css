@@ -19,6 +19,9 @@
 /* ****************************************************************************
  * 1. EXTEND/OVERRIDE WPMUDEV DASHBOARD/WP STYLES
  */
+.wpmud .button:hover {
+	background:#FFE900 !important;
+}
 .wpmud .spinner.standalone {
 	float: none;
 	margin: 0;
@@ -306,12 +309,93 @@
     z-index: 9;
 }
 
+.wpmud .wphb-dashboard-caching-cloudflare-box p {
+	margin-top:30px;
+	margin-bottom:20px;
+}
+
+.wpmud #wphb-box-dashboard-cloudflare .cloudflare-step form label {
+	text-align: left;
+	font-weight: 400;
+	padding-left:0;
+	padding-right:0;
+}
+
+
+.wpmud .cloudflare-step form label input {
+	margin-top:10px;
+}
+
+.wpmud .cloudflare-step > p:first-child {
+	text-align:left;
+}
+
+.wpmud .cloudflare-spinner {
+	display: inline-block;
+	float:none;
+}
+.wpmud .cloudflare-step p.cloudflare-submit,
+.wpmud #cloudflare-how-to-title {
+	position:relative;
+	margin-top:11px;
+}
+
+.wpmud .cloudflare-step p.cloudflare-submit input[type="submit"] {
+	display: inline-block;
+	margin-top:0;
+}
+
+.wpmud #cloudflare-how-to {
+	clear:both;
+	margin-left:0;
+	list-style-position: inside;
+}
+
+.wpmud .cloudflare-step > p {
+	margin-bottom:30px;
+}
+.wpmud .cloudflare-step p.cloudflare-submit {
+	float:right;
+}
+.wpmud .cloudflare-step p.cloudflare-clear-cache {
+	float:left;
+	margin-bottom:0;
+}
+.wpmud .cloudflare-step hr {
+	margin-top:20px;
+	margin-bottom:20px;
+}
+.wpmud .cloudflare-step p.cloudflare-clear-cache-text {
+	text-align:left;
+}
+.wpmud #cloudflare-how-to-title {
+	float:left;
+	line-height: 40px;
+}
+
+.wpmud .cloudflare-step .cloudflare-data {
+	text-align:left;
+	margin-top:30px;
+	margin-bottom:0;
+}
+
+.wpmud .cloudflare-data > span {
+	display:inline-block;
+	margin-right:20px;
+}
+
+
 /* Buttons */
+.wrap-wp-hummingbird .button,
+.wrap-wp-hummingbird button {
+	-webkit-transition: all .3s ease;
+    transition: all .3s ease;
+}
 .wrap-wp-hummingbird .button-with-cta {
 	padding: 12px 20px 11px;
 }
 .wrap-wp-hummingbird .button-content-cta {
-	margin-top: 20px;
+	margin-top: 30px;
 }
 .wrap-wp-hummingbird .button-red-alt {
 	background: #fd6e70;
@@ -508,6 +592,17 @@
 .wpmud .wphb-label-notice-inline {
 	display: inline-block;
 }
+.wpmud .wphb-label-disabled {
+	background: #F2F2F2;
+    border-radius: 20px;
+    color: #C0C0C0;
+    display: inline-block;
+    font: 500 12px/20px 'Roboto', Arial, sans-serif;
+    min-width: 120px;
+    padding: 5px;
+    text-align: center;
+    text-transform: uppercase;
+}
 
 /* Icons */
 .wpmud .wphb-icon {
@@ -517,6 +612,24 @@
 	display: block;
 	float: left;
 }
+
+/* Pro feature callout */
+.wpmud .pro-callout a {
+	color:#5ba396;
+	border:1px solid #5ba396;
+	-webkit-border-radius:25px;
+	-moz-border-radius:25px;
+	border-radius:25px;
+	text-transform: uppercase;
+	padding:5px 10px;
+	line-height:40px;
+}
+
+.wpmud .pro-callout a:hover {
+	background: #5ba396;
+	color:white;
+}
+
 
 /* ****************************************************************************
  * 2. COMMON/GENERAL STYLES
@@ -684,7 +797,7 @@
 	margin-left: auto;
 }
 .wpmud .wphb-image-icon-content-top {
-	margin-bottom: 20px;
+	margin-bottom: 30px;
 }
 
 /* Lists */
@@ -919,8 +1032,62 @@
 }
 
 /* Toggles */
+.wpmud .toggle .toggle-label {
+	text-align: left;
+}
 .wpmud .toggle-group {
 	display: inline-block;
+}
+.wpmud .toggle .toggle-checkbox:checked:disabled + .toggle-label {
+	background: transparent;
+}
+.wpmud .toggle .toggle-checkbox:checked:disabled + .toggle-label:before {
+	bottom: 0;
+	left: 0;
+	right: 0;
+	top: 0;
+}
+.wpmud .toggle .toggle-checkbox:checked:disabled + .toggle-label:after {
+	margin-left: 1px;
+}
+.wpmud .toggle-item.bordered {
+	border-top: 1px solid #E6E6E6;
+	padding-top: 30px;
+}
+.wpmud .toggle-item.space-top {
+	margin: 30px 0 0;
+}
+.wpmud .toggle-item.space-top-small {
+	margin: 15px 0 0;
+}
+.wpmud .toggle-item label {
+	text-align: left;
+}
+.wpmud .toggle-item .toggle-item-group {
+	display: table;
+	width: 100%;
+}
+.wpmud .toggle-item .toggle-info,
+.wpmud .toggle-item .toggle-actions {
+	display: table-cell;
+}
+.wpmud .toggle-item .toggle-item-title {
+	color: #555;
+	font: 400 15px/20px 'Roboto', Arial, sans-serif;
+    margin: 0;
+}
+.wpmud .toggle-item .toggle-item-description {
+	color: #888;
+	font: 400 13px/22px 'Roboto', Arial, sans-serif;
+	margin: 10px 0;
+}
+.wpmud .toggle-item .toggle-item-description:last-child {
+	margin-bottom: 0;
+}
+.wpmud .toggle-item .toggle-actions {
+	padding-left: 30px;
+	vertical-align: middle;
+	text-align: right;
 }
 
 /* ****************************************************************************
@@ -1038,7 +1205,7 @@
 }
 .wpmud .content-box-one-col-center .wphb-block-entry-content {
 	margin: 0 auto;
-	padding: 15px 0;
+	padding: 15px 0 0 0;
 }
 
 /* Box: Content w/Image (left) */
@@ -1082,6 +1249,9 @@
 .wpmud .wphb-block-content > *:last-child {
 	margin-bottom: 0;
 }
+#wphb-box-dashboard-cloudflare .wphb-block-entry  .wphb-block-entry-content {
+	padding-top: 0;
+}
 .wpmud .wphb-block-content-center {
 	text-align: center;
 }
@@ -1091,11 +1261,17 @@
 	border-radius: 5px;
 	margin: 0;
 	padding: 20px 30px;
-	white-space: pre-wrap;
-	word-break: break-word;
+	white-space: pre;
+	overflow-x: scroll;
+	max-width: 100%;
 }
 .wpmud .wphb-block-content-grey {
 	background-color: #FAFAFA;
+	border-radius: 5px;
+	padding: 20px 30px;
+}
+.wpmud .wphb-block-content-blue {
+	background-color: #e0f6ff;
 	border-radius: 5px;
 	padding: 20px 30px;
 }
@@ -1544,6 +1720,24 @@
 	text-align: center;
 	top: 50%;
 }
+#wphb-error-details {
+	display:none;
+}
+
+#wphb-error-details-link {
+	color:white;
+	text-decoration: none;
+	margin-top:10px;
+	margin-bottom:10px;
+	display:inline-block;
+	font-weight:400;
+}
+#wphb-error-details-link > .dashicons {
+	text-decoration:none;
+}
+#wphb-error-details-link.expanded {
+	display:none;
+}
 
 /* ****************************************************************************
  * 4. WELCOME / DASHBOARD
@@ -1614,6 +1808,53 @@
 
 .wpmud .box-dashboard-performance-module .dashboard-performance-report-table .wphb-performance-report-item > * {
 	cursor:pointer;
+}
+
+.wpmud #cloudflare-how-to-title,
+.wpmud #cloudflare-how-to {
+	text-align:left;
+}
+.wpmud #cloudflare-how-to a {
+	font-weight: 500;
+	text-decoration: underline;
+	color: inherit;
+}
+.wpmud #cloudflare-info {
+	clear:both;
+}
+.wpmud .cloudflare-submit {
+	margin-bottom:0;
+}
+.wpmud #cloudflare-zone .clear {
+	padding:0;
+}
+.wpmud #cloudflare-zone label {
+	margin-bottom:13px;
+}
+.wpmud #cloudflare-zone .cloudflare-submit {
+	margin-top:22.5px
+}
+.wpmud #cloudflare-steps .wphb-notice-success {
+	margin-top:0;
+}
+
+
+@media screen and (max-width: 1200px) and (min-width: 783px) {
+	.wpmud #cloudflare-how-to-title {
+		float:none;
+		display: block;
+		text-align: center;
+		margin-bottom:0;
+	}
+	.wpmud .cloudflare-step p.cloudflare-submit {
+		float:none;
+		position:relative;
+	}
+	.wpmud .cloudflare-step p.cloudflare-submit .cloudflare-spinner {
+		position:absolute;
+		right:0;
+		top: 10px;
+	}
 }
 
 /* ****************************************************************************
@@ -1691,6 +1932,12 @@
 	margin-bottom:30px;
 }
 
+#wphb-box-minification-advanced-settings .toggle-item-description {
+	font-size:13px;
+	line-height:22px;
+	font-weight: 400;
+}
+
 /* ****************************************************************************
  * 7. BROWSER CACHING
  */
@@ -1703,6 +1950,13 @@
 }
 .wpmud .wphb-caching-error a {
 	text-decoration:underline;
+}
+.wpmud .wrap-wphb-caching .wphb-spinner {
+	float:none;
+	background-size: 15px 15px;
+}
+.wpmud .wphb-caching-cloudflare-box > p {
+	margin:30px 0 20px 0;
 }
 
 /* ****************************************************************************
@@ -1743,6 +1997,10 @@
 .wpmud .uptime-chart svg g g text:last-of-type {
 	fill: #1ABC9C;
 	font-weight: 500;
+}
+
+.wrap-wp-hummingbird .button-cta-green:hover {
+	box-shadow: none;
 }
 
 /* ****************************************************************************
@@ -2222,4 +2480,4 @@
 }
 
 
-/* 399212-1470134686-ai */
+/* 399212-1487333019-au */
