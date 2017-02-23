@@ -68,18 +68,18 @@
 			            <path class="totals-base" d="M613,596h91a21,21,0,0,1,0,42H613a21,21,0,0,1,0-42Z" transform="translate(0)" fill="#104c60" fill-rule="evenodd" ></path>
 			            <text class="sans-semi totals-title" transform="translate(629.94 623.23)" font-size="16" fill="#fff">TOTALS</text>
 			        </g>
-			        <text class="sans-semi total-l" x="427" y="627" font-size="30" fill="#015873">1,973,342</text>
-			        <text class="sans-semi total-r" x="754" y="627" font-size="30" fill="#fff">2,263,895</text>
-			        <text class="sans-semi fperc" x="681" y="323" font-size="48" fill="#fff">14.7%</text>
+			        <text class="sans-semi total-l" x="427" y="627" font-size="30" fill="#015873">2,263,895</text>
+			        <text class="sans-semi total-r" x="754" y="627" font-size="30" fill="#fff">2,559,242 </text>
+			        <text class="sans-semi fperc" x="671" y="323" font-size="48" fill="#fff">13.05%</text>
 			        <text class="sans-semi fup" x="729" y="278" font-size="30" fill="#fff">UP</text>
 			    </g>
 			    <g class="fyear-l">
 			        <path class="fyear-base" d="M541,16h54a21,21,0,0,1,0,42H541a21,21,0,0,1,0-42Z" transform="translate(0)" fill="none" stroke="#fff" stroke-miterlimit="10" fill-rule="evenodd" ></path>
-			        <text class="sans-light" transform="translate(544.03 44.6)" font-size="21" fill="#fff">2014</text>
+			        <text class="sans-light" transform="translate(544.03 44.6)" font-size="21" fill="#fff">2015</text>
 			    </g>
 			    <g class="fyear-r">
 			        <path class="fyear-base-2" data-name="year-base" d="M722.22,16h54a21,21,0,0,1,0,42h-54a21,21,0,0,1,0-42Z" transform="translate(0)" fill="none" stroke="#fff" stroke-miterlimit="10" fill-rule="evenodd" ></path>
-			        <text class="sans-light" transform="translate(724.48 44.6)" font-size="21" fill="#fff">2015</text>
+			        <text class="sans-light" transform="translate(724.48 44.6)" font-size="21" fill="#fff">2016</text>
 			    </g>
 			</svg>
 
@@ -87,7 +87,7 @@
 	</div>
 	<div class="followers-quote-wrapper">
 		<blockquote class="followers-quote">
-			<p>The reach of Irish journalists is increasing as total followers of the top 100 increases by over 290,000 in the past year.</p>
+			<p>The reach of Irish journalists is increasing as total followers of the top 100 increases by over 295,000 in the past year.</p>
 		</blockquote>
 	</div>
 </section>
