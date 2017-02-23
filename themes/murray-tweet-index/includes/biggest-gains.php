@@ -2,7 +2,7 @@
 
 	<div class="gains-wrapper">
 		<h2 class="section-title">Biggest Gainers</h2>
-		<p class="section-intro">vs 2014</p>
+		<p class="section-intro">vs 2015</p>
 		<div class="gains-info-wrapper">
 			<svg class="circ-graph-svg content" id="circ-graph" viewBox="0 0 750 500">
 			    <defs>
@@ -42,29 +42,29 @@
 			    </g>
 			    <g id="people">
 			      <g class="person">
-			        <text class="job-title serif" transform="translate(484 201.09)">US Correspondent, RTE</text>
-			        <text class="twitter-handle sans-semi" transform="translate(615 184.1)">@caitrionaperry</text>
-			        <text class="person-name sans-semi" transform="translate(484 183.09)">CAITRIONA PERRY</text>
+			        <text class="job-title serif" transform="translate(484 201.09)">News, RTE</text>
+			        <text class="twitter-handle sans-semi" transform="translate(586 184.1)">@ingridmileyrte</text>
+			        <text class="person-name sans-semi" transform="translate(484 183.09)">INGRID MILEY</text>
 			      </g>
 			      <g class="person">
-			        <text class="job-title serif" transform="translate(484 161.09)">Columnist/Presenter, Irish Times/RTE</text>
-			        <text class="twitter-handle sans-semi" transform="translate(566 142.09)">@kenearlys</text>
-			        <text class="person-name sans-semi" transform="translate(484 142.09)">KEN EARLY</text>
+			        <text class="job-title serif" transform="translate(484 161.09)">Business, Irish Independent</text>
+			        <text class="twitter-handle sans-semi" transform="translate(582 142.09)">@danobrien20</text>
+			        <text class="person-name sans-semi" transform="translate(484 142.09)">DAN O'BRIEN</text>
 			      </g>
 			      <g class="person">
-			        <text class="job-title serif" transform="translate(484 120.09)">Editor, Richard Oakley</text>
-			        <text class="twitter-handle sans-semi" transform="translate(612 101.09)">@roakleyst</text>
-			        <text class="person-name sans-semi" transform="translate(484 101.09)">RICHARD OAKLEY</text>
+			        <text class="job-title serif" transform="translate(484 120.09)">Fashion &amp; Beauty, Unaffiliated</text>
+			        <text class="twitter-handle sans-semi" transform="translate(616 101.09)">@Darrenken</text>
+			        <text class="person-name sans-semi" transform="translate(484 101.09)">DARREN KENNEDY</text>
 			      </g>
 			      <g class="person">
-			        <text class="job-title serif" transform="translate(484 80.09)">Deputy Business Editor, Irish Times</text>
-			        <text class="twitter-handle sans-semi" transform="translate(604 61.09)">@ITdominiccoyle</text>
-			        <text class="person-name sans-semi" transform="translate(484 61.09)">DOMINIC COYLE</text>
+			        <text class="job-title serif" transform="translate(484 80.09)">News, Unaffiliated</text>
+			        <text class="twitter-handle sans-semi" transform="translate(629 61.09)">@gemmaod1</text>
+			        <text class="person-name sans-semi" transform="translate(484 61.09)">GEMMA O'DOHERTY</text>
 			      </g>
 			      <g class="person">
-			        <text class="job-title serif" transform="translate(484 40.1)">Columnist, Sunday Independent</text>
-			        <text class="twitter-handle sans-semi" transform="translate(583 21.1)">@carolmhunt</text>
-			        <text class="person-name sans-semi" transform="translate(484 21.1)">CAROL HUNT</text>
+			        <text class="job-title serif" transform="translate(484 40.1)">Politics, Irish Examiner</text>
+			        <text class="twitter-handle sans-semi" transform="translate(633 21.1)">@McConnellDaniel</text>
+			        <text class="person-name sans-semi" transform="translate(484 21.1)">DANIEL MCCONNELL</text>
 			      </g>
 			    </g>
 			    <g class="goo" filter="url(#goo)">
@@ -87,24 +87,24 @@
 
 			<ol class="gains-people">
 				<li class="gains-people-item">
-					<h3 class="gain-title"><span class="gain-number">218</span> <span class="gain-name">Carol Hunt</span> @carolmhunt</h3>
-					<p class="gain-job">Columnist, Sunday Independent</p>
+					<h3 class="gain-title"><span class="gain-number">155</span> <span class="gain-name">Daniel McConnell</span> @McConnellDaniel</h3>
+					<p class="gain-job">Politics, Irish Examiner</p>
 				</li>
 				<li class="gains-people-item">
-					<h3 class="gain-title"><span class="gain-number">191</span> <span class="gain-name">Dominic Coyle</span> @ITdominiccoyle</h3>
-					<p class="gain-job">Deputy Business Editor, Irish Times</p>
+					<h3 class="gain-title"><span class="gain-number">142</span> <span class="gain-name">Gemma O'Doherty</span> @gemmaod1</h3>
+					<p class="gain-job">News, Unaffiliated</p>
 				</li>
 				<li class="gains-people-item">
-					<h3 class="gain-title"><span class="gain-number">143</span> <span class="gain-name">Richard Oakley</span> @roakleyst</h3>
-					<p class="gain-job">Editor, The Times (Ireland)</p>
+					<h3 class="gain-title"><span class="gain-number">67</span> <span class="gain-name">Darren Kennedy</span> @Darrenken</h3>
+					<p class="gain-job">Fashion &amp; Beauty, Unaffiliated</p>
 				</li>
 				<li class="gains-people-item">
-					<h3 class="gain-title"><span class="gain-number">131</span> <span class="gain-name">Ken Early</span> @kenearlys</h3>
-					<p class="gain-job">Columnist/Presenter, Irish Times/RTÉ</p>
+					<h3 class="gain-title"><span class="gain-number">62</span> <span class="gain-name">Dan O'Brien</span> @danobrien20</h3>
+					<p class="gain-job">Business, Irish Independent</p>
 				</li>
 				<li class="gains-people-item">
-					<h3 class="gain-title"><span class="gain-number">117</span> <span class="gain-name">Caitriona Perry</span> @caitrionaperry</h3>
-					<p class="gain-job">US Correspondent, RTÉ</p>
+					<h3 class="gain-title"><span class="gain-number">55</span> <span class="gain-name">Ingrid Miley</span> @ingridmileyrte</h3>
+					<p class="gain-job">News, RTÉ</p>
 				</li>
 			</ol>
 		</div>
