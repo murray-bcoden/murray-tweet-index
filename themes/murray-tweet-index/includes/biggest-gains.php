@@ -58,7 +58,7 @@
 			      </g>
 			      <g class="person">
 			        <text class="job-title serif" transform="translate(484 80.09)">News, Unaffiliated</text>
-			        <text class="twitter-handle sans-semi" transform="translate(629 61.09)">@gemmaod1</text>
+			        <text class="twitter-handle sans-semi" transform="translate(628 61.09)">@gemmaod1</text>
 			        <text class="person-name sans-semi" transform="translate(484 61.09)">GEMMA O'DOHERTY</text>
 			      </g>
 			      <g class="person">

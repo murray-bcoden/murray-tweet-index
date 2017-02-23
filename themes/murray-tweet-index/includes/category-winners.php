@@ -29,11 +29,11 @@
 		<div class="slider responsive" id="carousel">
 		  <div class="category">
 		  	<div class="category-image-wrapper">
-		  		<img class="twitter-profile" src="https://twitter.com/SiCarswell/profile_image?size=bigger" alt="Twitter Profile Image">
+		  		<img class="twitter-profile" src="https://twitter.com/gemmaod1/profile_image?size=bigger" alt="Twitter Profile Image">
 		  	</div>
 		  	<div class="category-winner">
-				<div class="name">Simon Carswell</div>
-				<div class="job-title">US Correspondent, Irish Times</div>
+				<div class="name">Gemma O'Doherty</div>
+				<div class="job-title">Investigative Journalist, Unaffiliated</div>
 			</div>
 			<div class="category-title-wrapper">
 				<div class="category-title">News</div>
@@ -45,27 +45,27 @@
 					<ol class="categories-panel-list">
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">1</span><a href="https://twitter.com/sicarswell" target="_blank" class="categories-panel-link">@sicarswell</a>
+								<span class="categories-panel-index">1</span><a href="https://twitter.com/gemmaod1" target="_blank" class="categories-panel-link">@gemmaod1</a>
 							</div>
 						</li>
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">2</span><a href="https://twitter.com/rodneyedwards" target="_blank" class="categories-panel-link">@rodneyedwards</a>
+								<span class="categories-panel-index">2</span><a href="https://twitter.com/caitrionaperry" target="_blank" class="categories-panel-link">@caitrionaperry</a>
 							</div>
 						</li>
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">3</span><a href="https://twitter.com/tconnellyrte" target="_blank" class="categories-panel-link">@tconnellyrte</a>
+								<span class="categories-panel-index">3</span><a href="https://twitter.com/sicarswell" target="_blank" class="categories-panel-link">@sicarswell</a>
 							</div>
 						</li>
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">4</span><a href="https://twitter.com/dearbhaildibs" target="_blank" class="categories-panel-link">@dearbhaildibs</a>
+								<span class="categories-panel-index">4</span><a href="https://twitter.com/philipbromwell" target="_blank" class="categories-panel-link">@philipbromwell</a>
 							</div>
 						</li>
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">5</span><a href="https://twitter.com/caitrionaperry" target="_blank" class="categories-panel-link">@caitrionaperry</a>
+								<span class="categories-panel-index">5</span><a href="https://twitter.com/tconnellyrte" target="_blank" class="categories-panel-link">@tconnellyrte</a>
 							</div>
 						</li>
 					</ol>
@@ -75,11 +75,11 @@
 
 		  <div class="category">
 		  	<div class="category-image-wrapper">
-		  		<img class="twitter-profile" src="https://twitter.com/TomLyonsBiz/profile_image?size=bigger" alt="Twitter Profile Image">
+		  		<img class="twitter-profile" src="https://twitter.com/DearbhailDibs/profile_image?size=bigger" alt="Twitter Profile Image">
 		  	</div>
 		  	<div class="category-winner">
-			    <div class="name">Tom Lyons</div>
-			    <div class="job-title">Business Editor, Sunday Business Post</div>
+			    <div class="name">Dearbhail McDonald</div>
+			    <div class="job-title">Group Business Editor, Irish Independent</div>
 			</div>
 		    <div class="category-title-wrapper">
 				<div class="category-title">Business</div>
@@ -91,27 +91,27 @@
 					<ol class="categories-panel-list">
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">1</span><a href="https://twitter.com/TomLyonsBiz" target="_blank" class="categories-panel-link">@TomLyonsBiz</a>
+								<span class="categories-panel-index">1</span><a href="https://twitter.com/DearbhailDibs" target="_blank" class="categories-panel-link">@DearbhailDibs</a>
 							</div>
 						</li>
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">2</span><a href="https://twitter.com/ianguider" target="_blank" class="categories-panel-link">@ianguider</a>
+								<span class="categories-panel-index">2</span><a href="https://twitter.com/davidmurphyRTE" target="_blank" class="categories-panel-link">@davidmurphyRTE</a>
 							</div>
 						</li>
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">3</span><a href="https://twitter.com/davidmurphyRTE" target="_blank" class="categories-panel-link">@davidmurphyRTE</a>
+								<span class="categories-panel-index">3</span><a href="https://twitter.com/TomLyonsBiz" target="_blank" class="categories-panel-link">@TomLyonsBiz</a>
 							</div>
 						</li>
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">4</span><a href="https://twitter.com/ITdominiccoyle" target="_blank" class="categories-panel-link">@ITdominiccoyle</a>
+								<span class="categories-panel-index">4</span><a href="https://twitter.com/ianguider" target="_blank" class="categories-panel-link">@ianguider</a>
 							</div>
 						</li>
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">5</span><a href="https://twitter.com/IrishTimesLaura" target="_blank" class="categories-panel-link">@IrishTimesLaura</a>
+								<span class="categories-panel-index">5</span><a href="https://twitter.com/danobrien20" target="_blank" class="categories-panel-link">@danobrien20</a>
 							</div>
 						</li>
 					</ol>
@@ -121,11 +121,11 @@
 		  
 		  <div class="category">
 		  	<div class="category-image-wrapper">
-		  		<img class="twitter-profile" src="https://twitter.com/sportsdes/profile_image?size=bigger" alt="Twitter Profile Image">
+		  		<img class="twitter-profile" src="https://twitter.com/RealKevinPalmer/profile_image?size=bigger" alt="Twitter Profile Image">
 		  	</div>
 		  	<div class="category-winner">
-			    <div class="name">Des Cahill</div>
-			    <div class="job-title">Sports Presenter, RTE</div>
+			    <div class="name">Kevin Palmer</div>
+			    <div class="job-title">Sports &amp; Showbiz Journalist Sunday World</div>
 			</div>
 		    <div class="category-title-wrapper">
 				<div class="category-title">Sport</div>
@@ -137,27 +137,27 @@
 					<ol class="categories-panel-list">
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">1</span><a href="https://twitter.com/sportsdes" target="_blank" class="categories-panel-link">@sportsdes</a>
+								<span class="categories-panel-index">1</span><a href="https://twitter.com/RealKevinPalmer" target="_blank" class="categories-panel-link">@RealKevinPalmer</a>
 							</div>
 						</li>
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">2</span><a href="https://twitter.com/kenearlys" target="_blank" class="categories-panel-link">@kenearlys</a>
+								<span class="categories-panel-index">2</span><a href="https://twitter.com/sportsdes" target="_blank" class="categories-panel-link">@sportsdes</a>
 							</div>
 						</li>
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">3</span><a href="https://twitter.com/JohnFogartyIrl" target="_blank" class="categories-panel-link">@JohnFogartyIrl</a>
+								<span class="categories-panel-index">3</span><a href="https://twitter.com/kenearlys" target="_blank" class="categories-panel-link">@kenearlys</a>
 							</div>
 						</li>
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">4</span><a href="https://twitter.com/davidwalshst" target="_blank" class="categories-panel-link">@davidwalshst</a>
+								<span class="categories-panel-index">4</span><a href="https://twitter.com/Woolberto" target="_blank" class="categories-panel-link">@Woolberto</a>
 							</div>
 						</li>
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">5</span><a href="https://twitter.com/michaelc_rte" target="_blank" class="categories-panel-link">@michaelc_rte</a>
+								<span class="categories-panel-index">5</span><a href="https://twitter.com/nathanmurf" target="_blank" class="categories-panel-link">@nathanmurf</a>
 							</div>
 						</li>
 					</ol>
@@ -170,7 +170,7 @@
 		  		<img class="twitter-profile" src="https://twitter.com/gavreilly/profile_image?size=bigger" alt="Twitter Profile Image">
 		  	</div>
 		  	<div class="category-winner">
-			    <div class="name">Gavin Reilly</div>
+			    <div class="name">Gavan Reilly</div>
 			    <div class="job-title">Political Correspondent, Today FM</div>
 			</div>
 		    <div class="category-title-wrapper">
@@ -193,17 +193,17 @@
 						</li>
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">3</span><a href="https://twitter.com/oconnellhugh" target="_blank" class="categories-panel-link">@oconnellhugh</a>
+								<span class="categories-panel-index">3</span><a href="https://twitter.com/KevDoyle_Indo" target="_blank" class="categories-panel-link">@KevDoyle_Indo</a>
 							</div>
 						</li>
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">4</span><a href="https://twitter.com/MaryERegan" target="_blank" class="categories-panel-link">@MaryERegan</a>
+								<span class="categories-panel-index">4</span><a href="https://twitter.com/McConnellDaniel" target="_blank" class="categories-panel-link">@McConnellDaniel</a>
 							</div>
 						</li>
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">5</span><a href="https://twitter.com/newschambers" target="_blank" class="categories-panel-link">@newschambers</a>
+								<span class="categories-panel-index">5</span><a href="https://twitter.com/martinafitzg" target="_blank" class="categories-panel-link">@martinafitzg</a>
 							</div>
 						</li>
 					</ol>
@@ -213,11 +213,11 @@
 		  
 		  <div class="category">
 		  	<div class="category-image-wrapper">
-		  		<img class="twitter-profile" src="https://twitter.com/ghook/profile_image?size=bigger" alt="Twitter Profile Image">
+		  		<img class="twitter-profile" src="https://twitter.com/cooper_m/profile_image?size=bigger" alt="Twitter Profile Image">
 		  	</div>
 		  	<div class="category-winner">
-			    <div class="name">George Hook</div>
-			    <div class="job-title">Presenter, Newstalk</div>
+			    <div class="name">Matt Cooper</div>
+			    <div class="job-title">Presenter, Today FM</div>
 			</div>
 		    <div class="category-title-wrapper">
 				<div class="category-title">Broadcast Presenter</div>
@@ -229,27 +229,27 @@
 					<ol class="categories-panel-list">
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">1</span><a href="https://twitter.com/ghook" target="_blank" class="categories-panel-link">@ghook</a>
+								<span class="categories-panel-index">1</span><a href="https://twitter.com/cooper_m" target="_blank" class="categories-panel-link">@cooper_m</a>
 							</div>
 						</li>
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">2</span><a href="https://twitter.com/boucherhayes" target="_blank" class="categories-panel-link">@boucherhayes</a>
+								<span class="categories-panel-index">2</span><a href="https://twitter.com/ghook" target="_blank" class="categories-panel-link">@ghook</a>
 							</div>
 						</li>
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">3</span><a href="https://twitter.com/CathalMacCoille" target="_blank" class="categories-panel-link">@CathalMacCoille</a>
+								<span class="categories-panel-index">3</span><a href="https://twitter.com/patkennynt" target="_blank" class="categories-panel-link">@patkennynt</a>
 							</div>
 						</li>
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">4</span><a href="https://twitter.com/jonathanhealy" target="_blank" class="categories-panel-link">@jonathanhealy</a>
+								<span class="categories-panel-index">4</span><a href="https://twitter.com/CathalMacCoille" target="_blank" class="categories-panel-link">@CathalMacCoille</a>
 							</div>
 						</li>
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">5</span><a href="https://twitter.com/cooper_m" target="_blank" class="categories-panel-link">@cooper_m</a>
+								<span class="categories-panel-index">5</span><a href="https://twitter.com/jonathanhealy" target="_blank" class="categories-panel-link">@jonathanhealy</a>
 							</div>
 						</li>
 					</ol>
@@ -266,7 +266,7 @@
 			    <div class="job-title">Consumer Affairs Correspondent, Irish Times</div>
 			</div>
 		    <div class="category-title-wrapper">
-				<div class="category-title">Consumer/Personal Finance</div>
+				<div class="category-title">Consumer Affairs</div>
 			</div>
 		    <div class="category-icon-wrapper">
 		    	<div class="category-icon category-icon-finance"></div>
@@ -290,12 +290,12 @@
 						</li>
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">4</span><a href="https://twitter.com/Emma_SBP_money" target="_blank" class="categories-panel-link">@Emma_SBP_money</a>
+								<span class="categories-panel-index">4</span><a href="https://twitter.com/JillKerby" target="_blank" class="categories-panel-link">@JillKerby</a>
 							</div>
 						</li>
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">5</span><a href="https://twitter.com/jillkerby" target="_blank" class="categories-panel-link">@jillkerby</a>
+								<span class="categories-panel-index">5</span><a href="https://twitter.com/Emma_SBP_money" target="_blank" class="categories-panel-link">@Emma_SBP_money</a>
 							</div>
 						</li>
 					</ol>
@@ -309,7 +309,7 @@
 		  	</div>
 		  	<div class="category-winner">
 			    <div class="name">Suzanne Campbell</div>
-			    <div class="job-title">Food and Farming journalist</div>
+			    <div class="job-title">Food and Farming Journalist</div>
 			</div>
 		    <div class="category-title-wrapper">
 				<div class="category-title">Agriculture/Farming</div>
@@ -336,12 +336,12 @@
 						</li>
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">4</span><a href="https://twitter.com/georgeleerte" target="_blank" class="categories-panel-link">@georgeleerte</a>
+								<span class="categories-panel-index">4</span><a href="https://twitter.com/AislingHussey" target="_blank" class="categories-panel-link">@AislingHussey</a>
 							</div>
 						</li>
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">5</span><a href="https://twitter.com/AlisonHealyIT" target="_blank" class="categories-panel-link">@AlisonHealyIT</a>
+								<span class="categories-panel-index">5</span><a href="https://twitter.com/aibrenn" target="_blank" class="categories-panel-link">@aibrenn</a>
 							</div>
 						</li>
 					</ol>
@@ -377,17 +377,22 @@
 						</li>
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">3</span><a href="https://twitter.com/MrJohnFKennedy" target="_blank" class="categories-panel-link">@MrJohnFKennedy</a>
+								<span class="categories-panel-index">3</span><a href="https://twitter.com/ciaraobrien" target="_blank" class="categories-panel-link">@ciaraobrien</a>
 							</div>
 						</li>
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">4</span><a href="https://twitter.com/ciaraobrien" target="_blank" class="categories-panel-link">@ciaraobrien</a>
+								<span class="categories-panel-index">4</span><a href="https://twitter.com/action81" target="_blank" class="categories-panel-link">@action81</a>
 							</div>
 						</li>
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">5</span><a href="https://twitter.com/marievonboran" target="_blank" class="categories-panel-link">@marievonboran</a>
+								<span class="categories-panel-index">5=</span><a href="https://twitter.com/MrJohnFKennedy" target="_blank" class="categories-panel-link">@MrJohnFKennedy</a>
+							</div>
+						</li>
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">5=</span><a href="https://twitter.com/simoncocking" target="_blank" class="categories-panel-link">@simoncocking</a>
 							</div>
 						</li>
 					</ol>
@@ -397,11 +402,11 @@
 		  
 		  <div class="category">
 		  	<div class="category-image-wrapper">
-		  		<img class="twitter-profile" src="https://twitter.com/LisaCannonXpose/profile_image?size=bigger" alt="Twitter Profile Image">
+		  		<img class="twitter-profile" src="https://twitter.com/KenSweeney/profile_image?size=bigger" alt="Twitter Profile Image">
 		  	</div>
 		  	<div class="category-winner">
-			    <div class="name">Lisa Cannon </div>
-			    <div class="job-title">Presenter, TV3</div>
+			    <div class="name">Ken Sweeney</div>
+			    <div class="job-title">Broadcaster, RTE</div>
 			</div>
 		    <div class="category-title-wrapper">
 				<div class="category-title">Entertainment</div>
@@ -413,12 +418,12 @@
 					<ol class="categories-panel-list">
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">1</span><a href="https://twitter.com/LisaCannonXpose" target="_blank" class="categories-panel-link">@LisaCannonXpose</a>
+								<span class="categories-panel-index">1</span><a href="https://twitter.com/KenSweeney" target="_blank" class="categories-panel-link">@KenSweeney</a>
 							</div>
 						</li>
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">2</span><a href="https://twitter.com/kensweeney" target="_blank" class="categories-panel-link">@kensweeney</a>
+								<span class="categories-panel-index">2</span><a href="https://twitter.com/LisaCannonTV" target="_blank" class="categories-panel-link">@LisaCannonTV</a>
 							</div>
 						</li>
 						<li class="categories-panel-item">
@@ -428,12 +433,12 @@
 						</li>
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">4</span><a href="https://twitter.com/realbarryegan" target="_blank" class="categories-panel-link">@realbarryegan</a>
+								<span class="categories-panel-index">4</span><a href="https://twitter.com/karenkoster" target="_blank" class="categories-panel-link">@karenkoster</a>
 							</div>
 						</li>
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">5</span><a href="https://twitter.com/karenkoster" target="_blank" class="categories-panel-link">@karenkoster</a>
+								<span class="categories-panel-index">5</span><a href="https://twitter.com/RealBarryEgan" target="_blank" class="categories-panel-link">@RealBarryEgan</a>
 							</div>
 						</li>
 					</ol>
@@ -443,11 +448,11 @@
 		  
 		  <div class="category">
 		  	<div class="category-image-wrapper">
-		  		<img class="twitter-profile" src="https://twitter.com/unamullally/profile_image?size=bigger" alt="Twitter Profile Image">
+		  		<img class="twitter-profile" src="https://twitter.com/davidmcw/profile_image?size=bigger" alt="Twitter Profile Image">
 		  	</div>
 		  	<div class="category-winner">
-			    <div class="name">Una Mullally</div>
-			    <div class="job-title">Columnist, Irish Times</div>
+			    <div class="name">David McWilliams</div>
+			    <div class="job-title">Columnist, Sunday Business Post</div>
 			</div>
 		    <div class="category-title-wrapper">
 				<div class="category-title">Columnist</div>
@@ -459,27 +464,32 @@
 					<ol class="categories-panel-list">
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">1</span><a href="https://twitter.com/unamullally" target="_blank" class="categories-panel-link">@unamullally</a>
+								<span class="categories-panel-index">1</span><a href="https://twitter.com/davidmcw" target="_blank" class="categories-panel-link">@davidmcw</a>
 							</div>
 						</li>
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">2</span><a href="https://twitter.com/davidmcw" target="_blank" class="categories-panel-link">@davidmcw</a>
+								<span class="categories-panel-index">2</span><a href="https://twitter.com/elainebyrne" target="_blank" class="categories-panel-link">@elainebyrne</a>
 							</div>
 						</li>
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">3</span><a href="https://twitter.com/elainebyrne" target="_blank" class="categories-panel-link">@elainebyrne</a>
+								<span class="categories-panel-index">3</span><a href="https://twitter.com/unamullally" target="_blank" class="categories-panel-link">@unamullally</a>
 							</div>
 						</li>
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">4</span><a href="https://twitter.com/roisiningle" target="_blank" class="categories-panel-link">@roisiningle</a>
+								<span class="categories-panel-index">4</span><a href="https://twitter.com/colettebrowne" target="_blank" class="categories-panel-link">@colettebrowne</a>
 							</div>
 						</li>
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">5</span><a href="https://twitter.com/GTCost" target="_blank" class="categories-panel-link">@GTCost</a>
+								<span class="categories-panel-index">5=</span><a href="https://twitter.com/GeneKerrigan" target="_blank" class="categories-panel-link">@GeneKerrigan</a>
+							</div>
+						</li>
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">5=</span><a href="https://twitter.com/stephenkinsella" target="_blank" class="categories-panel-link">@stephenkinsella</a>
 							</div>
 						</li>
 					</ol>
@@ -525,7 +535,7 @@
 						</li>
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">5</span><a href="https://twitter.com/sburx" target="_blank" class="categories-panel-link">@sburx</a>
+								<span class="categories-panel-index">5</span><a href="https://twitter.com/ciarakellydoc" target="_blank" class="categories-panel-link">@ciarakellydoc</a>
 							</div>
 						</li>
 					</ol>
@@ -535,11 +545,11 @@
 		  
 		  <div class="category">
 		  	<div class="category-image-wrapper">
-		  		<img class="twitter-profile" src="https://twitter.com/gnelis/profile_image?size=bigger" alt="Twitter Profile Image">
+		  		<img class="twitter-profile" src="https://twitter.com/MrKeithMahon/profile_image?size=bigger" alt="Twitter Profile Image">
 		  	</div>
 		  	<div class="category-winner">
-			    <div class="name">Gillian Nelis</div>
-			    <div class="job-title">Sunday Business Post</div>
+			    <div class="name">Keith Mahon</div>
+			    <div class="job-title">Founder / MD thetaste.ie</div>
 			</div>
 		    <div class="category-title-wrapper">
 				<div class="category-title">Food &amp; Drink</div>
@@ -551,27 +561,27 @@
 					<ol class="categories-panel-list">
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">1</span><a href="https://twitter.com/gnelis" target="_blank" class="categories-panel-link">@gnelis</a>
+								<span class="categories-panel-index">1</span><a href="https://twitter.com/MrKeithMahon" target="_blank" class="categories-panel-link">@MrKeithMahon</a>
 							</div>
 						</li>
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">2</span><a href="https://twitter.com/tomdoorley" target="_blank" class="categories-panel-link">@tomdoorley</a>
+								<span class="categories-panel-index">2</span><a href="https://twitter.com/gnelis" target="_blank" class="categories-panel-link">@gnelis</a>
 							</div>
 						</li>
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">3</span><a href="https://twitter.com/LucindasIreland" target="_blank" class="categories-panel-link">@LucindasIreland</a>
+								<span class="categories-panel-index">3</span><a href="https://twitter.com/mcdigby" target="_blank" class="categories-panel-link">@mcdigby</a>
 							</div>
 						</li>
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">4</span><a href="https://twitter.com/mcdigby" target="_blank" class="categories-panel-link">@mcdigby</a>
+								<span class="categories-panel-index">4</span><a href="https://twitter.com/tomdoorley" target="_blank" class="categories-panel-link">@tomdoorley</a>
 							</div>
 						</li>
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">5</span><a href="https://twitter.com/LillyHiggins" target="_blank" class="categories-panel-link">@LillyHiggins</a>
+								<span class="categories-panel-index">5</span><a href="https://twitter.com/LucindasIreland" target="_blank" class="categories-panel-link">@LucindasIreland</a>
 							</div>
 						</li>
 					</ol>
@@ -581,11 +591,11 @@
 		  
 		  <div class="category">
 		  	<div class="category-image-wrapper">
-		  		<img class="twitter-profile" src="https://twitter.com/pfmflan/profile_image?size=bigger" alt="Twitter Profile Image">
+		  		<img class="twitter-profile" src="https://twitter.com/BerniceHarrison/profile_image?size=bigger" alt="Twitter Profile Image">
 		  	</div>
 		  	<div class="category-winner">
-			    <div class="name">Peter Flanagan</div>
-			    <div class="job-title">Commercial Property Editor, Independent News &amp; Media</div>
+			    <div class="name">Bernice Harrison</div>
+			    <div class="job-title">Journalist, Irish Times</div>
 			</div>
 		    <div class="category-title-wrapper">
 				<div class="category-title">Property</div>
@@ -597,12 +607,12 @@
 					<ol class="categories-panel-list">
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">1</span><a href="https://twitter.com/pfmflan" target="_blank" class="categories-panel-link">@pfmflan</a>
+								<span class="categories-panel-index">1</span><a href="https://twitter.com/BerniceHarrison" target="_blank" class="categories-panel-link">@BerniceHarrison</a>
 							</div>
 						</li>
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">2</span><a href="https://twitter.com/LindaDaly19" target="_blank" class="categories-panel-link">@LindaDaly19</a>
+								<span class="categories-panel-index">2</span><a href="https://twitter.com/pfmflan" target="_blank" class="categories-panel-link">@pfmflan</a>
 							</div>
 						</li>
 						<li class="categories-panel-item">
@@ -612,7 +622,7 @@
 						</li>
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">4</span><a href="https://twitter.com/Markkhere" target="_blank" class="categories-panel-link">@Markkhere</a>
+								<span class="categories-panel-index">4</span><a href="https://twitter.com/RonaldQ2016" target="_blank" class="categories-panel-link">@RonaldQ2016</a>
 							</div>
 						</li>
 						<li class="categories-panel-item">
@@ -627,11 +637,11 @@
 		  
 		  <div class="category">
 		  	<div class="category-image-wrapper">
-		  		<img class="twitter-profile" src="https://twitter.com/BrendanCourtney/profile_image?size=bigger" alt="Twitter Profile Image">
+		  		<img class="twitter-profile" src="https://twitter.com/Darrenken/profile_image?size=bigger" alt="Twitter Profile Image">
 		  	</div>
 		  	<div class="category-winner">
-			    <div class="name">Brendan Courtney</div>
-			    <div class="job-title">Broadcaster, frockadvisor.com</div>
+			    <div class="name">Darren Kennedy</div>
+			    <div class="job-title">Fashion &amp; Beauty, Unaffiliated</div>
 			</div>
 		    <div class="category-title-wrapper">
 				<div class="category-title">Fashion</div>
@@ -643,27 +653,27 @@
 					<ol class="categories-panel-list">
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">1</span><a href="https://twitter.com/BrendanCourtney" target="_blank" class="categories-panel-link">@BrendanCourtney</a>
+								<span class="categories-panel-index">1</span><a href="https://twitter.com/Darrenken" target="_blank" class="categories-panel-link">@Darrenken</a>
 							</div>
 						</li>
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">2</span><a href="https://twitter.com/bairbrepower" target="_blank" class="categories-panel-link">@bairbrepower</a>
+								<span class="categories-panel-index">2</span><a href="https://twitter.com/sonyalennon" target="_blank" class="categories-panel-link">@sonyalennon</a>
 							</div>
 						</li>
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">3</span><a href="https://twitter.com/sonyalennon" target="_blank" class="categories-panel-link">@sonyalennon</a>
+								<span class="categories-panel-index">3</span><a href="https://twitter.com/bairbrepower" target="_blank" class="categories-panel-link">@bairbrepower</a>
 							</div>
 						</li>
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">4</span><a href="https://twitter.com/Darrenken" target="_blank" class="categories-panel-link">@Darrenken</a>
+								<span class="categories-panel-index">4</span><a href="https://twitter.com/BrendanCourtney" target="_blank" class="categories-panel-link">@BrendanCourtney</a>
 							</div>
 						</li>
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">5</span><a href="https://twitter.com/DeeMcQuillan" target="_blank" class="categories-panel-link">@DeeMcQuillan</a>
+								<span class="categories-panel-index">5</span><a href="https://twitter.com/mcbride_caitlin" target="_blank" class="categories-panel-link">@mcbride_caitlin</a>
 							</div>
 						</li>
 					</ol>
@@ -699,17 +709,17 @@
 						</li>
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">3</span><a href="https://twitter.com/sineadcrowley" target="_blank" class="categories-panel-link">@sineadcrowley</a>
+								<span class="categories-panel-index">3</span><a href="https://twitter.com/eithneshortall" target="_blank" class="categories-panel-link">@eithneshortall</a>
 							</div>
 						</li>
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">4</span><a href="https://twitter.com/DonaldClarke63" target="_blank" class="categories-panel-link">@DonaldClarke63</a>
+								<span class="categories-panel-index">4</span><a href="https://twitter.com/sineadcrowley" target="_blank" class="categories-panel-link">@sineadcrowley</a>
 							</div>
 						</li>
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">5</span><a href="https://twitter.com/esthermccarthy" target="_blank" class="categories-panel-link">@esthermccarthy</a>
+								<span class="categories-panel-index">5</span><a href="https://twitter.com/MartinDoyleIT" target="_blank" class="categories-panel-link">@MartinDoyleIT</a>
 							</div>
 						</li>
 					</ol>
@@ -719,11 +729,11 @@
 		  
 		  <div class="category">
 		  	<div class="category-image-wrapper">
-		  		<img class="twitter-profile" src="https://twitter.com/davidcochrane/profile_image?size=bigger" alt="Twitter Profile Image">
+		  		<img class="twitter-profile" src="https://twitter.com/franksuntimes/profile_image?size=bigger" alt="Twitter Profile Image">
 		  	</div>
 		  	<div class="category-winner">
-			    <div class="name">David Cochrane</div>
-			    <div class="job-title">Communities Editor, Irish Times</div>
+			    <div class="name">Frank Fitzgibbon</div>
+			    <div class="job-title">Editor, The Sunday Times (Irish Edition)</div>
 			</div>
 		    <div class="category-title-wrapper">
 				<div class="category-title">Editorial</div>
@@ -735,17 +745,17 @@
 					<ol class="categories-panel-list">
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">1</span><a href="https://twitter.com/davidcochrane" target="_blank" class="categories-panel-link">@davidcochrane</a>
+								<span class="categories-panel-index">1</span><a href="https://twitter.com/franksuntimes" target="_blank" class="categories-panel-link">@franksuntimes</a>
 							</div>
 						</li>
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">2</span><a href="https://twitter.com/franksuntimes" target="_blank" class="categories-panel-link">@franksuntimes</a>
+								<span class="categories-panel-index">2</span><a href="https://twitter.com/davidcochrane" target="_blank" class="categories-panel-link">@davidcochrane</a>
 							</div>
 						</li>
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">3</span><a href="https://twitter.com/BiddyEarly" target="_blank" class="categories-panel-link">@BiddyEarly</a>
+								<span class="categories-panel-index">3</span><a href="https://twitter.com/PaddyMcKenna" target="_blank" class="categories-panel-link">@PaddyMcKenna</a>
 							</div>
 						</li>
 						<li class="categories-panel-item">
@@ -755,7 +765,7 @@
 						</li>
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">5</span><a href="https://twitter.com/fionnansheahan" target="_blank" class="categories-panel-link">@fionnansheahan</a>
+								<span class="categories-panel-index">5</span><a href="https://twitter.com/KOSullivanIT" target="_blank" class="categories-panel-link">@KOSullivanIT</a>
 							</div>
 						</li>
 					</ol>
@@ -765,11 +775,11 @@
 		  
 		  <div class="category">
 		  	<div class="category-image-wrapper">
-		  		<img class="twitter-profile" src="https://twitter.com/lovelygirlybits/profile_image?size=bigger" alt="Twitter Profile Image">
+		  		<img class="twitter-profile" src="https://twitter.com/berminghamlaura/profile_image?size=bigger" alt="Twitter Profile Image">
 		  	</div>
 		  	<div class="category-winner">
-			    <div class="name">Karen Constantine</div>
-			    <div class="job-title">Blogger, Lovely Girlie Bits</div>
+			    <div class="name">Laura Bermingham</div>
+			    <div class="job-title">Beauty Columnist / Reporter, Unaffiliated</div>
 			</div>
 		    <div class="category-title-wrapper">
 				<div class="category-title">Beauty</div>
@@ -781,27 +791,165 @@
 					<ol class="categories-panel-list">
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">1</span><a href="https://twitter.com/lovelygirlybits" target="_blank" class="categories-panel-link">@lovelygirlybits</a>
+								<span class="categories-panel-index">1</span><a href="https://twitter.com/berminghamlaura" target="_blank" class="categories-panel-link">@berminghamlaura</a>
 							</div>
 						</li>
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">2</span><a href="https://twitter.com/melaniemorris" target="_blank" class="categories-panel-link">@melaniemorris</a>
+								<span class="categories-panel-index">2</span><a href="https://twitter.com/lovelygirlybits" target="_blank" class="categories-panel-link">@lovelygirlybits</a>
 							</div>
 						</li>
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">3</span><a href="https://twitter.com/3namc" target="_blank" class="categories-panel-link">@3namc</a>
+								<span class="categories-panel-index">3</span><a href="https://twitter.com/aislingmkeenan" target="_blank" class="categories-panel-link">@aislingmkeenan</a>
 							</div>
 						</li>
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">4</span><a href="https://twitter.com/fluffyblog" target="_blank" class="categories-panel-link">@fluffyblog</a>
+								<span class="categories-panel-index">4</span><a href="https://twitter.com/melaniemorris" target="_blank" class="categories-panel-link">@melaniemorris</a>
 							</div>
 						</li>
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">5</span><a href="https://twitter.com/berminghamlaura" target="_blank" class="categories-panel-link">@berminghamlaura</a>
+								<span class="categories-panel-index">5</span><a href="https://twitter.com/triona_ie" target="_blank" class="categories-panel-link">@triona_ie</a>
+							</div>
+						</li>
+					</ol>
+				</div>
+		    </div>
+		  </div>
+		  
+		  <div class="category">
+		  	<div class="category-image-wrapper">
+		  		<img class="twitter-profile" src="https://twitter.com/mickthehack/profile_image?size=bigger" alt="Twitter Profile Image">
+		  	</div>
+		  	<div class="category-winner">
+			    <div class="name">Michael O'Toole</div>
+			    <div class="job-title">Crime Correspondent, Irish Daily Star</div>
+			</div>
+		    <div class="category-title-wrapper">
+				<div class="category-title">Crime</div>
+			</div>
+		    <div class="category-icon-wrapper">
+		    	<div class="category-icon category-icon-arts"></div>
+		        <a href="#" class="btn-expand btn-expand-categories">View Top 5</a>
+				<div class="categories-panel">
+					<ol class="categories-panel-list">
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">1</span><a href="https://twitter.com/mickthehack" target="_blank" class="categories-panel-link">@mickthehack</a>
+							</div>
+						</li>
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">2</span><a href="https://twitter.com/nicolatallantsw" target="_blank" class="categories-panel-link">@nicolatallantsw</a>
+							</div>
+						</li>
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">3</span><a href="https://twitter.com/johnmooneyst" target="_blank" class="categories-panel-link">@johnmooneyst</a>
+							</div>
+						</li>
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">4</span><a href="https://twitter.com/EamoD" target="_blank" class="categories-panel-link">@EamoD</a>
+							</div>
+						</li>
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">5</span><a href="https://twitter.com/CormacJOKeeffe" target="_blank" class="categories-panel-link">@CormacJOKeeffe</a>
+							</div>
+						</li>
+					</ol>
+				</div>
+		    </div>
+		  </div>
+		  
+		  <div class="category">
+		  	<div class="category-image-wrapper">
+		  		<img class="twitter-profile" src="https://twitter.com/RealKevinPalmer/profile_image?size=bigger" alt="Twitter Profile Image">
+		  	</div>
+		  	<div class="category-winner">
+			    <div class="name">Kevin Palmer</div>
+			    <div class="job-title">Sports &amp; Showbiz Journalist Sunday World</div>
+			</div>
+		    <div class="category-title-wrapper">
+				<div class="category-title">Tabloids</div>
+			</div>
+		    <div class="category-icon-wrapper">
+		    	<div class="category-icon category-icon-arts"></div>
+		        <a href="#" class="btn-expand btn-expand-categories">View Top 5</a>
+				<div class="categories-panel">
+					<ol class="categories-panel-list">
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">1</span><a href="https://twitter.com/RealKevinPalmer" target="_blank" class="categories-panel-link">@RealKevinPalmer</a>
+							</div>
+						</li>
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">2</span><a href="https://twitter.com/KenSweeney" target="_blank" class="categories-panel-link">@KenSweeney</a>
+							</div>
+						</li>
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">3</span><a href="https://twitter.com/noriordan" target="_blank" class="categories-panel-link">@noriordan</a>
+							</div>
+						</li>
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">4</span><a href="https://twitter.com/KCsixtyseven" target="_blank" class="categories-panel-link">@KCsixtyseven</a>
+							</div>
+						</li>
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">5</span><a href="https://twitter.com/PetesyCarroll" target="_blank" class="categories-panel-link">@PetesyCarroll</a>
+							</div>
+						</li>
+					</ol>
+				</div>
+		    </div>
+		  </div>
+		  
+		  <div class="category">
+		  	<div class="category-image-wrapper">
+		  		<img class="twitter-profile" src="https://twitter.com/MrKeithMahon/profile_image?size=bigger" alt="Twitter Profile Image">
+		  	</div>
+		  	<div class="category-winner">
+			    <div class="name">Keith Mahon</div>
+			    <div class="job-title">Food and Wine, thetaste.ie</div>
+			</div>
+		    <div class="category-title-wrapper">
+				<div class="category-title">Online Only</div>
+			</div>
+		    <div class="category-icon-wrapper">
+		    	<div class="category-icon category-icon-arts"></div>
+		        <a href="#" class="btn-expand btn-expand-categories">View Top 5</a>
+				<div class="categories-panel">
+					<ol class="categories-panel-list">
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">1</span><a href="https://twitter.com/MrKeithMahon" target="_blank" class="categories-panel-link">@MrKeithMahon</a>
+							</div>
+						</li>
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">2</span><a href="https://twitter.com/Woolberto" target="_blank" class="categories-panel-link">@Woolberto</a>
+							</div>
+						</li>
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">3</span><a href="https://twitter.com/PaddyMcKenna" target="_blank" class="categories-panel-link">@PaddyMcKenna</a>
+							</div>
+						</li>
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">4</span><a href="https://twitter.com/christinebohan" target="_blank" class="categories-panel-link">@christinebohan</a>
+							</div>
+						</li>
+						<li class="categories-panel-item">
+							<div class="categories-panel-pos">
+								<span class="categories-panel-index">5</span><a href="https://twitter.com/BiddyEarly" target="_blank" class="categories-panel-link">@BiddyEarly</a>
 							</div>
 						</li>
 					</ol>
