@@ -50,12 +50,12 @@
 						</li>
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">2</span><a href="https://twitter.com/caitrionaperry" target="_blank" class="categories-panel-link">@caitrionaperry</a>
+								<span class="categories-panel-index">2</span><a href="https://twitter.com/CaitrionaPerry" target="_blank" class="categories-panel-link">@CaitrionaPerry</a>
 							</div>
 						</li>
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">3</span><a href="https://twitter.com/sicarswell" target="_blank" class="categories-panel-link">@sicarswell</a>
+								<span class="categories-panel-index">3</span><a href="https://twitter.com/SiCarswell" target="_blank" class="categories-panel-link">@SiCarswell</a>
 							</div>
 						</li>
 						<li class="categories-panel-item">
@@ -65,7 +65,7 @@
 						</li>
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">5</span><a href="https://twitter.com/tconnellyrte" target="_blank" class="categories-panel-link">@tconnellyrte</a>
+								<span class="categories-panel-index">5</span><a href="https://twitter.com/tconnellyRTE" target="_blank" class="categories-panel-link">@tconnellyRTE</a>
 							</div>
 						</li>
 					</ol>
@@ -203,7 +203,7 @@
 						</li>
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">5</span><a href="https://twitter.com/martinafitzg" target="_blank" class="categories-panel-link">@martinafitzg</a>
+								<span class="categories-panel-index">5</span><a href="https://twitter.com/MartinaFitzg" target="_blank" class="categories-panel-link">@MartinaFitzg</a>
 							</div>
 						</li>
 					</ol>
@@ -239,7 +239,7 @@
 						</li>
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">3</span><a href="https://twitter.com/patkennynt" target="_blank" class="categories-panel-link">@patkennynt</a>
+								<span class="categories-panel-index">3</span><a href="https://twitter.com/PatKennyNT" target="_blank" class="categories-panel-link">@PatKennyNT</a>
 							</div>
 						</li>
 						<li class="categories-panel-item">
@@ -392,7 +392,7 @@
 						</li>
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">5=</span><a href="https://twitter.com/simoncocking" target="_blank" class="categories-panel-link">@simoncocking</a>
+								<span class="categories-panel-index">5=</span><a href="https://twitter.com/SimonCocking" target="_blank" class="categories-panel-link">@SimonCocking</a>
 							</div>
 						</li>
 					</ol>
@@ -469,12 +469,12 @@
 						</li>
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">2</span><a href="https://twitter.com/elainebyrne" target="_blank" class="categories-panel-link">@elainebyrne</a>
+								<span class="categories-panel-index">2</span><a href="https://twitter.com/ElaineByrne" target="_blank" class="categories-panel-link">@ElaineByrne</a>
 							</div>
 						</li>
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">3</span><a href="https://twitter.com/unamullally" target="_blank" class="categories-panel-link">@unamullally</a>
+								<span class="categories-panel-index">3</span><a href="https://twitter.com/UnaMullally" target="_blank" class="categories-panel-link">@UnaMullally</a>
 							</div>
 						</li>
 						<li class="categories-panel-item">
@@ -499,7 +499,7 @@
 		  
 		  <div class="category">
 		  	<div class="category-image-wrapper">
-		  		<img class="twitter-profile" src="https://twitter.com/fergalbowers/profile_image?size=bigger" alt="Twitter Profile Image">
+		  		<img class="twitter-profile" src="https://twitter.com/FergalBowers/profile_image?size=bigger" alt="Twitter Profile Image">
 		  	</div>
 		  	<div class="category-winner">
 			    <div class="name">Fergal Bowers</div>
@@ -515,7 +515,7 @@
 					<ol class="categories-panel-list">
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">1</span><a href="https://twitter.com/fergalbowers" target="_blank" class="categories-panel-link">@fergalbowers</a>
+								<span class="categories-panel-index">1</span><a href="https://twitter.com/FergalBowers" target="_blank" class="categories-panel-link">@FergalBowers</a>
 							</div>
 						</li>
 						<li class="categories-panel-item">
@@ -714,7 +714,7 @@
 						</li>
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">4</span><a href="https://twitter.com/sineadcrowley" target="_blank" class="categories-panel-link">@sineadcrowley</a>
+								<span class="categories-panel-index">4</span><a href="https://twitter.com/SineadCrowley" target="_blank" class="categories-panel-link">@SineadCrowley</a>
 							</div>
 						</li>
 						<li class="categories-panel-item">
@@ -729,7 +729,7 @@
 		  
 		  <div class="category">
 		  	<div class="category-image-wrapper">
-		  		<img class="twitter-profile" src="https://twitter.com/franksuntimes/profile_image?size=bigger" alt="Twitter Profile Image">
+		  		<img class="twitter-profile" src="https://twitter.com/FrankSunTimes/profile_image?size=bigger" alt="Twitter Profile Image">
 		  	</div>
 		  	<div class="category-winner">
 			    <div class="name">Frank Fitzgibbon</div>
@@ -745,7 +745,7 @@
 					<ol class="categories-panel-list">
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">1</span><a href="https://twitter.com/franksuntimes" target="_blank" class="categories-panel-link">@franksuntimes</a>
+								<span class="categories-panel-index">1</span><a href="https://twitter.com/FrankSunTimes" target="_blank" class="categories-panel-link">@FrankSunTimes</a>
 							</div>
 						</li>
 						<li class="categories-panel-item">
@@ -944,7 +944,7 @@
 						</li>
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">4</span><a href="https://twitter.com/christinebohan" target="_blank" class="categories-panel-link">@christinebohan</a>
+								<span class="categories-panel-index">4</span><a href="https://twitter.com/ChristineBohan" target="_blank" class="categories-panel-link">@ChristineBohan</a>
 							</div>
 						</li>
 						<li class="categories-panel-item">

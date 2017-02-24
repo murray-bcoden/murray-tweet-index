@@ -251,7 +251,7 @@
 						</li>
 						<li class="params-panel-item">
 							<div class="params-panel-pos">
-								<span class="params-panel-index">3</span><a href="https://twitter.com/fergalbowers" target="_blank" class="params-panel-link">@fergalbowers</a>
+								<span class="params-panel-index">3</span><a href="https://twitter.com/FergalBowers" target="_blank" class="params-panel-link">@FergalBowers</a>
 							</div>
 							<div class="graph-bar params-bar"><span></span></div>
 							<div class="params-panel-num">74.39%</div>
@@ -312,7 +312,7 @@
 						</li>
 						<li class="params-panel-item">
 							<div class="params-panel-pos">
-								<span class="params-panel-index">4</span><a href="https://twitter.com/fergalbowers" target="_blank" class="params-panel-link">@fergalbowers</a>
+								<span class="params-panel-index">4</span><a href="https://twitter.com/FergalBowers" target="_blank" class="params-panel-link">@FergalBowers</a>
 							</div>
 							<div class="graph-bar params-bar"><span></span></div>
 							<div class="params-panel-num">84.07%</div>

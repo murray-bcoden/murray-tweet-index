@@ -43,7 +43,7 @@
 			    <g id="people">
 			      <g class="person">
 			        <text class="job-title serif" transform="translate(484 201.09)">News, RTE</text>
-			        <text class="twitter-handle sans-semi" transform="translate(576 184.1)">@ingridmileyrte</text>
+			        <text class="twitter-handle sans-semi" transform="translate(576 184.1)">@ingridmileyRTE</text>
 			        <text class="person-name sans-semi" transform="translate(474 183.09)">INGRID MILEY</text>
 			      </g>
 			      <g class="person">
@@ -103,7 +103,7 @@
 					<p class="gain-job">Business, Irish Independent</p>
 				</li>
 				<li class="gains-people-item">
-					<h3 class="gain-title"><span class="gain-number">55</span> <span class="gain-name">Ingrid Miley</span> @ingridmileyrte</h3>
+					<h3 class="gain-title"><span class="gain-number">55</span> <span class="gain-name">Ingrid Miley</span> @ingridmileyRTE</h3>
 					<p class="gain-job">News, RTÉ</p>
 				</li>
 			</ol>

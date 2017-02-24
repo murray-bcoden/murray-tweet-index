@@ -66,13 +66,13 @@
 							</a>
 						</li>
 						<li class="top-item">
-							<a href="https://twitter.com/patkennynt" class="top-link" target="_blank">
+							<a href="https://twitter.com/PatKennyNT" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/patkennynt/profile_image?size=bigger" alt="" class="top-image lazy">
+									<img data-original="http://twitter.com/PatKennyNT/profile_image?size=bigger" alt="" class="top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">4</div>
-									<div class="top-handle">@patkennynt</div>
+									<div class="top-handle">@PatKennyNT</div>
 									<div class="top-name">Pat Kenny</div>
 								</div>
 							</a>
@@ -114,13 +114,13 @@
 							</a>
 						</li>
 						<li class="top-item">
-							<a href="https://twitter.com/unamullally" class="top-link" target="_blank">
+							<a href="https://twitter.com/UnaMullally" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/unamullally/profile_image?size=bigger" alt="" class="top-image lazy">
+									<img data-original="http://twitter.com/UnaMullally/profile_image?size=bigger" alt="" class="top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">8</div>
-									<div class="top-handle">@unamullally</div>
+									<div class="top-handle">@UnaMullally</div>
 									<div class="top-name">Una Mullally</div>
 								</div>
 							</a>
@@ -138,13 +138,13 @@
 							</a>
 						</li>
 						<li class="top-item">
-							<a href="https://twitter.com/caitrionaperry" class="top-link" target="_blank">
+							<a href="https://twitter.com/CaitrionaPerry" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/caitrionaperry/profile_image?size=bigger" alt="" class="top-image lazy">
+									<img data-original="http://twitter.com/CaitrionaPerry/profile_image?size=bigger" alt="" class="top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">10</div>
-									<div class="top-handle">@caitrionaperry</div>
+									<div class="top-handle">@CaitrionaPerry</div>
 									<div class="top-name">Catriona Perry</div>
 								</div>
 							</a>
@@ -222,13 +222,13 @@
 							</a>
 						</li>
 						<li class="top-item">
-							<a href="https://twitter.com/sicarswell" class="top-link" target="_blank">
+							<a href="https://twitter.com/SiCarswell" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/sicarswell/profile_image?size=bigger" alt="" class="top-image lazy">
+									<img data-original="http://twitter.com/SiCarswell/profile_image?size=bigger" alt="" class="top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">17</div>
-									<div class="top-handle">@sicarswell</div>
+									<div class="top-handle">@SiCarswell</div>
 									<div class="top-name">Simon Carswell</div>
 								</div>
 							</a>
@@ -270,13 +270,13 @@
 							</a>
 						</li>
 						<li class="top-item">
-							<a href="https://twitter.com/fergalbowers" class="top-link" target="_blank">
+							<a href="https://twitter.com/FergalBowers" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/fergalbowers/profile_image?size=bigger" alt="" class="top-image lazy">
+									<img data-original="http://twitter.com/FergalBowers/profile_image?size=bigger" alt="" class="top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">21</div>
-									<div class="top-handle">@fergalbowers</div>
+									<div class="top-handle">@FergalBowers</div>
 									<div class="top-name">Ferghal Bowers</div>
 								</div>
 							</a>
@@ -330,13 +330,13 @@
 							</a>
 						</li>
 						<li class="top-item">
-							<a href="https://twitter.com/franksuntimes" class="top-link" target="_blank">
+							<a href="https://twitter.com/FrankSunTimes" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/franksuntimes/profile_image?size=bigger" alt="" class="top-image lazy">
+									<img data-original="http://twitter.com/FrankSunTimes/profile_image?size=bigger" alt="" class="top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">26</div>
-									<div class="top-handle">@franksuntimes</div>
+									<div class="top-handle">@FrankSunTimes</div>
 									<div class="top-name">Frank Fitzgibbon</div>
 								</div>
 							</a>
@@ -402,13 +402,13 @@
 							</a>
 						</li>
 						<li class="top-item">
-							<a href="https://twitter.com/michaelc_rte" class="top-link" target="_blank">
+							<a href="https://twitter.com/MichaelC_RTE" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/michaelc_rte/profile_image?size=bigger" alt="" class="top-image lazy">
+									<img data-original="http://twitter.com/MichaelC_RTE/profile_image?size=bigger" alt="" class="top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">32</div>
-									<div class="top-handle">@michaelc_rte</div>
+									<div class="top-handle">@MichaelC_RTE</div>
 									<div class="top-name">Michael Corcoran</div>
 								</div>
 							</a>
@@ -450,13 +450,13 @@
 							</a>
 						</li>
 						<li class="top-item">
-							<a href="https://twitter.com/tconnellyrte" class="top-link" target="_blank">
+							<a href="https://twitter.com/tconnellyRTE" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/tconnellyrte/profile_image?size=bigger" alt="" class="top-image lazy">
+									<img data-original="http://twitter.com/tconnellyRTE/profile_image?size=bigger" alt="" class="top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">36</div>
-									<div class="top-handle">@tconnellyrte</div>
+									<div class="top-handle">@tconnellyRTE</div>
 									<div class="top-name">Tony Connelly</div>
 								</div>
 							</a>
@@ -498,13 +498,13 @@
 							</a>
 						</li>
 						<li class="top-item">
-							<a href="https://twitter.com/martinafitzg" class="top-link" target="_blank">
+							<a href="https://twitter.com/MartinaFitzg" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/martinafitzg/profile_image?size=bigger" alt="" class="top-image lazy">
+									<img data-original="http://twitter.com/MartinaFitzg/profile_image?size=bigger" alt="" class="top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">40</div>
-									<div class="top-handle">@martinafitzg</div>
+									<div class="top-handle">@MartinaFitzg</div>
 									<div class="top-name">Martina Fitzgerald</div>
 								</div>
 							</a>
@@ -606,13 +606,13 @@
 							</a>
 						</li>
 						<li class="top-item">
-							<a href="https://twitter.com/ingridmileyrte" class="top-link" target="_blank">
+							<a href="https://twitter.com/ingridmileyRTE" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/ingridmileyrte/profile_image?size=bigger" alt="" class="top-image lazy">
+									<img data-original="http://twitter.com/ingridmileyRTE/profile_image?size=bigger" alt="" class="top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">49</div>
-									<div class="top-handle">@ingridmileyrte</div>
+									<div class="top-handle">@ingridmileyRTE</div>
 									<div class="top-name">Ingrid Miley</div>
 								</div>
 							</a>
@@ -846,13 +846,13 @@
 							</a>
 						</li>
 						<li class="top-item">
-							<a href="https://twitter.com/paulkimmage" class="top-link" target="_blank">
+							<a href="https://twitter.com/PaulKimmage" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/paulkimmage/profile_image?size=bigger" alt="" class="top-image lazy">
+									<img data-original="http://twitter.com/PaulKimmage/profile_image?size=bigger" alt="" class="top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">69</div>
-									<div class="top-handle">@paulkimmage</div>
+									<div class="top-handle">@PaulKimmage</div>
 									<div class="top-name">Paul Kimmage</div>
 								</div>
 							</a>
@@ -966,25 +966,25 @@
 							</a>
 						</li>
 						<li class="top-item">
-							<a href="https://twitter.com/EwanMackenna" class="top-link" target="_blank">
+							<a href="https://twitter.com/EwanMacKenna" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/EwanMackenna/profile_image?size=bigger" alt="" class="top-image lazy">
+									<img data-original="http://twitter.com/EwanMacKenna/profile_image?size=bigger" alt="" class="top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">79</div>
-									<div class="top-handle">@EwanMackenna</div>
+									<div class="top-handle">@EwanMacKenna</div>
 									<div class="top-name">Ewan McKenna</div>
 								</div>
 							</a>
 						</li>
 						<li class="top-item">
-							<a href="https://twitter.com/eoinmcdevitt" class="top-link" target="_blank">
+							<a href="https://twitter.com/EoinMcDevitt" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/eoinmcdevitt/profile_image?size=bigger" alt="" class="top-image lazy">
+									<img data-original="http://twitter.com/EoinMcDevitt/profile_image?size=bigger" alt="" class="top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">80</div>
-									<div class="top-handle">@eoinmcdevitt</div>
+									<div class="top-handle">@EoinMcDevitt</div>
 									<div class="top-name">Eoin McDevitt</div>
 								</div>
 							</a>
@@ -1002,13 +1002,13 @@
 							</a>
 						</li>
 						<li class="top-item">
-							<a href="https://twitter.com/malachyclerkin" class="top-link" target="_blank">
+							<a href="https://twitter.com/MalachyClerkin" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/malachyclerkin/profile_image?size=bigger" alt="" class="top-image lazy">
+									<img data-original="http://twitter.com/MalachyClerkin/profile_image?size=bigger" alt="" class="top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">82</div>
-									<div class="top-handle">@malachyclerkin</div>
+									<div class="top-handle">@MalachyClerkin</div>
 									<div class="top-name">Malachy Clerkin</div>
 								</div>
 							</a>
@@ -1026,13 +1026,13 @@
 							</a>
 						</li>
 						<li class="top-item">
-							<a href="https://twitter.com/miriamocal" class="top-link" target="_blank">
+							<a href="https://twitter.com/MiriamOCal" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/miriamocal/profile_image?size=bigger" alt="" class="top-image lazy">
+									<img data-original="http://twitter.com/MiriamOCal/profile_image?size=bigger" alt="" class="top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">84</div>
-									<div class="top-handle">@miriamocal</div>
+									<div class="top-handle">@MiriamOCal</div>
 									<div class="top-name">Miriam O'Callaghan</div>
 								</div>
 							</a>
@@ -1074,13 +1074,13 @@
 							</a>
 						</li>
 						<li class="top-item">
-							<a href="https://twitter.com/christinebohan" class="top-link" target="_blank">
+							<a href="https://twitter.com/ChristineBohan" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/christinebohan/profile_image?size=bigger" alt="" class="top-image lazy">
+									<img data-original="http://twitter.com/ChristineBohan/profile_image?size=bigger" alt="" class="top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">88</div>
-									<div class="top-handle">@christinebohan</div>
+									<div class="top-handle">@ChristineBohan</div>
 									<div class="top-name">Christine Bohan</div>
 								</div>
 							</a>
@@ -1122,13 +1122,13 @@
 							</a>
 						</li>
 						<li class="top-item">
-							<a href="https://twitter.com/kittyhollandit" class="top-link" target="_blank">
+							<a href="https://twitter.com/KittyHollandIT" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/kittyhollandit/profile_image?size=bigger" alt="" class="top-image lazy">
+									<img data-original="http://twitter.com/KittyHollandIT/profile_image?size=bigger" alt="" class="top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">92</div>
-									<div class="top-handle">@kittyhollandit</div>
+									<div class="top-handle">@KittyHollandIT</div>
 									<div class="top-name">Kitty Holland</div>
 								</div>
 							</a>
@@ -1170,13 +1170,13 @@
 							</a>
 						</li>
 						<li class="top-item">
-							<a href="https://twitter.com/DionFanning" class="top-link" target="_blank">
+							<a href="https://twitter.com/dionfanning" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/DionFanning/profile_image?size=bigger" alt="" class="top-image lazy">
+									<img data-original="http://twitter.com/dionfanning/profile_image?size=bigger" alt="" class="top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">96</div>
-									<div class="top-handle">@DionFanning</div>
+									<div class="top-handle">@dionfanning</div>
 									<div class="top-name">Dion Fanning</div>
 								</div>
 							</a>
