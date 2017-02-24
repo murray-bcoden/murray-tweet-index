@@ -353,7 +353,7 @@ jQuery(document).ready(function($){
     ========================================================================== */  
 
 	var total = 218;
-	var vals = [117, 131, 143, 191, 218];
+	var vals = [55, 62, 67, 142, 155];
 	var percs;
 	var baseTime = 0.7;
 
@@ -367,7 +367,7 @@ jQuery(document).ready(function($){
 	function initPercs() {
 		percs = [];
 		for(i=0; i<vals.length; i++) {
-			percs.push(100*vals[i]/218);
+			percs.push(100*vals[i]/155);
 		}
 	};
 

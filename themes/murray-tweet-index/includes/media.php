@@ -49,71 +49,96 @@
 					<li class="most-list-item">
 						<div class="most-outlet">RTÉ</div>
 						<div class="graph-bar most-bar"><span style="width: 100%"></span></div>
-						<div class="most-num">21</div>
-					</li>
-					<li class="most-list-item">
-						<div class="most-outlet">Irish Times</div>
-						<div class="graph-bar most-bar"><span style="width: 85.7%"></span></div>
 						<div class="most-num">18</div>
 					</li>
 					<li class="most-list-item">
 						<div class="most-outlet">Independent News &amp; Media</div>
-						<div class="graph-bar most-bar"><span style="width: 71.40%"></span></div>
+						<div class="graph-bar most-bar"><span style="width: 88.88%"></span></div>
+						<div class="most-num">16</div>
+					</li>
+					<li class="most-list-item">
+						<div class="most-outlet">Irish Times</div>
+						<div class="graph-bar most-bar"><span style="width: 83.33%"></span></div>
 						<div class="most-num">15</div>
 					</li>
 					<li class="most-list-item">
+						<div class="most-outlet">Unaffiliated</div>
+						<div class="graph-bar most-bar"><span style="width: 50.00%"></span></div>
+						<div class="most-num">9</div>
+					</li>
+					<li class="most-list-item">
 						<div class="most-outlet">Newstalk</div>
-						<div class="graph-bar most-bar"><span style="width: 38.1%"></span></div>
+						<div class="graph-bar most-bar"><span style="width: 44.44%"></span></div>
 						<div class="most-num">8</div>
 					</li>
 					<li class="most-list-item">
 						<div class="most-outlet">Sunday Business Post</div>
-						<div class="graph-bar most-bar"><span style="width: 19%"></span></div>
-						<div class="most-num">4</div>
-					</li>
-					<li class="most-list-item">
-						<div class="most-outlet">Sunday Times</div>
-						<div class="graph-bar most-bar"><span style="width: 19%"></span></div>
-						<div class="most-num">4</div>
+						<div class="graph-bar most-bar"><span style="width: 44.44%"></span></div>
+						<div class="most-num">8</div>
 					</li>
 					<li class="most-list-item">
 						<div class="most-outlet">Irish Examiner</div>
-						<div class="graph-bar most-bar"><span style="width: 14.2%"></span></div>
+						<div class="graph-bar most-bar"><span style="width: 22.22%"></span></div>
+						<div class="most-num">4</div>
+					</li>
+					<li class="most-list-item">
+						<div class="most-outlet">Today FM</div>
+						<div class="graph-bar most-bar"><span style="width: 16.67%"></span></div>
+						<div class="most-num">3</div>
+					</li>
+					<li class="most-list-item">
+						<div class="most-outlet">Joe.ie / Maximum Media</div>
+						<div class="graph-bar most-bar"><span style="width: 16.67%"></span></div>
+						<div class="most-num">3</div>
+					</li>
+					<li class="most-list-item">
+						<div class="most-outlet">Sunday Times / Times.ie</div>
+						<div class="graph-bar most-bar"><span style="width: 16.67%"></span></div>
+						<div class="most-num">3</div>
+					</li>
+					<li class="most-list-item">
+						<div class="most-outlet">The Irish Sun</div>
+						<div class="graph-bar most-bar"><span style="width: 16.67%"></span></div>
 						<div class="most-num">3</div>
 					</li>
 					<li class="most-list-item">
 						<div class="most-outlet">journal.ie</div>
-						<div class="graph-bar most-bar"><span style="width: 9.5%"></span></div>
+						<div class="graph-bar most-bar"><span style="width: 11.11%"></span></div>
+						<div class="most-num">2</div>
+					</li>
+					<li class="most-list-item">
+						<div class="most-outlet">Irish Daily Star</div>
+						<div class="graph-bar most-bar"><span style="width: 11.11%"></span></div>
 						<div class="most-num">2</div>
 					</li>
 					<li class="most-list-item">
 						<div class="most-outlet">TV 3</div>
 						<div class="graph-bar most-bar"><span style="width: 9.5%"></span></div>
-						<div class="most-num">2</div>
+						<div class="most-num">1</div>
 					</li>
 					<li class="most-list-item">
-						<div class="most-outlet">Today FM</div>
-						<div class="graph-bar most-bar"><span style="width: 9.5%"></span></div>
-						<div class="most-num">2</div>
+						<div class="most-outlet">Irish Mirror</div>
+						<div class="graph-bar most-bar"><span style="width: 5.55%"></span></div>
+						<div class="most-num">1</div>
+					</li>
+					<li class="most-list-item">
+						<div class="most-outlet">Sunday World</div>
+						<div class="graph-bar most-bar"><span style="width: 5.55%"></span></div>
+						<div class="most-num">1</div>
+					</li>
+					<li class="most-list-item">
+						<div class="most-outlet">thetaste.ie</div>
+						<div class="graph-bar most-bar"><span style="width: 5.55%"></span></div>
+						<div class="most-num">1</div>
+					</li>
+					<li class="most-list-item">
+						<div class="most-outlet">Impartial Reporter</div>
+						<div class="graph-bar most-bar"><span style="width: 5.55%"></span></div>
+						<div class="most-num">1</div>
 					</li>
 					<li class="most-list-item">
 						<div class="most-outlet">UTV Ireland</div>
-						<div class="graph-bar most-bar"><span style="width: 4.8%"></span></div>
-						<div class="most-num">1</div>
-					</li>
-					<li class="most-list-item">
-						<div class="most-outlet">Daily Mail</div>
-						<div class="graph-bar most-bar"><span style="width: 4.8%"></span></div>
-						<div class="most-num">1</div>
-					</li>
-					<li class="most-list-item">
-						<div class="most-outlet">The Irish Sun</div>
-						<div class="graph-bar most-bar"><span style="width: 4.8%"></span></div>
-						<div class="most-num">1</div>
-					</li>
-					<li class="most-list-item">
-						<div class="most-outlet">Irish Daily Star</div>
-						<div class="graph-bar most-bar"><span style="width: 4.8%"></span></div>
+						<div class="graph-bar most-bar"><span style="width: 5.55%"></span></div>
 						<div class="most-num">1</div>
 					</li>
 				</ol>
@@ -124,7 +149,7 @@
 	</div>
 
 	<blockquote class="media-quote">
-		<p>Not surprisingly, given its scale, RTE has the most journalists in the top 100, with the second placed Irish Times just pipping Independent News &amp; Media into third place.</p>
+		<p>Not surprisingly, given its scale, RTE has the most journalists in the top 100, with the second placed Independent News &amp; Media just pipping Irish Times into third place.</p>
 	</blockquote>
 	
 </section>
