@@ -379,11 +379,21 @@ jQuery(document).ready(function($){
 	};
 
 	function positionValues() { // called oncomplete of last circ
-		for(i=0; i<values.length; i++) {
-			var newText = values[i];
-			newText.setAttributeNS(null,"x",circs[i]._gsTransform.x + circs[i]._gsTransform.xOrigin - 9);     
-			newText.setAttributeNS(null,"y",circs[i]._gsTransform.y + circs[i]._gsTransform.yOrigin + 5); 
-		}
+		// values[0] is the largest, outermost circle with values increasing inwards
+		values[0].setAttributeNS(null,"x",circs[0]._gsTransform.x + circs[0]._gsTransform.xOrigin - 9);
+		values[0].setAttributeNS(null,"y",circs[0]._gsTransform.y + circs[0]._gsTransform.yOrigin + 5);
+
+		values[1].setAttributeNS(null,"x",circs[1]._gsTransform.x + circs[1]._gsTransform.xOrigin - 9);
+		values[1].setAttributeNS(null,"y",circs[1]._gsTransform.y + circs[1]._gsTransform.yOrigin + 5);
+
+		values[2].setAttributeNS(null,"x",circs[2]._gsTransform.x + circs[2]._gsTransform.xOrigin - 7);
+		values[2].setAttributeNS(null,"y",circs[2]._gsTransform.y + circs[2]._gsTransform.yOrigin + 5);
+
+		values[3].setAttributeNS(null,"x",circs[3]._gsTransform.x + circs[3]._gsTransform.xOrigin - 7);
+		values[3].setAttributeNS(null,"y",circs[3]._gsTransform.y + circs[3]._gsTransform.yOrigin + 5);
+
+		values[4].setAttributeNS(null,"x",circs[4]._gsTransform.x + circs[4]._gsTransform.xOrigin - 7);
+		values[4].setAttributeNS(null,"y",circs[4]._gsTransform.y + circs[4]._gsTransform.yOrigin + 5);
 	};
 
 	initPercs();

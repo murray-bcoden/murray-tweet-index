@@ -43,28 +43,28 @@
 			    <g id="people">
 			      <g class="person">
 			        <text class="job-title serif" transform="translate(484 201.09)">News, RTE</text>
-			        <text class="twitter-handle sans-semi" transform="translate(586 184.1)">@ingridmileyrte</text>
-			        <text class="person-name sans-semi" transform="translate(484 183.09)">INGRID MILEY</text>
+			        <text class="twitter-handle sans-semi" transform="translate(576 184.1)">@ingridmileyrte</text>
+			        <text class="person-name sans-semi" transform="translate(474 183.09)">INGRID MILEY</text>
 			      </g>
 			      <g class="person">
 			        <text class="job-title serif" transform="translate(484 161.09)">Business, Irish Independent</text>
-			        <text class="twitter-handle sans-semi" transform="translate(582 142.09)">@danobrien20</text>
-			        <text class="person-name sans-semi" transform="translate(484 142.09)">DAN O'BRIEN</text>
+			        <text class="twitter-handle sans-semi" transform="translate(572 142.09)">@danobrien20</text>
+			        <text class="person-name sans-semi" transform="translate(474 142.09)">DAN O'BRIEN</text>
 			      </g>
 			      <g class="person">
 			        <text class="job-title serif" transform="translate(484 120.09)">Fashion &amp; Beauty, Unaffiliated</text>
-			        <text class="twitter-handle sans-semi" transform="translate(616 101.09)">@Darrenken</text>
-			        <text class="person-name sans-semi" transform="translate(484 101.09)">DARREN KENNEDY</text>
+			        <text class="twitter-handle sans-semi" transform="translate(606 101.09)">@Darrenken</text>
+			        <text class="person-name sans-semi" transform="translate(474 101.09)">DARREN KENNEDY</text>
 			      </g>
 			      <g class="person">
 			        <text class="job-title serif" transform="translate(484 80.09)">News, Unaffiliated</text>
-			        <text class="twitter-handle sans-semi" transform="translate(628 61.09)">@gemmaod1</text>
-			        <text class="person-name sans-semi" transform="translate(484 61.09)">GEMMA O'DOHERTY</text>
+			        <text class="twitter-handle sans-semi" transform="translate(618 61.09)">@gemmaod1</text>
+			        <text class="person-name sans-semi" transform="translate(474 61.09)">GEMMA O'DOHERTY</text>
 			      </g>
 			      <g class="person">
 			        <text class="job-title serif" transform="translate(484 40.1)">Politics, Irish Examiner</text>
-			        <text class="twitter-handle sans-semi" transform="translate(633 21.1)">@McConnellDaniel</text>
-			        <text class="person-name sans-semi" transform="translate(484 21.1)">DANIEL MCCONNELL</text>
+			        <text class="twitter-handle sans-semi" transform="translate(623 21.1)">@McConnellDaniel</text>
+			        <text class="person-name sans-semi" transform="translate(474 21.1)">DANIEL MCCONNELL</text>
 			      </g>
 			    </g>
 			    <g class="goo" filter="url(#goo)">
