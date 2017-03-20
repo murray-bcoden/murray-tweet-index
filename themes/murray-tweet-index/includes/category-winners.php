@@ -831,7 +831,7 @@
 				<div class="category-title">Crime</div>
 			</div>
 		    <div class="category-icon-wrapper">
-		    	<div class="category-icon category-icon-arts"></div>
+		    	<div class="category-icon category-icon-crime"></div>
 		        <a href="#" class="btn-expand btn-expand-categories">View Top 5</a>
 				<div class="categories-panel">
 					<ol class="categories-panel-list">
@@ -877,7 +877,7 @@
 				<div class="category-title">Tabloids</div>
 			</div>
 		    <div class="category-icon-wrapper">
-		    	<div class="category-icon category-icon-arts"></div>
+		    	<div class="category-icon category-icon-tabloids"></div>
 		        <a href="#" class="btn-expand btn-expand-categories">View Top 5</a>
 				<div class="categories-panel">
 					<ol class="categories-panel-list">
@@ -923,7 +923,7 @@
 				<div class="category-title">Online Only</div>
 			</div>
 		    <div class="category-icon-wrapper">
-		    	<div class="category-icon category-icon-arts"></div>
+		    	<div class="category-icon category-icon-online-only"></div>
 		        <a href="#" class="btn-expand btn-expand-categories">View Top 5</a>
 				<div class="categories-panel">
 					<ol class="categories-panel-list">

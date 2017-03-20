@@ -127,5 +127,26 @@
 	background-position: -50px -100px;
 }
 
+.category-icon-crime {
+	@extend .category-icon;
+	width: 48px;
+	height: 46px;
+	background-position: -351px -100px;
+}
+
+.category-icon-tabloids {
+	@extend .category-icon;
+	width: 48px;
+	height: 46px;
+	background-position: -402px -100px;
+}
+
+.category-icon-online-only {
+	@extend .category-icon;
+	width: 48px;
+	height: 46px;
+	background-position: -451px -100px;
+}
+
 
 
