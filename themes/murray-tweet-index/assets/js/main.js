@@ -828,6 +828,50 @@ jQuery(document).ready(function($){
 		// .addTo(controller);
   //   }
 
+  /*  ==========================================================================
+    Twitter Profile Images
+    ========================================================================== */
+	// Set up array
+	var twitters = [];
+	// Get image tags with class .twitter-profile-image
+	var twitter_handles = $('.twitter-profile-image');
+
+	// Loop through each image tag
+	$.each(twitter_handles, function(index, item) {
+		// Add the Twitter handle to the array
+		twitters.push( $(item).data('handle') );
+	});
+
+	var debug = true;
+
+	$.ajax({
+		url: getprofileimages.ajaxurl,
+		type: 'post',
+		dataType: 'JSON',
+		data: {
+			twitterHandles: twitters,
+			action: 'load_profile_images'
+		},
+		success: function( data ) {
+			// console.log(data);
+			// Loop through each response object and set the image src
+			$.each(data, function(index, item) {
+				// Get the img tag for the relevant profile
+				var $current_profile = $('.twitter-profile-image[data-handle="' + item.handle + '"]');
+				// Set the src attribute on the img tag
+				$current_profile.attr("src", item.profile_image);
+			});
+		},
+		error : function(jqXHR, textStatus, errorThrown, data) {
+			// console.log('jqXHR: ' . jqXHR);
+			// console.log('textStatus: ' . textStatus);
+			// console.log('errorThrown: ' . errorThrown);
+			if (debug) {
+				console.dir('data: ' . data);
+			}
+		}
+
+	});
 
 
 

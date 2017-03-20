@@ -32,7 +32,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/cooper_m" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/cooper_m/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/cooper_m/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="cooper_m" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">1</div>
@@ -44,7 +45,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/RealKevinPalmer" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/RealKevinPalmer/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/RealKevinPalmer/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="RealKevinPalmer" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">2</div>
@@ -56,7 +58,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/ghook" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/ghook/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/ghook/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="ghook" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">3</div>
@@ -68,7 +71,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/PatKennyNT" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/PatKennyNT/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/PatKennyNT/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="PatKennyNT" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">4</div>
@@ -80,7 +84,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/davidmcw" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/davidmcw/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/davidmcw/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="davidmcw" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">5</div>
@@ -92,7 +97,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/elainebyrne" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/elainebyrne/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/elainebyrne/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="elainebyrne" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">6</div>
@@ -104,7 +110,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/gemmaod1" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/gemmaod1/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/gemmaod1/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="gemmaod1" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">7</div>
@@ -116,7 +123,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/UnaMullally" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/UnaMullally/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/UnaMullally/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="UnaMullally" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">8</div>
@@ -128,7 +136,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/CathalMacCoille" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/CathalMacCoille/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/CathalMacCoille/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="CathalMacCoille" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">9</div>
@@ -140,7 +149,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/CaitrionaPerry" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/CaitrionaPerry/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/CaitrionaPerry/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="CaitrionaPerry" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">10</div>
@@ -152,7 +162,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/sportsdes" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/sportsdes/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/sportsdes/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="sportsdes" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">11</div>
@@ -164,7 +175,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/gavreilly" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/gavreilly/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/gavreilly/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="gavreilly" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">12</div>
@@ -176,7 +188,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/conor_pope" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/conor_pope/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/conor_pope/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="conor_pope" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">13</div>
@@ -188,7 +201,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/jonathanhealy" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/jonathanhealy/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/jonathanhealy/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="jonathanhealy" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">14</div>
@@ -200,7 +214,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/harrymcgee" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/harrymcgee/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/harrymcgee/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="harrymcgee" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">15</div>
@@ -212,7 +227,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/kenearlys" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/kenearlys/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/kenearlys/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="kenearlys" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">16</div>
@@ -224,7 +240,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/SiCarswell" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/SiCarswell/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/SiCarswell/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="SiCarswell" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">17</div>
@@ -236,7 +253,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/boucherhayes" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/boucherhayes/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/boucherhayes/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="boucherhayes" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">18</div>
@@ -248,7 +266,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/MrKeithMahon" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/MrKeithMahon/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/MrKeithMahon/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="MrKeithMahon" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">19</div>
@@ -260,7 +279,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/colettebrown" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/colettebrown/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/colettebrown/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="colettebrown" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">20</div>
@@ -272,7 +292,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/FergalBowers" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/FergalBowers/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/FergalBowers/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="FergalBowers" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">21</div>
@@ -284,7 +305,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/RosemaryMacCabe" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/RosemaryMacCabe/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/RosemaryMacCabe/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="RosemaryMacCabe" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">22</div>
@@ -296,7 +318,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/Woolberto" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/Woolberto/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/Woolberto/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="Woolberto" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">23</div>
@@ -308,7 +331,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/adrianweckler" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/adrianweckler/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/adrianweckler/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="adrianweckler" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">24</div>
@@ -320,7 +344,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/nathanmurf" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/nathanmurf/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/nathanmurf/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="nathanmurf" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">25</div>
@@ -332,7 +357,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/FrankSunTimes" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/FrankSunTimes/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/FrankSunTimes/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="FrankSunTimes" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">26</div>
@@ -344,7 +370,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/Darrenken" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/Darrenken/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/Darrenken/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="Darrenken" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">27</div>
@@ -356,7 +383,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/GeneKerrigan" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/GeneKerrigan/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/GeneKerrigan/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="GeneKerrigan" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">28</div>
@@ -368,7 +396,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/willgoodbody" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/willgoodbody/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/willgoodbody/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="willgoodbody" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">29</div>
@@ -380,7 +409,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/oisinlangan" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/oisinlangan/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/oisinlangan/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="oisinlangan" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">30</div>
@@ -392,7 +422,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/stephenkinsella" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/stephenkinsella/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/stephenkinsella/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="stephenkinsella" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">31</div>
@@ -404,7 +435,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/MichaelC_RTE" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/MichaelC_RTE/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/MichaelC_RTE/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="MichaelC_RTE" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">32</div>
@@ -416,7 +448,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/philipbromwell" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/philipbromwell/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/philipbromwell/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="philipbromwell" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">33</div>
@@ -428,7 +461,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/KevDoyle_Indo" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/KevDoyle_Indo/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/KevDoyle_Indo/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="KevDoyle_Indo" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">34</div>
@@ -440,7 +474,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/KenSweeney" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/KenSweeney/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/KenSweeney/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="KenSweeney" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">35</div>
@@ -452,7 +487,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/tconnellyRTE" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/tconnellyRTE/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/tconnellyRTE/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="tconnellyRTE" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">36</div>
@@ -464,7 +500,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/McConnellDaniel" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/McConnellDaniel/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/McConnellDaniel/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="McConnellDaniel" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">37</div>
@@ -476,7 +513,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/roisiningle" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/roisiningle/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/roisiningle/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="roisiningle" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">38</div>
@@ -488,7 +526,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/poloconghaile" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/poloconghaile/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/poloconghaile/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="poloconghaile" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">39</div>
@@ -500,7 +539,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/MartinaFitzg" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/MartinaFitzg/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/MartinaFitzg/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="MartinaFitzg" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">40</div>
@@ -512,7 +552,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/DearbhailDibs" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/DearbhailDibs/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/DearbhailDibs/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="DearbhailDibs" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">41</div>
@@ -524,7 +565,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/RuaidhriOC" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/RuaidhriOC/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/RuaidhriOC/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="RuaidhriOC" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">42</div>
@@ -536,7 +578,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/davidmurphyRTE" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/davidmurphyRTE/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/davidmurphyRTE/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="davidmurphyRTE" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">43</div>
@@ -548,7 +591,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/JohnFogartyIrl" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/JohnFogartyIrl/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/JohnFogartyIrl/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="JohnFogartyIrl" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">44</div>
@@ -560,7 +604,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/McDonnellDan" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/McDonnellDan/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/McDonnellDan/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="McDonnellDan" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">45</div>
@@ -572,7 +617,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/davidcochrane" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/davidcochrane/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/davidcochrane/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="davidcochrane" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">46</div>
@@ -584,7 +630,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/DavQuinn" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/DavQuinn/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/DavQuinn/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="DavQuinn" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">47</div>
@@ -596,7 +643,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/oconnellhugh" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/oconnellhugh/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/oconnellhugh/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="oconnellhugh" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">48</div>
@@ -608,7 +656,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/ingridmileyRTE" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/ingridmileyRTE/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/ingridmileyRTE/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="ingridmileyRTE" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">49</div>
@@ -620,7 +669,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/paraicgallagher" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/paraicgallagher/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/paraicgallagher/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="paraicgallagher" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">50</div>
@@ -632,7 +682,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/TomLyonsBiz" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/TomLyonsBiz/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/TomLyonsBiz/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="TomLyonsBiz" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">51</div>
@@ -644,7 +695,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/newschambers" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/newschambers/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/newschambers/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="newschambers" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">52</div>
@@ -656,7 +708,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/EoinBearla" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/EoinBearla/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/EoinBearla/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="EoinBearla" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">53</div>
@@ -668,7 +721,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/tonyleen" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/tonyleen/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/tonyleen/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="tonyleen" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">54</div>
@@ -680,7 +734,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/bobbykerr" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/bobbykerr/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/bobbykerr/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="bobbykerr" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">55</div>
@@ -692,7 +747,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/sonyalennon" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/sonyalennon/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/sonyalennon/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="sonyalennon" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">56</div>
@@ -704,7 +760,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/gnelis" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/gnelis/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/gnelis/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="gnelis" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">57</div>
@@ -716,7 +773,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/ianguider" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/ianguider/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/ianguider/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="ianguider" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">58</div>
@@ -728,7 +786,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/sinead_ryan" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/sinead_ryan/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/sinead_ryan/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="sinead_ryan" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">59</div>
@@ -740,7 +799,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/PaddyMcKenna" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/PaddyMcKenna/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/PaddyMcKenna/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="PaddyMcKenna" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">60</div>
@@ -752,7 +812,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/orlatinsley" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/orlatinsley/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/orlatinsley/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="orlatinsley" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">61</div>
@@ -764,7 +825,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/philipnolan1" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/philipnolan1/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/philipnolan1/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="philipnolan1" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">62</div>
@@ -776,7 +838,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/noriordan" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/noriordan/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/noriordan/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="noriordan" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">63</div>
@@ -788,7 +851,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/MaryERegan" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/MaryERegan/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/MaryERegan/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="MaryERegan" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">64</div>
@@ -800,7 +864,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/danobrien20" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/danobrien20/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/danobrien20/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="danobrien20" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">65</div>
@@ -812,7 +877,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/hlinehan" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/hlinehan/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/hlinehan/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="hlinehan" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">66</div>
@@ -824,7 +890,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/KCsixtyseven" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/KCsixtyseven/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/KCsixtyseven/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="KCsixtyseven" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">67</div>
@@ -836,7 +903,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/roakleyIRL" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/roakleyIRL/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/roakleyIRL/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="roakleyIRL" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">68</div>
@@ -848,7 +916,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/PaulKimmage" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/PaulKimmage/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/PaulKimmage/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="PaulKimmage" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">69</div>
@@ -860,7 +929,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/MartyM_RTE" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/MartyM_RTE/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/MartyM_RTE/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="MartyM_RTE" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">70</div>
@@ -872,7 +942,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/bairbrepower" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/bairbrepower/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/bairbrepower/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="bairbrepower" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">71</div>
@@ -884,7 +955,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/damien_omeara" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/damien_omeara/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/damien_omeara/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="damien_omeara" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">72</div>
@@ -896,7 +968,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/campbellsuz" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/campbellsuz/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/campbellsuz/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="campbellsuz" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">73</div>
@@ -908,7 +981,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/fotoole" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/fotoole/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/fotoole/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="fotoole" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">74</div>
@@ -920,7 +994,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/JoeBrolly1993" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/JoeBrolly1993/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/JoeBrolly1993/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="JoeBrolly1993" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">75</div>
@@ -932,7 +1007,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/RMcGreevy1301" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/RMcGreevy1301/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/RMcGreevy1301/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="RMcGreevy1301" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">76</div>
@@ -944,7 +1020,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/mcdigby" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/mcdigby/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/mcdigby/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="mcdigby" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">77</div>
@@ -956,7 +1033,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/JohnBurnsST" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/JohnBurnsST/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/JohnBurnsST/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="JohnBurnsST" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">78</div>
@@ -968,7 +1046,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/EwanMacKenna" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/EwanMacKenna/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/EwanMacKenna/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="EwanMacKenna" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">79</div>
@@ -980,7 +1059,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/EoinMcDevitt" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/EoinMcDevitt/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/EoinMcDevitt/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="EoinMcDevitt" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">80</div>
@@ -992,7 +1072,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/RuthDE" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/RuthDE/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/RuthDE/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="RuthDE" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">81</div>
@@ -1004,7 +1085,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/MalachyClerkin" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/MalachyClerkin/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/MalachyClerkin/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="MalachyClerkin" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">82</div>
@@ -1016,7 +1098,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/BrendanCourtney" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/BrendanCourtney/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/BrendanCourtney/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="BrendanCourtney" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">83</div>
@@ -1028,7 +1111,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/MiriamOCal" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/MiriamOCal/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/MiriamOCal/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="MiriamOCal" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">84</div>
@@ -1040,7 +1124,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/KOSullivanIT" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/KOSullivanIT/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/KOSullivanIT/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="KOSullivanIT" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">85</div>
@@ -1052,7 +1137,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/EvanneNiC" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/EvanneNiC/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/EvanneNiC/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="EvanneNiC" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">86</div>
@@ -1064,7 +1150,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/rodneyedwards" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/rodneyedwards/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/rodneyedwards/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="rodneyedwards" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">87</div>
@@ -1076,7 +1163,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/ChristineBohan" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/ChristineBohan/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/ChristineBohan/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="ChristineBohan" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">88</div>
@@ -1088,7 +1176,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/styleisleIRL" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/styleisleIRL/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/styleisleIRL/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="styleisleIRL" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">89</div>
@@ -1100,7 +1189,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/ian_odoherty" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/ian_odoherty/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/ian_odoherty/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="ian_odoherty" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">90</div>
@@ -1112,7 +1202,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/PetesyCarroll" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/PetesyCarroll/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/PetesyCarroll/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="PetesyCarroll" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">91</div>
@@ -1124,7 +1215,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/KittyHollandIT" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/KittyHollandIT/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/KittyHollandIT/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="KittyHollandIT" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">92</div>
@@ -1136,7 +1228,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/paulcollinstipp" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/paulcollinstipp/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/paulcollinstipp/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="paulcollinstipp" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">93</div>
@@ -1148,7 +1241,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/BiddyEarly" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/BiddyEarly/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/BiddyEarly/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="BiddyEarly" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">94</div>
@@ -1160,7 +1254,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/fionndavenport" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/fionndavenport/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/fionndavenport/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="fionndavenport" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">95</div>
@@ -1172,7 +1267,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/dionfanning" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/dionfanning/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/dionfanning/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="dionfanning" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">96</div>
@@ -1184,7 +1280,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/mickthehack" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/mickthehack/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/mickthehack/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="mickthehack" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">97</div>
@@ -1196,7 +1293,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/Victoriamary" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/Victoriamary/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/Victoriamary/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="Victoriamary" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">98</div>
@@ -1208,7 +1306,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/ITdominiccoyle" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/ITdominiccoyle/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/ITdominiccoyle/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="ITdominiccoyle" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">99</div>
@@ -1220,7 +1319,8 @@
 						<li class="top-item">
 							<a href="https://twitter.com/OCowzer" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<img data-original="http://twitter.com/OCowzer/profile_image?size=bigger" alt="" class="top-image lazy">
+									<!-- <img data-original="http://twitter.com/OCowzer/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="OCowzer" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">100</div>

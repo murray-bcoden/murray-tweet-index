@@ -1,5 +1,7 @@
 <?php
 
+include('includes/twitter-profile-images.php');
+
 // Incorporating elements from http://html5blank.com/
 
 /*  ==========================================================================
@@ -45,6 +47,7 @@ function LoadMainJS() {
         wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js", null, false, true);
         wp_enqueue_script('jquery');
         wp_enqueue_script( 'main-min.js', get_template_directory_uri() . '/assets/js/min/main-min.js', array('jquery') );
+        wp_localize_script( 'main-min.js', 'getprofileimages', array(	'ajaxurl' => admin_url( 'admin-ajax.php' ) ));
     }
 }
 
