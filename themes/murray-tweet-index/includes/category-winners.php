@@ -79,7 +79,7 @@
 		  	</div>
 		  	<div class="category-winner">
 			    <div class="name">Dearbhail McDonald</div>
-			    <div class="job-title">Group Business Editor, Irish Independent</div>
+			    <div class="job-title">Group Business Editor, Independent News &amp; Media</div>
 			</div>
 		    <div class="category-title-wrapper">
 				<div class="category-title">Business</div>
@@ -309,7 +309,7 @@
 		  	</div>
 		  	<div class="category-winner">
 			    <div class="name">Suzanne Campbell</div>
-			    <div class="job-title">Food and Farming Journalist</div>
+			    <div class="job-title">Food and Farming Journalist, RTE</div>
 			</div>
 		    <div class="category-title-wrapper">
 				<div class="category-title">Agriculture/Farming</div>
@@ -406,7 +406,7 @@
 		  	</div>
 		  	<div class="category-winner">
 			    <div class="name">Ken Sweeney</div>
-			    <div class="job-title">Broadcaster, RTE</div>
+			    <div class="job-title">Showbiz Editor, Irish Sun</div>
 			</div>
 		    <div class="category-title-wrapper">
 				<div class="category-title">Entertainment</div>
@@ -595,7 +595,7 @@
 		  	</div>
 		  	<div class="category-winner">
 			    <div class="name">Bernice Harrison</div>
-			    <div class="job-title">Journalist, Irish Times</div>
+			    <div class="job-title">Property Journalist, Irish Times</div>
 			</div>
 		    <div class="category-title-wrapper">
 				<div class="category-title">Property</div>
@@ -641,7 +641,7 @@
 		  	</div>
 		  	<div class="category-winner">
 			    <div class="name">Darren Kennedy</div>
-			    <div class="job-title">Fashion &amp; Beauty, Unaffiliated</div>
+			    <div class="job-title">Fashion Journalist, Unaffiliated</div>
 			</div>
 		    <div class="category-title-wrapper">
 				<div class="category-title">Fashion</div>
