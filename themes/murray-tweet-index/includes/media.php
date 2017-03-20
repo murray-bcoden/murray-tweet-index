@@ -37,7 +37,7 @@
 				<!-- 			<text class="sans-light" x="260" y="20" font-size="14" fill="#fff" >ONLINE - <tspan class="sans-semi">4%</tspan></text> -->
 							<text class="sans-light" x="648" y="160" font-size="14" fill="#fff" >BROADCAST - <tspan class="sans-semi">34%</tspan></text>
 							<text class="sans-light" x="607" y="488" font-size="14" fill="#fff" >ONLINE ONLY - <tspan class="sans-semi">6%</tspan></text>
-							<text class="sans-light" x="27" y="352" font-size="14" fill="#fff" >PRINT - <tspan class="sans-semi">64%</tspan></text>
+							<text class="sans-light" x="37" y="388" font-size="14" fill="#fff" >PRINT - <tspan class="sans-semi">60%</tspan></text>
 						</g>
 					</svg>
 				</div>

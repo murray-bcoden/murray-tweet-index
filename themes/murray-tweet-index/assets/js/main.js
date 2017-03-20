@@ -528,7 +528,7 @@ jQuery(document).ready(function($){
 /*  Global variables
     ========================================================================== */  
 
-	var percs = [34, 6, 64];
+	var percs = [34, 6, 60];
 	var percsRange = []; // array of percentage ranges for the arcs to animate from to
 	var percsEnd = []; // array of percentages for the divider lines to animate to
 	var markersAngles = []; // array of percentages for markers to be positioned mid arcs
