@@ -277,7 +277,7 @@
 								<div class="top-bar">
 									<div class="top-num">21</div>
 									<div class="top-handle">@FergalBowers</div>
-									<div class="top-name">Ferghal Bowers</div>
+									<div class="top-name">Fergal Bowers</div>
 								</div>
 							</a>
 						</li>
@@ -289,7 +289,7 @@
 								<div class="top-bar">
 									<div class="top-num">22</div>
 									<div class="top-handle">@RosemaryMacCabe</div>
-									<div class="top-name">Rosemary McCabe</div>
+									<div class="top-name">Rosemary MacCabe</div>
 								</div>
 							</a>
 						</li>

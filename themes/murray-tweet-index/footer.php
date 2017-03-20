@@ -9,7 +9,7 @@
 						<!-- <div class="methodology-content"> -->
 
 							<!-- <div class="method-intro"> -->
-								<p>The study was based on the analysis of the Twitter handles of over 300 journalists carried out in September and October 2015. Using the analysis tool Twitonomy, we gathered the following data for each of the journalists:</p>
+								<p>The study was based on the analysis of the Twitter handles of over 700 journalists carried out in November and December 2016. Using the analysis tool Twitonomy, we gathered the following data for each of the journalists:</p>
 							<!-- </div> -->
 							
 							<ol class="method-list">
