@@ -38,7 +38,8 @@
 		if ($response_code == 200) {
 			// Loop through the response and display the images
 			foreach ($contents as $content) {
-				array_push($twitter_images, array('handle' => $content->screen_name, 'profile_image' => $content->profile_image_url));
+				$profile_image = str_replace('_normal', '_400x400', $content->profile_image_url);
+				array_push($twitter_images, array('handle' => $content->screen_name, 'profile_image' => $profile_image));
 			}
 			$ajax_response = $twitter_images;
 		} else {

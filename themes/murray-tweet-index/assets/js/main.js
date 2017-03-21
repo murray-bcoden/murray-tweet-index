@@ -829,19 +829,17 @@ jQuery(document).ready(function($){
   //   }
 
   /*  ==========================================================================
-    Twitter Profile Images
+    Twitter Profile Images - Top 100
     ========================================================================== */
 	// Set up array
-	var twitters = [];
+	var twitters_top_100 = [];
 	// Get image tags with class .twitter-profile-image
-	var twitter_handles = $('.twitter-profile-image');
-
-	// Loop through each image tag
-	$.each(twitter_handles, function(index, item) {
+	var twitter_handles_top_100 = $('.twitter-profile-image');
+	// Loop through each image tag to get the Twitter handle
+	$.each(twitter_handles_top_100, function(index, item) {
 		// Add the Twitter handle to the array
-		twitters.push( $(item).data('handle') );
+		twitters_top_100.push( $(item).data('handle') );
 	});
-
 	var debug = true;
 
 	$.ajax({
@@ -849,11 +847,10 @@ jQuery(document).ready(function($){
 		type: 'post',
 		dataType: 'JSON',
 		data: {
-			twitterHandles: twitters,
+			twitterHandles: twitters_top_100,
 			action: 'load_profile_images'
 		},
 		success: function( data ) {
-			// console.log(data);
 			// Loop through each response object and set the image src
 			$.each(data, function(index, item) {
 				// Get the img tag for the relevant profile
@@ -863,14 +860,54 @@ jQuery(document).ready(function($){
 			});
 		},
 		error : function(jqXHR, textStatus, errorThrown, data) {
-			// console.log('jqXHR: ' . jqXHR);
-			// console.log('textStatus: ' . textStatus);
-			// console.log('errorThrown: ' . errorThrown);
+			console.log('jqXHR: ' . jqXHR);
+			console.log('textStatus: ' . textStatus);
+			console.log('errorThrown: ' . errorThrown);
 			if (debug) {
 				console.dir('data: ' . data);
 			}
 		}
+	});
 
+  /*  ==========================================================================
+    Twitter Profile Images - Category Winners and 6 Parameters
+    ========================================================================== */
+	// Set up array
+	var twitters_category = [];
+	// Get image tags with class .twitter-profile-image
+	var twitter_handles_category = $('.twitter-profile-image-category');
+	// Loop through each image tag to get the Twitter handle
+	$.each(twitter_handles_category, function(index, item) {
+		// Add the Twitter handle to the array
+		twitters_category.push( $(item).data('handle') );
+	});
+	var debug = true;
+
+	$.ajax({
+		url: getprofileimages.ajaxurl,
+		type: 'post',
+		dataType: 'JSON',
+		data: {
+			twitterHandles: twitters_category,
+			action: 'load_profile_images'
+		},
+		success: function( data ) {
+			// Loop through each response object and set the image src
+			$.each(data, function(index, item) {
+				// Get the img tag for the relevant profile
+				var $current_profile = $('.twitter-profile-image-category[data-handle="' + item.handle + '"]');
+				// Set the src attribute on the img tag
+				$current_profile.attr("src", item.profile_image);
+			});
+		},
+		error : function(jqXHR, textStatus, errorThrown, data) {
+			console.log('jqXHR: ' . jqXHR);
+			console.log('textStatus: ' . textStatus);
+			console.log('errorThrown: ' . errorThrown);
+			if (debug) {
+				console.dir('data: ' . data);
+			}
+		}
 	});
 
 

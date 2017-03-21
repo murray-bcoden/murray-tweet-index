@@ -29,7 +29,8 @@
 		<div class="slider responsive" id="carousel">
 		  <div class="category">
 		  	<div class="category-image-wrapper">
-		  		<img class="twitter-profile" src="https://twitter.com/gemmaod1/profile_image?size=bigger" alt="Twitter Profile Image">
+		  		<!-- <img class="twitter-profile" src="https://twitter.com/gemmaod1/profile_image?size=bigger" alt="Twitter Profile Image"> -->
+		  		<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="gemmaod1" alt="" class="twitter-profile twitter-profile-image-category">
 		  	</div>
 		  	<div class="category-winner">
 				<div class="name">Gemma O'Doherty</div>
@@ -75,7 +76,8 @@
 
 		  <div class="category">
 		  	<div class="category-image-wrapper">
-		  		<img class="twitter-profile" src="https://twitter.com/DearbhailDibs/profile_image?size=bigger" alt="Twitter Profile Image">
+		  		<!-- <img class="twitter-profile" src="https://twitter.com/DearbhailDibs/profile_image?size=bigger" alt="Twitter Profile Image"> -->
+		  		<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="DearbhailDibs" alt="" class="twitter-profile twitter-profile-image-category">
 		  	</div>
 		  	<div class="category-winner">
 			    <div class="name">Dearbhail McDonald</div>
@@ -121,7 +123,8 @@
 		  
 		  <div class="category">
 		  	<div class="category-image-wrapper">
-		  		<img class="twitter-profile" src="https://twitter.com/RealKevinPalmer/profile_image?size=bigger" alt="Twitter Profile Image">
+		  		<!-- <img class="twitter-profile" src="https://twitter.com/RealKevinPalmer/profile_image?size=bigger" alt="Twitter Profile Image"> -->
+		  		<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="RealKevinPalmer" alt="" class="twitter-profile twitter-profile-image-category">
 		  	</div>
 		  	<div class="category-winner">
 			    <div class="name">Kevin Palmer</div>
@@ -167,7 +170,8 @@
 		  
 		  <div class="category">
 		  	<div class="category-image-wrapper">
-		  		<img class="twitter-profile" src="https://twitter.com/gavreilly/profile_image?size=bigger" alt="Twitter Profile Image">
+		  		<!-- <img class="twitter-profile" src="https://twitter.com/gavreilly/profile_image?size=bigger" alt="Twitter Profile Image"> -->
+		  		<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="gavreilly" alt="" class="twitter-profile twitter-profile-image-category">
 		  	</div>
 		  	<div class="category-winner">
 			    <div class="name">Gavan Reilly</div>
@@ -213,7 +217,8 @@
 		  
 		  <div class="category">
 		  	<div class="category-image-wrapper">
-		  		<img class="twitter-profile" src="https://twitter.com/cooper_m/profile_image?size=bigger" alt="Twitter Profile Image">
+		  		<!-- <img class="twitter-profile" src="https://twitter.com/cooper_m/profile_image?size=bigger" alt="Twitter Profile Image"> -->
+		  		<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="cooper_m" alt="" class="twitter-profile twitter-profile-image-category">
 		  	</div>
 		  	<div class="category-winner">
 			    <div class="name">Matt Cooper</div>
@@ -259,7 +264,8 @@
 		  
 		  <div class="category">
 		  	<div class="category-image-wrapper">
-		  		<img class="twitter-profile" src="https://twitter.com/conor_pope/profile_image?size=bigger" alt="Twitter Profile Image">
+		  		<!-- <img class="twitter-profile" src="https://twitter.com/conor_pope/profile_image?size=bigger" alt="Twitter Profile Image"> -->
+		  		<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="conor_pope" alt="" class="twitter-profile twitter-profile-image-category">
 		  	</div>
 		  	<div class="category-winner">
 			    <div class="name">Conor Pope</div>
@@ -305,7 +311,8 @@
 		  
 		  <div class="category">
 		  	<div class="category-image-wrapper">
-		  		<img class="twitter-profile" src="https://twitter.com/campbellsuz/profile_image?size=bigger" alt="Twitter Profile Image">
+		  		<!-- <img class="twitter-profile" src="https://twitter.com/campbellsuz/profile_image?size=bigger" alt="Twitter Profile Image"> -->
+		  		<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="campbellsuz" alt="" class="twitter-profile twitter-profile-image-category">
 		  	</div>
 		  	<div class="category-winner">
 			    <div class="name">Suzanne Campbell</div>
@@ -351,7 +358,8 @@
 		  
 		  <div class="category">
 		  	<div class="category-image-wrapper">
-		  		<img class="twitter-profile" src="https://twitter.com/adrianweckler/profile_image?size=bigger" alt="Twitter Profile Image">
+		  		<!-- <img class="twitter-profile" src="https://twitter.com/adrianweckler/profile_image?size=bigger" alt="Twitter Profile Image"> -->
+		  		<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="adrianweckler" alt="" class="twitter-profile twitter-profile-image-category">
 		  	</div>
 		  	<div class="category-winner">
 			    <div class="name">Adrian Weckler</div>
@@ -402,7 +410,8 @@
 		  
 		  <div class="category">
 		  	<div class="category-image-wrapper">
-		  		<img class="twitter-profile" src="https://twitter.com/KenSweeney/profile_image?size=bigger" alt="Twitter Profile Image">
+		  		<!-- <img class="twitter-profile" src="https://twitter.com/KenSweeney/profile_image?size=bigger" alt="Twitter Profile Image"> -->
+		  		<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="KenSweeney" alt="" class="twitter-profile twitter-profile-image-category">
 		  	</div>
 		  	<div class="category-winner">
 			    <div class="name">Ken Sweeney</div>
@@ -448,7 +457,8 @@
 		  
 		  <div class="category">
 		  	<div class="category-image-wrapper">
-		  		<img class="twitter-profile" src="https://twitter.com/davidmcw/profile_image?size=bigger" alt="Twitter Profile Image">
+		  		<!-- <img class="twitter-profile" src="https://twitter.com/davidmcw/profile_image?size=bigger" alt="Twitter Profile Image"> -->
+		  		<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="davidmcw" alt="" class="twitter-profile twitter-profile-image-category">
 		  	</div>
 		  	<div class="category-winner">
 			    <div class="name">David McWilliams</div>
@@ -499,7 +509,8 @@
 		  
 		  <div class="category">
 		  	<div class="category-image-wrapper">
-		  		<img class="twitter-profile" src="https://twitter.com/FergalBowers/profile_image?size=bigger" alt="Twitter Profile Image">
+		  		<!-- <img class="twitter-profile" src="https://twitter.com/FergalBowers/profile_image?size=bigger" alt="Twitter Profile Image"> -->
+		  		<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="FergalBowers" alt="" class="twitter-profile twitter-profile-image-category">
 		  	</div>
 		  	<div class="category-winner">
 			    <div class="name">Fergal Bowers</div>
@@ -545,7 +556,8 @@
 		  
 		  <div class="category">
 		  	<div class="category-image-wrapper">
-		  		<img class="twitter-profile" src="https://twitter.com/MrKeithMahon/profile_image?size=bigger" alt="Twitter Profile Image">
+		  		<!-- <img class="twitter-profile" src="https://twitter.com/MrKeithMahon/profile_image?size=bigger" alt="Twitter Profile Image"> -->
+		  		<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="MrKeithMahon" alt="" class="twitter-profile twitter-profile-image-category">
 		  	</div>
 		  	<div class="category-winner">
 			    <div class="name">Keith Mahon</div>
@@ -591,7 +603,8 @@
 		  
 		  <div class="category">
 		  	<div class="category-image-wrapper">
-		  		<img class="twitter-profile" src="https://twitter.com/BerniceHarrison/profile_image?size=bigger" alt="Twitter Profile Image">
+		  		<!-- <img class="twitter-profile" src="https://twitter.com/BerniceHarrison/profile_image?size=bigger" alt="Twitter Profile Image"> -->
+		  		<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="BerniceHarrison" alt="" class="twitter-profile twitter-profile-image-category">
 		  	</div>
 		  	<div class="category-winner">
 			    <div class="name">Bernice Harrison</div>
@@ -637,7 +650,8 @@
 		  
 		  <div class="category">
 		  	<div class="category-image-wrapper">
-		  		<img class="twitter-profile" src="https://twitter.com/Darrenken/profile_image?size=bigger" alt="Twitter Profile Image">
+		  		<!-- <img class="twitter-profile" src="https://twitter.com/Darrenken/profile_image?size=bigger" alt="Twitter Profile Image"> -->
+		  		<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="Darrenken" alt="" class="twitter-profile twitter-profile-image-category">
 		  	</div>
 		  	<div class="category-winner">
 			    <div class="name">Darren Kennedy</div>
@@ -683,7 +697,8 @@
 		  
 		  <div class="category">
 		  	<div class="category-image-wrapper">
-		  		<img class="twitter-profile" src="https://twitter.com/rositaboland/profile_image?size=bigger" alt="Twitter Profile Image">
+		  		<!-- <img class="twitter-profile" src="https://twitter.com/RositaBoland/profile_image?size=bigger" alt="Twitter Profile Image"> -->
+		  		<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="RositaBoland" alt="" class="twitter-profile twitter-profile-image-category">
 		  	</div>
 		  	<div class="category-winner">
 			    <div class="name">Rosita Boland</div>
@@ -699,7 +714,7 @@
 					<ol class="categories-panel-list">
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">1</span><a href="https://twitter.com/rositaboland" target="_blank" class="categories-panel-link">@rositaboland</a>
+								<span class="categories-panel-index">1</span><a href="https://twitter.com/RositaBoland" target="_blank" class="categories-panel-link">@RositaBoland</a>
 							</div>
 						</li>
 						<li class="categories-panel-item">
@@ -729,7 +744,8 @@
 		  
 		  <div class="category">
 		  	<div class="category-image-wrapper">
-		  		<img class="twitter-profile" src="https://twitter.com/FrankSunTimes/profile_image?size=bigger" alt="Twitter Profile Image">
+		  		<!-- <img class="twitter-profile" src="https://twitter.com/FrankSunTimes/profile_image?size=bigger" alt="Twitter Profile Image"> -->
+		  		<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="FrankSunTimes" alt="" class="twitter-profile twitter-profile-image-category">
 		  	</div>
 		  	<div class="category-winner">
 			    <div class="name">Frank Fitzgibbon</div>
@@ -775,7 +791,8 @@
 		  
 		  <div class="category">
 		  	<div class="category-image-wrapper">
-		  		<img class="twitter-profile" src="https://twitter.com/berminghamlaura/profile_image?size=bigger" alt="Twitter Profile Image">
+		  		<!-- <img class="twitter-profile" src="https://twitter.com/berminghamlaura/profile_image?size=bigger" alt="Twitter Profile Image"> -->
+		  		<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="berminghamlaura" alt="" class="twitter-profile twitter-profile-image-category">
 		  	</div>
 		  	<div class="category-winner">
 			    <div class="name">Laura Bermingham</div>
@@ -821,7 +838,8 @@
 		  
 		  <div class="category">
 		  	<div class="category-image-wrapper">
-		  		<img class="twitter-profile" src="https://twitter.com/mickthehack/profile_image?size=bigger" alt="Twitter Profile Image">
+		  		<!-- <img class="twitter-profile" src="https://twitter.com/mickthehack/profile_image?size=bigger" alt="Twitter Profile Image"> -->
+		  		<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="mickthehack" alt="" class="twitter-profile twitter-profile-image-category">
 		  	</div>
 		  	<div class="category-winner">
 			    <div class="name">Michael O'Toole</div>
@@ -867,7 +885,8 @@
 		  
 		  <div class="category">
 		  	<div class="category-image-wrapper">
-		  		<img class="twitter-profile" src="https://twitter.com/RealKevinPalmer/profile_image?size=bigger" alt="Twitter Profile Image">
+		  		<!-- <img class="twitter-profile" src="https://twitter.com/RealKevinPalmer/profile_image?size=bigger" alt="Twitter Profile Image"> -->
+		  		<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="RealKevinPalmer" alt="" class="twitter-profile twitter-profile-image-category">
 		  	</div>
 		  	<div class="category-winner">
 			    <div class="name">Kevin Palmer</div>
@@ -913,7 +932,8 @@
 		  
 		  <div class="category">
 		  	<div class="category-image-wrapper">
-		  		<img class="twitter-profile" src="https://twitter.com/MrKeithMahon/profile_image?size=bigger" alt="Twitter Profile Image">
+		  		<!-- <img class="twitter-profile" src="https://twitter.com/MrKeithMahon/profile_image?size=bigger" alt="Twitter Profile Image"> -->
+		  		<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="MrKeithMahon" alt="" class="twitter-profile twitter-profile-image-category">
 		  	</div>
 		  	<div class="category-winner">
 			    <div class="name">Keith Mahon</div>
