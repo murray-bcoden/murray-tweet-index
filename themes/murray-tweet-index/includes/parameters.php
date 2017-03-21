@@ -9,7 +9,8 @@
 				
 				<div class="top-params-details">
 					<div class="params-image-wrapper">
-						<img src="http://twitter.com/davidmcw/profile_image?size=bigger" alt="" class="top-params-image">
+						<!-- <img src="http://twitter.com/davidmcw/profile_image?size=bigger" alt="" class="top-params-image"> -->
+				  		<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="davidmcw" alt="" class="top-params-image twitter-profile-image-category">
 					</div>
 					<h4 class="top-params-name"><a href="http://twitter.com/davidmcw/" target="_blank">David McWilliams</a></h4>
 					<p class="top-params-job">Columnist, Sunday Business Post</p>
@@ -63,7 +64,8 @@
 				
 				<div class="top-params-details">
 					<div class="params-image-wrapper">
-						<img src="http://twitter.com/MiguelDelaney/profile_image?size=bigger" alt="" class="top-params-image">
+						<!-- <img src="http://twitter.com/MiguelDelaney/profile_image?size=bigger" alt="" class="top-params-image"> -->
+				  		<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="MiguelDelaney" alt="" class="top-params-image twitter-profile-image-category">
 					</div>
 					<h4 class="top-params-name"><a href="http://twitter.com/MiguelDelaney/" target="_blank">Miguel Delaney</a></h4>
 					<p class="top-params-job">Chief Football Writer, Irish Independent</p>
@@ -117,7 +119,8 @@
 				
 				<div class="top-params-details">
 					<div class="params-image-wrapper">
-						<img src="http://twitter.com/gemmaod1/profile_image?size=bigger" alt="" class="top-params-image">
+						<!-- <img src="http://twitter.com/gemmaod1/profile_image?size=bigger" alt="" class="top-params-image"> -->
+				  		<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="gemmaod1" alt="" class="top-params-image twitter-profile-image-category">
 					</div>
 					<h4 class="top-params-name"><a href="http://twitter.com/gemmaod1/" target="_blank">Gemma O'Doherty</a></h4>
 					<p class="top-params-job">Investigative Journalist, Unaffiliated</p>
@@ -171,7 +174,8 @@
 				
 				<div class="top-params-details">
 					<div class="params-image-wrapper">
-						<img src="http://twitter.com/cooper_m/profile_image?size=bigger" alt="" class="top-params-image">
+						<!-- <img src="http://twitter.com/cooper_m/profile_image?size=bigger" alt="" class="top-params-image"> -->
+				  		<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="cooper_m" alt="" class="top-params-image twitter-profile-image-category">
 					</div>
 					<h4 class="top-params-name"><a href="http://twitter.com/cooper_m/" target="_blank">Matt Cooper</a></h4>
 					<p class="top-params-job">Presenter, Today FM</p>
@@ -225,7 +229,8 @@
 				
 				<div class="top-params-details">
 					<div class="params-image-wrapper">
-						<img src="http://twitter.com/gerrythornley/profile_image?size=bigger" alt="" class="top-params-image">
+						<!-- <img src="http://twitter.com/gerrythornley/profile_image?size=bigger" alt="" class="top-params-image"> -->
+				  		<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="gerrythornley" alt="" class="top-params-image twitter-profile-image-category">
 					</div>
 					<h4 class="top-params-name"><a href="http://twitter.com/gerrythornley/" target="_blank">Gerry Thornley</a></h4>
 					<p class="top-params-job">Rugby Correspondent, Irish Times</p>
@@ -279,7 +284,8 @@
 				
 				<div class="top-params-details">
 					<div class="params-image-wrapper">
-						<img src="http://twitter.com/gerrythornley/profile_image?size=bigger" alt="" class="top-params-image">
+						<!-- <img src="http://twitter.com/gerrythornley/profile_image?size=bigger" alt="" class="top-params-image"> -->
+				  		<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="gerrythornley" alt="" class="top-params-image twitter-profile-image-category">
 					</div>
 					<h4 class="top-params-name"><a href="http://twitter.com/gerrythornley/" target="_blank">Gerry Thornley</a></h4>
 					<p class="top-params-job">Rugby Correspondent, Irish Times</p>

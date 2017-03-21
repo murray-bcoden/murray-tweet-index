@@ -95,14 +95,14 @@
 							</a>
 						</li>
 						<li class="top-item">
-							<a href="https://twitter.com/elainebyrne" class="top-link" target="_blank">
+							<a href="https://twitter.com/ElaineByrne" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<!-- <img data-original="http://twitter.com/elainebyrne/profile_image?size=bigger" alt="" class="top-image lazy"> -->
-									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="elainebyrne" alt="" class="twitter-profile-image top-image lazy">
+									<!-- <img data-original="http://twitter.com/ElaineByrne/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="ElaineByrne" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">6</div>
-									<div class="top-handle">@elainebyrne</div>
+									<div class="top-handle">@ElaineByrne</div>
 									<div class="top-name">Elaine Byrne</div>
 								</div>
 							</a>
