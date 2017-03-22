@@ -68,7 +68,7 @@
 				  		<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="MiguelDelaney" alt="" class="top-params-image twitter-profile-image-category">
 					</div>
 					<h4 class="top-params-name"><a href="http://twitter.com/MiguelDelaney/" target="_blank">Miguel Delaney</a></h4>
-					<p class="top-params-job">Chief Football Writer, Irish Independent</p>
+					<p class="top-params-job">Chief Football Writer, The Independent / independent.co.uk</p>
 					<div class="top-params-num">77.84</div>
 					
 				</div>

@@ -173,10 +173,12 @@
 
     .top-params-job {
         margin: 0;
+        padding-right: 230px;
         @include font-size($font-16);
         @extend .serif;
         @include breakpoint($break-1200) {
             margin-left: 110px;
+            padding-right: 0px;
             //@include font-size($font-14);
             padding-right: 0;
         }
