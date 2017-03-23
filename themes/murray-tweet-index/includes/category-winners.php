@@ -113,7 +113,7 @@
 						</li>
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">5</span><a href="https://twitter.com/danobrien20" target="_blank" class="categories-panel-link">@danobrien20</a>
+								<span class="categories-panel-index">5</span><a href="https://twitter.com/ITdominiccoyle" target="_blank" class="categories-panel-link">@ITdominiccoyle</a>
 							</div>
 						</li>
 					</ol>

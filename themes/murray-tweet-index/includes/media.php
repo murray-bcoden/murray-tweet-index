@@ -67,12 +67,12 @@
 						<div class="most-num">9</div>
 					</li>
 					<li class="most-list-item">
-						<div class="most-outlet">Newstalk</div>
+						<div class="most-outlet">Sunday Business Post</div>
 						<div class="graph-bar most-bar"><span style="width: 44.44%"></span></div>
-						<div class="most-num">8</div>
+						<div class="most-num">9</div>
 					</li>
 					<li class="most-list-item">
-						<div class="most-outlet">Sunday Business Post</div>
+						<div class="most-outlet">Newstalk</div>
 						<div class="graph-bar most-bar"><span style="width: 44.44%"></span></div>
 						<div class="most-num">8</div>
 					</li>
@@ -102,7 +102,7 @@
 						<div class="most-num">3</div>
 					</li>
 					<li class="most-list-item">
-						<div class="most-outlet">journal.ie</div>
+						<div class="most-outlet">thejournal.ie</div>
 						<div class="graph-bar most-bar"><span style="width: 11.11%"></span></div>
 						<div class="most-num">2</div>
 					</li>
@@ -133,11 +133,6 @@
 					</li>
 					<li class="most-list-item">
 						<div class="most-outlet">Impartial Reporter</div>
-						<div class="graph-bar most-bar"><span style="width: 5.55%"></span></div>
-						<div class="most-num">1</div>
-					</li>
-					<li class="most-list-item">
-						<div class="most-outlet">UTV Ireland</div>
 						<div class="graph-bar most-bar"><span style="width: 5.55%"></span></div>
 						<div class="most-num">1</div>
 					</li>
