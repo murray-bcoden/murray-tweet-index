@@ -14,3 +14,5 @@ config.codekit
 **/.sass-cache
 **/.sass-cache/*
 *.map
+
+wp-config.php
