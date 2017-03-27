@@ -53,7 +53,7 @@
 					</li>
 					<li class="most-list-item">
 						<div class="most-outlet">Independent News &amp; Media</div>
-						<div class="graph-bar most-bar"><span style="width: 88.88%"></span></div>
+						<div class="graph-bar most-bar"><span style="width: 88.89%"></span></div>
 						<div class="most-num">16</div>
 					</li>
 					<li class="most-list-item">
@@ -62,14 +62,14 @@
 						<div class="most-num">15</div>
 					</li>
 					<li class="most-list-item">
-						<div class="most-outlet">Sunday Business Post</div>
+						<div class="most-outlet">Newstalk</div>
 						<div class="graph-bar most-bar"><span style="width: 44.44%"></span></div>
 						<div class="most-num">8</div>
 					</li>
 					<li class="most-list-item">
-						<div class="most-outlet">Newstalk</div>
-						<div class="graph-bar most-bar"><span style="width: 44.44%"></span></div>
-						<div class="most-num">8</div>
+						<div class="most-outlet">Sunday Business Post</div>
+						<div class="graph-bar most-bar"><span style="width: 38.89%"></span></div>
+						<div class="most-num">7</div>
 					</li>
 					<li class="most-list-item">
 						<div class="most-outlet">Irish Examiner</div>
