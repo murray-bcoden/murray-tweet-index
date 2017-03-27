@@ -29,12 +29,12 @@
 		<div class="slider responsive" id="carousel">
 		  <div class="category">
 		  	<div class="category-image-wrapper">
-		  		<!-- <img class="twitter-profile" src="https://twitter.com/gemmaod1/profile_image?size=bigger" alt="Twitter Profile Image"> -->
-		  		<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="gemmaod1" alt="" class="twitter-profile twitter-profile-image-category">
+		  		<!-- <img class="twitter-profile" src="https://twitter.com/CaitrionaPerry/profile_image?size=bigger" alt="Twitter Profile Image"> -->
+		  		<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="CaitrionaPerry" alt="" class="twitter-profile twitter-profile-image-category">
 		  	</div>
 		  	<div class="category-winner">
-				<div class="name">Gemma O'Doherty</div>
-				<div class="job-title">Investigative Journalist, Unaffiliated</div>
+				<div class="name">Caitriona Perry</div>
+				<div class="job-title">Washington Correspondent, RTE</div>
 			</div>
 			<div class="category-title-wrapper">
 				<div class="category-title">News</div>
@@ -46,27 +46,27 @@
 					<ol class="categories-panel-list">
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">1</span><a href="https://twitter.com/gemmaod1" target="_blank" class="categories-panel-link">@gemmaod1</a>
+								<span class="categories-panel-index">1</span><a href="https://twitter.com/CaitrionaPerry" target="_blank" class="categories-panel-link">@CaitrionaPerry</a>
 							</div>
 						</li>
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">2</span><a href="https://twitter.com/CaitrionaPerry" target="_blank" class="categories-panel-link">@CaitrionaPerry</a>
+								<span class="categories-panel-index">2</span><a href="https://twitter.com/SiCarswell" target="_blank" class="categories-panel-link">@SiCarswell</a>
 							</div>
 						</li>
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">3</span><a href="https://twitter.com/SiCarswell" target="_blank" class="categories-panel-link">@SiCarswell</a>
+								<span class="categories-panel-index">3</span><a href="https://twitter.com/philipbromwell" target="_blank" class="categories-panel-link">@philipbromwell</a>
 							</div>
 						</li>
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">4</span><a href="https://twitter.com/philipbromwell" target="_blank" class="categories-panel-link">@philipbromwell</a>
+								<span class="categories-panel-index">4</span><a href="https://twitter.com/tconnellyRTE" target="_blank" class="categories-panel-link">@tconnellyRTE</a>
 							</div>
 						</li>
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">5</span><a href="https://twitter.com/tconnellyRTE" target="_blank" class="categories-panel-link">@tconnellyRTE</a>
+								<span class="categories-panel-index">5</span><a href="https://twitter.com/ingridmileyRTE" target="_blank" class="categories-panel-link">@ingridmileyRTE</a>
 							</div>
 						</li>
 					</ol>
@@ -924,7 +924,7 @@
 		    </div>
 		  </div> -->
 		  
-		  <div class="category">
+		  <!-- <div class="category">
 		  	<div class="category-image-wrapper">
 		  		<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="ChristineBohan" alt="" class="twitter-profile twitter-profile-image-category">
 		  	</div>
@@ -968,7 +968,7 @@
 					</ol>
 				</div>
 		    </div>
-		  </div>
+		  </div> -->
 		  
 		</div>
 	</div>

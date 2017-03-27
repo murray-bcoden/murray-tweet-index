@@ -155,7 +155,7 @@
 								<div class="top-bar">
 									<div class="top-num">10</div>
 									<div class="top-handle">@CaitrionaPerry</div>
-									<div class="top-name">Catriona Perry</div>
+									<div class="top-name">Caitriona Perry</div>
 								</div>
 							</a>
 						</li>
@@ -277,14 +277,14 @@
 							</a>
 						</li>
 						<li class="top-item">
-							<a href="https://twitter.com/colettebrown" class="top-link" target="_blank">
+							<a href="https://twitter.com/colettebrowne" class="top-link" target="_blank">
 								<div class="top-image-wrapper">
-									<!-- <img data-original="http://twitter.com/colettebrown/profile_image?size=bigger" alt="" class="top-image lazy"> -->
-									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="colettebrown" alt="" class="twitter-profile-image top-image lazy">
+									<!-- <img data-original="http://twitter.com/colettebrowne/profile_image?size=bigger" alt="" class="top-image lazy"> -->
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="colettebrowne" alt="" class="twitter-profile-image top-image lazy">
 								</div>
 								<div class="top-bar">
 									<div class="top-num">20</div>
-									<div class="top-handle">@colettebrown</div>
+									<div class="top-handle">@colettebrowne</div>
 									<div class="top-name">Colette Brown</div>
 								</div>
 							</a>

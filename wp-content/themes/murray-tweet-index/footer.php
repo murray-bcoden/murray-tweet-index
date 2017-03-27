@@ -30,6 +30,8 @@
 							</ul>
 
 							<p>Journalists were restricted to being considered in only one specialist category even if they might have been ranked in more than one. For example George Hook could have been considered in the sports category, but was restricted to what we viewed as his primary role as broadcast presenter.</p>
+
+							<p>*** Joint 5th places were awarded where there was a difference of less than 5 in the overall ranking score between two journalists.</p>
 						<!-- </div> -->
 
 					</div>
