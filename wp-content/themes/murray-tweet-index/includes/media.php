@@ -62,14 +62,9 @@
 						<div class="most-num">15</div>
 					</li>
 					<li class="most-list-item">
-						<div class="most-outlet">Unaffiliated</div>
-						<div class="graph-bar most-bar"><span style="width: 50.00%"></span></div>
-						<div class="most-num">9</div>
-					</li>
-					<li class="most-list-item">
 						<div class="most-outlet">Sunday Business Post</div>
 						<div class="graph-bar most-bar"><span style="width: 44.44%"></span></div>
-						<div class="most-num">9</div>
+						<div class="most-num">8</div>
 					</li>
 					<li class="most-list-item">
 						<div class="most-outlet">Newstalk</div>
@@ -110,31 +105,6 @@
 						<div class="most-outlet">Irish Daily Star</div>
 						<div class="graph-bar most-bar"><span style="width: 11.11%"></span></div>
 						<div class="most-num">2</div>
-					</li>
-					<li class="most-list-item">
-						<div class="most-outlet">TV3</div>
-						<div class="graph-bar most-bar"><span style="width: 9.5%"></span></div>
-						<div class="most-num">1</div>
-					</li>
-					<li class="most-list-item">
-						<div class="most-outlet">Irish Mirror</div>
-						<div class="graph-bar most-bar"><span style="width: 5.55%"></span></div>
-						<div class="most-num">1</div>
-					</li>
-					<li class="most-list-item">
-						<div class="most-outlet">Sunday World</div>
-						<div class="graph-bar most-bar"><span style="width: 5.55%"></span></div>
-						<div class="most-num">1</div>
-					</li>
-					<li class="most-list-item">
-						<div class="most-outlet">thetaste.ie</div>
-						<div class="graph-bar most-bar"><span style="width: 5.55%"></span></div>
-						<div class="most-num">1</div>
-					</li>
-					<li class="most-list-item">
-						<div class="most-outlet">Impartial Reporter</div>
-						<div class="graph-bar most-bar"><span style="width: 5.55%"></span></div>
-						<div class="most-num">1</div>
 					</li>
 				</ol>
 			</div>

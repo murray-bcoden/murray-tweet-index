@@ -462,7 +462,7 @@
 		  	</div>
 		  	<div class="category-winner">
 			    <div class="name">David McWilliams</div>
-			    <div class="job-title">Columnist, Sunday Business Post</div>
+			    <div class="job-title">Columnist, Unaffiliated</div>
 			</div>
 		    <div class="category-title-wrapper">
 				<div class="category-title">Columnist</div>

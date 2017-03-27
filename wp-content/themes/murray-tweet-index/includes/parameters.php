@@ -13,7 +13,7 @@
 				  		<img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-bird.jpg" data-handle="davidmcw" alt="" class="top-params-image twitter-profile-image-category">
 					</div>
 					<h4 class="top-params-name"><a href="http://twitter.com/davidmcw/" target="_blank">David McWilliams</a></h4>
-					<p class="top-params-job">Columnist, Sunday Business Post</p>
+					<p class="top-params-job">Columnist, Unaffiliated</p>
 					<div class="top-params-num">195,786</div>
 					
 				</div>
