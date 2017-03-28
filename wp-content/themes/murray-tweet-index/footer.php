@@ -41,7 +41,7 @@
 						<div class="contact">
 							<h2 class="footer-title">Contact</h2>
 							<p>For comments or suggestions on the #murraytweetindex, or to suggest a name that was not included and should have been, please email us at: <a href="mailto:<?php echo antispambot( 'tweetindex@murraygroup.ie' ); ?>"><?php echo antispambot( 'tweetindex@murraygroup.ie' ); ?></a></p>
-							<p>Website: <a href="http://www.murrayconsult.ie" target="_blank">murrayconsult.ie</a></p>
+							<p>Website: <a href="http://www.murrayconsultants.ie" target="_blank">murrayconsultants.ie</a></p>
 						</div>
 
 						<div class="twitter-follow">
