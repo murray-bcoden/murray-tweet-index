@@ -14,6 +14,7 @@
 // @codekit-prepend "vendor/lazyload/jquery.lazyload.min.js";
 // @codekit-prepend "vendor/jquery.nanoscroller.min.js";
 // @codekit-prepend "vendor/ssm.min.js";
+// @codekit-prepend "vendor/remodal/remodal.min.js";
 
 jQuery(document).ready(function($){
 
