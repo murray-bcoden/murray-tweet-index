@@ -57,7 +57,7 @@
 			        <text class="person-name sans-semi" transform="translate(474 101.09)">DARREN KENNEDY</text>
 			      </g>
 			      <g class="person">
-			        <text class="job-title serif" transform="translate(484 80.09)">News, Unaffiliated</text>
+			        <text class="job-title serif" transform="translate(484 80.09)">Investigative, Unaffiliated</text>
 			        <text class="twitter-handle sans-semi" transform="translate(618 61.09)">@gemmaod1</text>
 			        <text class="person-name sans-semi" transform="translate(474 61.09)">GEMMA O'DOHERTY</text>
 			      </g>
@@ -92,7 +92,7 @@
 				</li>
 				<li class="gains-people-item">
 					<h3 class="gain-title"><span class="gain-number">142</span> <span class="gain-name">Gemma O'Doherty</span> @gemmaod1</h3>
-					<p class="gain-job">News, Unaffiliated</p>
+					<p class="gain-job">Investigative, Unaffiliated</p>
 				</li>
 				<li class="gains-people-item">
 					<h3 class="gain-title"><span class="gain-number">67</span> <span class="gain-name">Darren Kennedy</span> @Darrenken</h3>
