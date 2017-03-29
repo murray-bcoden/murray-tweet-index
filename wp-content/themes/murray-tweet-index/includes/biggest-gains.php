@@ -52,7 +52,7 @@
 			        <text class="person-name sans-semi" transform="translate(474 142.09)">DAN O'BRIEN</text>
 			      </g>
 			      <g class="person">
-			        <text class="job-title serif" transform="translate(484 120.09)">Fashion &amp; Beauty, Unaffiliated</text>
+			        <text class="job-title serif" transform="translate(484 120.09)">Fashion, Unaffiliated</text>
 			        <text class="twitter-handle sans-semi" transform="translate(606 101.09)">@Darrenken</text>
 			        <text class="person-name sans-semi" transform="translate(474 101.09)">DARREN KENNEDY</text>
 			      </g>
