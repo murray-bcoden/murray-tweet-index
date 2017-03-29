@@ -301,7 +301,7 @@
 						</li>
 						<li class="categories-panel-item">
 							<div class="categories-panel-pos">
-								<span class="categories-panel-index">5</span><a href="https://twitter.com/Emma_SBP_money" target="_blank" class="categories-panel-link">@Emma_SBP_money</a>
+								<span class="categories-panel-index">5</span><a href="https://twitter.com/Emma_K_journo" target="_blank" class="categories-panel-link">@Emma_K_journo</a>
 							</div>
 						</li>
 					</ol>
